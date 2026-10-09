@@ -3,349 +3,349 @@ ar:
   activerecord:
     attributes:
       resource_allocation:
-        allocated_hours: Hours
-        allocated_time: Allocated time
-        date_range: Dates
-        end_date: Finish date
-        entity: Entity
-        filter_name: Resource filter name
-        principal: Assignee
-        start_date: Start date
-        state: State
-        user_filter: User filter
+        allocated_hours: الساعات
+        allocated_time: الوقت المخصص
+        date_range: التواريخ
+        end_date: تاريخ الانتهاء
+        entity: الكيان
+        filter_name: اسم عامل تصفية الموارد
+        principal: المُسند إليه
+        start_date: تاريخ البدء
+        state: الحالة
+        user_filter: عامل تصفية المستخدمين
       resource_planner:
-        date_range: Dates
-        default_view_class_name: Default view
-        end_date: Finish date
-        favorite: Favorite
-        name: Name
-        public: Public
-        start_date: Start date
+        date_range: التواريخ
+        default_view_class_name: العرض الافتراضي
+        end_date: تاريخ الانتهاء
+        favorite: مفضّل
+        name: الاسم
+        public: عام
+        start_date: تاريخ البدء
     errors:
       models:
         resource_allocation:
           attributes:
             end_date:
-              greater_than_start_date: must be after the start date.
+              greater_than_start_date: يجب أن يكون بعد تاريخ البدء.
         resource_planner:
           attributes:
             end_date:
-              greater_than_start_date: must be after the start date.
-              required_with_start_date: must be set when a start date is set.
+              greater_than_start_date: يجب أن يكون بعد تاريخ البدء.
+              required_with_start_date: يجب تعيينه عند تعيين تاريخ البدء.
             start_date:
-              required_with_end_date: must be set when a finish date is set.
+              required_with_end_date: يجب تعيينه عند تعيين تاريخ الانتهاء.
         resource_work_package_list:
           attributes:
             query:
-              must_be_work_package_query: must be a work package query.
+              must_be_work_package_query: يجب أن يكون استعلام حزم عمل.
     models:
       resource_allocation:
-        zero: Resource Allocations
-        one: Resource Allocation
-        two: Resource Allocations
-        few: Resource Allocations
-        many: Resource Allocations
-        other: Resource Allocations
+        zero: تخصيصات الموارد
+        one: تخصيص مورد
+        two: تخصيصات الموارد
+        few: تخصيصات الموارد
+        many: تخصيصات الموارد
+        other: تخصيصات الموارد
       resource_planner:
-        zero: Resource Planners
-        one: Resource Planner
-        two: Resource Planners
-        few: Resource Planners
-        many: Resource Planners
-        other: Resource Planners
+        zero: مخططات الموارد
+        one: مخطط موارد
+        two: مخططات الموارد
+        few: مخططات الموارد
+        many: مخططات الموارد
+        other: مخططات الموارد
       resource_user_card:
-        zero: User cards
-        one: User card
-        two: User cards
-        few: User cards
-        many: User cards
-        other: User cards
+        zero: بطاقات المستخدمين
+        one: بطاقة مستخدم
+        two: بطاقات المستخدمين
+        few: بطاقات المستخدمين
+        many: بطاقات المستخدمين
+        other: بطاقات المستخدمين
       resource_user_timeline:
-        zero: User timelines
-        one: User timeline
-        two: User timelines
-        few: User timelines
-        many: User timelines
-        other: User timelines
+        zero: المخططات الزمنية للمستخدمين
+        one: مخطط زمني للمستخدم
+        two: المخططات الزمنية للمستخدمين
+        few: المخططات الزمنية للمستخدمين
+        many: المخططات الزمنية للمستخدمين
+        other: المخططات الزمنية للمستخدمين
       resource_work_package_list:
-        zero: Work packages lists
-        one: Work packages list
-        two: Work packages lists
-        few: Work packages lists
-        many: Work packages lists
-        other: Work packages lists
+        zero: قوائم حزم العمل
+        one: قائمة حزم العمل
+        two: قوائم حزم العمل
+        few: قوائم حزم العمل
+        many: قوائم حزم العمل
+        other: قوائم حزم العمل
       resource_work_package_timeline:
-        zero: Work packages timelines
-        one: Work packages timeline
-        two: Work packages timelines
-        few: Work packages timelines
-        many: Work packages timelines
-        other: Work packages timelines
-  button_next: Next
+        zero: المخططات الزمنية لحزم العمل
+        one: مخطط زمني لحزم العمل
+        two: المخططات الزمنية لحزم العمل
+        few: المخططات الزمنية لحزم العمل
+        many: المخططات الزمنية لحزم العمل
+        other: المخططات الزمنية لحزم العمل
+  button_next: التالي
   ee:
     features:
-      resource_management: Resource management
+      resource_management: إدارة الموارد
     upsell:
       resource_management:
-        description: Plan and balance your team's workload with resource planners. Allocate people to work packages, track capacity over time and spot over- and under-allocation at a glance.
-        title: Resource management
-  label_resource_management: Resource management
-  permission_allocate_user_resources: Allocate user resources
-  permission_allocate_user_resources_explanation: Allows users to create, update, and delete resource allocations within a resource planner. This includes assigning users (or user filters) to a planner and adjusting the allocated time and date range.
-  permission_assign_users_to_generic_allocations: Assign users to generic allocations
-  permission_assign_users_to_generic_allocations_explanation: Allows users to use the Staffing view to assign real users to generic (filter-based) resource allocations that do not yet have a user. It does not allow creating or editing allocations.
-  permission_manage_public_resource_planners: Manage public resource planners
-  permission_manage_public_resource_planners_explanation: Allows users to create and manage public resource planners. It allows them to view, create, manage and publish their own resource planners. It does not allow users to view resource planners created by other users that are not shared publicly.
-  permission_view_resource_planners: View resource planners
-  permission_view_resource_planners_explanation: Allows users to access resource planners. It allows them to create and manage their own resource planners and view public resource planners. It does not allow users to view resource planners created by other users that are not shared publicly.
+        description: خطط عبء عمل فريقك ووازنه باستخدام مخططات الموارد. خصص الأفراد لحزم العمل، وتتبّع السعة بمرور الوقت، واكتشف التخصيص الزائد والناقص بنظرة سريعة.
+        title: إدارة الموارد
+  label_resource_management: إدارة الموارد
+  permission_allocate_user_resources: تخصيص موارد المستخدمين
+  permission_allocate_user_resources_explanation: يتيح للمستخدمين إنشاء تخصيصات الموارد وتحديثها وحذفها ضمن مخطط الموارد. ويشمل ذلك إسناد المستخدمين (أو عوامل تصفية المستخدمين) إلى المخطط وتعديل الوقت المخصص والنطاق الزمني.
+  permission_assign_users_to_generic_allocations: إسناد المستخدمين إلى التخصيصات العامة
+  permission_assign_users_to_generic_allocations_explanation: يتيح للمستخدمين استخدام عرض «إسناد الكوادر» لإسناد مستخدمين فعليين إلى تخصيصات الموارد العامة (المستندة إلى عوامل التصفية) التي لم يُسنَد إليها مستخدم بعد. ولا يتيح إنشاء التخصيصات أو تعديلها.
+  permission_manage_public_resource_planners: إدارة مخططات الموارد العامة
+  permission_manage_public_resource_planners_explanation: يتيح للمستخدمين إنشاء مخططات الموارد العامة وإدارتها. ويتيح لهم عرض مخططات الموارد الخاصة بهم وإنشاءها وإدارتها ونشرها. ولا يتيح للمستخدمين عرض مخططات الموارد التي أنشأها مستخدمون آخرون ولم تتم مشاركتها بشكل عام.
+  permission_view_resource_planners: عرض مخططات الموارد
+  permission_view_resource_planners_explanation: يتيح للمستخدمين الوصول إلى مخططات الموارد. ويتيح لهم إنشاء مخططات الموارد الخاصة بهم وإدارتها، وعرض مخططات الموارد العامة. ولا يتيح للمستخدمين عرض مخططات الموارد التي أنشأها مستخدمون آخرون ولم تتم مشاركتها بشكل عام.
   plugin_openproject_resource_management:
-    description: Provides resource management and capacity planning.
-    name: OpenProject Resource Management
-  project_module_resource_management: Resource management
+    description: يوفر إدارة الموارد وتخطيط السعة.
+    name: إدارة الموارد في OpenProject
+  project_module_resource_management: إدارة الموارد
   resource_management:
     action:
-      delete: Delete
-      edit: Edit
-      favorite: Add to favorites
-      make_private: Make private
-      make_public: Make public
-      unfavorite: Remove from favorites
+      delete: حذف
+      edit: تعديل
+      favorite: إضافة إلى المفضلة
+      make_private: جعله خاصًا
+      make_public: جعله عامًا
+      unfavorite: إزالة من المفضلة
     allocate_resource_dialog:
       kind:
         filter:
-          caption: Set filter criteria based on user attributes to create a placeholder resource.
-          label: Filter criteria
-        label: Allocation type
+          caption: حدد معايير التصفية بناءً على سمات المستخدم لإنشاء مورد بديل.
+          label: معايير التصفية
+        label: نوع التخصيص
         principal:
-          caption: Allocate hours for a specific user.
-          label: User
+          caption: تخصيص ساعات لمستخدم محدد.
+          label: المستخدم
       missing_working_hours:
-        none: The selected user has no working hours configured for these dates, so they are counted as having no capacity.
-        partial: The selected user has no working hours configured for %{dates}, so those days are counted as having no capacity.
+        none: لم يتم تكوين ساعات عمل للمستخدم المحدد في هذه التواريخ، لذا يُحتسب على أنه بلا سعة.
+        partial: لم يتم تكوين ساعات عمل للمستخدم المحدد في %{dates}، لذا تُحتسب تلك الأيام على أنها بلا سعة.
       outside_dates:
-        description: The selected resource dates, %{resource_dates}, are outside of the work package's dates, %{work_package_dates}.
+        description: تواريخ المورد المحددة (%{resource_dates}) تقع خارج تواريخ حزمة العمل (%{work_package_dates}).
       overbooking:
-        capacity_summary: "%{available} available · %{scheduled} scheduled"
-        description: The selected user, %{user}, would be allocated beyond their working hours during this period.
-        hidden_work: Other allocations
-        schedule_availability: "%{schedule} (%{factor}% available for project work)"
-        schedule_change: until %{date}, then %{schedule}
-        schedule_note: This user works %{schedule}.
-        submit: Allocate overtime
-        title: Do you want to allocate overtime to the user?
-      submit: Allocate
-      success_message: Resource allocated.
-      title: Allocate resource
+        capacity_summary: "%{available} متاح · %{scheduled} مجدول"
+        description: سيتم تخصيص المستخدم المحدد، %{user}، بما يتجاوز ساعات عمله خلال هذه الفترة.
+        hidden_work: تخصيصات أخرى
+        schedule_availability: "%{schedule} (%{factor}% متاح لأعمال المشروع)"
+        schedule_change: حتى %{date}، ثم %{schedule}
+        schedule_note: يعمل هذا المستخدم %{schedule}.
+        submit: تخصيص وقت إضافي
+        title: هل تريد تخصيص وقت إضافي للمستخدم؟
+      submit: تخصيص
+      success_message: تم تخصيص المورد.
+      title: تخصيص مورد
     allocation:
       hours: "%{value}h"
-      no_work: No work planned on this work package
+      no_work: لا يوجد عمل مخطط لحزمة العمل هذه
       summary: "%{allocated} / %{scheduled}"
     assignment_dialog:
-      available: "%{hours} available"
-      confirm_overtime: Assign anyway
-      filter_criteria: Filter criteria
+      available: "%{hours} متاح"
+      confirm_overtime: الإسناد على أي حال
+      filter_criteria: معايير التصفية
       no_candidates:
-        description: No project member matches this allocation's filter criteria.
-        title: No matching members
-      no_schedule: This user has no work schedule set up, so we cannot determine whether this allocation fits.
-      overbooked_detail: This user has %{available} available in this period, the work package requires %{requested}.
-      requested_for: Requested for
-      select_user: Please select a user to assign.
-      submit: Assign
-      title: Assign %{filter_name}
+        description: لا يوجد عضو في المشروع يطابق معايير التصفية لهذا التخصيص.
+        title: لا يوجد أعضاء مطابقون
+      no_schedule: لم يتم إعداد جدول عمل لهذا المستخدم، لذا لا يمكن تحديد ما إذا كان هذا التخصيص مناسبًا.
+      overbooked_detail: لدى هذا المستخدم %{available} من الوقت المتاح في هذه الفترة، بينما تتطلب حزمة العمل %{requested}.
+      requested_for: الفترة المطلوبة
+      select_user: يرجى تحديد مستخدم لإسناده.
+      submit: إسناد
+      title: إسناد %{filter_name}
     blankslate:
-      desc: Create a resource planner to start planning capacity for this project.
-      title: No resource planners yet
+      desc: أنشئ مخطط موارد لبدء تخطيط السعة لهذا المشروع.
+      title: لا توجد مخططات موارد بعد
     configure_view_dialog:
-      delete_confirmation: Are you sure you want to delete this view? This cannot be undone.
+      delete_confirmation: هل أنت متأكد من أنك تريد حذف هذا العرض؟ لا يمكن التراجع عن هذا الإجراء.
       filter_mode:
         automatic:
-          caption: An automatically-generated list that displays items that meet criteria you define.
-          label: Automatically filtered
-        label: Item selection
+          caption: قائمة تُنشأ تلقائيًا وتعرض العناصر التي تستوفي المعايير التي تحددها.
+          label: مُصفّى تلقائيًا
+        label: اختيار العناصر
         manual:
-          caption: A custom list of items you manually add and remove. Filtering is not possible.
-          label: Manually hand-picked
-      title: Configure view
+          caption: قائمة مخصصة من العناصر تضيفها وتزيلها يدويًا. لا تتوفر إمكانية التصفية.
+          label: مختار يدويًا
+      title: تكوين العرض
     edit_allocation_dialog:
-      submit: Save
-      success_message: Resource allocation updated.
-      title: Edit allocation
-    favorite_caption: Make this view a favorite to add it on the top section of the sidebar menu.
-    label_edit_resource_planner: Edit resource planner
-    label_new_resource_planner: New resource planner
-    label_resource_planner: Resource planner
-    label_resource_planner_plural: Resource planners
+      submit: حفظ
+      success_message: تم تحديث تخصيص المورد.
+      title: تعديل التخصيص
+    favorite_caption: أضف هذا العرض إلى المفضلة لإظهاره في القسم العلوي من القائمة الجانبية.
+    label_edit_resource_planner: تعديل مخطط الموارد
+    label_new_resource_planner: مخطط موارد جديد
+    label_resource_planner: مخطط الموارد
+    label_resource_planner_plural: مخططات الموارد
     new_view_dialog:
-      title: Add View
-    public_caption: Make this view public to all members of the project. This does not affect the visibility of work packages which still depends on each user permission.
+      title: إضافة عرض
+    public_caption: اجعل هذا العرض عامًا لجميع أعضاء المشروع. لا يؤثر ذلك في ظهور حزم العمل، إذ يظل معتمدًا على صلاحيات كل مستخدم.
     show:
-      placeholder: The detailed view for this resource planner is coming soon.
+      placeholder: العرض التفصيلي لمخطط الموارد هذا سيتوفر قريبًا.
     sidebar:
-      private: Private
-      public: Public
+      private: خاص
+      public: عام
     staffing:
-      assign: Assign user
+      assign: إسناد مستخدم
       blank:
-        description: All generic allocations in this project have a user assigned.
-        title: Nothing to staff
+        description: تم إسناد مستخدم إلى جميع التخصيصات العامة في هذا المشروع.
+        title: لا توجد تخصيصات بحاجة إلى إسناد
       columns:
-        dates: Dates
-        requested_time: Requested time
-        resource: Resource
-        work_package: Work package
-      context_menu_label: Allocation actions
-      delete_confirmation: Are you sure you want to delete this allocation?
-      menu_item: Staffing
-      starts_in_past: This allocation has already started and is still unassigned.
-      success_message: User assigned.
-      title: Staffing
-    sub_views: Views in this resource planner
+        dates: التواريخ
+        requested_time: الوقت المطلوب
+        resource: المورد
+        work_package: حزمة العمل
+      context_menu_label: إجراءات التخصيص
+      delete_confirmation: هل أنت متأكد من أنك تريد حذف هذا التخصيص؟
+      menu_item: إسناد الكوادر
+      starts_in_past: بدأ هذا التخصيص بالفعل ولا يزال غير مُسنَد.
+      success_message: تم إسناد المستخدم.
+      title: إسناد الكوادر
+    sub_views: العروض في مخطط الموارد هذا
     timeframe:
-      full: From %{start} to %{end}
+      full: من %{start} إلى %{end}
     timeline:
       granularity:
-        day: Day
-        month: Month
-        week: Calendar week
+        day: يوم
+        month: شهر
+        week: أسبوع تقويمي
       navigation:
-        next: Next period
-        previous: Previous period
-        today: Today
+        next: الفترة التالية
+        previous: الفترة السابقة
+        today: اليوم
       subheader:
-        add: Add
-        allocate: Allocate
-        settings: Configure view
+        add: إضافة
+        allocate: تخصيص
+        settings: تكوين العرض
     user_allocations_dialog:
-      allocate_work_package: Allocate work package
-      blank: This user has no allocated work packages.
+      allocate_work_package: تخصيص حزمة عمل
+      blank: لا توجد حزم عمل مخصصة لهذا المستخدم.
       other_work_packages:
-        zero: "%{count} other work packages"
-        one: 1 other work package
-        two: "%{count} other work packages"
-        few: "%{count} other work packages"
-        many: "%{count} other work packages"
-        other: "%{count} other work packages"
-      title: Utilization
+        zero: لا توجد حزم عمل أخرى
+        one: حزمة عمل واحدة أخرى
+        two: حزمتا عمل أخريان
+        few: "%{count} حزم عمل أخرى"
+        many: "%{count} حزمة عمل أخرى"
+        other: "%{count} حزمة عمل أخرى"
+      title: نسبة الاستخدام
     user_card_list:
       add_user_dialog:
-        title: Add user
+        title: إضافة مستخدم
       blank:
-        description: There are no users matching this view's filters yet.
-        manual_description: No users have been added to this view yet.
-        title: No users to display
+        description: لا يوجد مستخدمون يطابقون عوامل التصفية لهذا العرض بعد.
+        manual_description: لم تتم إضافة أي مستخدمين إلى هذا العرض بعد.
+        title: لا يوجد مستخدمون لعرضهم
       card:
-        multi_value_more: "+%{count} more"
-        remove: Remove user
-        remove_confirmation: Remove this user from the view?
+        multi_value_more: "+%{count} أخرى"
+        remove: إزالة المستخدم
+        remove_confirmation: هل تريد إزالة هذا المستخدم من العرض؟
       fields:
-        drag_area_label: Displayed fields
-        input_caption: Select the fields that will be displayed in the user card for this view
-        input_label: Fields
-        input_placeholder: Add a field
-        working_times: Working times
+        drag_area_label: الحقول المعروضة
+        input_caption: حدد الحقول التي ستُعرض في بطاقة المستخدم لهذا العرض
+        input_label: الحقول
+        input_placeholder: إضافة حقل
+        working_times: أوقات العمل
       subheader:
-        resource: Resource
-        settings: Configure view
+        resource: المورد
+        settings: تكوين العرض
       utilization:
-        label: Utilization
+        label: نسبة الاستخدام
       working_hours:
-        blank: No working hours configured
-        schedule_availability_compact: "%{schedule} (%{factor}% available)"
-        schedule_change_compact: until %{date}, %{schedule}
+        blank: لم يتم تكوين ساعات عمل
+        schedule_availability_compact: "%{schedule} (%{factor}% متاح)"
+        schedule_change_compact: حتى %{date}، %{schedule}
     user_timeline:
       blank:
-        add_user: Add user
-        configure_view: Configure view
-        description: There are no users matching this view's filters yet.
-        manual_description: Add users to this view to see their allocation over time.
-        title: No users to display
-      no_work_schedule: No work schedule planned for this user
-      overbooked: This user is over-allocated in the selected period.
+        add_user: إضافة مستخدم
+        configure_view: تكوين العرض
+        description: لا يوجد مستخدمون يطابقون عوامل التصفية لهذا العرض بعد.
+        manual_description: أضف مستخدمين إلى هذا العرض لمشاهدة تخصيصهم بمرور الوقت.
+        title: لا يوجد مستخدمون لعرضهم
+      no_work_schedule: لا يوجد جدول عمل مخطط لهذا المستخدم
+      overbooked: يتجاوز تخصيص هذا المستخدم سعته في الفترة المحددة.
       overbooked_tooltip:
-        range: "%{dates}: %{scheduled} scheduled, %{available} available"
+        range: "%{dates}: %{scheduled} مجدول، %{available} متاح"
       subheader:
-        add_user: Add user
+        add_user: إضافة مستخدم
     view_types:
       resource_user_card:
-        caption: Create a view based on users and see their details and allocation in a list of user cards
-        label: Users card list
+        caption: أنشئ عرضًا قائمًا على المستخدمين واطّلع على تفاصيلهم وتخصيصهم في قائمة من بطاقات المستخدمين
+        label: قائمة بطاقات المستخدمين
       resource_user_timeline:
-        caption: Create a view based on users and see their allocations over time on a timeline
-        label: Users timeline
+        caption: أنشئ عرضًا قائمًا على المستخدمين واطّلع على تخصيصاتهم بمرور الوقت على مخطط زمني
+        label: المخطط الزمني للمستخدمين
       resource_work_package_list:
-        caption: Create a view based on work packages and see its details and allocation in a list
-        label: Work packages list
+        caption: أنشئ عرضًا قائمًا على حزم العمل واطّلع على تفاصيلها وتخصيصها في قائمة
+        label: قائمة حزم العمل
       resource_work_package_timeline:
-        caption: Create a view based on work packages and see their allocations over time on a timeline
-        label: Work packages timeline
+        caption: أنشئ عرضًا قائمًا على حزم العمل واطّلع على تخصيصاتها بمرور الوقت على مخطط زمني
+        label: المخطط الزمني لحزم العمل
       user_card:
-        caption: Create a view based on users and see their details and allocation in a list of user cards
-        label: Users card list
+        caption: أنشئ عرضًا قائمًا على المستخدمين واطّلع على تفاصيلهم وتخصيصهم في قائمة من بطاقات المستخدمين
+        label: قائمة بطاقات المستخدمين
     work_package_allocations_dialog:
-      allocate_resource: Allocate resource
-      context_menu_label: Allocation actions
-      delete_confirmation: Are you sure you want to delete this allocation? This cannot be undone.
-      delete_success: Resource allocation deleted.
-      hidden_user: Hidden user
-      overbooked: The user is allocated beyond their working hours during this period.
-      title: Allocation
+      allocate_resource: تخصيص مورد
+      context_menu_label: إجراءات التخصيص
+      delete_confirmation: هل أنت متأكد من أنك تريد حذف هذا التخصيص؟ لا يمكن التراجع عن هذا الإجراء.
+      delete_success: تم حذف تخصيص المورد.
+      hidden_user: مستخدم مخفي
+      overbooked: تم تخصيص المستخدم بما يتجاوز ساعات عمله خلال هذه الفترة.
+      title: التخصيص
     work_package_list:
       add_work_package_dialog:
-        title: Add work package
+        title: إضافة حزمة عمل
       allocated_members:
         additional: "+%{count}"
         other_users:
-          zero: "%{count} users"
-          one: "%{count} user"
-          two: "%{count} users"
-          few: "%{count} users"
-          many: "%{count} users"
-          other: "%{count} users"
-        unassigned: Unassigned
+          zero: لا يوجد مستخدمون
+          one: مستخدم واحد
+          two: مستخدمان
+          few: "%{count} مستخدمين"
+          many: "%{count} مستخدمًا"
+          other: "%{count} مستخدم"
+        unassigned: غير مُسنَد
       allocation_placeholder: "—"
       blank:
-        description: There are no work packages matching this view's filters yet.
-        title: No work packages to display
+        description: لا توجد حزم عمل تطابق عوامل التصفية لهذا العرض بعد.
+        title: لا توجد حزم عمل لعرضها
       columns:
-        allocated_members: Allocated members
-        allocation: Allocation
-        dates: Dates
+        allocated_members: الأعضاء المخصصون
+        allocation: التخصيص
+        dates: التواريخ
       context_menu:
-        add_filter_criteria: Add filter criteria
-        add_user_group: Add user group
-        edit_total_work: Edit total work
-        label: More actions
-        move: Move
-        move_down: Move down
-        move_to_bottom: Move to bottom
-        move_to_top: Move to top
-        move_up: Move up
-        remove: Remove
-        remove_confirmation: Remove this work package from the view?
-        see_allocation: See allocation
-      mobile_title: Work packages
-      query_name: 'Resource management work packages: %{name}'
+        add_filter_criteria: إضافة معايير تصفية
+        add_user_group: إضافة مجموعة مستخدمين
+        edit_total_work: تعديل إجمالي العمل
+        label: مزيد من الإجراءات
+        move: نقل
+        move_down: نقل لأسفل
+        move_to_bottom: نقل إلى الأسفل
+        move_to_top: نقل إلى الأعلى
+        move_up: نقل لأعلى
+        remove: إزالة
+        remove_confirmation: هل تريد إزالة حزمة العمل هذه من العرض؟
+        see_allocation: عرض التخصيص
+      mobile_title: حزم العمل
+      query_name: 'حزم عمل إدارة الموارد: %{name}'
       subheader:
-        add: Add
-        add_work_package: Add work package
-        allocate: Allocate
-        settings: Configure view
+        add: إضافة
+        add_work_package: إضافة حزمة عمل
+        allocate: تخصيص
+        settings: تكوين العرض
     work_package_timeline:
       allocation_bar:
         matching_members_description:
-          zero: "%{count} members of this project match the allocation's filter criteria."
-          one: "%{count} member of this project matches the allocation's filter criteria."
-          two: "%{count} members of this project match the allocation's filter criteria."
-          few: "%{count} members of this project match the allocation's filter criteria."
-          many: "%{count} members of this project match the allocation's filter criteria."
-          other: "%{count} members of this project match the allocation's filter criteria."
+          zero: لا يوجد أعضاء في هذا المشروع يطابقون معايير التصفية للتخصيص.
+          one: عضو واحد في هذا المشروع يطابق معايير التصفية للتخصيص.
+          two: عضوان في هذا المشروع يطابقان معايير التصفية للتخصيص.
+          few: "%{count} أعضاء في هذا المشروع يطابقون معايير التصفية للتخصيص."
+          many: "%{count} عضوًا في هذا المشروع يطابقون معايير التصفية للتخصيص."
+          other: "%{count} عضو في هذا المشروع يطابقون معايير التصفية للتخصيص."
       blank:
-        add_work_package: Add work package
-        configure_view: Configure view
-        description: There are no work packages matching this view's filters yet.
-        manual_description: Add work packages to this view to plan their allocation over time.
-        title: No work packages to display
-      query_name: 'Resource management work package timeline: %{name}'
+        add_work_package: إضافة حزمة عمل
+        configure_view: تكوين العرض
+        description: لا توجد حزم عمل تطابق عوامل التصفية لهذا العرض بعد.
+        manual_description: أضف حزم عمل إلى هذا العرض لتخطيط تخصيصها بمرور الوقت.
+        title: لا توجد حزم عمل لعرضها
+      query_name: 'المخطط الزمني لحزم عمل إدارة الموارد: %{name}'
       subheader:
-        add_work_package: Add work package
+        add_work_package: إضافة حزمة عمل

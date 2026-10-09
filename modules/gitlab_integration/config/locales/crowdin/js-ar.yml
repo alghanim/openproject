@@ -24,28 +24,28 @@
 ar:
   js:
     gitlab_integration:
-      gitlab_pipelines: Pipelines
+      gitlab_pipelines: خطوط المعالجة
       tab_header_issue:
         title: مشاكل
       tab_header_mr:
         copy_menu:
-          description: Copy git snippets to clipboard
-          label: Git snippets
+          description: نسخ مقتطفات Git إلى الحافظة
+          label: مقتطفات Git
         create_mr:
-          description: Create a Merge Request
-          label: Create MR
+          description: إنشاء طلب دمج
+          label: إنشاء طلب دمج
         git_actions:
-          branch_name: Branch name
-          cmd: Create branch with empty commit
-          commit_message: Commit message
+          branch_name: اسم الفرع
+          cmd: إنشاء فرع بإيداع فارغ
+          commit_message: رسالة الإيداع
           copy_error: فشل النسخ
           copy_success: نسخ
           title: مقتطفات سريعة لأوامر
-        title: Merge requests
+        title: طلبات الدمج
       tab_issue:
-        empty: There are no issues linked yet. Link an existing issue by using the code <code>OP#%{wp_id}</code> (or <code>PP#%{wp_id}</code> for private links) in the issue title/description or create a new issue.
+        empty: لا توجد مشكلات مرتبطة بعد. اربط مشكلة موجودة باستخدام الرمز <code>OP#%{wp_id}</code> (أو <code>PP#%{wp_id}</code> للروابط الخاصة) في عنوان المشكلة أو وصفها، أو أنشئ مشكلة جديدة.
       tab_mrs:
-        empty: There are no merge requests linked yet. Link an existing MR by using the code <code>OP#%{wp_id}</code> (or <code>PP#%{wp_id}</code> for private links) in the MR title/description or create a new MR.
+        empty: لا توجد طلبات دمج مرتبطة بعد. اربط طلب دمج موجودًا باستخدام الرمز <code>OP#%{wp_id}</code> (أو <code>PP#%{wp_id}</code> للروابط الخاصة) في عنوان طلب الدمج أو وصفه، أو أنشئ طلب دمج جديدًا.
       updated_on: تم التحديث بتاريخ
       work_packages:
         tab_name: GitLab

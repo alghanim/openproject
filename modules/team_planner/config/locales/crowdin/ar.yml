@@ -10,8 +10,8 @@ ar:
   permission_manage_team_planner: إدارة مخطط الفريق
   permission_view_team_planner: عرض مخطط الفريق
   plugin_openproject_team_planner:
-    description: Provides team planner views.
-    name: OpenProject Team Planner
+    description: يوفر طرق عرض مخطط الفريق.
+    name: مخطط الفريق لـ OpenProject
   project_module_team_planner_view: مخططي الفريق
   team_planner:
     label_assignees: المعينون

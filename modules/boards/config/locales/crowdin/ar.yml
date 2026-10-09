@@ -3,17 +3,17 @@ ar:
   activerecord:
     models:
       boards/grid:
-        zero: Boards
-        one: Board
-        two: Boards
-        few: Boards
-        many: Boards
-        other: Boards
+        zero: اللوحات
+        one: لوحة
+        two: اللوحات
+        few: اللوحات
+        many: اللوحات
+        other: اللوحات
   boards:
     board_type_attributes:
       assignee: المُسند إليه
-      basic: Basic
-      status: Kanban
+      basic: أساسية
+      status: كانبان
       subproject: مشروع فرعي
       subtasks: الاصل والفرع
       version: الإصدار
@@ -37,12 +37,12 @@ ar:
 
         '
     board_types:
-      action: Action board (%{attribute})
-      free: Basic
+      action: لوحة إجراءات (%{attribute})
+      free: أساسية
     label_board: لوحة
     label_board_type: نوع اللوحة
     label_boards: اللوحات
-    label_create_new_board: Create new board
+    label_create_new_board: إنشاء لوحة جديدة
   ee:
     upsell:
       board_view:
@@ -50,6 +50,6 @@ ar:
   permission_manage_board_views: إدارة اللوحات
   permission_show_board_views: شاهد لوحات المهمات
   plugin_openproject_boards:
-    description: Provides board views.
-    name: OpenProject Boards
+    description: يوفر طرق عرض اللوحات.
+    name: لوحات OpenProject
   project_module_board_view: لوحات

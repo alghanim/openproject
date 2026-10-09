@@ -24,12 +24,12 @@ ar:
   activerecord:
     models:
       cost_query:
-        zero: Cost reports
-        one: Cost report
-        two: Cost reports
-        few: Cost reports
-        many: Cost reports
-        other: Cost reports
+        zero: تقارير التكلفة
+        one: تقرير التكلفة
+        two: تقارير التكلفة
+        few: تقارير التكلفة
+        many: تقارير التكلفة
+        other: تقارير التكلفة
   button_save_report_as: حفظ التقرير بشكل...
   comments: التعليق
   cost_reports_title: الوقت والتكاليف
@@ -39,17 +39,17 @@ ar:
   description_remove_filter: أَزِل عامل التصفية
   export:
     cost_reports:
-      end_time: End time
-      start_time: Start time
-      title: Your Cost Reports XLS export
+      end_time: وقت الانتهاء
+      start_time: وقت البدء
+      title: تصدير تقارير التكلفة الخاص بك بتنسيق XLS
     timesheet:
-      button: Export PDF timesheet
-      overview_per_user_day: 'Overview: Hours per user per day'
-      overview_per_user_total: 'Overview: Total hours per user'
-      sums_hours: Sums
+      button: تصدير كشف ساعات العمل بتنسيق PDF
+      overview_per_user_day: 'نظرة عامة: الساعات لكل مستخدم في اليوم'
+      overview_per_user_total: 'نظرة عامة: إجمالي الساعات لكل مستخدم'
+      sums_hours: المجاميع
       time: الوقت
-      timesheet: Timesheet
-      title: Your PDF timesheet export
+      timesheet: كشف ساعات العمل
+      title: تصدير كشف ساعات العمل الخاص بك بتنسيق PDF
   information_restricted_depending_on_permission: اعتمادًا على الأذونات الخاصة بك، قد تحتوي هذه الصفحة على معلومات مقيّدة.
   label_click_to_edit: اضغط للتعديل.
   label_closed: مغلق
@@ -70,9 +70,9 @@ ar:
   label_group_by_add: أضِف مجموعة بحسب السّمة
   label_inactive: "<<غير فعّال>>"
   label_is_not_project_with_subprojects: لا (تشمل المشاريع الفرعية)
-  label_is_not_work_package_with_descendants: is not (includes descendants)
+  label_is_not_work_package_with_descendants: ليس (يشمل حزم العمل الفرعية)
   label_is_project_with_subprojects: هو (يشمل المشاريع الفرعية)
-  label_is_work_package_with_descendants: is (includes descendants)
+  label_is_work_package_with_descendants: هو (يشمل حزم العمل الفرعية)
   label_less: "<"
   label_logged_by_reporting: '"تم تسجيل الدخول بواسطة "'
   label_money: القيمة النقدية
@@ -101,8 +101,8 @@ ar:
   permission_save_cost_reports: احفظ تقارير التكلفة العامة
   permission_save_private_cost_reports: احفظ تقارير التكلفة الخاصة
   plugin_openproject_reporting:
-    description: This plugin allows creating custom cost reports with filtering and grouping created by the OpenProject Time and costs plugin.
-    name: OpenProject Reporting
+    description: تتيح هذه الإضافة إنشاء تقارير تكلفة مخصصة مع التصفية والتجميع، استنادًا إلى البيانات التي تنشئها إضافة الوقت والتكاليف في OpenProject.
+    name: تقارير OpenProject
   project_module_reporting_module: تقارير التكلفة
   reporting:
     group_by:

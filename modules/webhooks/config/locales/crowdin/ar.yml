@@ -4,23 +4,23 @@ ar:
     attributes:
       webhooks/log:
         event_name: اسم الحدث
-        response_body: Response
-        response_code: Response code
-        url: Payload URL
+        response_body: الاستجابة
+        response_code: رمز الاستجابة
+        url: عنوان URL للحمولة
       webhooks/webhook:
-        enabled: Enabled
+        enabled: مفعّل
         events: الأحداث
         projects: المشاريع الممكنة
-        secret: Signature secret
-        url: Payload URL
+        secret: سر التوقيع
+        url: عنوان URL للحمولة
     models:
       webhooks/log:
-        zero: Webhook logs
-        one: Webhook log
-        two: Webhook logs
-        few: Webhook logs
-        many: Webhook logs
-        other: Webhook logs
+        zero: سجلات Webhook
+        one: سجل Webhook
+        two: سجلات Webhook
+        few: سجلات Webhook
+        many: سجلات Webhook
+        other: سجلات Webhook
       webhooks/webhook:
         zero: Webhooks
         one: Webhook
@@ -34,55 +34,58 @@ ar:
   webhooks:
     outgoing:
       deliveries:
-        no_results_table: No deliveries have been made for this webhook in the past days.
-        time: Delivery time
-        title: Recent deliveries
+        no_results_table: لم تُجرَ أي عمليات إرسال عبر هذا الـ Webhook خلال الأيام الماضية.
+        time: وقت الإرسال
+        title: عمليات الإرسال الأخيرة
       events:
         comment: تعليق
         created: تم إنشاؤه
-        internal_comment: Internal comment
+        internal_comment: تعليق داخلي
         updated: محدث
-      explanation_html: 'Upon the occurrence of an event like the creation of a work package or an update on a project, OpenProject will send a POST request to the configured web endpoints. Oftentimes, the event is sent after the [configured aggregation period](aggregation_path) has passed.
+      explanation_html: 'عند وقوع حدث مثل إنشاء حزمة عمل أو تحديث مشروع، سيرسل OpenProject طلب POST إلى نقاط نهاية الويب المكوَّنة. وغالبًا ما يُرسَل الحدث بعد انقضاء [فترة التجميع المكوَّنة](aggregation_path).
 
         '
       form:
-        apiv3_doc_url: For more information, visit the API documentation
+        apiv3_doc_url: لمزيد من المعلومات، تفضّل بزيارة وثائق API
         description:
-          placeholder: Optional description for the webhook.
+          placeholder: وصف اختياري للـ Webhook.
         enabled:
-          description: 'When checked, the webhook will trigger on the selected events. Uncheck to disable the webhook.
+          description: 'عند التحديد، سيُشغَّل الـ Webhook عند وقوع الأحداث المحددة. ألغِ التحديد لتعطيل الـ Webhook.
 
             '
         events:
-          title: Enabled events
-        introduction: 'Send a POST request to the payload URL below for any event in the project you''re subscribed to. Payload will correspond to the APIv3 representation of the object being modified.
+          title: الأحداث المفعّلة
+        introduction: 'أرسل طلب POST إلى عنوان URL للحمولة أدناه عند وقوع أي حدث في المشروع الذي اشتركت فيه. ستطابق الحمولة تمثيل APIv3 للكائن الذي يجري تعديله.
 
           '
         project_ids:
-          all: All projects
-          description: Select for which projects this webhook should be executed for.
-          selected: Selected projects only
+          all: جميع المشاريع
+          description: حدد المشاريع التي يجب تنفيذ هذا الـ Webhook لها.
+          selected: المشاريع المحددة فقط
           title: المشاريع الممكنة
         secret:
-          description: 'If set, this secret value is used by OpenProject to sign the webhook payload.
+          description: 'في حال تعيينها، يستخدم OpenProject هذه القيمة السرية لتوقيع حمولة الـ Webhook.
 
             '
         selected_project_ids:
-          title: Selected projects
-      label_add_new: Add new webhook
-      label_edit: Edit webhook
+          title: المشاريع المحددة
+      label_add_new: إضافة Webhook جديد
+      label_edit: تعديل Webhook
       label_x_events:
-        one: 1 event
-        other: "%{count} events"
-        zero: No events
-      no_results_table: No webhooks have been defined yet.
+        one: حدث واحد
+        other: "%{count} حدث"
+        zero: لا توجد أحداث
+        two: حدثان
+        few: "%{count} أحداث"
+        many: "%{count} حدثًا"
+      no_results_table: لم يتم تعريف أي Webhook بعد.
       status:
-        disabled: Webhook is disabled
-        disabled_text: Click the edit button to activate the webhook.
-        enabled: Webhook is enabled
-        enabled_text: The webhook will emit payloads for the defined events below.
+        disabled: الـ Webhook معطّل
+        disabled_text: انقر على زر التعديل لتفعيل الـ Webhook.
+        enabled: الـ Webhook مفعّل
+        enabled_text: سيُرسل الـ Webhook حمولات للأحداث المحددة أدناه.
     plural: Webhooks
     resources:
       time_entry:
-        name: Time entry
+        name: إدخال الوقت
     singular: Webhook

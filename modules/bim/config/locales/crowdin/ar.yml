@@ -3,81 +3,81 @@ ar:
   activerecord:
     attributes:
       bim/bcf/issue:
-        bcf_comment: BCF comment
-        bim_snippet: BIM snippet
-        reference_links: Reference links
-        stage: Stage
-        status_id: Status
-        viewpoint: Viewpoint
+        bcf_comment: تعليق BCF
+        bim_snippet: مقتطف BIM
+        reference_links: روابط مرجعية
+        stage: المرحلة
+        status_id: الحالة
+        viewpoint: نقطة العرض
       bim/bcf/viewpoint:
-        status_id: Status
+        status_id: الحالة
       bim/ifc_models/ifc_model:
-        attachments: IFC file
-        ifc_attachment: IFC file
+        attachments: ملف IFC
+        ifc_attachment: ملف IFC
         is_default: النموذج الافتراضي
     errors:
       models:
         bim/bcf/issue:
-          uuid_already_taken: Can't import this BCF issue as there already is another with the same GUID. Could it be that this BCF issue had already been imported into a different project?
+          uuid_already_taken: تعذّر استيراد مشكلة BCF هذه لوجود مشكلة أخرى تحمل المعرّف GUID نفسه. هل من الممكن أن تكون مشكلة BCF هذه قد استُوردت مسبقًا إلى مشروع آخر؟
         bim/bcf/viewpoint:
-          bitmaps_not_writable: bitmaps is not writable as it is not yet implemented.
-          index_not_integer: index is not an integer.
-          invalid_clipping_planes: clipping_planes is invalid.
-          invalid_components: components is invalid.
-          invalid_lines: lines is invalid.
-          invalid_orthogonal_camera: orthogonal_camera is invalid.
-          invalid_perspective_camera: perspective_camera is invalid.
-          mismatching_guid: The guid in the json_viewpoint does not match the model's guid.
-          no_json: Is not a well structured json.
-          snapshot_data_blank: snapshot_data needs to be provided.
-          snapshot_type_unsupported: snapshot_type needs to be either 'png' or 'jpg'.
-          unsupported_key: An unsupported json property is included.
+          bitmaps_not_writable: لا يمكن الكتابة في bitmaps لأنها لم تُنفَّذ بعد.
+          index_not_integer: قيمة index ليست عددًا صحيحًا.
+          invalid_clipping_planes: قيمة clipping_planes غير صالحة.
+          invalid_components: قيمة components غير صالحة.
+          invalid_lines: قيمة lines غير صالحة.
+          invalid_orthogonal_camera: قيمة orthogonal_camera غير صالحة.
+          invalid_perspective_camera: قيمة perspective_camera غير صالحة.
+          mismatching_guid: قيمة guid في json_viewpoint لا تطابق قيمة guid الخاصة بالنموذج.
+          no_json: ليس بصيغة JSON سليمة البنية.
+          snapshot_data_blank: يجب توفير snapshot_data.
+          snapshot_type_unsupported: يجب أن تكون قيمة snapshot_type إما 'png' أو 'jpg'.
+          unsupported_key: يتضمن خاصية JSON غير مدعومة.
         bim/ifc_models/ifc_model:
           attributes:
             base:
-              ifc_attachment_missing: No ifc file attached.
-              invalid_ifc_file: The provided file is not a valid IFC file.
+              ifc_attachment_missing: لم يتم إرفاق ملف IFC.
+              invalid_ifc_file: الملف المقدَّم ليس ملف IFC صالحًا.
     models:
       bim/bcf/comment:
-        zero: BCF comments
-        one: BCF comment
-        two: BCF comments
-        few: BCF comments
-        many: BCF comments
-        other: BCF comments
+        zero: تعليقات BCF
+        one: تعليق BCF
+        two: تعليقات BCF
+        few: تعليقات BCF
+        many: تعليقات BCF
+        other: تعليقات BCF
       bim/bcf/issue:
-        zero: BCF issues
-        one: BCF issue
-        two: BCF issues
-        few: BCF issues
-        many: BCF issues
-        other: BCF issues
+        zero: مشاكل BCF
+        one: مشكلة BCF
+        two: مشاكل BCF
+        few: مشاكل BCF
+        many: مشاكل BCF
+        other: مشاكل BCF
       bim/bcf/viewpoint:
-        zero: BCF viewpoints
-        one: BCF viewpoint
-        two: BCF viewpoints
-        few: BCF viewpoints
-        many: BCF viewpoints
-        other: BCF viewpoints
+        zero: نقاط عرض BCF
+        one: نقطة عرض BCF
+        two: نقاط عرض BCF
+        few: نقاط عرض BCF
+        many: نقاط عرض BCF
+        other: نقاط عرض BCF
       bim/ifc_models/ifc_model:
-        zero: IFC models
-        one: IFC model
-        two: IFC models
-        few: IFC models
-        many: IFC models
-        other: IFC models
+        zero: نماذج IFC
+        one: نموذج IFC
+        two: نماذج IFC
+        few: نماذج IFC
+        many: نماذج IFC
+        other: نماذج IFC
   attributes:
-    bcf_thumbnail: BCF snapshot
+    bcf_thumbnail: لقطة BCF
   bcf:
     bcf_xml:
       export: تصدير
       import:
         add_as_members_with_role: قم بدعوتهم كأعضاء في المشروع "%{project}" مع دور
-        bcf_file_not_found: Failed to locate BCF file. Please start the upload process again.
+        bcf_file_not_found: تعذّر العثور على ملف BCF. يُرجى بدء عملية الرفع من جديد.
         button_back_to_list: رجوع إلى القائمة
         button_perform_import: تأكيد الاستيراد
         button_prepare: إعداد الاستيراد
-        button_proceed: Proceed with import
+        button_proceed: متابعة الاستيراد
         contact_project_admin: اتصل بمشرف المشروع الخاص بك لإضافته كأعضاء وبدء هذا الاستيراد مرة أخرى.
         continue_anyways: هل تريد المضي قدما وإنهاء الاستيراد على أي حال؟
         description: توفير ملف BCF-XML v2.1 للاستيراد إلى هذا المشروع. يمكنك فحص محتوياته قبل إجراء الاستيراد.
@@ -102,19 +102,19 @@ ar:
         unknown_property: خاصية غير معروفة
         what_to_do: ماذا تريد أن تفعل؟
         work_package_has_newer_changes: انتهت صلاحيتها! لم يتم تحديث هذا الموضوع لأن أحدث التغييرات على الخادم كانت أحدث من "تاريخ التعديل" للموضوع المستورد. غير أن التعليقات على الموضوع قد استُوردت.
-      import_canceled: BCF-XML import canceled.
-      import_failed: 'Cannot import BCF file: %{error}'
-      import_failed_unsupported_bcf_version: 'Failed to read the BCF file: The BCF version is not supported. Please ensure the version is at least %{minimal_version} or higher.'
-      import_successful: Imported %{count} BCF issues
+      import_canceled: تم إلغاء استيراد BCF-XML.
+      import_failed: 'تعذّر استيراد ملف BCF: %{error}'
+      import_failed_unsupported_bcf_version: 'تعذّرت قراءة ملف BCF: إصدار BCF غير مدعوم. يُرجى التأكد من أن الإصدار %{minimal_version} أو أحدث.'
+      import_successful: تم استيراد %{count} من مشاكل BCF
       import_title: استيراد
-      import_update_comment: "(Updated in BCF import)"
+      import_update_comment: "(تم التحديث عبر استيراد BCF)"
       type_not_active: لم يتم تفعيل نوع المشكلة لهذا المشروع.
-      xml_file: BCF XML File
+      xml_file: ملف BCF XML
     exceptions:
       file_invalid: ملف BCF غير صالح
     issues: مشاكل
     label_bcf: BCF
-    label_bcf_issue_associated: BCF issue associated
+    label_bcf_issue_associated: مشكلة BCF مرتبطة
     label_imported_failed: فشل استيراد مواضيع BCF
     label_imported_successfully: تم استيراد موضوعات BCF بنجاح
     new_badge: جديد
@@ -122,58 +122,61 @@ ar:
     not_recommended: غير موصى بها
     recommended: موصى بها
     x_bcf_issues:
-      one: One BCF issue
-      other: "%{count} BCF issues"
+      one: مشكلة BCF واحدة
+      other: "%{count} مشكلة BCF"
       zero: لا توجد مشاكل BCF
+      two: مشكلتا BCF
+      few: "%{count} مشاكل BCF"
+      many: "%{count} مشكلة BCF"
   bim:
-    error_direct_upload_failed: Direct upload failed.
-    error_direct_upload_file_too_large: IFC model is too large (maximum size is %{size} Bytes).
+    error_direct_upload_failed: فشل الرفع المباشر.
+    error_direct_upload_file_too_large: نموذج IFC كبير جدًا (الحد الأقصى للحجم %{size} بايت).
     label_bim: BIM
   export:
     format:
       bcf: BCF-XML
   extraction:
     available:
-      ifc_convert: IFC conversion pipeline available
+      ifc_convert: خط معالجة تحويل IFC متاح
   ifc_models:
     conversion:
-      missing_commands: 'The following IFC converter commands are missing on this system: %{names}'
+      missing_commands: 'أوامر محوّل IFC التالية غير موجودة على هذا النظام: %{names}'
     conversion_status:
       completed: اكتمل
       error: خطأ
-      label: Processing?
+      label: قيد المعالجة؟
       pending: قيد الانتظار
-      processing: Processing
+      processing: قيد المعالجة
     flash_messages:
-      upload_successful: Upload succeeded. It will now get processed and will be ready to use in a couple of minutes.
-    label_default_ifc_models: Default IFC models
-    label_edit_defaults: Edit defaults
-    label_ifc_models: IFC models
-    label_new_ifc_model: New IFC model
-    label_show_defaults: Show defaults
+      upload_successful: تم الرفع بنجاح. ستتم معالجة الملف الآن وسيكون جاهزًا للاستخدام خلال بضع دقائق.
+    label_default_ifc_models: نماذج IFC الافتراضية
+    label_edit_defaults: تعديل النماذج الافتراضية
+    label_ifc_models: نماذج IFC
+    label_new_ifc_model: نموذج IFC جديد
+    label_show_defaults: عرض النماذج الافتراضية
     no_defaults_warning:
-      check_1: Check that you have uploaded at least one IFC model.
-      check_2: Check that at least one IFC model is set to "Default".
-      title: No IFC model was set as default for this project.
-    no_results: No IFC models have been uploaded in this project.
+      check_1: تحقق من أنك رفعت نموذج IFC واحدًا على الأقل.
+      check_2: تحقق من تعيين نموذج IFC واحد على الأقل على «افتراضي».
+      title: لم يتم تعيين أي نموذج IFC كنموذج افتراضي لهذا المشروع.
+    no_results: لم يتم رفع أي نماذج IFC في هذا المشروع.
     processing_notice:
-      processing_default: 'The following default IFC models are still being processed and are thus not available, yet:'
+      processing_default: 'نماذج IFC الافتراضية التالية لا تزال قيد المعالجة، ولذلك فهي غير متاحة بعد:'
   oauth:
     scopes:
       bcf_v2_1: الوصول الكامل إلى BCF v2.1 API
       bcf_v2_1_text: سيحصل التطبيق على الوصول الكامل للقراءة والكتابة إلى OpenProject BCF API v2.1 لتنفيذ الإجراءات نيابة عنك.
-  permission_delete_bcf: Delete BCF issues
+  permission_delete_bcf: حذف مشاكل BCF
   permission_manage_bcf: استيراد وإدارة مشكلات BCF
   permission_manage_bcf_explanation: |
-    Allows managing BCF issues, including bulk import and updates.
-    BCF import maps file metadata to project resources and can create or update work packages
-    and comments using author and timestamp values from the imported file, effectively acting on behalf of users.
-  permission_manage_ifc_models: Import and manage IFC models
-  permission_view_ifc_models: View IFC models
+    يتيح إدارة مشاكل BCF، بما في ذلك الاستيراد والتحديث المجمّع.
+    يربط استيراد BCF البيانات الوصفية للملف بموارد المشروع، ويمكنه إنشاء حزم العمل
+    والتعليقات أو تحديثها باستخدام قيم المؤلف والطابع الزمني من الملف المستورد، أي أنه يتصرف فعليًا نيابةً عن المستخدمين.
+  permission_manage_ifc_models: استيراد نماذج IFC وإدارتها
+  permission_view_ifc_models: عرض نماذج IFC
   permission_view_linked_issues: لا توجد مشاكل BCF
   plugin_openproject_bim:
-    description: This OpenProject plugin introduces BIM and BCF functionality.
-    name: OpenProject BIM and BCF functionality
+    description: تضيف إضافة OpenProject هذه وظائف BIM وBCF.
+    name: وظائف BIM وBCF في OpenProject
   project_module_bcf: BCF
   project_module_bim: BCF
-  project_module_ifc_models: IFC models
+  project_module_ifc_models: نماذج IFC

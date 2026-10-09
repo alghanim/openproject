@@ -24,146 +24,146 @@ ar:
   activerecord:
     attributes:
       document:
-        content_binary: Content binary
+        content_binary: المحتوى الثنائي
         title: العنوان
     errors:
       models:
         document_type:
-          one_or_more_required: Cannot delete the last document type
+          one_or_more_required: لا يمكن حذف آخر نوع وثيقة
     models:
       document:
-        zero: Documents
-        one: Document
-        two: Documents
-        few: Documents
-        many: Documents
-        other: Documents
+        zero: الوثائق
+        one: وثيقة
+        two: الوثائق
+        few: الوثائق
+        many: الوثائق
+        other: الوثائق
       document_type:
-        zero: Document types
-        one: Document type
-        two: Document types
-        few: Document types
-        many: Document types
-        other: Document types
+        zero: أنواع الوثائق
+        one: نوع الوثيقة
+        two: أنواع الوثائق
+        few: أنواع الوثائق
+        many: أنواع الوثائق
+        other: أنواع الوثائق
   activity:
     filter:
       document: الوثائق
   attributes:
-    collaborative_editing_hocuspocus_url: Hocuspocus server URL
-    documents: Documents
+    collaborative_editing_hocuspocus_url: عنوان URL لخادم Hocuspocus
+    documents: الوثائق
   default_doc_category_tech: التوثيق التقني
   default_doc_category_user: توثيق المستخدم
   documents:
-    active_editors: Active editors
+    active_editors: المحررون النشطون
     active_editors_count:
-      zero: "%{count} active editors"
-      one: 1 active editor
-      two: "%{count} active editors"
-      few: "%{count} active editors"
-      many: "%{count} active editors"
-      other: "%{count} active editors"
+      zero: لا يوجد محررون نشطون
+      one: محرر نشط واحد
+      two: محرران نشطان
+      few: "%{count} محررين نشطين"
+      many: "%{count} محررًا نشطًا"
+      other: "%{count} محرر نشط"
     admin:
       collaboration_settings:
         banner:
-          none_writable: These values are configured via environment variables and cannot be edited here.
-          some_unwritable: Some values are configured via environment variables and cannot be edited here.
-        hocuspocus_server: Hocuspocus server
+          none_writable: تم تكوين هذه القيم عبر متغيرات البيئة ولا يمكن تعديلها هنا.
+          some_unwritable: تم تكوين بعض القيم عبر متغيرات البيئة ولا يمكن تعديلها هنا.
+        hocuspocus_server: خادم Hocuspocus
         hocuspocus_server_secret:
-          caption: Paste the secret provided by the Hocuspocus server.
-          label: Client secret
+          caption: الصق السر المقدَّم من خادم Hocuspocus.
+          label: سر العميل
         hocuspocus_server_url:
-          caption: The WebSocket address of a working Hocuspocus server.
-          invalid_scheme: Must use a WebSocket protocol (ws:// or wss://).
-          label: Hocuspocus server URL
+          caption: عنوان WebSocket لخادم Hocuspocus يعمل بشكل سليم.
+          invalid_scheme: يجب استخدام بروتوكول WebSocket (ws:// أو wss://).
+          label: عنوان URL لخادم Hocuspocus
         page_header:
           description: |-
-            When enabled, real-time collaboration allows multiple users to edit a document at the same time.
-            It requires a working %{hocuspocus_server_link} to function.
+            عند التفعيل، يتيح التعاون في الوقت الفعلي لعدة مستخدمين تعديل وثيقة في الوقت نفسه.
+            ويتطلب ذلك وجود %{hocuspocus_server_link} يعمل بشكل سليم.
       disable_text_collaboration_dialog:
-        confirmation_checkbox_message: I understand that I might permanently lose data
+        confirmation_checkbox_message: أدرك أنني قد أفقد البيانات نهائيًا
         confirmation_message: |-
-          All existing documents may become inaccessible. Please only do this if you are certain you want to disable
-          real-time collaboration and the BlockNote editor in this instance.
-        heading: Disable real-time collaboration?
-        success: Real-time collaboration has been disabled.
-        title: Disable real-time collaboration
+          قد يتعذّر الوصول إلى جميع الوثائق الموجودة. يُرجى عدم القيام بذلك إلا إذا كنت متأكدًا من رغبتك في تعطيل
+          التعاون في الوقت الفعلي ومحرر BlockNote في هذا النظام.
+        heading: تعطيل التعاون في الوقت الفعلي؟
+        success: تم تعطيل التعاون في الوقت الفعلي.
+        title: تعطيل التعاون في الوقت الفعلي
       enable_text_collaboration:
         description: |-
-          Once enabled, multiple users will be able to work together on a document at the same time.
-          All new documents will be based on a new editor (BlockNote) and will require a working connection to a
-          Hocuspocus server.
-        heading: Real-time collaboration is not enabled
-        primary_action: Enable real-time collaboration
-        success: Real-time collaboration has been enabled.
-    button_add_type: Type
+          بعد التفعيل، سيتمكن عدة مستخدمين من العمل معًا على وثيقة واحدة في الوقت نفسه.
+          ستعتمد جميع الوثائق الجديدة على محرر جديد (BlockNote) وستتطلب اتصالًا فعّالًا بخادم
+          Hocuspocus.
+        heading: التعاون في الوقت الفعلي غير مفعّل
+        primary_action: تفعيل التعاون في الوقت الفعلي
+        success: تم تفعيل التعاون في الوقت الفعلي.
+    button_add_type: نوع
     delete_dialog:
-      confirmation_message_html: This will permanently delete this document and all file attachments. Are you sure you want to do this?
-      heading: Delete this document?
-      title: Delete document
+      confirmation_message_html: سيؤدي هذا إلى حذف هذه الوثيقة وجميع مرفقاتها نهائيًا. هل أنت متأكد من أنك تريد المتابعة؟
+      heading: حذف هذه الوثيقة؟
+      title: حذف الوثيقة
     delete_document_type_dialog:
       at_least_one_type_required:
-        heading: Cannot delete the last document type
-        message: There must always be at least one document type configured. Create another one first if you want to delete this one.
-        title: Cannot delete document type
-      confirmation_message: The type "%{type_name}" is currently unused. Deleting this type will have no effect on existing documents.
-      heading: Delete this document type?
+        heading: لا يمكن حذف آخر نوع وثيقة
+        message: يجب أن يكون هناك دائمًا نوع وثيقة واحد مُكوَّن على الأقل. أنشئ نوعًا آخر أولًا إذا كنت تريد حذف هذا النوع.
+        title: لا يمكن حذف نوع الوثيقة
+      confirmation_message: النوع «%{type_name}» غير مستخدم حاليًا. لن يؤثر حذف هذا النوع على الوثائق الموجودة.
+      heading: حذف نوع الوثيقة هذا؟
       reassign_message:
-        zero: The type "%{type_name}" is currently being used in %{document_count} documents. Please select which type to reassign them to.
-        one: The type "%{type_name}" is currently being used in %{document_count} document. Please select which type to reassign them to.
-        two: The type "%{type_name}" is currently being used in %{document_count} documents. Please select which type to reassign them to.
-        few: The type "%{type_name}" is currently being used in %{document_count} documents. Please select which type to reassign them to.
-        many: The type "%{type_name}" is currently being used in %{document_count} documents. Please select which type to reassign them to.
-        other: The type "%{type_name}" is currently being used in %{document_count} documents. Please select which type to reassign them to.
-      select_reassign_to_label: Reassign documents to
-      title: Delete document type
+        zero: النوع «%{type_name}» مستخدم حاليًا في %{document_count} من الوثائق. يُرجى تحديد النوع الذي تريد إعادة إسنادها إليه.
+        one: النوع «%{type_name}» مستخدم حاليًا في %{document_count} من الوثائق. يُرجى تحديد النوع الذي تريد إعادة إسنادها إليه.
+        two: النوع «%{type_name}» مستخدم حاليًا في %{document_count} من الوثائق. يُرجى تحديد النوع الذي تريد إعادة إسنادها إليه.
+        few: النوع «%{type_name}» مستخدم حاليًا في %{document_count} وثائق. يُرجى تحديد النوع الذي تريد إعادة إسنادها إليه.
+        many: النوع «%{type_name}» مستخدم حاليًا في %{document_count} وثيقة. يُرجى تحديد النوع الذي تريد إعادة إسنادها إليه.
+        other: النوع «%{type_name}» مستخدم حاليًا في %{document_count} وثيقة. يُرجى تحديد النوع الذي تريد إعادة إسنادها إليه.
+      select_reassign_to_label: إعادة إسناد الوثائق إلى
+      title: حذف نوع الوثيقة
     document_categories_deprecation_notice:
       description: |-
-        Your existing file categories have been converted to document types with the introduction of the new Documents module.
-        All existing documents have also been migrated to these new types.
-      heading: File categories are now called 'Document types'
-      primary_action: Configure document types
-      secondary_action: Learn more about the Documents module
-    document_type_actions: Document type actions
+        تم تحويل فئات الملفات الحالية إلى أنواع وثائق مع إطلاق وحدة «الوثائق» الجديدة.
+        كما تم ترحيل جميع الوثائق الحالية إلى هذه الأنواع الجديدة.
+      heading: أصبحت فئات الملفات تُسمّى الآن «أنواع الوثائق»
+      primary_action: تكوين أنواع الوثائق
+      secondary_action: معرفة المزيد عن وحدة «الوثائق»
+    document_type_actions: إجراءات نوع الوثيقة
     documents_list_blank_slate:
-      description: There are no documents in this view. You can click the button below to add one.
-      heading: There are no documents yet
+      description: لا توجد وثائق في هذا العرض. يمكنك النقر على الزر أدناه لإضافة وثيقة.
+      heading: لا توجد وثائق بعد
     index_page:
-      label_legacy: Legacy
+      label_legacy: قديمة
       name: الاسم
       type: النّوع
-      updated_at: Last edited
+      updated_at: آخر تعديل
     info_line:
-      connection_restored: You are now back online.
-      currently_offline: You are currently offline.
+      connection_restored: أنت متصل بالإنترنت مجددًا.
+      currently_offline: أنت غير متصل بالإنترنت حاليًا.
     label_attachment_author: مؤلف مرفق
     label_categories: الأقسام
-    last_updated_at: Last saved %{time}.
+    last_updated_at: تم الحفظ آخر مرة %{time}.
     menu:
-      all: All documents
-      collaboration_settings: Real-time collaboration
+      all: جميع الوثائق
+      collaboration_settings: التعاون في الوقت الفعلي
       types: الأنواع
     new_category: فئة جديدة
-    new_type: New type
+    new_type: نوع جديد
     page_header:
       action_menu:
-        document_actions: Document actions
-        edit_title: Edit title
-      heading: All documents
+        document_actions: إجراءات الوثيقة
+        edit_title: تعديل العنوان
+      heading: جميع الوثائق
     show_edit_view:
       connection_error_notice:
-        action: Try again
+        action: إعادة المحاولة
         description_server_unavailable: |-
-          Unable to open document because the real-time text collaboration server is unreachable.
-          Please contact the administrator if the problem persists.
-      tabs: Document tabs
+          تعذّر فتح الوثيقة لأنه لا يمكن الوصول إلى خادم التعاون النصي في الوقت الفعلي.
+          يُرجى التواصل مع المسؤول إذا استمرت المشكلة.
+      tabs: علامات تبويب الوثيقة
     subheader:
       filter:
-        label: Document name filter
-        placeholder: Type here to search document names
+        label: عامل تصفية اسم الوثيقة
+        placeholder: اكتب هنا للبحث في أسماء الوثائق
     text_collaboration_disabled_notice:
       description: |-
-        Unable to open document because real-time text collaboration is disabled.
-        Please contact your administrator to enable real-time text collaboration if you want to access this document.
+        تعذّر فتح الوثيقة لأن التعاون النصي في الوقت الفعلي معطّل.
+        يُرجى التواصل مع المسؤول لتفعيل التعاون النصي في الوقت الفعلي إذا كنت تريد الوصول إلى هذه الوثيقة.
   enumeration_doc_categories: فئات الوثائق
   label_document_added: تم إضافة وثيقة
   label_document_category: الفئة
@@ -171,11 +171,11 @@ ar:
   label_document_new: وثيقة جديدة
   label_document_plural: الوثائق
   label_document_title: العنوان
-  label_document_type: Type
+  label_document_type: النوع
   label_documents: الوثائق
   permission_manage_documents: إدارة الوثائق
   permission_view_documents: عرض الوثائق
   plugin_openproject_documents:
-    description: An OpenProject plugin to allow creation of documents in projects.
-    name: OpenProject Documents
+    description: إضافة OpenProject تتيح إنشاء الوثائق في المشاريع.
+    name: وثائق OpenProject
   project_module_documents: الوثائق

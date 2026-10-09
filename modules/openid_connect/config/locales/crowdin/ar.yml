@@ -3,178 +3,181 @@ ar:
   activerecord:
     attributes:
       openid_connect/group_link:
-        oidc_group_name: OpenID group identifier
+        oidc_group_name: معرّف مجموعة OpenID
       openid_connect/provider:
-        acr_values: ACR values
-        authorization_endpoint: Authorization endpoint
-        claims: Claims
-        client_id: Client ID
-        client_secret: Client secret
+        acr_values: قيم ACR
+        authorization_endpoint: نقطة نهاية التفويض
+        claims: المطالبات (claims)
+        client_id: معرّف العميل
+        client_secret: سر العميل
         display_name: اسم العرض
-        end_session_endpoint: End session endpoint
-        grant_types_supported: Supported grant types
-        group_regexes: Patterns (regular expressions)
-        groups_claim: Groups claim
-        icon: Custom icon
-        issuer: Issuer
+        end_session_endpoint: نقطة نهاية إنهاء الجلسة
+        grant_types_supported: أنواع المنح المدعومة
+        group_regexes: الأنماط (التعبيرات النمطية)
+        groups_claim: مطالبة المجموعات
+        icon: أيقونة مخصصة
+        issuer: المُصدِر
         jwks_uri: JWKS URI
-        limit_self_registration: Limit self registration
-        metadata_url: Metadata URL
+        limit_self_registration: تقييد التسجيل الذاتي
+        metadata_url: عنوان URL للبيانات الوصفية
         name: الاسم
-        post_logout_redirect_uri: Post logout redirect URI
-        redirect_url: Redirect URL
+        post_logout_redirect_uri: عنوان URI لإعادة التوجيه بعد تسجيل الخروج
+        redirect_url: عنوان URL لإعادة التوجيه
         scope: النطاق
         secret: السر
-        slug: Unique identifier
-        sync_groups: Synchronize groups
-        tenant: Tenant
-        token_endpoint: Token endpoint
-        userinfo_endpoint: User information endpoint
+        slug: المعرّف الفريد
+        sync_groups: مزامنة المجموعات
+        tenant: المستأجر (Tenant)
+        token_endpoint: نقطة نهاية الرمز
+        userinfo_endpoint: نقطة نهاية معلومات المستخدم
     errors:
       models:
         openid_connect/provider:
           attributes:
             metadata_url:
-              format: Discovery endpoint URL %{message}
-              response_is_not_json: " does not return JSON body."
-              response_is_not_successful: " responds with %{status}."
-              response_misses_required_attributes: " does not return required attributes. Missing attributes are: %{missing_attributes}."
-          invalid_claims_essential: does not define a boolean at %{attribute}.
-          invalid_claims_location: 'contain unsupported locations: %{invalid}. Supported locations are: %{supported}.'
-          invalid_claims_values: does not define an array at %{attribute}.
-          non_object_attribute: does not define a JSON object at %{attribute}.
+              format: عنوان URL لنقطة نهاية الاكتشاف %{message}
+              response_is_not_json: " لا يُعيد محتوى JSON."
+              response_is_not_successful: " يستجيب بالحالة %{status}."
+              response_misses_required_attributes: " لا يُعيد السمات المطلوبة. السمات المفقودة هي: %{missing_attributes}."
+          invalid_claims_essential: لا يحدد قيمة منطقية في %{attribute}.
+          invalid_claims_location: 'تحتوي على مواقع غير مدعومة: %{invalid}. المواقع المدعومة هي: %{supported}.'
+          invalid_claims_values: لا يحدد مصفوفة في %{attribute}.
+          non_object_attribute: لا يحدد كائن JSON في %{attribute}.
     models:
       openid_connect/provider:
-        zero: OpenID Connect providers
-        one: OpenID Connect provider
-        two: OpenID Connect providers
-        few: OpenID Connect providers
-        many: OpenID Connect providers
-        other: OpenID Connect providers
+        zero: موفرو OpenID Connect
+        one: موفر OpenID Connect
+        two: موفرو OpenID Connect
+        few: موفرو OpenID Connect
+        many: موفرو OpenID Connect
+        other: موفرو OpenID Connect
       openid_connect/user_token:
-        zero: OpenID Connect tokens
-        one: OpenID Connect token
-        two: OpenID Connect tokens
-        few: OpenID Connect tokens
-        many: OpenID Connect tokens
-        other: OpenID Connect tokens
+        zero: رموز OpenID Connect
+        one: رمز OpenID Connect
+        two: رموز OpenID Connect
+        few: رموز OpenID Connect
+        many: رموز OpenID Connect
+        other: رموز OpenID Connect
   logout_warning: 'لقد تم تسجيل خروجك. قد يتم فقدان محتويات أي نموذج تقوم بإرساله. يرجى [تسجيل الدخول].
 
     '
   openid_connect:
-    delete_heading: Delete this OpenID Connect provider?
-    delete_title: Delete OpenID Connect provider
-    group_links_heading: OpenID Connect group links
+    delete_heading: حذف موفر OpenID Connect هذا؟
+    delete_title: حذف موفر OpenID Connect
+    group_links_heading: روابط مجموعات OpenID Connect
     groups:
       match_preview_component:
-        placeholder_none: No groups currently match the pattern.
-        title: Extracted group names
+        placeholder_none: لا توجد مجموعات تطابق النمط حاليًا.
+        title: أسماء المجموعات المستخرجة
       match_preview_dialog_component:
-        description: This allows you to test your regular expression pattern against sample data to verify that the group names you want extracted are indeed extracted properly. You can modify your pattern here but the test string and matches themselves will not be saved with the configuration.
-        group_names_description: Enter one group name per line as it would appear in the OIDC claim, to see how your regular expression patterns affect them.
-        group_names_label: Test group names
-        show_button: Test pattern
-        title: Test regular expressions
+        description: يتيح لك هذا اختبار نمط التعبير النمطي على بيانات نموذجية للتحقق من أن أسماء المجموعات التي تريد استخراجها تُستخرج بشكل صحيح بالفعل. يمكنك تعديل النمط هنا، لكن نص الاختبار والتطابقات نفسها لن تُحفظ مع التكوين.
+        group_names_description: أدخل اسم مجموعة واحدًا في كل سطر كما سيظهر في مطالبة OIDC، لمعرفة كيف تؤثر أنماط التعبيرات النمطية عليها.
+        group_names_label: أسماء مجموعات للاختبار
+        show_button: اختبار النمط
+        title: اختبار التعبيرات النمطية
     instructions:
-      acr_values: 'Request non-essential claims in an easier format. See [our documentation on acr_values](docs_url) for more information.
+      acr_values: 'اطلب المطالبات غير الأساسية بتنسيق أسهل. راجع [وثائقنا حول acr_values](docs_url) لمزيد من المعلومات.
 
         '
-      claims: 'You can request additional claims for the userinfo and id token endpoints. Please see [our OpenID connect documentation](docs_url) for more information.
+      claims: 'يمكنك طلب مطالبات إضافية لنقطتي النهاية userinfo و id token. يُرجى مراجعة [وثائق OpenID Connect الخاصة بنا](docs_url) لمزيد من المعلومات.
 
         '
-      client_id: This is the client ID given to you by your OpenID Connect provider
-      client_secret: This is the client secret given to you by your OpenID Connect provider
-      display_name: The name of the provider. This will be displayed as the login button and in the list of providers.
-      endpoint_url: The endpoint URL given to you by the OpenID Connect provider
-      group_regexes: One regular expression pattern per line. Please read [the documentation](docs_url) for more information on how to do this.
-      group_regexes_detail: Optionally define patterns using regular expressions to match group names from the groups claim. For example, entering a pattern like <code>^Level1/Level2/([\w/]+)$</code> will extract the group “Groupname/SubGroup” from a response including “Level1/Level2/GroupName/SubGroup”. If no pattern matches, the group is ignored. Leave empty to synchronize all groups using their full group name.
-      group_regexes_testing: Click on 'Test pattern' to test your regular expression pattern against sample OIDC userinfo.
-      group_sync: Automatically extract and synchronise group membership information from the identity provider.
-      groups_claim: Specify the name of the claim that's expected to indicate the group names that the user is a member of.
-      limit_self_registration: If enabled, users can only register using this provider if configuration on the provider's end allows it.
-      mapping_admin: 'Provide a custom mapping in the userinfo response to be used for the admin status. It expects a boolean attribute to be returned.
+      client_id: هذا هو معرّف العميل الذي منحك إياه موفر OpenID Connect
+      client_secret: هذا هو سر العميل الذي منحك إياه موفر OpenID Connect
+      display_name: اسم الموفر. سيُعرض على زر تسجيل الدخول وفي قائمة الموفرين.
+      endpoint_url: عنوان URL لنقطة النهاية الذي منحك إياه موفر OpenID Connect
+      group_regexes: نمط تعبير نمطي واحد في كل سطر. يُرجى قراءة [الوثائق](docs_url) لمزيد من المعلومات حول كيفية القيام بذلك.
+      group_regexes_detail: حدد اختياريًا أنماطًا باستخدام التعبيرات النمطية لمطابقة أسماء المجموعات من مطالبة المجموعات. على سبيل المثال، سيؤدي إدخال نمط مثل <code>^Level1/Level2/([\w/]+)$</code> إلى استخراج المجموعة «Groupname/SubGroup» من استجابة تتضمن «Level1/Level2/GroupName/SubGroup». إذا لم يطابق أي نمط، فسيتم تجاهل المجموعة. اتركه فارغًا لمزامنة جميع المجموعات باستخدام أسمائها الكاملة.
+      group_regexes_testing: انقر على «اختبار النمط» لاختبار نمط التعبير النمطي على بيانات userinfo نموذجية من OIDC.
+      group_sync: استخراج معلومات عضوية المجموعات ومزامنتها تلقائيًا من موفر الهوية.
+      groups_claim: حدد اسم المطالبة المتوقع أن تشير إلى أسماء المجموعات التي ينتمي إليها المستخدم.
+      limit_self_registration: في حال التفعيل، لا يمكن للمستخدمين التسجيل باستخدام هذا الموفر إلا إذا كان التكوين لدى الموفر يسمح بذلك.
+      mapping_admin: 'قدّم تعيينًا مخصصًا في استجابة userinfo لاستخدامه لحالة المسؤول. يُتوقع إرجاع سمة منطقية.
 
         '
-      mapping_email: 'Provide a custom mapping in the userinfo response to be used for the email attribute.
+      mapping_email: 'قدّم تعيينًا مخصصًا في استجابة userinfo لاستخدامه لسمة البريد الإلكتروني.
 
         '
-      mapping_first_name: 'Provide a custom mapping in the userinfo response to be used for the first name.
+      mapping_first_name: 'قدّم تعيينًا مخصصًا في استجابة userinfo لاستخدامه للاسم الأول.
 
         '
-      mapping_last_name: 'Provide a custom mapping in the userinfo response to be used for the last name.
+      mapping_last_name: 'قدّم تعيينًا مخصصًا في استجابة userinfo لاستخدامه للاسم الأخير.
 
         '
-      mapping_login: 'Provide a custom mapping in the userinfo response to be used for the login attribute.
+      mapping_login: 'قدّم تعيينًا مخصصًا في استجابة userinfo لاستخدامه لسمة تسجيل الدخول.
 
         '
-      metadata_none: I don't have this information
-      metadata_url: I have a discovery endpoint URL
-      oidc_information: These values are needed to configure the OpenID Connect provider.
-      post_logout_redirect_uri: The URL the OpenID Connect provider should redirect to after a logout request.
-      scope: If you want to request custom scopes, you can add one or multiple scope values separated by spaces here. For more information, see the [OpenID Connect documentation](docs_url).
-      tenant: Please replace the default tenant with your own if applicable. See <a href=" https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols-oidc#find-your-apps-openid-configuration-document-uri">this</a>.
+      metadata_none: لا تتوفر لدي هذه المعلومات
+      metadata_url: لدي عنوان URL لنقطة نهاية الاكتشاف
+      oidc_information: هذه القيم مطلوبة لتكوين موفر OpenID Connect.
+      post_logout_redirect_uri: عنوان URL الذي يجب أن يعيد موفر OpenID Connect التوجيه إليه بعد طلب تسجيل الخروج.
+      scope: إذا كنت تريد طلب نطاقات مخصصة، يمكنك هنا إضافة قيمة نطاق واحدة أو أكثر مفصولة بمسافات. لمزيد من المعلومات، راجع [وثائق OpenID Connect](docs_url).
+      tenant: يرجى استبدال المستأجر (Tenant) الافتراضي بالمستأجر الخاص بك إن كان ذلك منطبقًا. راجع <a href=" https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols-oidc#find-your-apps-openid-configuration-document-uri">هذا الرابط</a>.
     menu_title: مزودو OpenID
     providers:
-      client_details_description: Configuration details of OpenProject as an OIDC client
+      client_details_description: تفاصيل تكوين OpenProject بصفته عميل OIDC
       custom:
-        name: Custom
+        name: مخصص
       google:
         name: Google
       label_add_new: إضافة مزود OpenID جديد
-      label_advanced_configuration: Advanced configuration
-      label_attribute_mapping: Attribute mapping
+      label_advanced_configuration: التكوين المتقدم
+      label_attribute_mapping: ربط السمات
       label_automatic_configuration: التكوين التلقائي
-      label_client_details: Client details
-      label_configuration_details: Metadata
+      label_client_details: تفاصيل العميل
+      label_configuration_details: البيانات الوصفية
       label_edit: تعديل موفر OpenID %{name}
-      label_empty_description: Add a provider to see them here.
-      label_empty_title: No OpenID providers configured yet.
-      label_group_mapping: Group mapping
-      label_metadata: OpenID Connect Discovery Endpoint
-      label_optional_configuration: Optional configuration
-      label_providers: Providers
+      label_empty_description: أضف موفرًا لعرضه هنا.
+      label_empty_title: لم يتم تكوين أي موفر OpenID بعد.
+      label_group_mapping: ربط المجموعات
+      label_metadata: نقطة نهاية اكتشاف OpenID Connect
+      label_optional_configuration: التكوين الاختياري
+      label_providers: الموفرون
       microsoft_entra:
         name: Microsoft Entra
       no_results_table: لم يتم تعريف أى مزودين حتى الآن
-      notice_created: A new OpenID provider was successfully created.
+      notice_created: تم إنشاء موفر OpenID جديد بنجاح.
       plural: مزودو OpenID
       section_texts:
-        attribute_mapping: Configure the mapping of attributes between OpenProject and the OpenID Connect provider.
-        claims: Request additional claims for the ID token or userinfo response.
-        configuration: Configuration details of the OpenID Connect provider
-        configuration_metadata: The information has been pre-filled using the supplied discovery endpoint. In most cases, they do not require editing.
-        display_name: The display name visible to users.
-        group_mapping: Map group names provided by the identity provider to groups in OpenProject.
-        metadata: Pre-fill configuration using an OpenID Connect discovery endpoint URL
-        metadata_form_banner: Editing the discovery endpoint may override existing pre-filled metadata values.
-        metadata_form_description: If your identity provider has a discovery endpoint URL. Use it below to pre-fill configuration.
-        metadata_form_title: OpenID Connect Discovery endpoint
+        attribute_mapping: قم بتكوين ربط السمات بين OpenProject وموفر OpenID Connect.
+        claims: اطلب مطالبات (claims) إضافية لرمز المعرّف (ID token) أو لاستجابة معلومات المستخدم (userinfo).
+        configuration: تفاصيل تكوين موفر OpenID Connect
+        configuration_metadata: تمت تعبئة المعلومات مسبقًا باستخدام نقطة نهاية الاكتشاف المقدَّمة. وفي معظم الحالات، لا تحتاج إلى تعديل.
+        display_name: اسم العرض الظاهر للمستخدمين.
+        group_mapping: اربط أسماء المجموعات المقدَّمة من موفر الهوية بالمجموعات في OpenProject.
+        metadata: تعبئة التكوين مسبقًا باستخدام عنوان URL لنقطة نهاية اكتشاف OpenID Connect
+        metadata_form_banner: قد يؤدي تعديل نقطة نهاية الاكتشاف إلى استبدال قيم البيانات الوصفية المعبأة مسبقًا.
+        metadata_form_description: إذا كان لدى موفر الهوية الخاص بك عنوان URL لنقطة نهاية الاكتشاف، فاستخدمه أدناه لتعبئة التكوين مسبقًا.
+        metadata_form_title: نقطة نهاية اكتشاف OpenID Connect
       side_panel:
         information_component:
-          backchannel_logout_url: Backchannel logout URL
+          backchannel_logout_url: عنوان URL لتسجيل الخروج عبر القناة الخلفية
       singular: مزود OpenID
       upsell:
-        description: Connect OpenProject to an OpenID connect identity provider
-        title: Single Sign-On (SSO) with OpenID connect
+        description: اربط OpenProject بموفر هوية OpenID Connect
+        title: تسجيل الدخول الموحد (SSO) باستخدام OpenID Connect
     setting_instructions:
-      limit_self_registration: 'If enabled users can only register using this provider if the self registration setting allows for it.
+      limit_self_registration: 'عند التفعيل، لا يمكن للمستخدمين التسجيل باستخدام هذا الموفر إلا إذا كان إعداد التسجيل الذاتي يسمح بذلك.
 
         '
     settings:
-      endpoint_url: Endpoint URL
-      metadata_none: I don't have this information
-      metadata_url: I have a discovery endpoint URL
+      endpoint_url: عنوان URL لنقطة النهاية
+      metadata_none: لا تتوفر لدي هذه المعلومات
+      metadata_url: لدي عنوان URL لنقطة نهاية الاكتشاف
   plugin_openproject_openid_connect:
     description: يضيف مزودي استراتيجية OmniAuth OpenID Connect إلى OpenProject.
     name: OpenProject OpenID Connect
   provider:
     delete_warning:
-      delete_result_1: Remove the provider from the list of available providers.
-      delete_result_direct: This provider is marked as a direct login provider. The setting will be removed and users will no longer be redirected to the provider for login.
+      delete_result_1: إزالة الموفر من قائمة الموفرين المتاحين.
+      delete_result_direct: تم تعيين هذا الموفر كموفر تسجيل دخول مباشر. ستتم إزالة هذا الإعداد ولن تتم إعادة توجيه المستخدمين إلى الموفر لتسجيل الدخول بعد الآن.
       delete_result_user_count:
-        one: One user is currently still using this provider. They will need to be re-invited or logging in with another provider.
-        other: "%{count} users are currently still using this provider. They will need to be re-invited or logging in with another provider."
-        zero: No users are currently using this provider. No further action is required.
-      input_delete_confirmation_html: Enter the provider name %{name} to confirm deletion.
-      irreversible_notice: Deleting an SSO provider is an irreversible action.
-      provider_html: 'Are you sure you want to delete the SSO provider %{name}? Be aware, that this will:'
+        one: لا يزال مستخدم واحد يستخدم هذا الموفر حاليًا. سيتعين إعادة دعوته أو أن يسجل الدخول باستخدام موفر آخر.
+        other: لا يزال %{count} مستخدم يستخدمون هذا الموفر حاليًا. سيتعين إعادة دعوتهم أو أن يسجلوا الدخول باستخدام موفر آخر.
+        zero: لا يوجد مستخدمون يستخدمون هذا الموفر حاليًا. لا يلزم اتخاذ أي إجراء آخر.
+        two: لا يزال مستخدمان يستخدمان هذا الموفر حاليًا. سيتعين إعادة دعوتهما أو أن يسجلا الدخول باستخدام موفر آخر.
+        few: لا يزال %{count} مستخدمين يستخدمون هذا الموفر حاليًا. سيتعين إعادة دعوتهم أو أن يسجلوا الدخول باستخدام موفر آخر.
+        many: لا يزال %{count} مستخدمًا يستخدمون هذا الموفر حاليًا. سيتعين إعادة دعوتهم أو أن يسجلوا الدخول باستخدام موفر آخر.
+      input_delete_confirmation_html: أدخل اسم الموفر %{name} لتأكيد الحذف.
+      irreversible_notice: حذف موفر SSO إجراء لا يمكن التراجع عنه.
+      provider_html: 'هل أنت متأكد من أنك تريد حذف موفر SSO %{name}؟ يرجى العلم أن ذلك سيؤدي إلى:'

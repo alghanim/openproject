@@ -23,7 +23,7 @@
 ar:
   js:
     github_integration:
-      github_actions: Actions
+      github_actions: الإجراءات
       pull_requests:
         merged_message: 'طلب السحب #%{pr_number} %{pr_link} لمستودع %{repository_link} تم %{pr_state} من قبل %{github_user_link}.'
         message: 'طلب السحب #%{pr_number} %{pr_link} لمستودع %{repository_link} الذي أنشأه %{github_user_link} تم %{pr_state}.'
@@ -36,18 +36,18 @@ ar:
           ready_for_review: تم وضع علامة جاهز للمراجعة
       tab_header:
         copy_menu:
-          description: Copy git snippets to clipboard
-          label: Git snippets
+          description: نسخ مقتطفات Git إلى الحافظة
+          label: مقتطفات Git
         git_actions:
-          branch_name: Branch name
-          cmd: Create branch with empty commit
-          commit_message: Commit message
+          branch_name: اسم الفرع
+          cmd: إنشاء فرع بإيداع فارغ
+          commit_message: رسالة الإيداع
           copy_error: فشل النسخ
           copy_success: نسخ
           title: مقتطفات سريعة لأوامر
-        title: Pull requests
+        title: طلبات الدمج
       tab_prs:
-        empty: There are no pull requests linked yet. Link an existing PR by using the code <code>OP#%{wp_id}</code> in the PR description or create a new PR.
+        empty: لا توجد طلبات دمج مرتبطة بعد. اربط طلب دمج موجودًا باستخدام الرمز <code>OP#%{wp_id}</code> في وصف طلب الدمج، أو أنشئ طلب دمج جديدًا.
       work_packages:
         tab_name: GitHub
     work_packages:

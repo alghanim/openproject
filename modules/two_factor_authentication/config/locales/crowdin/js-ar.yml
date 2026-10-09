@@ -24,4 +24,4 @@ ar:
   js:
     two_factor_authentication:
       errors:
-        aborted: The authentication was cancelled. Please try again.
+        aborted: تم إلغاء المصادقة. يرجى المحاولة مرة أخرى.

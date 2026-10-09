@@ -3,7 +3,7 @@ ar:
   activerecord:
     attributes:
       saml/provider:
-        allowed_clock_drift: Allowed clock drift
+        allowed_clock_drift: انحراف الساعة المسموح به
         assertion_consumer_service_url: رابط ACS (خدمة مستهلك الخدمة)
         authn_requests_signed: توقيع طلبات مصادقة SAML
         certificate: شهادة مستخدمة من قبل OpenProject لطلبات SAML
@@ -35,12 +35,12 @@ ar:
           unmatched_private_key: لا ينتمي إلى الشهادة المذكورة
     models:
       saml/provider:
-        zero: SAML providers
-        one: SAML provider
-        two: SAML providers
-        few: SAML providers
-        many: SAML providers
-        other: SAML providers
+        zero: موفرو SAML
+        one: موفر SAML
+        two: موفرو SAML
+        few: موفرو SAML
+        many: موفرو SAML
+        other: موفرو SAML
   saml:
     delete_heading: هل تريد حذف مزود SAML هذا؟
     delete_title: حذف مزود SAML
@@ -50,7 +50,7 @@ ar:
         '
       title: معلمات تكوين بروتوكول SAML
     instructions:
-      allowed_clock_drift: 'Tolerance in seconds applied when validating the timestamps of the identity provider response. Fractions of a second are accepted. Use this only if the clocks of OpenProject and the identity provider are known to be out of sync, and keep the value as low as possible (Default: 0).
+      allowed_clock_drift: 'هامش التسامح بالثواني المطبَّق عند التحقق من الطوابع الزمنية في استجابة موفر الهوية. تُقبل أجزاء الثانية. لا تستخدم هذا الخيار إلا إذا كان معروفًا أن ساعتي OpenProject وموفر الهوية غير متزامنتين، واجعل القيمة منخفضة قدر الإمكان (الافتراضي: 0).
 
         '
       authn_requests_signed: 'في حالة تحديد هذا الخيار، سيقوم OpenProject بالتوقيع على طلب المصادقة SAML [AuthnRequest]. وسيتعين عليك تقديم شهادة التوقيع والمفتاح الخاص باستخدام الحقول أدناه.
@@ -176,7 +176,7 @@ ar:
       metadata:
         dialog: 'هذا هو عنوان URL الذي تتوفر فيه بيانات تعريف SAML الخاصة بـ OpenProject. يمكنك استخدامه اختياريًّا لتكوين مزود الهوية الخاص بك:'
       no_results_table: لم يتم تحديد أي مزودي هوية SAML حتى الآن.
-      notice_created: A new SAML identity provider was successfully created.
+      notice_created: تم إنشاء موفر هوية SAML جديد بنجاح.
       plural: مزودي الهوية SAML
       request_attributes:
         format: تنسيق السمة

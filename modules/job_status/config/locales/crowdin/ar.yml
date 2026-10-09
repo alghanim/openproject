@@ -3,28 +3,28 @@ ar:
   activerecord:
     models:
       job_status/status:
-        zero: Background job statuses
-        one: Background job status
-        two: Background job statuses
-        few: Background job statuses
-        many: Background job statuses
-        other: Background job statuses
+        zero: حالات المهام الخلفية
+        one: حالة المهمة الخلفية
+        two: حالات المهام الخلفية
+        few: حالات المهام الخلفية
+        many: حالات المهام الخلفية
+        other: حالات المهام الخلفية
   job_status_dialog:
-    click_to_download: Or [click here](download_url) to download.
-    download_starts: The download should start automatically.
-    errors: Something went wrong
+    click_to_download: أو [انقر هنا](download_url) للتنزيل.
+    download_starts: من المفترض أن يبدأ التنزيل تلقائيًا.
+    errors: حدث خطأ ما
     generic_messages:
-      cancelled: The job has been cancelled due to an error.
-      error: The job has failed to complete.
-      in_process: The job is currently being processed.
-      in_queue: The job has been queued and will be processed shortly.
-      not_found: This job could not be found.
-      success: The job completed successfully.
-    redirect: You are being redirected.
-    redirect_errors: Due to these errors, you will not be redirected automatically.
-    redirect_link: Please click here to continue.
-    title: Background job status
-  label_job_status_plural: Job statuses
+      cancelled: تم إلغاء المهمة بسبب خطأ.
+      error: فشل إكمال المهمة.
+      in_process: تجري معالجة المهمة حاليًا.
+      in_queue: تمت إضافة المهمة إلى قائمة الانتظار وستتم معالجتها قريبًا.
+      not_found: تعذّر العثور على هذه المهمة.
+      success: اكتملت المهمة بنجاح.
+    redirect: تجري إعادة توجيهك.
+    redirect_errors: بسبب هذه الأخطاء، لن تتم إعادة توجيهك تلقائيًا.
+    redirect_link: يُرجى النقر هنا للمتابعة.
+    title: حالة المهمة الخلفية
+  label_job_status_plural: حالات المهام
   plugin_openproject_job_status:
-    description: Listing and status of background jobs.
-    name: OpenProject Job status
+    description: قائمة المهام الخلفية وحالاتها.
+    name: حالة مهام OpenProject

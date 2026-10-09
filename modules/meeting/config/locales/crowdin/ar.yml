@@ -25,161 +25,161 @@ ar:
     attributes:
       meeting:
         duration: المدّة
-        end_time: End time
+        end_time: وقت الانتهاء
         location: الموقع
         notes: ملاحظات
-        notify: Send notifications
+        notify: إرسال الإشعارات
         participant:
-          zero: "%{count} Participants"
-          one: 1 Participant
-          two: "%{count} Participants"
-          few: "%{count} Participants"
-          many: "%{count} Participants"
-          other: "%{count} Participants"
+          zero: لا يوجد مشاركون
+          one: مشارك واحد
+          two: مشاركان
+          few: "%{count} مشاركين"
+          many: "%{count} مشاركًا"
+          other: "%{count} مشارك"
         participants: المشاركون
-        participants_added: 'Participants added:'
+        participants_added: 'المشاركون المُضافون:'
         participants_attended: الحضور
         participants_invited: المدعوّون
-        participants_removed: 'Participants removed:'
+        participants_removed: 'المشاركون المُزالون:'
         project: مشروع
-        recurrence_start_time: Scheduled start time
-        sharing: Sharing
+        recurrence_start_time: وقت البدء المجدول
+        sharing: المشاركة
         start_date: التاريخ
-        start_time: Start time
-        start_time_hour: Start time
-        template: Template
-        type: Meeting type
+        start_time: وقت البدء
+        start_time_hour: وقت البدء
+        template: القالب
+        type: نوع الاجتماع
       meeting_agenda_item:
         author: المؤلف
         description: ملاحظات
         duration_in_minutes: المدّة
-        item_type: Type
-        lock_version: Lock version
-        notes: Notes
-        position: Position
-        presenter: Presenter
+        item_type: النوع
+        lock_version: إصدار القفل
+        notes: الملاحظات
+        position: الموضع
+        presenter: المقدّم
         title: العنوان
       meeting_outcome:
-        kind: Kind
+        kind: النوع
       meeting_participant:
-        attended: Attended
-        invited: Invited
-        participation_status: Participation status
+        attended: حضر
+        invited: مدعو
+        participation_status: حالة المشاركة
       meeting_section:
-        position: Position
+        position: الموضع
         title: العنوان
       recurring_meeting:
-        duration: Duration
-        end_after: Meeting series ends
+        duration: المدة
+        end_after: تنتهي سلسلة الاجتماعات
         end_date: تاريخ الانتهاء
-        frequency: Frequency
-        interval: Interval
-        iterations: Occurrences
-        location: Location
-        monthly_day: Day of month
-        monthly_ordinal: Position
-        monthly_weekday: Weekday
-        notify: Send notifications
-        start_date: Starts on
-        start_time: Start time
-        start_time_hour: Start time
-        time_zone: Time zone
-        title: Title
+        frequency: التكرار
+        interval: الفاصل الزمني
+        iterations: عدد المواعيد
+        location: المكان
+        monthly_day: يوم الشهر
+        monthly_ordinal: الترتيب
+        monthly_weekday: يوم الأسبوع
+        notify: إرسال الإشعارات
+        start_date: يبدأ في
+        start_time: وقت البدء
+        start_time_hour: وقت البدء
+        time_zone: المنطقة الزمنية
+        title: العنوان
       recurring_meeting_interim_response:
-        start_time: Start time
+        start_time: وقت البدء
     errors:
       messages:
         invalid_time_format: 'ليس وقتًا صالحًا. التصميم المطلوب: HH:MM'
       models:
         meeting_agenda_item:
-          section_not_belong_to_meeting: Section does not belong to the same meeting.
-          user_invalid: is not a valid participant.
+          section_not_belong_to_meeting: القسم لا ينتمي إلى الاجتماع نفسه.
+          user_invalid: ليس مشاركًا صالحًا.
         meeting_participant:
-          user_invalid: is not a valid participant.
+          user_invalid: ليس مشاركًا صالحًا.
         recurring_meeting:
           must_cover_existing_meetings:
             format: "%{message}"
-            one: There is one open meeting in the series that is not covered by the new schedule. Adjust the schedule to include all existing meetings.
-            other: There are %{count} open meetings in the series that are not covered by the new schedule. Adjust the schedule to include all existing meetings.
+            one: يوجد اجتماع مفتوح واحد في السلسلة لا يشمله الجدول الزمني الجديد. عدّل الجدول الزمني ليشمل جميع الاجتماعات الحالية.
+            other: يوجد %{count} من الاجتماعات المفتوحة في السلسلة لا يشملها الجدول الزمني الجديد. عدّل الجدول الزمني ليشمل جميع الاجتماعات الحالية.
         recurring_meeting_interim_response:
-          not_an_occurrence: is not a valid occurrence time for this recurring meeting
+          not_an_occurrence: ليس وقت موعد صالحًا لهذا الاجتماع المتكرر
     models:
       meeting:
-        zero: One-time meetings
-        one: One-time meeting
-        two: One-time meetings
-        few: One-time meetings
-        many: One-time meetings
-        other: One-time meetings
+        zero: الاجتماعات لمرة واحدة
+        one: اجتماع لمرة واحدة
+        two: الاجتماعات لمرة واحدة
+        few: الاجتماعات لمرة واحدة
+        many: الاجتماعات لمرة واحدة
+        other: الاجتماعات لمرة واحدة
       meeting_agenda_item:
-        zero: Agenda items
-        one: Agenda item
-        two: Agenda items
-        few: Agenda items
-        many: Agenda items
-        other: Agenda items
+        zero: بنود جدول الأعمال
+        one: بند جدول الأعمال
+        two: بنود جدول الأعمال
+        few: بنود جدول الأعمال
+        many: بنود جدول الأعمال
+        other: بنود جدول الأعمال
       meeting_outcome:
-        zero: Outcomes
-        one: Outcome
-        two: Outcomes
-        few: Outcomes
-        many: Outcomes
-        other: Outcomes
+        zero: النتائج
+        one: نتيجة
+        two: النتائج
+        few: النتائج
+        many: النتائج
+        other: النتائج
       meeting_participant:
-        zero: Meeting participants
-        one: Meeting participant
-        two: Meeting participants
-        few: Meeting participants
-        many: Meeting participants
-        other: Meeting participants
+        zero: المشاركون في الاجتماع
+        one: مشارك في الاجتماع
+        two: المشاركون في الاجتماع
+        few: المشاركون في الاجتماع
+        many: المشاركون في الاجتماع
+        other: المشاركون في الاجتماع
       meeting_section:
-        zero: Sections
-        one: Section
-        two: Sections
-        few: Sections
-        many: Sections
-        other: Sections
+        zero: الأقسام
+        one: قسم
+        two: الأقسام
+        few: الأقسام
+        many: الأقسام
+        other: الأقسام
       recurring_meeting:
-        zero: Recurring meetings
-        one: Recurring meeting
-        two: Recurring meetings
-        few: Recurring meetings
-        many: Recurring meetings
-        other: Recurring meetings
+        zero: الاجتماعات المتكررة
+        one: اجتماع متكرر
+        two: الاجتماعات المتكررة
+        few: الاجتماعات المتكررة
+        many: الاجتماعات المتكررة
+        other: الاجتماعات المتكررة
       scheduled_meeting:
-        zero: Scheduled meetings
-        one: Scheduled meeting
-        two: Scheduled meetings
-        few: Scheduled meetings
-        many: Scheduled meetings
-        other: Scheduled meetings
+        zero: الاجتماعات المجدولة
+        one: اجتماع مجدول
+        two: الاجتماعات المجدولة
+        few: الاجتماعات المجدولة
+        many: الاجتماعات المجدولة
+        other: الاجتماعات المجدولة
       token/ical_meeting:
-        zero: iCal Meeting subscriptions
-        one: iCal Meeting subscription
-        two: iCal Meeting subscriptions
-        few: iCal Meeting subscriptions
-        many: iCal Meeting subscriptions
-        other: iCal Meeting subscriptions
+        zero: اشتراكات iCal للاجتماعات
+        one: اشتراك iCal للاجتماعات
+        two: اشتراكات iCal للاجتماعات
+        few: اشتراكات iCal للاجتماعات
+        many: اشتراكات iCal للاجتماعات
+        other: اشتراكات iCal للاجتماعات
   activity:
     filter:
       meeting: الاجتماعات
     item:
       meeting_agenda_item:
         duration:
-          added: set to %{value}
-          added_html: set to <i>%{value}</i>
-          removed: removed
-          updated: changed from %{old_value} to %{value}
-          updated_html: changed from <i>%{old_value}</i> to <i>%{value}</i>
+          added: تم التعيين إلى %{value}
+          added_html: تم التعيين إلى <i>%{value}</i>
+          removed: تمت الإزالة
+          updated: تم التغيير من %{old_value} إلى %{value}
+          updated_html: تم التغيير من <i>%{old_value}</i> إلى <i>%{value}</i>
         position:
-          updated: reordered
+          updated: تمت إعادة الترتيب
         work_package:
-          updated: changed from %{old_value} to %{value}
-          updated_html: changed from <i>%{old_value}</i> to <i>%{value}</i>
-  caption_meeting_template_select: Select a template to automatically copy its agenda items
-  caption_template_project_select: Please select the project in which to create this meeting template
+          updated: تم التغيير من %{old_value} إلى %{value}
+          updated_html: تم التغيير من <i>%{old_value}</i> إلى <i>%{value}</i>
+  caption_meeting_template_select: حدد قالبًا لنسخ بنود جدول أعماله تلقائيًا
+  caption_template_project_select: يُرجى تحديد المشروع الذي سيُنشأ فيه قالب الاجتماع هذا
   description_attended: حَضَر
-  error_notification: Failed to send notification.
+  error_notification: تعذّر إرسال الإشعار.
   error_notification_with_errors: 'فشِل في إرسال الإشعار. لم يتم إشعار المستلمين التالية أسماؤهم: %{recipients}'
   events:
     meeting: تحرير الاجتماع
@@ -188,631 +188,642 @@ ar:
     meeting_agenda_opened: فُتِح جدول أعمال الاجتماع
     meeting_minutes: تحرير محضر الجلسة
     meeting_minutes_created: إنشاء محضر الجلسة
-  label_add_work_package_to_meeting_dialog_button: Add to meeting
-  label_add_work_package_to_meeting_dialog_title: Select meeting
-  label_add_work_package_to_meeting_section_label: Section
-  label_added_as_outcome: Added as outcome
-  label_agenda_backlog: Agenda backlog
-  label_agenda_backlog_clear_title: Clear agenda backlog?
-  label_agenda_item_actions: Agenda items actions
-  label_agenda_item_add: Add agenda item
+  label_add_work_package_to_meeting_dialog_button: إضافة إلى الاجتماع
+  label_add_work_package_to_meeting_dialog_title: تحديد اجتماع
+  label_add_work_package_to_meeting_section_label: القسم
+  label_added_as_outcome: أُضيف كنتيجة
+  label_agenda_backlog: قائمة الأعمال المتراكمة لجدول الأعمال
+  label_agenda_backlog_clear_title: مسح قائمة الأعمال المتراكمة لجدول الأعمال؟
+  label_agenda_item_actions: إجراءات بنود جدول الأعمال
+  label_agenda_item_add: إضافة بند إلى جدول الأعمال
   label_agenda_item_add_notes: إضافة ملاحظات
-  label_agenda_item_add_outcome: Add outcome
-  label_agenda_item_convert_to_work_package: Convert to work package
-  label_agenda_item_deleted_wp: Deleted work package reference
-  label_agenda_item_duplicate: Duplicate
-  label_agenda_item_duplicate_in_next: Duplicate in next meeting
-  label_agenda_item_duplicate_in_next_title: Duplicate in next meeting?
+  label_agenda_item_add_outcome: إضافة نتيجة
+  label_agenda_item_convert_to_work_package: تحويل إلى حزمة عمل
+  label_agenda_item_deleted_wp: مرجع إلى حزمة عمل محذوفة
+  label_agenda_item_duplicate: تكرار
+  label_agenda_item_duplicate_in_next: تكرار في الاجتماع التالي
+  label_agenda_item_duplicate_in_next_title: تكرار في الاجتماع التالي؟
   label_agenda_item_move: نقل
   label_agenda_item_move_down: تحريك للأسفل
-  label_agenda_item_move_to_backlog: Move to backlog
+  label_agenda_item_move_to_backlog: نقل إلى قائمة الأعمال المتراكمة
   label_agenda_item_move_to_bottom: الانتقال إلى الأسفل
-  label_agenda_item_move_to_current_meeting: Move to current meeting
-  label_agenda_item_move_to_next: Move to next meeting
-  label_agenda_item_move_to_next_title: Move to next meeting?
-  label_agenda_item_move_to_section: Move to section
+  label_agenda_item_move_to_current_meeting: نقل إلى الاجتماع الحالي
+  label_agenda_item_move_to_next: نقل إلى الاجتماع التالي
+  label_agenda_item_move_to_next_title: نقل إلى الاجتماع التالي؟
+  label_agenda_item_move_to_section: نقل إلى قسم
   label_agenda_item_move_to_top: الانتقال لأعلى الصفحة
   label_agenda_item_move_up: تحريك للأعلى
-  label_agenda_item_remove_from_agenda: Remove from agenda
-  label_agenda_item_remove_from_backlog: Remove from backlog
-  label_agenda_item_undisclosed_wp: 'Work package #%{id} not visible'
-  label_agenda_item_work_package: Agenda item work package
-  label_agenda_item_work_package_add: Add work package
-  label_agenda_items: Agenda items
-  label_agenda_items_reordered: reordered
-  label_agenda_new_outcome: New outcome
-  label_agenda_outcome: Outcome
-  label_agenda_outcome_actions: Agenda outcome actions
-  label_agenda_outcome_delete: Remove outcome
-  label_agenda_outcome_edit: Edit outcome
-  label_all_meetings: All meetings
-  label_attended: Attended
-  label_attended_user: Attended user
-  label_backlog_clear: Clear backlog
-  label_backlog_clear_button: Clear all
-  label_created_by_me: Created by me
-  label_existing_work_package: Existing work package
+  label_agenda_item_remove_from_agenda: إزالة من جدول الأعمال
+  label_agenda_item_remove_from_backlog: إزالة من قائمة الأعمال المتراكمة
+  label_agenda_item_undisclosed_wp: 'حزمة العمل #%{id} غير مرئية'
+  label_agenda_item_work_package: حزمة عمل بند جدول الأعمال
+  label_agenda_item_work_package_add: إضافة حزمة عمل
+  label_agenda_items: بنود جدول الأعمال
+  label_agenda_items_reordered: تمت إعادة الترتيب
+  label_agenda_new_outcome: نتيجة جديدة
+  label_agenda_outcome: النتيجة
+  label_agenda_outcome_actions: إجراءات نتيجة جدول الأعمال
+  label_agenda_outcome_delete: إزالة النتيجة
+  label_agenda_outcome_edit: تعديل النتيجة
+  label_all_meetings: جميع الاجتماعات
+  label_attended: حضر
+  label_attended_user: مستخدم حاضر
+  label_backlog_clear: مسح قائمة الأعمال المتراكمة
+  label_backlog_clear_button: مسح الكل
+  label_created_by_me: من إنشائي
+  label_existing_work_package: حزمة عمل موجودة
   label_icalendar: إرسال iCalendar
-  label_icalendar_download: Download iCalendar event
+  label_icalendar_download: تنزيل حدث iCalendar
   label_initial_meeting_details: الاجتماع
-  label_invitations: Invitations
-  label_invited_user: Invited user
-  label_involvement: Involvement
+  label_invitations: الدعوات
+  label_invited_user: مستخدم مدعو
+  label_involvement: نوع المشاركة
   label_meeting: الاجتماع
-  label_meeting_actions: Meeting actions
+  label_meeting_actions: إجراءات الاجتماع
   label_meeting_agenda: جدول الأعمال
   label_meeting_agenda_close: أغلِق جدول الأعمال للبدء في محضر الجلسة
   label_meeting_close: مُغلق
-  label_meeting_close_action: Close meeting
-  label_meeting_create: Create meeting
-  label_meeting_create_from_template: Create meeting from template
+  label_meeting_close_action: إغلاق الاجتماع
+  label_meeting_create: إنشاء اجتماع
+  label_meeting_create_from_template: إنشاء اجتماع من قالب
   label_meeting_created_by: أنشئ بواسطة
-  label_meeting_date_and_time: Date and time
+  label_meeting_date_and_time: التاريخ والوقت
   label_meeting_date_time: التاريخ/الوقت
-  label_meeting_delete: Delete meeting
-  label_meeting_details: Meeting details
-  label_meeting_details_edit: Edit meeting details
+  label_meeting_delete: حذف الاجتماع
+  label_meeting_details: تفاصيل الاجتماع
+  label_meeting_details_edit: تعديل تفاصيل الاجتماع
   label_meeting_diff: الاختلاف
-  label_meeting_duplicate: Duplicate meeting
+  label_meeting_duplicate: تكرار الاجتماع
   label_meeting_edit: تحرير الاجتماع
-  label_meeting_edit_title: Edit meeting title
-  label_meeting_empty_action: Add agenda item
-  label_meeting_in_progress_action: Start meeting
+  label_meeting_edit_title: تعديل عنوان الاجتماع
+  label_meeting_empty_action: إضافة بند إلى جدول الأعمال
+  label_meeting_in_progress_action: بدء الاجتماع
   label_meeting_index_delete: احذف
-  label_meeting_index_later: Next week and later
-  label_meeting_index_this_week: Later this week
+  label_meeting_index_later: الأسبوع القادم وما بعده
+  label_meeting_index_this_week: لاحقًا هذا الأسبوع
   label_meeting_index_today: اليوم
-  label_meeting_index_tomorrow: Tomorrow
-  label_meeting_last_updated: Last updated
+  label_meeting_index_tomorrow: غدًا
+  label_meeting_last_updated: آخر تحديث
   label_meeting_minutes: محضر الجلسة
   label_meeting_more:
-    zero: There are %{count} more meetings.
-    one: There is one more meeting.
-    two: There are %{count} more meetings.
-    few: There are %{count} more meetings.
-    many: There are %{count} more meetings.
-    other: There are %{count} more meetings.
+    zero: لا توجد اجتماعات أخرى.
+    one: يوجد اجتماع واحد آخر.
+    two: يوجد اجتماعان آخران.
+    few: يوجد %{count} اجتماعات أخرى.
+    many: يوجد %{count} اجتماعًا آخر.
+    other: يوجد %{count} اجتماع آخر.
   label_meeting_new: اجتماع جديد
-  label_meeting_new_dynamic: New one-time meeting
-  label_meeting_new_recurring: New recurring meeting
+  label_meeting_new_dynamic: اجتماع جديد لمرة واحدة
+  label_meeting_new_recurring: اجتماع متكرر جديد
   label_meeting_open: مفتوح
-  label_meeting_open_action: Open meeting
-  label_meeting_open_this_meeting: Open this meeting
+  label_meeting_open_action: فتح الاجتماع
+  label_meeting_open_this_meeting: فتح هذا الاجتماع
   label_meeting_plural: الاجتماعات
-  label_meeting_reload: Reload
-  label_meeting_reopen_action: Reopen meeting
-  label_meeting_selection_caption: It is only possible to add this work package to an upcoming or an ongoing meeting.
-  label_meeting_send_updates: Send email calendar invite and updates
-  label_meeting_send_updates_caption: Send out email invites to all participants of this meeting
-  label_meeting_series: Meeting series
-  label_meeting_series_details: Meeting series details
-  label_meeting_state: Meeting status
-  label_meeting_state_agenda_created: Agenda created
-  label_meeting_state_cancelled: Cancelled
+  label_meeting_reload: إعادة التحميل
+  label_meeting_reopen_action: إعادة فتح الاجتماع
+  label_meeting_selection_caption: لا يمكن إضافة حزمة العمل هذه إلا إلى اجتماع قادم أو جارٍ.
+  label_meeting_send_updates: إرسال دعوة التقويم والتحديثات عبر البريد الإلكتروني
+  label_meeting_send_updates_caption: إرسال دعوات عبر البريد الإلكتروني إلى جميع المشاركين في هذا الاجتماع
+  label_meeting_series: سلسلة الاجتماعات
+  label_meeting_series_details: تفاصيل سلسلة الاجتماعات
+  label_meeting_state: حالة الاجتماع
+  label_meeting_state_agenda_created: تم إنشاء جدول الأعمال
+  label_meeting_state_cancelled: ملغى
   label_meeting_state_closed: مغلق
-  label_meeting_state_draft: Draft
+  label_meeting_state_draft: مسودة
   label_meeting_state_in_progress: بصدد الإنجاز
   label_meeting_state_open: مفتوح
   label_meeting_state_planned: مُخَطَّط
-  label_meeting_state_skipped: Skipped
-  label_meeting_template: Template
-  label_meeting_template_create: Create template
-  label_meeting_template_delete: Delete template
-  label_meeting_template_edit: Edit template
-  label_meeting_template_new: New template
-  label_meeting_template_sharing: Sharing
-  label_meeting_template_sharing_descendants: With subprojects
-  label_meeting_template_sharing_none: Only with this project
-  label_meeting_template_sharing_system: With all projects
-  label_meeting_templates: Templates
-  label_my_meetings: My meetings
+  label_meeting_state_skipped: تم تخطيه
+  label_meeting_template: القالب
+  label_meeting_template_create: إنشاء قالب
+  label_meeting_template_delete: حذف القالب
+  label_meeting_template_edit: تعديل القالب
+  label_meeting_template_new: قالب جديد
+  label_meeting_template_sharing: المشاركة
+  label_meeting_template_sharing_descendants: مع المشاريع الفرعية
+  label_meeting_template_sharing_none: مع هذا المشروع فقط
+  label_meeting_template_sharing_system: مع جميع المشاريع
+  label_meeting_templates: القوالب
+  label_my_meetings: اجتماعاتي
   label_notify: إرسال للمراجعة
-  label_past_invitations: Past invitations
-  label_past_meetings: Past meetings
-  label_past_meetings_short: Past
-  label_recurring_filter: Recurring filter
-  label_recurring_meeting_cancel: Cancel this occurrence
+  label_past_invitations: الدعوات السابقة
+  label_past_meetings: الاجتماعات السابقة
+  label_past_meetings_short: السابقة
+  label_recurring_filter: عامل تصفية التكرار
+  label_recurring_meeting_cancel: إلغاء هذا الموعد
   label_recurring_meeting_create: مفتوح
-  label_recurring_meeting_delete: Delete occurrence
-  label_recurring_meeting_duplicate: Duplicate as a one-time meeting
+  label_recurring_meeting_delete: حذف الموعد
+  label_recurring_meeting_duplicate: تكرار كاجتماع لمرة واحدة
   label_recurring_meeting_more:
-    zero: There are %{count} more scheduled meetings (%{schedule}).
-    one: There is one more scheduled meeting (%{schedule}).
-    two: There are %{count} more scheduled meetings (%{schedule}).
-    few: There are %{count} more scheduled meetings (%{schedule}).
-    many: There are %{count} more scheduled meetings (%{schedule}).
-    other: There are %{count} more scheduled meetings (%{schedule}).
+    zero: لا توجد اجتماعات مجدولة أخرى (%{schedule}).
+    one: يوجد اجتماع مجدول واحد آخر (%{schedule}).
+    two: يوجد اجتماعان مجدولان آخران (%{schedule}).
+    few: يوجد %{count} اجتماعات مجدولة أخرى (%{schedule}).
+    many: يوجد %{count} اجتماعًا مجدولًا آخر (%{schedule}).
+    other: يوجد %{count} اجتماع مجدول آخر (%{schedule}).
   label_recurring_meeting_more_past:
-    zero: There are %{count} more past meetings.
-    one: There is one more past meeting.
-    two: There are %{count} more past meetings.
-    few: There are %{count} more past meetings.
-    many: There are %{count} more past meetings.
-    other: There are %{count} more past meetings.
-  label_recurring_meeting_new: New recurring meeting
-  label_recurring_meeting_next_occurrence: Next occurrence
-  label_recurring_meeting_no_end_date: There are more scheduled meetings (%{schedule}).
-  label_recurring_meeting_part_of: Part of a meeting series
-  label_recurring_meeting_plural: Recurring meetings
-  label_recurring_meeting_restore: Restore this occurrence
-  label_recurring_meeting_schedule: Schedule
-  label_recurring_meeting_series_create: Create meeting series
-  label_recurring_meeting_series_delete: Delete meeting series
-  label_recurring_meeting_series_edit: Edit meeting series
-  label_recurring_meeting_series_end: End meeting series
-  label_recurring_meeting_series_end_now: End series now
-  label_recurring_meeting_show_more: Show more
-  label_recurring_meeting_view: View meeting series
-  label_section_rename: Rename section
-  label_section_selection_caption: Choose a particular section of the agenda or add it to the backlog.
-  label_series_backlog: Series backlog
-  label_series_backlog_clear_title: Clear series backlog?
+    zero: لا توجد اجتماعات سابقة أخرى.
+    one: يوجد اجتماع سابق واحد آخر.
+    two: يوجد اجتماعان سابقان آخران.
+    few: يوجد %{count} اجتماعات سابقة أخرى.
+    many: يوجد %{count} اجتماعًا سابقًا آخر.
+    other: يوجد %{count} اجتماع سابق آخر.
+  label_recurring_meeting_new: اجتماع متكرر جديد
+  label_recurring_meeting_next_occurrence: الموعد التالي
+  label_recurring_meeting_no_end_date: توجد اجتماعات مجدولة أخرى (%{schedule}).
+  label_recurring_meeting_part_of: جزء من سلسلة اجتماعات
+  label_recurring_meeting_plural: الاجتماعات المتكررة
+  label_recurring_meeting_restore: استعادة هذا الموعد
+  label_recurring_meeting_schedule: الجدول الزمني
+  label_recurring_meeting_series_create: إنشاء سلسلة اجتماعات
+  label_recurring_meeting_series_delete: حذف سلسلة الاجتماعات
+  label_recurring_meeting_series_edit: تعديل سلسلة الاجتماعات
+  label_recurring_meeting_series_end: إنهاء سلسلة الاجتماعات
+  label_recurring_meeting_series_end_now: إنهاء السلسلة الآن
+  label_recurring_meeting_show_more: عرض المزيد
+  label_recurring_meeting_view: عرض سلسلة الاجتماعات
+  label_section_rename: إعادة تسمية القسم
+  label_section_selection_caption: اختر قسمًا محددًا من جدول الأعمال أو أضفه إلى قائمة الأعمال المتراكمة.
+  label_series_backlog: قائمة الأعمال المتراكمة للسلسلة
+  label_series_backlog_clear_title: مسح قائمة الأعمال المتراكمة للسلسلة؟
   label_start_date: تاريخ البدء
-  label_subscribe_icalendar: Subscribe to calendar
-  label_template: Template
+  label_subscribe_icalendar: الاشتراك في التقويم
+  label_template: القالب
   label_time_zone: المنطقة الزمنية
-  label_upcoming_meetings: Upcoming meetings
-  label_upcoming_meetings_short: Upcoming
+  label_upcoming_meetings: الاجتماعات القادمة
+  label_upcoming_meetings_short: القادمة
   label_version: النسخة
-  label_view_meeting: View meeting
-  label_view_meeting_series: View meeting series
-  label_write_outcome: Write outcome
+  label_view_meeting: عرض الاجتماع
+  label_view_meeting_series: عرض سلسلة الاجتماعات
+  label_write_outcome: كتابة النتيجة
   meeting:
     attachments:
-      onetime_template: These attached files will be included in all future meetings using this template.
-      series_template: These attached files will be included in all future meetings in the series.
-      text: Attached files are available to all meeting participants. You can also drag and drop these into agenda item notes.
+      onetime_template: ستُضمَّن هذه الملفات المرفقة في جميع الاجتماعات المستقبلية التي تستخدم هذا القالب.
+      series_template: ستُضمَّن هذه الملفات المرفقة في جميع الاجتماعات المستقبلية ضمن السلسلة.
+      text: الملفات المرفقة متاحة لجميع المشاركين في الاجتماع. يمكنك أيضًا سحبها وإفلاتها في ملاحظات بنود جدول الأعمال.
     blankslate:
-      desc: You can create a new meeting or change filter criteria
-      title: There are no meetings to display
+      desc: يمكنك إنشاء اجتماع جديد أو تغيير معايير التصفية
+      title: لا توجد اجتماعات لعرضها
     copied: 'نسخ من الاجتماع #%{id}'
     copy:
-      agenda: Copy agenda
-      agenda_items: Copy agenda items
-      agenda_text: Copy the agenda of the old meeting
-      attachments: Copy attachments
-      attachments_text: Copy over all attached files to the new meeting
-      participants: Copy list of participants
-      title: 'Copy meeting: %{title}'
-      to_clipboard: Copy link to clipboard
+      agenda: نسخ جدول الأعمال
+      agenda_items: نسخ بنود جدول الأعمال
+      agenda_text: نسخ جدول أعمال الاجتماع القديم
+      attachments: نسخ المرفقات
+      attachments_text: نسخ جميع الملفات المرفقة إلى الاجتماع الجديد
+      participants: نسخ قائمة المشاركين
+      title: 'نسخ الاجتماع: %{title}'
+      to_clipboard: نسخ الرابط إلى الحافظة
     delete_dialog:
       occurrence:
-        confirm_button: Cancel occurrence
-        confirmation_message_html: 'Any meeting information not in the template will be lost. Do you want to continue?
-
-          '
-        heading: Cancel this meeting occurrence?
-        title: Cancel meeting occurrence
+        confirm_button: إلغاء الموعد
+        confirmation_message_html: |
+          ستُفقد أي معلومات للاجتماع غير موجودة في القالب.
+          هل تريد المتابعة؟
+        heading: إلغاء موعد الاجتماع هذا؟
+        title: إلغاء موعد الاجتماع
       occurrence_past:
-        confirm_button: Delete occurrence
-        confirmation_message_html: 'This action is not reversible. Please proceed with caution.
+        confirm_button: حذف الموعد
+        confirmation_message_html: 'لا يمكن التراجع عن هذا الإجراء. يُرجى المتابعة بحذر.
 
           '
-        heading: Delete this occurrence?
-        title: Delete occurrence
+        heading: حذف هذا الموعد؟
+        title: حذف الموعد
       one_time:
-        confirmation_message_html: 'This action is not reversible. Please proceed with caution.
+        confirmation_message_html: 'لا يمكن التراجع عن هذا الإجراء. يُرجى المتابعة بحذر.
 
           '
-        heading: Delete this meeting?
+        heading: حذف هذا الاجتماع؟
         template:
-          confirmation_message_html: 'This action is not reversible. Please proceed with caution. Existing meetings that were created using this template will not be affected.
+          confirmation_message_html: 'لا يمكن التراجع عن هذا الإجراء. يُرجى المتابعة بحذر. لن تتأثر الاجتماعات الحالية التي أُنشئت باستخدام هذا القالب.
 
             '
-          heading: Delete this template?
-          title: Delete template
-        title: Delete meeting
+          heading: حذف هذا القالب؟
+          title: حذف القالب
+        title: حذف الاجتماع
     email:
       cancelled:
-        date_time: Scheduled date/time
-        header: 'Cancelled: Meeting ''%{title}'''
-        header_occurrence: 'Cancelled: Meeting occurrence ''%{title}'''
-        header_series: 'Cancelled: Meeting series ''%{title}'''
-        summary: "'%{title}' has been cancelled by %{actor}, or you have been removed as a participant"
-        summary_occurrence: An occurrence of '%{title}' has been cancelled by %{actor}, or you have been removed as a participant
-        summary_series: Meeting series '%{title}' has been cancelled by %{actor}, or you have been removed as a participant
+        date_time: التاريخ/الوقت المجدول
+        header: 'تم الإلغاء: الاجتماع «%{title}»'
+        header_occurrence: 'تم الإلغاء: موعد الاجتماع «%{title}»'
+        header_series: 'تم الإلغاء: سلسلة الاجتماعات «%{title}»'
+        summary: ألغى %{actor} «%{title}»، أو تمت إزالتك من المشاركين
+        summary_occurrence: ألغى %{actor} أحد مواعيد «%{title}»، أو تمت إزالتك من المشاركين
+        summary_series: ألغى %{actor} سلسلة الاجتماعات «%{title}»، أو تمت إزالتك من المشاركين
       ended:
-        header_series: 'Ended: Meeting series ''%{title}'''
-        summary_series: Meeting series '%{title}' has been ended by %{actor}
+        header_series: 'تم الإنهاء: سلسلة الاجتماعات «%{title}»'
+        summary_series: أنهى %{actor} سلسلة الاجتماعات «%{title}»
       invited:
-        summary: "%{actor} has sent you an invitation for the meeting '%{title}'"
-      open_meeting_link: Open meeting
-      open_my_meetings_link: Go to My meetings
-      send_emails: Email participants
-      send_invitation_emails: 'Send an email invitation immediately to the participants selected above. You can also do this manually at any time later.
+        summary: أرسل إليك %{actor} دعوة إلى الاجتماع «%{title}»
+      open_meeting_link: فتح الاجتماع
+      open_my_meetings_link: الانتقال إلى اجتماعاتي
+      send_emails: مراسلة المشاركين عبر البريد الإلكتروني
+      send_invitation_emails: 'إرسال دعوة عبر البريد الإلكتروني فورًا إلى المشاركين المحددين أعلاه. يمكنك أيضًا القيام بذلك يدويًا في أي وقت لاحقًا.
 
         '
-      send_invitation_emails_structured: Send an email invitation immediately to all participants. You can also do this manually at any time later.
+      send_invitation_emails_structured: إرسال دعوة عبر البريد الإلكتروني فورًا إلى جميع المشاركين. يمكنك أيضًا القيام بذلك يدويًا في أي وقت لاحقًا.
       series:
-        summary: "%{actor} has invited you to a new meeting series '%{title}'"
-        title: "[%{project_name}] Meeting series '%{title}'"
+        summary: دعاك %{actor} إلى سلسلة اجتماعات جديدة «%{title}»
+        title: "[%{project_name}] سلسلة الاجتماعات «%{title}»"
       series_updated:
-        new_schedule: New schedule
-        old_schedule: Old schedule
-        summary: Meeting series '%{title}' has been updated by %{actor}
-        title: "[%{project_name}] Meeting series '%{title}' has been updated"
+        new_schedule: الجدول الزمني الجديد
+        old_schedule: الجدول الزمني القديم
+        summary: حدّث %{actor} سلسلة الاجتماعات «%{title}»
+        title: "[%{project_name}] تم تحديث سلسلة الاجتماعات «%{title}»"
       updated:
-        added_participants: Added
-        body: The meeting '%{title}' has been updated by %{actor}.
-        header: Meeting '%{title}' has been updated
-        new_date_time: New date/time
-        new_location: New location
-        new_title: New title
-        old_date_time: Old date/time
-        old_location: Old location
-        old_title: Old title
-        removed_participants: Removed
-        summary: Meeting '%{title}' has been updated by %{actor}
+        added_participants: المُضافون
+        body: حدّث %{actor} الاجتماع «%{title}».
+        header: تم تحديث الاجتماع «%{title}»
+        new_date_time: التاريخ/الوقت الجديد
+        new_location: المكان الجديد
+        new_title: العنوان الجديد
+        old_date_time: التاريخ/الوقت القديم
+        old_location: المكان القديم
+        old_title: العنوان القديم
+        removed_participants: المُزالون
+        summary: حدّث %{actor} الاجتماع «%{title}»
     export:
       minutes:
         author: المؤلف
         date: التاريخ
-        footer_page_numbers: P. %{current_page} of %{total_pages}
+        footer_page_numbers: صفحة %{current_page} من %{total_pages}
         location: الموقع
         time: الوقت
         title: محضر الجلسة
-      your_meeting_export: Meeting is being exported
+      your_meeting_export: جارٍ تصدير الاجتماع
     export_pdf_dialog:
       author:
-        caption: The author of the minutes will be displayed in the subtitle.
+        caption: سيُعرض مؤلف محضر الاجتماع في العنوان الفرعي.
         label: المؤلف
-      description: Generate a printable PDF file of this meeting at the current state.
+      description: إنشاء ملف PDF قابل للطباعة لهذا الاجتماع بحالته الحالية.
       first_page_header_left:
-        caption: This text will appear on the first page at the left of the header.
-        label: First page header left
+        caption: سيظهر هذا النص في الصفحة الأولى على يسار الترويسة.
+        label: الجانب الأيسر من ترويسة الصفحة الأولى
       footer_text:
-        caption: This text will appear on every page at the center of the footer.
-        label: Footer text
+        caption: سيظهر هذا النص في كل صفحة في منتصف التذييل.
+        label: نص التذييل
       include_attachments:
-        caption: A list containing the filenames of attachments will be appended at the end.
-        label: Include list of attachments
+        caption: ستُلحق في النهاية قائمة بأسماء ملفات المرفقات.
+        label: تضمين قائمة المرفقات
       include_backlog:
-        caption: Backlog elements are not normally considered part of a meeting occurrence but you can choose to include them.
-        label: Include backlog
+        caption: لا تُعدّ عناصر قائمة الأعمال المتراكمة عادةً جزءًا من موعد الاجتماع، ولكن يمكنك اختيار تضمينها.
+        label: تضمين قائمة الأعمال المتراكمة
       include_outcomes:
-        caption: If your agenda outcomes contain confidential information, you can choose to not include them in the export.
-        label: Include agenda outcomes
+        caption: إذا كانت نتائج جدول الأعمال تحتوي على معلومات سرية، فيمكنك اختيار عدم تضمينها في التصدير.
+        label: تضمين نتائج جدول الأعمال
       include_participants:
-        caption: A list of participants will be preset above the meeting agenda.
-        label: Include list of participants
+        caption: ستُعرض قائمة بالمشاركين أعلى جدول أعمال الاجتماع.
+        label: تضمين قائمة المشاركين
       submit_button: تحميل
       templates:
         default:
-          caption: The default template is suitable for most meetings and represent the current state.
+          caption: القالب الافتراضي مناسب لمعظم الاجتماعات ويعرض حالتها الحالية.
           label: الافتراضي
         minutes:
-          caption: The minutes template is suitable for closed and archived meetings.
+          caption: قالب محضر الاجتماع مناسب للاجتماعات المغلقة والمؤرشفة.
           label: محضر الجلسة
-      title: Export PDF
+      title: تصدير PDF
     ical_response:
-      meeting_not_found: Meeting not found for the given UID.
-      update_failed: Could not update participation status.
-    label_export_pdf: Export PDF
-    label_mail_all_participants: Send email invite to participants
+      meeting_not_found: لم يتم العثور على اجتماع بمعرّف UID المحدد.
+      update_failed: تعذّر تحديث حالة المشاركة.
+    label_export_pdf: تصدير PDF
+    label_mail_all_participants: إرسال دعوة عبر البريد الإلكتروني إلى المشاركين
     notifications:
       dialog:
         confirm_label:
-          disable: Disable email updates
-          enable: Enable email updates
+          disable: تعطيل التحديثات عبر البريد الإلكتروني
+          enable: تفعيل التحديثات عبر البريد الإلكتروني
         message:
-          disable: If they already had an invite for this meeting, it might no longer be accurate.
-          enable: Once enabled, an email will be sent out immediately to all participants.
+          disable: إذا كانت لدى المشاركين دعوة لهذا الاجتماع بالفعل، فقد لا تكون دقيقة بعد الآن.
+          enable: بمجرد التفعيل، سيُرسل بريد إلكتروني فورًا إلى جميع المشاركين.
         title:
-          disable: Disable email calendar updates?
-          enable: Enable email calendar updates?
-      disabled: Participants will not receive email updates informing them of changes to the date, time or list of participants.
-      enabled: All participants will receive updated calendar invites informing them of changes to date, time or list of participants.
+          disable: تعطيل تحديثات التقويم عبر البريد الإلكتروني؟
+          enable: تفعيل تحديثات التقويم عبر البريد الإلكتروني؟
+      disabled: لن يتلقى المشاركون تحديثات عبر البريد الإلكتروني تُعلمهم بالتغييرات في التاريخ أو الوقت أو قائمة المشاركين.
+      enabled: سيتلقى جميع المشاركين دعوات تقويم محدّثة تُعلمهم بالتغييرات في التاريخ أو الوقت أو قائمة المشاركين.
       sidepanel:
         description:
-          change_via_template: To change this, edit the series template.
-        title: Email calendar updates
+          change_via_template: لتغيير ذلك، عدّل قالب السلسلة.
+        title: تحديثات التقويم عبر البريد الإلكتروني
     participants:
       blankslate:
-        description: There are no participants yet.
-        heading: No participants
+        description: لا يوجد مشاركون بعد.
+        heading: لا يوجد مشاركون
       label:
-        apply_to_upcoming_meetings: Apply these changes to all upcoming meetings in this series
-        attended: Attended
-        manage_participants: Manage participants
-        mark_all_as_attended: Mark all as attended
-        mark_as_attended: Mark as attended
-        no_participants: No participants
+        apply_to_upcoming_meetings: تطبيق هذه التغييرات على جميع الاجتماعات القادمة في هذه السلسلة
+        attended: حضر
+        manage_participants: إدارة المشاركين
+        mark_all_as_attended: تحديد الكل كحاضرين
+        mark_as_attended: تحديد كحاضر
+        no_participants: لا يوجد مشاركون
         participants: المشاركون
-        remove_participant: Remove participant
+        remove_participant: إزالة المشارك
         show_all: إظهار الجميع
       text:
-        manage_participants: Search for and add project members as participants to this meeting.
-        search_for_members: Search for project members
-        template: These participants will be invited automatically to all future meetings as they are created.
+        manage_participants: ابحث عن أعضاء المشروع وأضفهم كمشاركين في هذا الاجتماع.
+        search_for_members: البحث عن أعضاء المشروع
+        template: ستتم دعوة هؤلاء المشاركين تلقائيًا إلى جميع الاجتماعات المستقبلية عند إنشائها.
     presentation_mode:
-      button_present: Present
-      current_item: Current item
-      exit: Exit presentation
-      next: Next
-      no_items: No agenda items
-      no_items_flash: There are no agenda items to present.
-      previous: Previous
-      title: Presentation Mode
-      total_items: "%{current} of %{total}"
+      button_present: تقديم
+      current_item: البند الحالي
+      exit: الخروج من العرض التقديمي
+      next: التالي
+      no_items: لا توجد بنود في جدول الأعمال
+      no_items_flash: لا توجد بنود في جدول الأعمال لعرضها.
+      previous: السابق
+      title: وضع العرض التقديمي
+      total_items: "%{current} من %{total}"
     types:
-      one_time: One-time
-      recurring: Recurring
-      recurring_text: Create meeting series with dynamic template for each occurrence.
-      structured_text: Organize your meeting as a dynamic list of agenda items, optionally linking them to a work package.
-      structured_text_copy: Copying a meeting will currently not copy the associated meeting agenda items, just the details
+      one_time: لمرة واحدة
+      recurring: متكرر
+      recurring_text: إنشاء سلسلة اجتماعات بقالب ديناميكي لكل موعد.
+      structured_text: نظّم اجتماعك كقائمة ديناميكية من بنود جدول الأعمال، مع إمكانية ربطها بحزمة عمل.
+      structured_text_copy: لن يؤدي نسخ الاجتماع حاليًا إلى نسخ بنود جدول الأعمال المرتبطة به، بل تفاصيله فقط
     widgets:
       blankslate:
-        description: Upcoming meetings you are participating in will appear here.
-        heading: No upcoming meetings
-      view_details: View all meetings
+        description: ستظهر هنا الاجتماعات القادمة التي تشارك فيها.
+        heading: لا توجد اجتماعات قادمة
+      view_details: عرض جميع الاجتماعات
   meeting_participant:
     participation_status:
-      accepted: Accepted
-      declined: Declined
-      needs_action: No response
-      tentative: Maybe
-      unknown: Unknown
+      accepted: تم القبول
+      declined: تم الرفض
+      needs_action: لا يوجد رد
+      tentative: ربما
+      unknown: غير معروف
   meeting_section:
-    delete_confirmation: Deleting the section will also delete all of its agenda items. Are you sure you want to do this?
-    empty_text: Drag items here or create a new one
-    placeholder_title: New section
-    untitled_title: Untitled section
+    delete_confirmation: سيؤدي حذف القسم إلى حذف جميع بنود جدول الأعمال الموجودة فيه أيضًا. هل أنت متأكد من أنك تريد القيام بذلك؟
+    empty_text: اسحب البنود إلى هنا أو أنشئ بندًا جديدًا
+    placeholder_title: قسم جديد
+    untitled_title: قسم بلا عنوان
   my:
     access_token:
       created_dialog:
         token/ical_meeting:
-          body: Treat the following URL as you would a password. Anyone who has access to it can view all your meetings.
-          title: An iCal meeting subscription token has been generated
+          body: تعامل مع عنوان URL التالي كما تتعامل مع كلمة المرور. يمكن لأي شخص يصل إليه عرض جميع اجتماعاتك.
+          title: تم إنشاء رمز اشتراك iCal للاجتماعات
       dialog:
         token/ical_meeting:
-          create_button: Create subscription
-          dialog_body: This token will generate an iCal subscription URL that lets you view all your meetings in an external calendar application.
-          dialog_title: New iCal subscription token for meetings
-          name_caption: You can name it after where you will use it, such as "My phone" or "Work computer".
-          name_label: Token name
+          create_button: إنشاء اشتراك
+          dialog_body: سيُنشئ هذا الرمز عنوان URL لاشتراك iCal يتيح لك عرض جميع اجتماعاتك في تطبيق تقويم خارجي.
+          dialog_title: رمز اشتراك iCal جديد للاجتماعات
+          name_caption: يمكنك تسميته بحسب المكان الذي ستستخدمه فيه، مثل «هاتفي» أو «حاسوب العمل».
+          name_label: اسم الرمز
       revocation:
         token/ical_meeting:
-          notice_failure: 'Failed to revoke iCalendar meeting subscription: %{error}'
-          notice_success: The iCalendar meeting subscription has been revoked successfully.
+          notice_failure: 'تعذّر إلغاء اشتراك iCalendar للاجتماعات: %{error}'
+          notice_success: تم إلغاء اشتراك iCalendar للاجتماعات بنجاح.
   my_account:
     access_tokens:
       token/ical_meeting:
-        add_button: Subscribe to calendar
-        blank_description: You can create one using the button below.
-        blank_title: No iCalendar meeting token
-        disabled_text: iCalendar meeting subscriptions are not enabled by the administrator. Please contact your administrator to use this feature.
-        table_title: iCalendar meeting tokens
-        text_hint: iCalendar meeting tokens allow users to subscribe to all their meetings and view up-to-date meeting information in external clients.
-        title: iCalendar for meetings
-  notice_meeting_template_created: Template successfully created
-  notice_meeting_updated: This page has been updated by someone else. Reload to view changes.
-  notice_successful_notification: Email calendar update sent to all participants
+        add_button: الاشتراك في التقويم
+        blank_description: يمكنك إنشاء رمز باستخدام الزر أدناه.
+        blank_title: لا يوجد رمز iCalendar للاجتماعات
+        disabled_text: اشتراكات iCalendar للاجتماعات غير مفعّلة من قِبل المسؤول. يُرجى التواصل مع المسؤول لاستخدام هذه الميزة.
+        table_title: رموز iCalendar للاجتماعات
+        text_hint: تتيح رموز iCalendar للاجتماعات للمستخدمين الاشتراك في جميع اجتماعاتهم وعرض أحدث معلومات الاجتماعات في تطبيقات خارجية.
+        title: iCalendar للاجتماعات
+  notice_meeting_template_created: تم إنشاء القالب بنجاح
+  notice_meeting_updated: حدّث شخص آخر هذه الصفحة. أعد التحميل لعرض التغييرات.
+  notice_successful_notification: تم إرسال تحديث التقويم عبر البريد الإلكتروني إلى جميع المشاركين
   notice_timezone_missing: لم يتم تعيين المنطقة الزمنية و%{zone} مُفترض. لاختيار منطقتك الزمنية، من فضلك اضغط هنا.
   permission_create_meetings: إنشاء الاجتماعات
   permission_delete_meetings: إلغاء الاجتماعات
   permission_edit_meetings: تعديل الاجتماعات
   permission_manage_agendas: إدارة جداول الأعمال
-  permission_manage_agendas_explanation: Allows creating, editing and removing agenda items
-  permission_manage_outcomes: Manage outcomes
-  permission_send_meeting_invites_and_outcomes: Send meeting invites and outcomes to participants
+  permission_manage_agendas_explanation: يسمح بإنشاء بنود جدول الأعمال وتحريرها وإزالتها
+  permission_manage_outcomes: إدارة النتائج
+  permission_send_meeting_invites_and_outcomes: إرسال دعوات الاجتماع ونتائجه إلى المشاركين
   permission_view_meetings: عرض الاجتماعات
-  placeholder_meeting_template_no_templates_for_project: No templates available for this project
-  placeholder_meeting_template_select_project_first: Select a project first
-  placeholder_section_select_meeting_first: Meeting selection is required first
+  placeholder_meeting_template_no_templates_for_project: لا توجد قوالب متاحة لهذا المشروع
+  placeholder_meeting_template_select_project_first: حدد مشروعًا أولًا
+  placeholder_section_select_meeting_first: يجب تحديد اجتماع أولًا
   plugin_openproject_meeting:
-    description: This module adds functions to support project meetings to OpenProject. Meetings can be scheduled selecting invitees from the same project to take part in the meeting. An agenda can be created and sent to the invitees. After the meeting, attendees can be selected and minutes can be created based on the agenda. Finally, the minutes can be sent to all attendees and invitees.
-    name: OpenProject Meeting
+    description: تضيف هذه الوحدة إلى OpenProject وظائف لدعم اجتماعات المشروع. يمكن جدولة الاجتماعات باختيار المدعوين من المشروع نفسه للمشاركة فيها. ويمكن إنشاء جدول أعمال وإرساله إلى المدعوين. وبعد الاجتماع، يمكن تحديد الحاضرين وإنشاء محضر الاجتماع استنادًا إلى جدول الأعمال. وأخيرًا، يمكن إرسال المحضر إلى جميع الحاضرين والمدعوين.
+    name: اجتماعات OpenProject
   project_module_meetings: الاجتماعات
   recurring_meeting:
-    actual_first_occurrence_mismatch_html: The first occurrence of this series will be %{first_occurrence}
+    actual_first_occurrence_mismatch_html: سيكون الموعد الأول لهذه السلسلة في %{first_occurrence}
     caption:
-      ends_on: This results in a series ending on %{date}
+      ends_on: ينتج عن ذلك سلسلة تنتهي في %{date}
       occurrences:
-        zero: This results in %{count} upcoming occurrences
-        one: This results in 1 upcoming occurrence
-        two: This results in %{count} upcoming occurrences
-        few: This results in %{count} upcoming occurrences
-        many: This results in %{count} upcoming occurrences
-        other: This results in %{count} upcoming occurrences
-      occurrences_capped: This results in more than %{count} upcoming occurrences
-    day_of_month_skipping_info: Months with fewer than %{monthly_day} days will be skipped
+        zero: لا ينتج عن ذلك أي مواعيد قادمة
+        one: ينتج عن ذلك موعد قادم واحد
+        two: ينتج عن ذلك موعدان قادمان
+        few: ينتج عن ذلك %{count} مواعيد قادمة
+        many: ينتج عن ذلك %{count} موعدًا قادمًا
+        other: ينتج عن ذلك %{count} موعد قادم
+      occurrences_capped: ينتج عن ذلك أكثر من %{count} من المواعيد القادمة
+    day_of_month_skipping_info: سيتم تخطي الأشهر التي يقل عدد أيامها عن %{monthly_day}
     delete_dialog:
       confirmation_message_html:
-        one: 'Deleting <strong>%{title}</strong> will also delete one occurrence in this series. This action is not reversible. Please proceed with caution.
+        one: 'سيؤدي حذف <strong>%{title}</strong> أيضًا إلى حذف موعد واحد في هذه السلسلة. لا يمكن التراجع عن هذا الإجراء. يُرجى المتابعة بحذر.
 
           '
-        other: 'Deleting <strong>%{title}</strong> will delete all %{count} occurrences in this series. This action is not reversible. Please proceed with caution.
+        other: 'سيؤدي حذف <strong>%{title}</strong> إلى حذف جميع مواعيد هذه السلسلة، وعددها %{count} موعد. لا يمكن التراجع عن هذا الإجراء. يُرجى المتابعة بحذر.
 
           '
-        zero: 'The meeting series <strong>%{title}</strong> does not have any meeting occurrences. The series will be deleted for everyone. Please proceed with caution.
+        zero: 'لا تحتوي سلسلة الاجتماعات <strong>%{title}</strong> على أي مواعيد اجتماعات. سيتم حذف السلسلة للجميع. يُرجى المتابعة بحذر.
 
           '
-      heading: Permanently delete this meeting series?
-      title: Delete meeting series
+        two: 'سيؤدي حذف <strong>%{title}</strong> إلى حذف كلا الموعدين في هذه السلسلة. لا يمكن التراجع عن هذا الإجراء. يُرجى المتابعة بحذر.
+
+          '
+        few: 'سيؤدي حذف <strong>%{title}</strong> إلى حذف جميع مواعيد هذه السلسلة، وعددها %{count} مواعيد. لا يمكن التراجع عن هذا الإجراء. يُرجى المتابعة بحذر.
+
+          '
+        many: 'سيؤدي حذف <strong>%{title}</strong> إلى حذف جميع مواعيد هذه السلسلة، وعددها %{count} موعدًا. لا يمكن التراجع عن هذا الإجراء. يُرجى المتابعة بحذر.
+
+          '
+      heading: حذف سلسلة الاجتماعات هذه نهائيًا؟
+      title: حذف سلسلة الاجتماعات
     end_after:
-      iterations: After a number of occurrences
-      never: Never
-      specific_date: After a specific date
+      iterations: بعد عدد من المواعيد
+      never: أبدًا
+      specific_date: بعد تاريخ محدد
     end_series_dialog:
-      title: End meeting series
+      title: إنهاء سلسلة الاجتماعات
     ended_blankslate:
-      action: You can still view past occurrences or edit the meeting series to extend it.
-      message: 'This meeting series has come to an end. There are no upcoming meetings. '
-      title: Meeting series ended
+      action: لا يزال بإمكانك عرض المواعيد السابقة أو تحرير سلسلة الاجتماعات لتمديدها.
+      message: 'انتهت سلسلة الاجتماعات هذه. لا توجد اجتماعات قادمة. '
+      title: انتهت سلسلة الاجتماعات
     frequency:
-      every_weekday: Every %{day_of_the_week}
-      monthly_day_of_month: Day of month
-      monthly_nth_weekday: Monthly on a weekday
-      working_days: Every working day
+      every_weekday: كل يوم %{day_of_the_week}
+      monthly_day_of_month: يوم من الشهر
+      monthly_nth_weekday: شهريًا في يوم محدد من الأسبوع
+      working_days: كل يوم عمل
       x_daily:
-        zero: Every %{count} days
-        one: Every day
-        two: Every %{count} days
-        few: Every %{count} days
-        many: Every %{count} days
-        other: Every %{count} days
+        zero: كل %{count} يوم
+        one: كل يوم
+        two: كل يومين
+        few: كل %{count} أيام
+        many: كل %{count} يومًا
+        other: كل %{count} يوم
       x_monthly:
-        zero: Every %{count} months
-        one: Every month
-        two: Every %{count} months
-        few: Every %{count} months
-        many: Every %{count} months
-        other: Every %{count} months
+        zero: كل %{count} شهر
+        one: كل شهر
+        two: كل شهرين
+        few: كل %{count} أشهر
+        many: كل %{count} شهرًا
+        other: كل %{count} شهر
       x_weekly:
-        zero: Every %{count} weeks
-        one: Every week
-        two: Every %{count} weeks
-        few: Every %{count} weeks
-        many: Every %{count} weeks
-        other: Every %{count} weeks
+        zero: كل %{count} أسبوع
+        one: كل أسبوع
+        two: كل أسبوعين
+        few: كل %{count} أسابيع
+        many: كل %{count} أسبوعًا
+        other: كل %{count} أسبوع
     in_words:
-      daily_interval: Every %{interval} days
-      frequency: "%{base} at %{time}"
-      full: "%{base} at %{time}, ends on %{end_date}"
-      full_past: "%{base} at %{time}, ended on %{end_date}"
-      monthly_day: Every month on the %{day}
-      monthly_day_interval: Every %{interval} months on the %{day}
-      monthly_nth_weekday: Every month on the %{ordinal} %{weekday}
-      monthly_nth_weekday_interval: Every %{interval} months on the %{ordinal} %{weekday}
-      never_ending: "%{base} at %{time}"
-      weekly: Every week on %{weekday}
-      weekly_interval: Every %{interval} weeks on %{weekday}
-      working_days: Every working day
+      daily_interval: كل %{interval} من الأيام
+      frequency: "%{base} في الساعة %{time}"
+      full: "%{base} في الساعة %{time}، وتنتهي في %{end_date}"
+      full_past: "%{base} في الساعة %{time}، وانتهت في %{end_date}"
+      monthly_day: كل شهر في اليوم %{day}
+      monthly_day_interval: كل %{interval} من الأشهر في اليوم %{day}
+      monthly_nth_weekday: كل شهر في يوم %{weekday} %{ordinal}
+      monthly_nth_weekday_interval: كل %{interval} من الأشهر في يوم %{weekday} %{ordinal}
+      never_ending: "%{base} في الساعة %{time}"
+      weekly: كل أسبوع يوم %{weekday}
+      weekly_interval: كل %{interval} من الأسابيع يوم %{weekday}
+      working_days: كل يوم عمل
     monthly:
       inflected_ordinal:
-        first: first
-        fourth: fourth
-        last: last
-        second: second
-        third: third
+        first: الأول
+        fourth: الرابع
+        last: الأخير
+        second: الثاني
+        third: الثالث
       ordinal_options:
-        first: First
-        fourth: Fourth
-        last: Last
-        second: Second
-        third: Third
+        first: الأول
+        fourth: الرابع
+        last: الأخير
+        second: الثاني
+        third: الثالث
     occurrence:
-      error_no_next: There is no next occurrence for this meeting.
-      error_template_draft: The meeting series template is still in draft mode.
-      first_already_exists: The first occurrence of this meeting series is already instantiated.
-      first_created: 'The first meeting has been successfuly created from template. All future meetings will be created automatically at the time of the previous occurrence.
+      error_no_next: لا يوجد موعد تالٍ لهذا الاجتماع.
+      error_template_draft: لا يزال قالب سلسلة الاجتماعات في وضع المسودة.
+      first_already_exists: تم إنشاء الموعد الأول لسلسلة الاجتماعات هذه بالفعل.
+      first_created: 'تم إنشاء الاجتماع الأول من القالب بنجاح. سيتم إنشاء جميع الاجتماعات المستقبلية تلقائيًا في وقت الموعد السابق.
 
         '
-      infoline: This meeting is part of a recurring meeting series.
+      infoline: هذا الاجتماع جزء من سلسلة اجتماعات متكررة.
     open:
       blankslate:
-        desc: You can manually open a planned meeting by clicking on the 'Open' button below
-        title: No open meetings at the moment
-      subtitle: 'Open meetings have agendas that can be edited and show up in individual users’ ‘My meetings’ section. Changes to the meeting series template do not affect already-open meeting occurrences.
+        desc: يمكنك فتح اجتماع مخطط له يدويًا بالنقر على زر «فتح» أدناه
+        title: لا توجد اجتماعات مفتوحة حاليًا
+      subtitle: 'الاجتماعات المفتوحة لها جداول أعمال قابلة للتحرير، وتظهر في قسم «اجتماعاتي» لدى كل مستخدم. لا تؤثر التغييرات على قالب سلسلة الاجتماعات في مواعيد الاجتماعات المفتوحة بالفعل.
 
         '
-      title: Agenda opened
+      title: جدول الأعمال مفتوح
     planned:
       blankslate:
-        desc: 'There are no additional meetings planned in this series. To schedule additional meetings or extend the series, go to the template and edit meeting details to change the end date, frequency or interval.
+        desc: 'لا توجد اجتماعات إضافية مخطط لها في هذه السلسلة. لجدولة اجتماعات إضافية أو تمديد السلسلة، انتقل إلى القالب وحرّر تفاصيل الاجتماع لتغيير تاريخ الانتهاء أو معدل التكرار أو الفاصل الزمني.
 
           '
-        title: No more planned meetings
-      subtitle: 'The following meetings are planned in the recurring meeting schedule but are not open yet. Every time a planned meeting starts, the next one will automatically be opened for you. You can also open planned meetings manually to import the template and start editing the agenda.
+        title: لا توجد اجتماعات أخرى مخطط لها
+      subtitle: 'الاجتماعات التالية مخطط لها ضمن جدول الاجتماعات المتكررة ولكنها لم تُفتح بعد. في كل مرة يبدأ فيها اجتماع مخطط له، سيُفتح الاجتماع التالي تلقائيًا من أجلك. يمكنك أيضًا فتح الاجتماعات المخطط لها يدويًا لاستيراد القالب والبدء في تحرير جدول الأعمال.
 
         '
       title: مُخَطَّط
     scheduled_delete_dialog:
-      confirm_button: Cancel occurrence
-      confirmation_message_html: 'Any meeting information not in the template will be lost. Do you want to continue?
-
-        '
-      heading: Cancel this meeting occurrence?
-      title: Cancel meeting occurrence
-    starts: Starts
+      confirm_button: إلغاء الموعد
+      confirmation_message_html: |
+        ستُفقد أي معلومات للاجتماع غير موجودة في القالب.
+        هل تريد المتابعة؟
+      heading: إلغاء موعد الاجتماع هذا؟
+      title: إلغاء موعد الاجتماع
+    starts: يبدأ
     template:
-      banner_html: 'You are currently editing a template of a meeting series: %{link}. Every new occurrence of a meeting in the series will use this template. Changes will not affect past or already-created meetings.
+      banner_html: 'أنت تحرر حاليًا قالب سلسلة اجتماعات: %{link}. سيستخدم كل موعد جديد لاجتماع في السلسلة هذا القالب. لن تؤثر التغييرات في الاجتماعات السابقة أو التي تم إنشاؤها بالفعل.
 
         '
-      blank_title: Your meeting series template is empty
-      button_finalize: Open first meeting
-      description: 'This template will be used whenever new meetings in the series get created. You can add agenda items, participants, and attachments to this template.
+      blank_title: قالب سلسلة الاجتماعات فارغ
+      button_finalize: فتح الاجتماع الأول
+      description: 'سيُستخدم هذا القالب كلما أُنشئت اجتماعات جديدة في السلسلة. يمكنك إضافة بنود جدول الأعمال والمشاركين والمرفقات إلى هذا القالب.
 
         '
-      draft_banner_html: 'You are currently editing a template of a meeting series: %{link}. Every new occurrence of a meeting in the series will use this template. Changes will not affect past or already-created meetings. No email invites will be sent in this current draft mode until you open the first meeting.
+      draft_banner_html: 'أنت تحرر حاليًا قالب سلسلة اجتماعات: %{link}. سيستخدم كل موعد جديد لاجتماع في السلسلة هذا القالب. لن تؤثر التغييرات في الاجتماعات السابقة أو التي تم إنشاؤها بالفعل. لن تُرسل أي دعوات بالبريد الإلكتروني في وضع المسودة الحالي حتى تفتح الاجتماع الأول.
 
         '
-      label_edit_template: Edit template
-      label_view_template: View template
+      label_edit_template: تحرير القالب
+      label_view_template: عرض القالب
     time_zone_difference_banner:
-      description: 'The dates below are referencing the time zone of the meeting series (%{actual_zone}), not your local time zone (%{user_zone}).
+      description: 'تشير التواريخ أدناه إلى المنطقة الزمنية لسلسلة الاجتماعات (%{actual_zone})، وليس إلى منطقتك الزمنية المحلية (%{user_zone}).
 
         '
-      title: Time zone difference
-  text_add_work_package_to_meeting_description: A work package can be added to one or multiple meetings for discussion. Any notes concerning it are also visible here.
-  text_add_work_package_to_meeting_form: The work package will be added to the selected meeting or backlog as an agenda item.
-  text_agenda_backlog: 'This backlog is unique to this one-time meeting. You can drag items in and out to add or remove them from the meeting agenda.
+      title: اختلاف المنطقة الزمنية
+  text_add_work_package_to_meeting_description: يمكن إضافة حزمة العمل إلى اجتماع واحد أو أكثر لمناقشتها. وتظهر هنا أيضًا أي ملاحظات تتعلق بها.
+  text_add_work_package_to_meeting_form: ستُضاف حزمة العمل إلى الاجتماع المحدد أو قائمة الأعمال المتراكمة كبند في جدول الأعمال.
+  text_agenda_backlog: 'قائمة الأعمال المتراكمة هذه خاصة بهذا الاجتماع لمرة واحدة. يمكنك سحب البنود إليها أو منها لإضافتها إلى جدول أعمال الاجتماع أو إزالتها منه.
 
     '
-  text_agenda_backlog_clear_description: 'Are you sure you want to remove all items currently in the agenda backlog? This action is not reversible.
+  text_agenda_backlog_clear_description: 'هل أنت متأكد من أنك تريد إزالة جميع البنود الموجودة حاليًا في قائمة الأعمال المتراكمة لجدول الأعمال؟ لا يمكن التراجع عن هذا الإجراء.
 
     '
-  text_agenda_item_dialog_skipping_cancelled_many: "%{count} cancelled meetings"
-  text_agenda_item_dialog_skipping_cancelled_one: cancelled meeting on %{date}
-  text_agenda_item_dialog_skipping_closed_many: "%{count} closed meetings"
-  text_agenda_item_dialog_skipping_closed_one: closed meeting on %{date}
-  text_agenda_item_dialog_skipping_note: 'Note: Skipping %{details}.'
-  text_agenda_item_duplicate_in_next_meeting: Are you sure you want to add a copy of this agenda item to the next meeting, on %{date} at %{time}? Outcomes will not be duplicated.
-  text_agenda_item_duplicated_in_next_meeting: Agenda item duplicated in the next meeting, on %{date}
-  text_agenda_item_move_next_meeting: This item will be moved to the next meeting on %{date} at %{time}.
-  text_agenda_item_moved_to_next_meeting: Agenda item moved to the next meeting, on %{date}
-  text_agenda_item_no_available_occurrence: No upcoming occurrences are available.
-  text_agenda_item_no_notes: No notes provided
-  text_agenda_item_not_editable_anymore: This agenda item is not editable anymore.
-  text_agenda_item_title: Agenda item "%{title}"
-  text_agenda_work_package_deleted: Agenda item for deleted work package
-  text_backlog_clear_error: One or more errors occurred while trying to clear the backlog.
-  text_deleted_agenda_item: Deleted agenda item
+  text_agenda_item_dialog_skipping_cancelled_many: "%{count} من الاجتماعات الملغاة"
+  text_agenda_item_dialog_skipping_cancelled_one: الاجتماع الملغى في %{date}
+  text_agenda_item_dialog_skipping_closed_many: "%{count} من الاجتماعات المغلقة"
+  text_agenda_item_dialog_skipping_closed_one: الاجتماع المغلق في %{date}
+  text_agenda_item_dialog_skipping_note: 'ملاحظة: سيتم تخطي %{details}.'
+  text_agenda_item_duplicate_in_next_meeting: هل أنت متأكد من أنك تريد إضافة نسخة من بند جدول الأعمال هذا إلى الاجتماع التالي في %{date} الساعة %{time}؟ لن تُنسخ النتائج.
+  text_agenda_item_duplicated_in_next_meeting: تم نسخ بند جدول الأعمال إلى الاجتماع التالي بتاريخ %{date}
+  text_agenda_item_move_next_meeting: سيتم نقل هذا البند إلى الاجتماع التالي في %{date} الساعة %{time}.
+  text_agenda_item_moved_to_next_meeting: تم نقل بند جدول الأعمال إلى الاجتماع التالي بتاريخ %{date}
+  text_agenda_item_no_available_occurrence: لا تتوفر مواعيد قادمة.
+  text_agenda_item_no_notes: لا توجد ملاحظات
+  text_agenda_item_not_editable_anymore: لم يعد بند جدول الأعمال هذا قابلًا للتحرير.
+  text_agenda_item_title: بند جدول الأعمال «%{title}»
+  text_agenda_work_package_deleted: بند جدول أعمال لحزمة عمل محذوفة
+  text_backlog_clear_error: حدث خطأ واحد أو أكثر أثناء محاولة مسح قائمة الأعمال المتراكمة.
+  text_deleted_agenda_item: بند جدول أعمال محذوف
   text_duration_in_hours: المدة بالساعات
-  text_email_updates_enabled: Email calendar updates are enabled. All participants will receive updated invites via email when you make changes.
-  text_email_updates_muted: Email calendar updates are muted. Participants will not receive updated invites via email when you make changes.
-  text_exit_draft_mode_dialog_subtitle: You cannot return to draft mode once you schedule a meeting.
-  text_exit_draft_mode_dialog_template_subtitle: You cannot return to draft mode after this.
-  text_exit_draft_mode_dialog_template_title: Open the first occurrence of this meeting series?
-  text_exit_draft_mode_dialog_title: Open this meeting and send invites?
+  text_email_updates_enabled: تحديثات التقويم عبر البريد الإلكتروني مفعّلة. سيتلقى جميع المشاركين دعوات محدّثة عبر البريد الإلكتروني عند إجراء تغييرات.
+  text_email_updates_muted: تحديثات التقويم عبر البريد الإلكتروني موقوفة. لن يتلقى المشاركون دعوات محدّثة عبر البريد الإلكتروني عند إجراء تغييرات.
+  text_exit_draft_mode_dialog_subtitle: لا يمكنك العودة إلى وضع المسودة بعد جدولة الاجتماع.
+  text_exit_draft_mode_dialog_template_subtitle: لا يمكنك العودة إلى وضع المسودة بعد ذلك.
+  text_exit_draft_mode_dialog_template_title: فتح الموعد الأول لسلسلة الاجتماعات هذه؟
+  text_exit_draft_mode_dialog_title: فتح هذا الاجتماع وإرسال الدعوات؟
   text_in_hours: في الساعات
   text_meeting_agenda_for_meeting: جدول أعمال للاجتماع "%{meeting}"
   text_meeting_agenda_open_are_you_sure: سيؤدي هذا إلى استبدال جميع التغييرات في المقرر! هل تريد المتابعة؟
-  text_meeting_closed_description: This meeting is closed. You cannot add/remove agenda items anymore.
-  text_meeting_closed_dropdown_description: This meeting is closed. You cannot modify agenda items or outcomes anymore.
-  text_meeting_closing_are_you_sure: Are you sure you want to close the meeting agenda?
-  text_meeting_draft_banner: You are currently in draft mode. This meeting will not send out any calendar updates or invites, even if you change meeting details or add/remove participants.
-  text_meeting_draft_description: Prepare your agenda in draft mode. This meeting will not send out any calendar updates or invites, even if you change meeting details or add/remove participants.
-  text_meeting_empty_description1: Start by adding agenda items below. Each item can be as simple as just a title, but you can also add additional details like duration and notes.
-  text_meeting_empty_description2: You can also add references to existing work packages. When you do, related notes will automatically be visible in the work package's "Meetings" tab.
-  text_meeting_empty_heading: Your meeting is empty
-  text_meeting_ics_description: 'Link to meeting: %{url}'
-  text_meeting_ics_meeting_series_description: 'Link to meeting series: %{url}'
-  text_meeting_in_progress_description: You can modify the agenda, document outcomes for each item and track attendance for participants. Once the meeting is complete, you can mark it as closed to lock it.
-  text_meeting_in_progress_dropdown_description: Document outcomes like information needs or decisions taken during the meeting.
+  text_meeting_closed_description: هذا الاجتماع مغلق. لم يعد بإمكانك إضافة بنود جدول الأعمال أو إزالتها.
+  text_meeting_closed_dropdown_description: هذا الاجتماع مغلق. لم يعد بإمكانك تعديل بنود جدول الأعمال أو النتائج.
+  text_meeting_closing_are_you_sure: هل أنت متأكد من أنك تريد إغلاق جدول أعمال الاجتماع؟
+  text_meeting_draft_banner: أنت حاليًا في وضع المسودة. لن يُرسل هذا الاجتماع أي تحديثات للتقويم أو دعوات، حتى إذا غيّرت تفاصيل الاجتماع أو أضفت مشاركين أو أزلتهم.
+  text_meeting_draft_description: حضّر جدول أعمالك في وضع المسودة. لن يُرسل هذا الاجتماع أي تحديثات للتقويم أو دعوات، حتى إذا غيّرت تفاصيل الاجتماع أو أضفت مشاركين أو أزلتهم.
+  text_meeting_empty_description1: ابدأ بإضافة بنود جدول الأعمال أدناه. يمكن أن يكون كل بند بسيطًا ويقتصر على عنوان فقط، ولكن يمكنك أيضًا إضافة تفاصيل أخرى مثل المدة والملاحظات.
+  text_meeting_empty_description2: يمكنك أيضًا إضافة مراجع إلى حزم عمل موجودة. وعند القيام بذلك، ستظهر الملاحظات ذات الصلة تلقائيًا في علامة التبويب «الاجتماعات» الخاصة بحزمة العمل.
+  text_meeting_empty_heading: اجتماعك فارغ
+  text_meeting_ics_description: 'رابط الاجتماع: %{url}'
+  text_meeting_ics_meeting_series_description: 'رابط سلسلة الاجتماعات: %{url}'
+  text_meeting_in_progress_description: يمكنك تعديل جدول الأعمال وتوثيق النتائج لكل بند وتتبع حضور المشاركين. بمجرد انتهاء الاجتماع، يمكنك وضع علامة «مغلق» عليه لقفله.
+  text_meeting_in_progress_dropdown_description: وثّق النتائج مثل الاحتياجات من المعلومات أو القرارات المتخذة أثناء الاجتماع.
   text_meeting_minutes_for_meeting: محضر الجسلة للاجتماع "%{meeting}"
-  text_meeting_not_editable_anymore: This meeting is not editable anymore.
-  text_meeting_not_present_anymore: This meeting was deleted. Please select another meeting.
-  text_meeting_occurrence_ics_description: 'Link to meeting occurrence: %{url} Link to meeting series: %{series_url}'
-  text_meeting_open_description: You can add/remove agenda items and participants. Once the agenda is ready, mark it as in progress to document outcomes.
-  text_meeting_open_dropdown_description: Any existing outcomes will remain but users will not be able to add new outcomes.
-  text_meeting_series_end_early: Ending the series will delete any future open or scheduled meeting occurrences
-  text_meeting_series_end_early_heading: Delete future occurrences?
-  text_meeting_template_blank_slate: You can create a new template for one-time meetings
-  text_meeting_template_blank_slate_heading: There are no templates to display
-  text_meeting_template_sharing_description: This template can be shared with subprojects or other projects in this instance. Only the agenda items and attachments will be copied.
+  text_meeting_not_editable_anymore: لم يعد هذا الاجتماع قابلًا للتحرير.
+  text_meeting_not_present_anymore: تم حذف هذا الاجتماع. يُرجى تحديد اجتماع آخر.
+  text_meeting_occurrence_ics_description: |-
+    رابط موعد الاجتماع: %{url}
+    رابط سلسلة الاجتماعات: %{series_url}
+  text_meeting_open_description: يمكنك إضافة بنود جدول الأعمال والمشاركين أو إزالتهم. بمجرد أن يصبح جدول الأعمال جاهزًا، ضع عليه علامة «قيد التنفيذ» لتوثيق النتائج.
+  text_meeting_open_dropdown_description: ستبقى أي نتائج موجودة، ولكن لن يتمكن المستخدمون من إضافة نتائج جديدة.
+  text_meeting_series_end_early: سيؤدي إنهاء السلسلة إلى حذف أي مواعيد اجتماعات مستقبلية مفتوحة أو مجدولة
+  text_meeting_series_end_early_heading: حذف المواعيد المستقبلية؟
+  text_meeting_template_blank_slate: يمكنك إنشاء قالب جديد للاجتماعات لمرة واحدة
+  text_meeting_template_blank_slate_heading: لا توجد قوالب لعرضها
+  text_meeting_template_sharing_description: يمكن مشاركة هذا القالب مع المشاريع الفرعية أو مشاريع أخرى في هذا النظام. سيتم نسخ بنود جدول الأعمال والمرفقات فقط.
   text_notificiation_invited: 'هذا البريد الألكتروني يحتوي على مدخل (ics) للاجتماع أدناه:'
-  text_onetime_meeting_template_banner: You are currently editing a meeting template. You can use this template to create one-time meetings with a predefined agenda. Changes will not affect already-created meetings.
-  text_onetime_meeting_template_empty_description: Add agenda items, sections and attachments here. They will be included in every meeting created using this template.
-  text_onetime_meeting_template_empty_heading: This meeting template is empty
-  text_outcome_cannot_be_added: An outcome can no longer be added.
-  text_outcome_not_editable_anymore: This outcome is not editable anymore.
-  text_series_backlog: 'The backlog is shared with all occurrences of this series. You can drag items in and out to add or remove them from a particular meeting.
+  text_onetime_meeting_template_banner: أنت تحرر حاليًا قالب اجتماع. يمكنك استخدام هذا القالب لإنشاء اجتماعات لمرة واحدة بجدول أعمال محدد مسبقًا. لن تؤثر التغييرات في الاجتماعات التي تم إنشاؤها بالفعل.
+  text_onetime_meeting_template_empty_description: أضف بنود جدول الأعمال والأقسام والمرفقات هنا. سيتم تضمينها في كل اجتماع يُنشأ باستخدام هذا القالب.
+  text_onetime_meeting_template_empty_heading: قالب الاجتماع هذا فارغ
+  text_outcome_cannot_be_added: لم يعد بالإمكان إضافة نتيجة.
+  text_outcome_not_editable_anymore: لم تعد هذه النتيجة قابلة للتحرير.
+  text_series_backlog: 'قائمة الأعمال المتراكمة مشتركة بين جميع مواعيد هذه السلسلة. يمكنك سحب البنود إليها أو منها لإضافتها إلى اجتماع معين أو إزالتها منه.
 
     '
-  text_series_backlog_clear_description: 'This will remove all items in the series backlog, which is shared with all meetings in the series. Are you sure you want to continue? This action is not reversible.
+  text_series_backlog_clear_description: 'سيؤدي هذا إلى إزالة جميع البنود في قائمة الأعمال المتراكمة للسلسلة، وهي مشتركة بين جميع الاجتماعات في السلسلة. هل أنت متأكد من أنك تريد المتابعة؟ لا يمكن التراجع عن هذا الإجراء.
 
     '
-  text_work_package_add_to_meeting_hint: Use the "Add to meeting" button to add this work package to an upcoming meeting.
-  text_work_package_has_no_past_meeting_agenda_items: This work package was not added as an agenda item in a past meeting.
-  text_work_package_has_no_upcoming_meeting_agenda_items: This work package is not scheduled in an upcoming meeting agenda yet.
+  text_work_package_add_to_meeting_hint: استخدم زر «إضافة إلى اجتماع» لإضافة حزمة العمل هذه إلى اجتماع قادم.
+  text_work_package_has_no_past_meeting_agenda_items: لم تُضف حزمة العمل هذه كبند في جدول أعمال أي اجتماع سابق.
+  text_work_package_has_no_upcoming_meeting_agenda_items: لم تُجدول حزمة العمل هذه في جدول أعمال أي اجتماع قادم بعد.

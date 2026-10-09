@@ -22,7 +22,7 @@ ar:
   label_current_avatar: الصورة الرمزية الحالية
   message_avatar_uploaded: لقد تم تحميل الصورة الرمزية بنجاح .
   plugin_openproject_avatars:
-    description: This plugin allows OpenProject users to upload a picture to be used as an avatar or use registered images from Gravatar.
+    description: تتيح هذه الإضافة لمستخدمي OpenProject رفع صورة لاستخدامها كصورة رمزية، أو استخدام الصور المسجلة في Gravatar.
     name: الصور الرمزية
   unable_to_delete_avatar: لايمكن حذف الصورة الرمزية
   wrong_file_format: التنسيقات المتاحة للصور هي jpg و png و gif.

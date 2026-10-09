@@ -24,114 +24,114 @@ ar:
   js:
     admin:
       type_form:
-        edit_query: Edit query
+        edit_query: تعديل الاستعلام
       work_packages_settings:
-        warning_progress_calculation_mode_change_from_field_to_status_html: Changing progress calculation mode from work-based to status-based will result in all existing <i>% Complete</i> values to be lost and replaced with values associated with each status. Existing values for <i>Remaining work</i> may also be recalculated to reflect this change. This action is not reversible.
-        warning_progress_calculation_mode_change_from_status_to_field_html: Changing progress calculation mode from status-based to work-based will make the <i>% Complete</i> field freely editable. If you optionally enter values for <i>Work</i> or <i>Remaining work</i>, they will also be linked to <i>% Complete</i>. Changing <i>Remaining work</i> can then update <i>% Complete</i>.
+        warning_progress_calculation_mode_change_from_field_to_status_html: سيؤدي تغيير وضع حساب التقدم من الحساب المستند إلى العمل إلى الحساب المستند إلى الحالة إلى فقدان جميع قيم <i>نسبة الإنجاز</i> الحالية واستبدالها بالقيم المرتبطة بكل حالة. وقد يُعاد أيضًا حساب القيم الحالية لحقل <i>العمل المتبقي</i> لتعكس هذا التغيير. لا يمكن التراجع عن هذا الإجراء.
+        warning_progress_calculation_mode_change_from_status_to_field_html: سيؤدي تغيير وضع حساب التقدم من الحساب المستند إلى الحالة إلى الحساب المستند إلى العمل إلى جعل حقل <i>نسبة الإنجاز</i> قابلًا للتعديل بحرية. وإذا أدخلت اختياريًا قيمًا لحقلي <i>العمل</i> أو <i>العمل المتبقي</i>، فستُربط أيضًا بحقل <i>نسبة الإنجاز</i>. وعندئذٍ يمكن أن يؤدي تغيير <i>العمل المتبقي</i> إلى تحديث <i>نسبة الإنجاز</i>.
       working_days:
-        add_non_working_day: Non-working day
-        already_added_error: A non-working day for this date exists already. There can only be one non-working day created for each unique date.
+        add_non_working_day: يوم عطلة
+        already_added_error: يوجد يوم عطلة لهذا التاريخ بالفعل. لا يمكن إنشاء سوى يوم عطلة واحد لكل تاريخ.
         calendar:
-          empty_state_description: No specific non-working days are defined for this year. Click on "+ Non-working day" below to add a date.
-          empty_state_header: Non-working days
-          new_date: "(new)"
+          empty_state_description: لم تُحدَّد أيام عطلة خاصة لهذا العام. انقر على «+ يوم عطلة» أدناه لإضافة تاريخ.
+          empty_state_header: أيام العطلة
+          new_date: "(جديد)"
     ajax:
       hide: إخفاء
-      loading: Loading…
-      updating: Updating…
+      loading: جارٍ التحميل…
+      updating: جارٍ التحديث…
     attachments:
-      delete: Delete attachment
-      delete_confirmation: 'Are you sure you want to delete this file? This action is not reversible.
+      delete: حذف المرفق
+      delete_confirmation: 'هل أنت متأكد من رغبتك في حذف هذا الملف؟ لا يمكن التراجع عن هذا الإجراء.
 
         '
-      draggable_hint: 'Drag on editor field to inline image or reference attachment. Closed editor fields will be opened while you keep dragging.
+      draggable_hint: 'اسحب إلى حقل المحرر لإدراج الصورة ضمن النص أو للإشارة إلى المرفق. ستُفتح حقول المحرر المغلقة أثناء استمرارك في السحب.
 
         '
-      quarantined_hint: The file is quarantined, as a virus was found. It is not available for download.
+      quarantined_hint: تم عزل الملف لاكتشاف فيروس فيه. الملف غير متاح للتنزيل.
     autocomplete_ng_select:
-      add_tag: Add item
-      clear_all: Clear all
+      add_tag: إضافة عنصر
+      clear_all: مسح الكل
       loading: جاري التحميل...
-      not_found: No items found
-      type_to_search: Type to search
+      not_found: لم يتم العثور على عناصر
+      type_to_search: اكتب للبحث
     autocomplete_select:
-      active: Active %{label} %{name}
+      active: 'العنصر النشط: %{label} %{name}'
       placeholder:
-        multi: Add "%{name}"
-        single: Select "%{name}"
-      remove: Remove %{name}
+        multi: إضافة «%{name}»
+        single: تحديد «%{name}»
+      remove: إزالة %{name}
     autocompleter:
-      notFoundText: No items found
-      placeholder: Type to search
+      notFoundText: لم يتم العثور على عناصر
+      placeholder: اكتب للبحث
       project:
-        placeholder: Select project
+        placeholder: اختر مشروعًا
       search: البحث
     backup:
-      attachments_disabled: Attachments may not be included since they exceed the maximum overall size allowed. You can change this via the configuration (requires a server restart).
-      download_backup: Download backup
-      include_attachments: Include attachments
-      info: 'You can trigger a backup here. The process can take some time depending on the amount of data (especially attachments) you have. You will receive an email once it''s ready.
+      attachments_disabled: قد لا تُضمَّن المرفقات لأنها تتجاوز الحد الأقصى المسموح به للحجم الإجمالي. يمكنك تغيير ذلك من خلال التكوين (يتطلب إعادة تشغيل الخادم).
+      download_backup: تنزيل النسخة الاحتياطية
+      include_attachments: تضمين المرفقات
+      info: 'يمكنك بدء نسخة احتياطية من هنا. قد تستغرق العملية بعض الوقت بحسب حجم البيانات لديك (خاصةً المرفقات). ستتلقى رسالة بريد إلكتروني فور جاهزيتها.
 
         '
-      last_backup: Last backup
-      last_backup_from: Last backup from
-      note: 'A new backup will override any previous one. Only a limited number of backups per day can be requested.
+      last_backup: آخر نسخة احتياطية
+      last_backup_from: آخر نسخة احتياطية بتاريخ
+      note: 'ستحل النسخة الاحتياطية الجديدة محل أي نسخة سابقة. لا يمكن طلب سوى عدد محدود من النسخ الاحتياطية يوميًا.
 
         '
       options: خيارات
-      request_backup: Request backup
-      title: Backup OpenProject
+      request_backup: طلب نسخة احتياطية
+      title: النسخ الاحتياطي لـ OpenProject
     baseline:
       apply: تطبيق
       clear: إزالة
       drop_down:
-        a_specific_date: a specific date
-        between_two_specific_dates: between two specific dates
+        a_specific_date: تاريخ محدد
+        between_two_specific_dates: بين تاريخين محددين
         last_month: الشهر الماضي
         last_week: الأسبوع الماضي
-        last_working_day: last working day
+        last_working_day: آخر يوم عمل
         none: "-"
         yesterday: الأمس
       from: من
-      header_description: Highlight changes made to this list since any point in the past.
-      help_description: Reference time zone for the baseline.
+      header_description: إبراز التغييرات التي أُجريت على هذه القائمة منذ أي نقطة زمنية في الماضي.
+      help_description: المنطقة الزمنية المرجعية لخط الأساس.
       icon_tooltip:
-        added: Added to view within the comparison time period
-        changed: Maintained with modifications
-        removed: Removed from view within the comparison time period
+        added: أُضيف إلى العرض خلال فترة المقارنة
+        changed: باقٍ مع تعديلات
+        removed: أُزيل من العرض خلال فترة المقارنة
       legends:
-        changes_between: Changes between
-        changes_since: Changes since
-        in_your_timezone: 'In your local timezone:'
-        maintained_with_changes: Maintained with changes
-        no_longer_meets_filter_criteria: No longer meets filter criteria
-        now_meets_filter_criteria: Now meets filter criteria
-      show_changes_since: Show changes since
+        changes_between: التغييرات بين
+        changes_since: التغييرات منذ
+        in_your_timezone: 'بمنطقتك الزمنية المحلية:'
+        maintained_with_changes: باقٍ مع تغييرات
+        no_longer_meets_filter_criteria: لم يعد يستوفي معايير التصفية
+        now_meets_filter_criteria: أصبح يستوفي معايير التصفية
+      show_changes_since: إظهار التغييرات منذ
       time: الوقت
-      time_description: 'In your local time: %{datetime}'
+      time_description: 'بتوقيتك المحلي: %{datetime}'
       to: إلى
-      toggle_title: Baseline
-    breadcrumb: Breadcrumb
+      toggle_title: خط الأساس
+    breadcrumb: مسار التنقل
     button_add: أَضِفْ
     button_add_watcher: إضافة مراقب
-    button_advanced_filter: Advanced filter
+    button_advanced_filter: تصفية متقدمة
     button_back: الرجوع للخلف
-    button_back_to_list_view: Back to list view
+    button_back_to_list_view: العودة إلى عرض القائمة
     button_cancel: إلغاء
-    button_change_project: Move to another project
+    button_change_project: نقل إلى مشروع آخر
     button_check_all: اختر الكل
-    button_clear: Clear
+    button_clear: مسح
     button_close: أغلِق
-    button_close_details: Close details view
+    button_close_details: إغلاق عرض التفاصيل
     button_collapse_all: طَيْ الجميع
-    button_configure-form: Configure form
+    button_configure-form: تكوين النموذج
     button_confirm: تأكيد
-    button_continue: Continue
+    button_continue: متابعة
     button_copy: انسخ
-    button_copy_link_to_clipboard: Copy link to clipboard
-    button_copy_numeric_id_to_clipboard: Copy numeric ID to clipboard
+    button_copy_link_to_clipboard: نسخ الرابط إلى الحافظة
+    button_copy_numeric_id_to_clipboard: نسخ المعرّف الرقمي إلى الحافظة
     button_copy_to_clipboard: نسخ إلى الحافظة
-    button_copy_to_other_project: Duplicate in another project
+    button_copy_to_other_project: إنشاء نسخة في مشروع آخر
     button_create: إنشاء
     button_custom-fields: الحقول المخصصة
     button_delete: احذف
@@ -142,147 +142,147 @@ ar:
     button_expand_all: توسيع الجميع
     button_export-atom: تحميل Atom
     button_filter: فلترة
-    button_generate_pdf: Generate PDF
+    button_generate_pdf: إنشاء ملف PDF
     button_list_view: عرض القائمة
     button_log_time: وقت السجل
     button_more: المزيد
-    button_more_actions: More actions
+    button_more_actions: مزيد من الإجراءات
     button_open_details: عرض التفاصيل المفتوحة
     button_open_fullscreen: فتح عرض كامل الشاشة
     button_quote: اقتباس
     button_save: حفظ
     button_settings: إعدادات
-    button_show_cards: Show card view
-    button_show_fullscreen: Show fullscreen view
-    button_show_gantt: Show Gantt view
-    button_show_list: Show list view
-    button_show_table: Show table view
+    button_show_cards: إظهار عرض البطاقات
+    button_show_fullscreen: إظهار العرض بملء الشاشة
+    button_show_gantt: إظهار عرض جانت
+    button_show_list: إظهار عرض القائمة
+    button_show_table: إظهار عرض الجدول
     button_show_view: عرض ملء الشاشة
-    button_start_timer: Start timer
-    button_stop_timer: Stop timer
+    button_start_timer: بدء المؤقت
+    button_stop_timer: إيقاف المؤقت
     button_uncheck_all: إلغاء اختيار الكل
     button_update: التحديث
     caption_rate_history: تاريخ السعر
     card:
-      add_new: Add new card
+      add_new: إضافة بطاقة جديدة
       highlighting:
-        entire_card_by: Entire card by
-        inline: 'Highlight inline:'
-      remove_from_list: Remove card from list
+        entire_card_by: البطاقة بالكامل حسب
+        inline: 'إبراز ضمن السطر:'
+      remove_from_list: إزالة البطاقة من القائمة
     chart:
-      axis_criteria: Axis criteria
+      axis_criteria: معايير المحور
       errors:
-        could_not_load: The data to display the graph could not be loaded. The necessary permissions may be lacking.
-      modal_title: Work package graph configuration
+        could_not_load: تعذّر تحميل البيانات اللازمة لعرض الرسم البياني. قد تكون الصلاحيات اللازمة غير متوفرة.
+      modal_title: تكوين الرسم البياني لحزم العمل
       tabs:
-        dataset: Dataset %{number}
+        dataset: مجموعة البيانات %{number}
         graph_settings: عام
-      type: Chart type
+      type: نوع المخطط
       types:
-        bar: Bar
-        doughnut: Doughnut
-        horizontal_bar: Horizontal bar
-        line: Line
-        pie: Pie
-        polar_area: Polar area
-        radar: Radar
+        bar: شريطي
+        doughnut: حلقي
+        horizontal_bar: شريطي أفقي
+        line: خطي
+        pie: دائري
+        polar_area: قطبي مساحي
+        radar: راداري
     clipboard:
-      browser_error: 'Your browser doesn''t support copying to clipboard. Please copy it manually: %{content}'
-      copied_successful: Successfully copied to clipboard!
+      browser_error: 'لا يدعم متصفحك النسخ إلى الحافظة. يُرجى نسخه يدويًا: %{content}'
+      copied_successful: تم النسخ إلى الحافظة بنجاح!
     close_filter_title: إغلاق عامل التصفية
     close_form_title: إغلاق النموذج
     close_popup_title: إغلاق النافذة المنبثقة
     custom_actions:
       date:
-        current_date: Current date
+        current_date: التاريخ الحالي
         specific: في
     description_available_columns: الأعمدة المتوفرة
-    description_current_position: 'You are here: '
+    description_current_position: 'أنت هنا: '
     description_select_work_package: 'اختر مجموعة العمل #%{id}'
     description_subwork_package: 'إنتاج مجموعة العمل #%{id}'
     editor:
-      ckeditor_error: An error occurred within CKEditor
-      error_saving_failed: 'Saving the document failed with the following error: %{error}'
+      ckeditor_error: حدث خطأ في CKEditor
+      error_saving_failed: 'فشل حفظ المستند بسبب الخطأ التالي: %{error}'
       macro:
         attribute_reference:
-          aria_label_project_attribute: A dynamic project attribute placed using a macro.
+          aria_label_project_attribute: سمة مشروع ديناميكية مُدرجة باستخدام ماكرو.
           aria_label_with_name: "%{name}: %{description}"
-          aria_label_work_package_attribute: A dynamic work package attribute placed using a macro.
-          aria_label_work_package_link: A dynamic link to a work package placed using a macro.
-          invalid_attribute: The selected attribute '%{name}' does not exist.
-          nested_macro: This macro is recursively referencing %{model} %{id}.
-          not_found: Requested resource could not be found
+          aria_label_work_package_attribute: سمة حزمة عمل ديناميكية مُدرجة باستخدام ماكرو.
+          aria_label_work_package_link: رابط ديناميكي إلى حزمة عمل مُدرج باستخدام ماكرو.
+          invalid_attribute: السمة المحددة «%{name}» غير موجودة.
+          nested_macro: يشير هذا الماكرو بشكل تكراري إلى %{model} %{id}.
+          not_found: تعذّر العثور على المورد المطلوب
         child_pages:
-          button: List of sub-pages
-          hint: 'Leave this field empty to list all child pages of the current page. If you want to reference a different page, provide its title or slug.
+          button: قائمة الصفحات الفرعية
+          hint: 'اترك هذا الحقل فارغًا لعرض جميع الصفحات الفرعية للصفحة الحالية. إذا أردت الإشارة إلى صفحة أخرى، فأدخل عنوانها أو اسمها المختصر (slug).
 
             '
-          include_parent: Include parent
+          include_parent: تضمين الصفحة الأصل
           page: صفحة وِيكيبيديا
-          text: "[Placeholder] List of sub-pages of"
-          this_page: this page
+          text: "[عنصر نائب] قائمة الصفحات الفرعية التابعة لـ"
+          this_page: هذه الصفحة
         code_block:
-          button: Insert code snippet
-          language: Formatting language
-          language_hint: Enter the formatting language that will be used for highlighting (if supported).
-          title: Insert / edit Code snippet
+          button: إدراج مقتطف برمجي
+          language: لغة التنسيق
+          language_hint: أدخل لغة التنسيق التي ستُستخدم لتمييز الصياغة (إن كانت مدعومة).
+          title: إدراج / تعديل مقتطف برمجي
         embedded_calendar:
-          text: "[Placeholder] Embedded calendar"
+          text: "[عنصر نائب] تقويم مضمّن"
         embedded_table:
-          button: Embed work package table
-          text: "[Placeholder] Embedded work package table"
-        error: 'Cannot expand macro: %{message}'
+          button: تضمين جدول حزم العمل
+          text: "[عنصر نائب] جدول حزم عمل مضمّن"
+        error: 'تعذّر توسيع الماكرو: %{message}'
         macro_dropdown:
-          caption: Insert
-        toc: Table of contents
-        toolbar_help: Click to select widget and show the toolbar. Double-click to edit widget
+          caption: إدراج
+        toc: جدول المحتويات
+        toolbar_help: انقر لتحديد الأداة وإظهار شريط الأدوات. انقر نقرًا مزدوجًا لتعديل الأداة
         wiki_page_include:
-          button: Include content of another wiki page
+          button: تضمين محتوى صفحة ويكي أخرى
           hint: |
-            Include the content of another wiki page by specifying its title or slug.
-            You can include the wiki page of another project by separating them with a colon like the following example.
-          not_set: "(Page not yet set)"
+            ضمِّن محتوى صفحة ويكي أخرى بتحديد عنوانها أو اسمها المختصر (slug).
+            يمكنك تضمين صفحة ويكي من مشروع آخر بالفصل بينهما بنقطتين رأسيتين كما في المثال التالي.
+          not_set: "(لم تُحدَّد الصفحة بعد)"
           page: صفحة وِيكيبيديا
-          text: "[Placeholder] Included wiki page of"
+          text: "[عنصر نائب] صفحة الويكي المُضمَّنة من"
         work_package_button:
-          button: Insert create work package button
-          button_style: Use button style
-          button_style_hint: 'Optional: Check to make macro appear as a button, not as a link.'
-          type: Work package type
-          with_type: 'Create work package (Type: %{typename})'
-          without_type: Create work package
+          button: إدراج زر إنشاء حزمة عمل
+          button_style: استخدام نمط الزر
+          button_style_hint: 'اختياري: حدد هذا الخيار لإظهار الماكرو كزر بدلًا من رابط.'
+          type: نوع حزمة العمل
+          with_type: 'إنشاء حزمة عمل (النوع: %{typename})'
+          without_type: إنشاء حزمة عمل
       mode:
-        manual: Switch to Markdown source
-        wysiwyg: Switch to WYSIWYG editor
-      no_revisions: No local modifications found
-      preview: Toggle preview mode
-      revisions: Show local modifications
-      source_code: Toggle Markdown source mode
+        manual: التبديل إلى مصدر Markdown
+        wysiwyg: التبديل إلى المحرر المرئي (WYSIWYG)
+      no_revisions: لم يتم العثور على تعديلات محلية
+      preview: تبديل وضع المعاينة
+      revisions: إظهار التعديلات المحلية
+      source_code: تبديل وضع مصدر Markdown
     enumeration_activities: الأنشطة (تتبع الوقت)
     enumeration_doc_categories: فئات الوثائق
     enumeration_work_package_priorities: أولويات مجموعة العمل
     error:
-      cannot_save_changes_with_message: 'Cannot save your changes due to the following error: %{error}'
-      embedded_table_loading: 'The embedded view could not be loaded: %{message}'
+      cannot_save_changes_with_message: 'تعذّر حفظ تغييراتك بسبب الخطأ التالي: %{error}'
+      embedded_table_loading: 'تعذّر تحميل العرض المضمّن: %{message}'
       internal: حدث خطأ داخلي.
-      query_saving: The view could not be saved.
-    error_attachment_upload: 'File failed to upload: %{error}'
-    error_attachment_upload_permission: You don't have the permission to upload files on this resource.
+      query_saving: تعذّر حفظ العرض.
+    error_attachment_upload: 'فشل رفع الملف: %{error}'
+    error_attachment_upload_permission: ليست لديك صلاحية رفع الملفات إلى هذا المورد.
     error_could_not_resolve_user_name: تعذر حل اسم المستخدم
     error_could_not_resolve_version_name: تعثّر حل اسم الإصدار
     exclusion_info:
       modal:
-        content: The status '%{status_name}' has been configured to be excluded from hierarchy totals of Work, Remaining work, and % Complete. The totals do not take this value into account.
-        title: Status excluded from hierarchy totals
+        content: تم تكوين الحالة «%{status_name}» لاستبعادها من إجماليات التسلسل الهرمي للعمل والعمل المتبقي ونسبة الإنجاز. لا تأخذ الإجماليات هذه القيمة في الحسبان.
+        title: الحالة مستبعدة من إجماليات التسلسل الهرمي
     favorite_projects:
-      no_results: You have no favorite projects
-      no_results_subtext: Add one or multiple projects as favorite through their overview or in a project list.
+      no_results: ليست لديك مشاريع مفضلة
+      no_results_subtext: أضف مشروعًا أو أكثر إلى المفضلة من خلال صفحة النظرة العامة الخاصة به أو من قائمة المشاريع.
     field_value_enter_prompt: أدخِل قيمة ل '%{field}'
     filter:
       description:
         text_close_filter: لتحديد قيد مغادرة التركيز على سبيل المثال عن طريق الضغط على زر الدخول. للمغادرة بدون عامل التصفية حدد القيد الأول (فارغ).
         text_open_filter: فتح هذا المرشح باستخدام 'ALT' و مفاتيح الأسهم.
-      more_values_not_shown: There are %{total} more results, search to filter results.
+      more_values_not_shown: توجد نتائج إضافية عددها %{total}، استخدم البحث لتصفية النتائج.
       noneElement: "(بلا)"
       sorting:
         criteria:
@@ -290,37 +290,37 @@ ar:
           three: ثالثاً يتم فرز المعايير
           two: ثانياً يتم فرز المعايير
       time_zone_converted:
-        only_end: Till %{to} in your local time.
-        only_start: From %{from} in your local time.
-        two_values: "%{from} - %{to} in your local time."
+        only_end: حتى %{to} بتوقيتك المحلي.
+        only_start: من %{from} بتوقيتك المحلي.
+        two_values: "%{from} - %{to} بتوقيتك المحلي."
       value_spacer: "-"
     forms:
       advanced_settings: الإعدادات المتقدمة
-      load_error_message: There was an error loading the form
-      submit_success_message: The form was successfully submitted
-      validation_error_message: Please fix the errors present in the form
+      load_error_message: حدث خطأ أثناء تحميل النموذج
+      submit_success_message: تم إرسال النموذج بنجاح
+      validation_error_message: يُرجى تصحيح الأخطاء الموجودة في النموذج
     gantt_chart:
-      button_activate: Show Gantt chart
-      button_deactivate: Hide Gantt chart
+      button_activate: إظهار مخطط جانت
+      button_deactivate: إخفاء مخطط جانت
       filter:
         noneSelection: "(بلا)"
-      label: Gantt chart
+      label: مخطط جانت
       labels:
-        bar: Bar labels
-        description: 'Select the attributes you want to be shown in the respective positions of the Gantt chart at all times. Note that when hovering over an element, its date labels will be shown instead of these attributes.
+        bar: تسميات الأشرطة
+        description: 'حدد السمات التي تريد إظهارها في المواضع المقابلة من مخطط جانت في جميع الأوقات. لاحظ أنه عند تمرير المؤشر فوق عنصر، ستظهر تسميات تواريخه بدلًا من هذه السمات.
 
           '
-        farRight: Far right
-        left: Left
-        right: Right
-        title: Label configuration
+        farRight: أقصى اليسار
+        left: اليمين
+        right: اليسار
+        title: تكوين التسميات
       quarter_label: Q%{quarter_number}
       selection_mode:
-        notification: Click on any highlighted work package to create the relation. Press escape to cancel.
+        notification: انقر على أي حزمة عمل مميزة لإنشاء العلاقة. اضغط Escape للإلغاء.
       zoom:
-        auto: Auto zoom
+        auto: تكبير تلقائي
         days: أيام
-        description: 'Select the initial zoom level that should be shown when autozoom is not available.
+        description: 'حدد مستوى التكبير المبدئي الذي يجب عرضه عندما لا يتوفر التكبير التلقائي.
 
           '
         in: تكبير
@@ -334,57 +334,57 @@ ar:
     general_text_no: لا
     general_text_yes: نعم
     global_search:
-      all_projects: In all projects
-      close_search: Close search
-      current_project: In this project
-      current_project_and_all_descendants: In this project + subprojects
-      direct_hit_available: Work package with exact ID found. Press Enter to open it.
-      items_available: "%{count} items available"
-      recently_viewed: Recently viewed
-      search_placeholder_expanded: Search work packages by subject, project, type, status or ID
+      all_projects: في جميع المشاريع
+      close_search: إغلاق البحث
+      current_project: في هذا المشروع
+      current_project_and_all_descendants: في هذا المشروع + المشاريع الفرعية
+      direct_hit_available: تم العثور على حزمة عمل بالمعرّف المطابق تمامًا. اضغط Enter لفتحها.
+      items_available: 'عدد العناصر المتاحة: %{count}'
+      recently_viewed: المعروضة مؤخرًا
+      search_placeholder_expanded: ابحث في حزم العمل حسب الموضوع أو المشروع أو النوع أو الحالة أو المعرّف
       title:
-        all_projects: all projects
-        project_and_subprojects: and all subprojects
-        search_for: Search for
+        all_projects: جميع المشاريع
+        project_and_subprojects: وجميع المشاريع الفرعية
+        search_for: البحث عن
     hal:
       error:
-        edit_prohibited: Editing %{attribute} is blocked for this resource. Either this attribute is derived from relations (e.g, children) or otherwise not configurable.
+        edit_prohibited: تعديل %{attribute} محظور لهذا المورد. إما أن هذه السمة مشتقة من العلاقات (مثل العناصر الفرعية) أو أنها غير قابلة للتكوين لسبب آخر.
         format:
           date: "%{attribute} لا تاريخ صحيح--يتوقع YYYY-MM-DD."
         general: لقد حدث خطأ ما.
-        update_conflict_refresh: Click here to refresh the resource and update to the newest version.
+        update_conflict_refresh: انقر هنا لتحديث المورد والانتقال إلى أحدث نسخة.
     help_texts:
-      show_modal: Show help text
+      show_modal: إظهار نص المساعدة
     ical_sharing_modal:
-      copy_url_label: Copy URL
-      description: You can use the URL (iCalendar) to subscribe to this calendar in an external client and view up-to-date work package information from there.
-      ical_generation_error_text: An error occured while generating the calendar URL.
-      inital_setup_error_message: An error occured while fetching data.
-      success_message: The URL "%{name}" was successfully copied to your clipboard. Paste it in your calendar client to complete the subscription.
-      title: Subscribe to calendar
-      token_name_description_text: If you subscribe to this calendar from multiple devices, this name will help you distinguish between them in your <a href="%{myAccessTokensUrl}" target="_blank">access tokens</a> list.
-      token_name_label: Where will you be using this?
-      token_name_placeholder: Type a name, e.g. "Phone"
-      warning: Please don't share this URL with other users. Anyone with this link will be able to view work package details without an account or password.
+      copy_url_label: نسخ عنوان URL
+      description: يمكنك استخدام عنوان URL (iCalendar) للاشتراك في هذا التقويم من خلال عميل خارجي وعرض أحدث معلومات حزم العمل من هناك.
+      ical_generation_error_text: حدث خطأ أثناء إنشاء عنوان URL للتقويم.
+      inital_setup_error_message: حدث خطأ أثناء جلب البيانات.
+      success_message: تم نسخ عنوان URL «%{name}» إلى الحافظة بنجاح. الصقه في تطبيق التقويم لديك لإكمال الاشتراك.
+      title: الاشتراك في التقويم
+      token_name_description_text: إذا اشتركت في هذا التقويم من عدة أجهزة، فسيساعدك هذا الاسم على التمييز بينها في قائمة <a href="%{myAccessTokensUrl}" target="_blank">رموز الوصول</a> لديك.
+      token_name_label: أين ستستخدم هذا؟
+      token_name_placeholder: اكتب اسمًا، مثل «الهاتف»
+      warning: يُرجى عدم مشاركة عنوان URL هذا مع مستخدمين آخرين. سيتمكن أي شخص لديه هذا الرابط من عرض تفاصيل حزم العمل دون حساب أو كلمة مرور.
     include_projects:
       apply: تطبيق
-      clear_selection: Clear selection
-      include_subprojects: Include all sub-projects
-      no_results: No project matches your search criteria.
-      search_placeholder: Search projects...
+      clear_selection: مسح التحديد
+      include_subprojects: تضمين جميع المشاريع الفرعية
+      no_results: لا يوجد مشروع يطابق معايير البحث.
+      search_placeholder: البحث في المشاريع...
       selected_filter:
-        all: All projects
-        selected: Only selected
+        all: جميع المشاريع
+        selected: المحددة فقط
       title: المشاريع
-      toggle_title: Include projects
+      toggle_title: تضمين المشاريع
       tooltip:
-        current_project: This is the current project you are in.
-        does_not_match_search: Project does not match the search criteria.
-        include_all_selected: Project already included since Include all sub-projects is enabled.
+        current_project: هذا هو المشروع الذي تتواجد فيه حاليًا.
+        does_not_match_search: المشروع لا يطابق معايير البحث.
+        include_all_selected: المشروع مُضمَّن بالفعل لأن خيار «تضمين جميع المشاريع الفرعية» مفعّل.
     include_workspaces:
       types:
-        portfolio: Portfolio
-        program: Program
+        portfolio: محفظة
+        program: برنامج
     inplace:
       btn_preview_disable: تعطيل المعاينة
       btn_preview_enable: معاينة
@@ -402,34 +402,34 @@ ar:
         required: "%{field} لا يمكن أن يكون فارغًا"
       link_formatting_help: المساعدة في تنسيق النص
       null_value_label: لا توجد قيمة
-    invalid_job_response: Invalid response from server.
+    invalid_job_response: استجابة غير صالحة من الخادم.
     invite_user_modal:
-      invite: Invite
-      placeholder_add_tag: Create placeholder user
+      invite: دعوة
+      placeholder_add_tag: إنشاء مستخدم بديل
     label_activate: تفعيل
-    label_activity_show_all: Show all activities
-    label_activity_show_only_comments: Show activities with comments only
-    label_add_attachments: Attach files
-    label_add_column_after: Add column after
-    label_add_column_before: Add column before
-    label_add_columns: Add columns
+    label_activity_show_all: إظهار جميع الأنشطة
+    label_activity_show_only_comments: إظهار الأنشطة التي تتضمن تعليقات فقط
+    label_add_attachments: إرفاق ملفات
+    label_add_column_after: إضافة عمود بعده
+    label_add_column_before: إضافة عمود قبله
+    label_add_columns: إضافة أعمدة
     label_add_comment: أضِف تعليقًا
-    label_add_comment_title: Comment and type @ to notify other people
+    label_add_comment_title: أضف تعليقًا واكتب @ لإشعار الآخرين
     label_add_description: إضافة توصيفات إلى%{file}
-    label_add_row_after: Add row after
-    label_add_row_before: Add row before
+    label_add_row_after: إضافة صف بعده
+    label_add_row_before: إضافة صف قبله
     label_add_selected_columns: اضف الأعمدة المحددة
     label_added_by: أضيف بواسطة
-    label_added_time_by: Added by <a href="%{authorLink}">%{author}</a> at %{age}
+    label_added_time_by: أضافه <a href="%{authorLink}">%{author}</a> في %{age}
     label_ago: أيام مضت
     label_all: الكل
-    label_all_projects: All projects
+    label_all_projects: جميع المشاريع
     label_all_uppercase: الجميع
     label_all_work_packages: جميع مجموعات العمل
     label_and: و
     label_ascending: ترتيب تصاعدي
     label_assignee: المُسند إليه
-    label_assignee_alt_text: This work package is assigned to %{name}
+    label_assignee_alt_text: حزمة العمل هذه مُسندة إلى %{name}
     label_attachments: المرفقات
     label_author: الكاتب%{user}
     label_avatar: الصورة الرمزية
@@ -440,11 +440,11 @@ ar:
     label_board_sticky: مثبت
     label_cancel_comment: ألغي التعليق
     label_change: تغيير
-    label_children_derived_duration: Work package's children derived duration
+    label_children_derived_duration: المدة المشتقة من حزم العمل الفرعية
     label_closed_work_packages: مغلق
     label_collapse: مطوي
     label_collapse_all: طَيْ الجميع
-    label_collapse_text: Collapse text
+    label_collapse_text: طي النص
     label_collapsed: مطوي
     label_columns: الأعمدة
     label_comment: تعليق
@@ -453,8 +453,8 @@ ar:
     label_create_work_package: إنشاء حزمة جديدة
     label_created_by: أنشئ بواسطة
     label_created_on: تم إنشاؤها على
-    label_current: current
-    label_custom_queries: Private
+    label_current: الحالي
+    label_custom_queries: خاص
     label_date: التاريخ
     label_date_with_format: 'أدخل %{date_attribute} باستخدام التنسيق التالي: %{format}'
     label_deactivate: تعطيل
@@ -463,25 +463,25 @@ ar:
     label_description: الوصف
     label_details: تفاصيل
     label_display: عرض
-    label_drop_files: Drop files here to attach files.
-    label_drop_folders_hint: You cannot upload folders as an attachment. Please select single files.
-    label_drop_or_click_files: Drop files here or click to attach files.
+    label_drop_files: أفلت الملفات هنا لإرفاقها.
+    label_drop_folders_hint: لا يمكنك رفع المجلدات كمرفقات. يُرجى تحديد ملفات منفردة.
+    label_drop_or_click_files: أفلت الملفات هنا أو انقر لإرفاق ملفات.
     label_edit_comment: تعديل هذا التعليق
-    label_edit_status: Edit the status of the work package
+    label_edit_status: تعديل حالة حزمة العمل
     label_email: البريد الإكتروني
     label_equals: يكون
     label_expand: وسّع
     label_expand_all: توسيع الجميع
-    label_expand_project_menu: Expand project menu
-    label_expand_text: Show full text
+    label_expand_project_menu: توسيع قائمة المشروع
+    label_expand_text: إظهار النص كاملًا
     label_expanded: تم التوسع
     label_export: تصدير
-    label_export_preparing: The export is being prepared and will be downloaded shortly.
-    label_favorites: Favorites
+    label_export_preparing: يجري تحضير التصدير وسيتم تنزيله قريبًا.
+    label_favorites: المفضلة
     label_filename: ملف
     label_files_to_upload: 'هذه الملفات ستحمل:'
     label_filesize: حجم
-    label_formattable_attachment_hint: Attach and link files by dropping on this field, or pasting from the clipboard.
+    label_formattable_attachment_hint: أرفق الملفات واربطها بإفلاتها في هذا الحقل أو بلصقها من الحافظة.
     label_general: عام
     label_global_queries: عام
     label_greater_or_equal: "=<"
@@ -490,102 +490,102 @@ ar:
     label_group_plural: المجموعات
     label_hide_attributes: أظهِر أقل
     label_hide_column: إخفاء العمود
-    label_hide_project_menu: Collapse project menu
+    label_hide_project_menu: طي قائمة المشروع
     label_import: استيراد
     label_in: في
     label_in_less_than: في أقل من
     label_in_more_than: في أكثر من
     label_incoming_emails: رسائل البريد الالكتروني الواردة
-    label_infinity: Infinity
+    label_infinity: ما لا نهاية
     label_information_plural: معلومات
-    label_invalid: Invalid
+    label_invalid: غير صالح
     label_last_updated_on: تاريخ آخر تحديث
-    label_latest_activity: Latest activity
+    label_latest_activity: أحدث نشاط
     label_learn_more_link: التعرف على المزيد
     label_less_or_equal: "=>"
     label_less_than_ago: أقل من أيام
     label_loading: جاري التحميل...
     label_mail_notification: إشعارات البريد الإلكتروني
-    label_manage_columns: Manage and reorder columns
+    label_manage_columns: إدارة الأعمدة وإعادة ترتيبها
     label_me: لي
     label_meeting_agenda: جدول الأعمال
     label_meeting_minutes: محضر الجلسة
-    label_moderate_comment: Moderate comment
+    label_moderate_comment: الإشراف على التعليق
     label_more_than_ago: منذ أكثر من أيام
     label_next: التالي
-    label_no_color: No color
+    label_no_color: بدون لون
     label_no_data: لا يوجد بيانات لعرضها
-    label_no_date: no date
-    label_no_due_date: no finish date
+    label_no_date: بدون تاريخ
+    label_no_due_date: بدون تاريخ انتهاء
     label_no_start_date: لا يوجد تاريخ بدء
     label_no_value: لا توجد قيمة
     label_none: لا شيء
-    label_not_available: Not available
+    label_not_available: غير متاح
     label_not_contains: لا يحتوي على
     label_not_equals: ليس
     label_on: في
-    label_open_context_menu: Open context menu
+    label_open_context_menu: فتح قائمة السياق
     label_open_menu: فتح القائمة
     label_open_work_packages: افتح
     label_password: كلمة المرور
     label_per_page: 'لكل صفحة:'
     label_please_wait: الرجاء الانتظار
-    label_press_enter_to_save: Press enter to save.
+    label_press_enter_to_save: اضغط Enter للحفظ.
     label_previous: السابق
     label_project: مشروع
     label_project_plural: المشاريع
     label_public_query: عام
     label_quote_comment: أقتبس هذا التعليق
-    label_recent: Recent
+    label_recent: الأخيرة
     label_rejected_files: 'هذه الملفات لا يمكن أن تحمل:'
     label_rejected_files_reason: هذه الملفات لا يمكن تحميلها بينما حجمها أكبر من%{maximumFilesize}
     label_remove: إزالة
     label_remove_all_files: حذف كل الملفات
-    label_remove_column: Remove column
+    label_remove_column: إزالة العمود
     label_remove_columns: إزالة الأعمدة المختارة
     label_remove_file: حذف%{fileName}
-    label_remove_row: Remove row
+    label_remove_row: إزالة الصف
     label_remove_watcher: حذف المراقب %{name}
     label_report: تقرير
     label_repository_plural: مستودعات البيانات
     label_reset: إعادة تعيين
-    label_resize_project_menu: Resize project menu
+    label_resize_project_menu: تغيير حجم قائمة المشروع
     label_save_as: احفظ بشكل
-    label_search_columns: Search a column
+    label_search_columns: البحث عن عمود
     label_select_watcher: اختر مراقبًا...
     label_selected_filter_list: عوامل التصفية المٌختارة
     label_show_attributes: عرض كل السمات
-    label_show_in_menu: Show view in menu
+    label_show_in_menu: إظهار العرض في القائمة
     label_sort_by: التصنيف حسب
     label_sort_higher: تحريك للأعلى
     label_sort_lower: تحريك للأسفل
     label_sorted_by: مرتبة حسب
     label_sorting: جاري الترتيب
     label_spent_time: الوقت المستهلك
-    label_star_query: Favorited
-    label_starred_queries: Favorite
+    label_star_query: مفضّل
+    label_starred_queries: المفضلة
     label_subject: الموضوع
     label_sum: المجموع
     label_sum_for: مجموع ال
     label_this_week: هذا الأسبوع
     label_time_entry_plural: الوقت المستهلك
     label_today: اليوم
-    label_total_amount: 'Total: %{amount}'
+    label_total_amount: 'الإجمالي: %{amount}'
     label_total_progress: "%{percent} من التقدم الكلي"
-    label_total_sum: Total sum
+    label_total_sum: المجموع الكلي
     label_unwatch: وقْف المشاهدة
     label_unwatch_work_package: لا تراقب مجموعة العمل
     label_up: الأعلى
     label_updated_on: تم التحديث بتاريخ
     label_upload_counter: "%{done} من%{count} ملف انهيت"
-    label_upload_notification: Uploading files...
+    label_upload_notification: جارٍ رفع الملفات...
     label_uploaded_by: تم التحميل بواسطة
     label_user_plural: المستخدمين
     label_validation_error: 'تعذر حفظ حزمة العمل نتيجة للأخطاء التالية:'
-    label_value_derived_from_children: "(value derived from children)"
+    label_value_derived_from_children: "(قيمة مشتقة من العناصر الفرعية)"
     label_version_plural: الإصدارات
-    label_view_has_changed: This view has unsaved changes. Click to save them.
-    label_visibility_settings: Visibility settings
+    label_view_has_changed: يحتوي هذا العرض على تغييرات غير محفوظة. انقر لحفظها.
+    label_visibility_settings: إعدادات الظهور
     label_wait: الرجاء الانتظار للتكوين...
     label_warning: تحذير
     label_watch: مشاهدة
@@ -593,12 +593,12 @@ ar:
     label_watcher_added_successfully: تم إضافة المراقب بنجاح!
     label_watcher_deleted_successfully: تم حذف المراقب بنجاح!
     label_work_package: مجموعة العمل
-    label_work_package_context_menu: Work package context menu
-    label_work_package_details_you_are_here: You are on the %{tab} tab for %{type} %{subject}.
-    label_work_package_parent: Parent work package
+    label_work_package_context_menu: قائمة السياق لحزمة العمل
+    label_work_package_details_you_are_here: أنت في علامة التبويب %{tab} الخاصة بـ %{type} %{subject}.
+    label_work_package_parent: حزمة العمل الأصل
     label_work_package_plural: مجموعات العمل
     label_work_package_upload_notification: تحميل ملفات إلى حزمة العمل%{id}:%{subject}
-    label_wp_id_added_by: "#%{id} added by %{author}"
+    label_wp_id_added_by: "#%{id} أضافها %{author}"
     modals:
       button_apply: تطبيق
       button_cancel: إلغاء
@@ -606,170 +606,170 @@ ar:
       button_save: حفظ
       button_submit: إرسال
       destroy_time_entry:
-        text: Are you sure you want to delete the following time entry?
-        title: Confirm deletion of time entry
+        text: هل أنت متأكد من رغبتك في حذف إدخال الوقت التالي؟
+        title: تأكيد حذف إدخال الوقت
       form_submit:
-        text: Are you sure you want to perform this action?
-        title: Confirm to continue
+        text: هل أنت متأكد من رغبتك في تنفيذ هذا الإجراء؟
+        title: التأكيد للمتابعة
       label_delete_page: احذف الصفحة الحالية
       label_name: الاسم
-    no_job_id: No job ID returned from server.
+    no_job_id: لم يُرجع الخادم معرّف المهمة.
     notice_bad_request: طلب غير صحيح.
-    notice_job_started: job started.
-    notice_no_results_to_display: No visible results to display.
+    notice_job_started: بدأت المهمة.
+    notice_no_results_to_display: لا توجد نتائج مرئية لعرضها.
     notice_successful_create: إنشاء ناجح.
     notice_successful_delete: حذف ناجح.
     notice_successful_update: تحديث ناجح.
     notifications:
       center:
         and_more_users:
-          zero: and %{count} others
-          one: and 1 other
-          two: and %{count} others
-          few: and %{count} others
-          many: and %{count} others
-          other: and %{count} others
+          zero: و%{count} شخص آخر
+          one: وشخص آخر
+          two: وشخصان آخران
+          few: و%{count} أشخاص آخرين
+          many: و%{count} شخصًا آخر
+          other: و%{count} شخص آخر
         empty_state:
-          no_notification: Looks like you are all caught up.
-          no_notification_for_filter: Looks like you are all caught up for this filter.
-          no_notification_with_current_filter: Looks like you are all caught up for %{filter} filter.
-          no_notification_with_current_project_filter: Looks like you are all caught up with the selected project.
-          no_selection: Click on a notification to view all activity details.
+          no_notification: يبدو أنك اطلعت على كل شيء.
+          no_notification_for_filter: يبدو أنك اطلعت على كل شيء ضمن عامل التصفية هذا.
+          no_notification_with_current_filter: يبدو أنك اطلعت على كل شيء ضمن عامل التصفية %{filter}.
+          no_notification_with_current_project_filter: يبدو أنك اطلعت على كل شيء في المشروع المحدد.
+          no_selection: انقر على إشعار لعرض جميع تفاصيل النشاط.
         label_actor_and: و
-        mark_all_read: Mark all as read
-        mark_all_read_confirmation: This will mark all notifications in this view as read. Are you sure you want to do this?
-        mark_as_read: Mark as read
+        mark_all_read: تحديد الكل كمقروء
+        mark_all_read_confirmation: سيؤدي هذا إلى تحديد جميع الإشعارات في هذا العرض كمقروءة. هل أنت متأكد من رغبتك في ذلك؟
+        mark_as_read: تحديد كمقروء
         new_notifications:
-          link_text: Click here to load them.
-          message: There are new notifications.
+          link_text: انقر هنا لتحميلها.
+          message: توجد إشعارات جديدة.
         no_results:
-          at_all: New notifications will appear here when there is activity that concerns you.
-          with_current_filter: There are no notifications in this view at the moment
-        text_update_date_by: "%{date} by"
-        total_count_warning: Showing the %{newest_count} most recent notifications. %{more_count} more are not displayed.
+          at_all: ستظهر الإشعارات الجديدة هنا عند وجود نشاط يخصك.
+          with_current_filter: لا توجد إشعارات في هذا العرض حاليًا
+        text_update_date_by: "%{date} بواسطة"
+        total_count_warning: يُعرض أحدث %{newest_count} من الإشعارات. ولا يُعرض %{more_count} من الإشعارات الأخرى.
       date_alerts:
-        milestone_date: Milestone date
-        overdue: Overdue
-        overdue_since: for %{difference_in_days}.
-        property_is: is in %{difference_in_days}.
-        property_is_deleted: is deleted.
-        property_today: is today.
-        property_was: was %{difference_in_days} ago.
-      no_unread: No unread notifications
+        milestone_date: تاريخ المعلم
+        overdue: متأخر
+        overdue_since: منذ %{difference_in_days}.
+        property_is: بعد %{difference_in_days}.
+        property_is_deleted: محذوف.
+        property_today: اليوم.
+        property_was: كان قبل %{difference_in_days}.
+      no_unread: لا توجد إشعارات غير مقروءة
       reasons:
         assigned: المُسند إليه
         commented: علّق
         created: تم إنشاؤه
-        dateAlert: Date alert
-        mentioned: Mentioned
-        prioritized: Prioritized
-        processed: Processed
-        reminder: Reminder
-        responsible: Accountable
+        dateAlert: تنبيه التاريخ
+        mentioned: مُشار إليه
+        prioritized: ذو أولوية
+        processed: تمت معالجته
+        reminder: تذكير
+        responsible: المسؤول
         scheduled: مُجدول
-        shared: Shared
+        shared: تمت مشاركته
         watched: المشاهد
       reminders:
-        note: 'Note: “%{note}”'
+        note: 'ملاحظة: «%{note}»'
       settings:
-        change_notification_settings: You can modify your <a target="_blank" href="%{url}">notification settings</a> to ensure you never miss an important update.
-        title: Notification settings
-      title: Notifications
+        change_notification_settings: يمكنك تعديل <a target="_blank" href="%{url}">إعدادات الإشعارات</a> لضمان عدم تفويت أي تحديث مهم.
+        title: إعدادات الإشعارات
+      title: الإشعارات
     onboarding:
       buttons:
-        got_it: Got it
+        got_it: فهمت
         next: التالي
-        skip: Skip
+        skip: تخطي
       steps:
         boards:
-          add: Click on the plus (+) icon to <b>create a new card</b> or <b>add an existing card</b> to the list on the board.
-          drag: Drag and drop your cards within a given list to reorder them, or to move them to another list. <br> You can click the info (i) icon in the upper right-hand corner or double-click a card to open its details.
-          lists_basic: Here you can create multiple lists (columns) within your agile board.
-          lists_kanban: Here you can create multiple lists (columns) within your board. This feature allows you to create a <b>Kanban board</b>, for example.
-          overview: Select <b>boards</b> to shift the view and manage your project using the agile boards view.
-        help_menu: The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide, helpful how-to videos and more. <br> Enjoy your work with OpenProject!
-        members: Invite new <b>members</b> to join your project.
-        quick_add_button: Click on the plus (+) icon in the header navigation to <b>create a new project</b> or to <b>invite coworkers</b>.
-        sidebar_arrow: Use the return arrow in the top left corner to return to the project’s <b>main menu</b>.
+          add: انقر على أيقونة الزائد (+) <b>لإنشاء بطاقة جديدة</b> أو <b>لإضافة بطاقة موجودة</b> إلى القائمة في اللوحة.
+          drag: اسحب بطاقاتك وأفلتها داخل القائمة لإعادة ترتيبها أو لنقلها إلى قائمة أخرى. <br> يمكنك النقر على أيقونة المعلومات (i) في الزاوية العلوية للبطاقة أو النقر نقرًا مزدوجًا على البطاقة لفتح تفاصيلها.
+          lists_basic: يمكنك هنا إنشاء قوائم متعددة (أعمدة) داخل لوحتك الرشيقة (Agile).
+          lists_kanban: يمكنك هنا إنشاء قوائم متعددة (أعمدة) داخل لوحتك. تتيح لك هذه الميزة إنشاء <b>لوحة كانبان</b> على سبيل المثال.
+          overview: اختر <b>اللوحات</b> لتبديل العرض وإدارة مشروعك باستخدام عرض اللوحات الرشيقة.
+        help_menu: توفر قائمة المساعدة (?) <b>موارد مساعدة إضافية</b>. ستجد هنا دليل المستخدم ومقاطع فيديو إرشادية مفيدة والمزيد. <br> استمتع بعملك مع OpenProject!
+        members: ادعُ <b>أعضاء</b> جددًا للانضمام إلى مشروعك.
+        quick_add_button: انقر على أيقونة الزائد (+) في شريط التنقل العلوي <b>لإنشاء مشروع جديد</b> أو <b>لدعوة زملاء العمل</b>.
+        sidebar_arrow: استخدم سهم الرجوع في الزاوية العلوية للعودة إلى <b>القائمة الرئيسية</b> للمشروع.
         team_planner:
-          add_assignee: To get started, add assignees to the team planner.
-          add_existing: Search for existing work packages and drag them to the team planner to instantly assign them to a team member and define start and end dates.
-          calendar: The weekly or biweekly planning board displays all work packages assigned to your team members.
-          card: Drag work packages horizontally to move them backwards or forwards in time, drag the edges to change start and end dates and even drag them vertically to a different row to assign them to another member.
-          overview: The team planner lets you visually assign tasks to team members and get an overview of who is working on what.
-        welcome: Take a three-minute introduction tour to learn the most <b>important features</b>. <br> We recommend completing the steps until the end. You can restart the tour any time.
-        wiki: Within the <b>wiki</b> you can document and share knowledge together with your team.
+          add_assignee: للبدء، أضف المُسند إليهم إلى مخطط الفريق.
+          add_existing: ابحث عن حزم العمل الموجودة واسحبها إلى مخطط الفريق لإسنادها فورًا إلى أحد أعضاء الفريق وتحديد تاريخي البدء والانتهاء.
+          calendar: تعرض لوحة التخطيط لأسبوع أو أسبوعين جميع حزم العمل المُسندة إلى أعضاء فريقك.
+          card: اسحب حزم العمل أفقيًا لتحريكها إلى الوراء أو إلى الأمام زمنيًا، واسحب حوافها لتغيير تاريخي البدء والانتهاء، بل يمكنك سحبها عموديًا إلى صف آخر لإسنادها إلى عضو آخر.
+          overview: يتيح لك مخطط الفريق إسناد المهام إلى أعضاء الفريق بصريًا والحصول على نظرة عامة حول من يعمل على ماذا.
+        welcome: قم بجولة تعريفية مدتها ثلاث دقائق للتعرف على <b>أهم الميزات</b>. <br> ننصحك بإكمال الخطوات حتى النهاية. يمكنك إعادة بدء الجولة في أي وقت.
+        wiki: يمكنك من خلال <b>الويكي</b> توثيق المعرفة ومشاركتها مع فريقك.
         wp:
-          back_button: Use the return arrow in the top left corner to exit and return to the work package list.
-          create_button: The <b>+ Create</b> button will add a new work package to your project.
-          full_view: The <b>work package details</b> view provides all the relevant information pertaining to a given work package, such as its description, status, priority, activities, dependencies, and comments.
-          gantt_menu: Create project schedules and timelines effortlessly using the Gantt chart module.
-          list: This <b>work</b> package overview provides a list of all the work in your project, such as tasks, milestones, phases, and more. <br> Work packages can be created and edited directly from this view. To access the details of a particular work package, simply double-click its row.
-          timeline: Here you can <b>edit your project plan</b>, create new work packages, such as tasks, milestones, phases, and more, as well as <b>add dependencies</b>. All team members can see and update the latest plan at any time.
-          toggler: Now let's have a look at the <b>work package</b> section, which gives you a more detailed view of your work.
+          back_button: استخدم سهم الرجوع في الزاوية العلوية للخروج والعودة إلى قائمة حزم العمل.
+          create_button: يضيف زر <b>+ إنشاء</b> حزمة عمل جديدة إلى مشروعك.
+          full_view: يوفر عرض <b>تفاصيل حزمة العمل</b> جميع المعلومات ذات الصلة بحزمة عمل معينة، مثل وصفها وحالتها وأولويتها وأنشطتها وتبعياتها وتعليقاتها.
+          gantt_menu: أنشئ الجداول الزمنية للمشروع وخطوطه الزمنية بسهولة باستخدام وحدة مخطط جانت.
+          list: توفر هذه النظرة العامة على <b>حزم العمل</b> قائمة بجميع الأعمال في مشروعك، مثل المهام والمعالم والمراحل وغيرها. <br> يمكن إنشاء حزم العمل وتعديلها مباشرةً من هذا العرض. وللوصول إلى تفاصيل حزمة عمل معينة، ما عليك سوى النقر نقرًا مزدوجًا على صفها.
+          timeline: يمكنك هنا <b>تعديل خطة مشروعك</b>، وإنشاء حزم عمل جديدة مثل المهام والمعالم والمراحل وغيرها، بالإضافة إلى <b>إضافة التبعيات</b>. يمكن لجميع أعضاء الفريق الاطلاع على أحدث خطة وتحديثها في أي وقت.
+          toggler: لنلقِ الآن نظرة على قسم <b>حزم العمل</b>، الذي يمنحك عرضًا أكثر تفصيلًا لعملك.
     open_project_storage_modal:
       waiting_subtitle:
-        network_off: There is a network problem.
-        network_on: Network is back. We are trying.
+        network_off: توجد مشكلة في الشبكة.
+        network_on: عاد الاتصال بالشبكة. جارٍ المحاولة.
       waiting_title:
-        timeout: Timeout
+        timeout: انتهت المهلة
     pagination:
       no_other_page: أنت في الصفحة فقط.
-      page_navigation: Pagination navigation
+      page_navigation: التنقل بين الصفحات
       pages:
-        page_number: Page %{number}
-        show_per_page: Show %{number} per page
-      pages_skipped: Pages skipped.
-      per_page_navigation: Items per page selection
+        page_number: الصفحة %{number}
+        show_per_page: عرض %{number} في كل صفحة
+      pages_skipped: تم تخطي صفحات.
+      per_page_navigation: اختيار عدد العناصر في كل صفحة
     placeholders:
       default: "-"
-      description: 'Description: Click to edit...'
+      description: 'الوصف: انقر للتحرير...'
       relation_description: انقر لإضافة وصف لهذه العلاقة
       selection: من فضلك اختر
-      subject: Enter subject here
+      subject: أدخل الموضوع هنا
     project:
       autocompleter:
-        label: Project autocompletion
-      click_to_switch_to_project: 'Project: %{projectname}'
-      context: Project context
-      not_available: Project N/A
-      required_outside_context: 'Please choose a project to create the work package in to see all attributes. You can only select projects which have the type above activated.
+        label: الإكمال التلقائي للمشروع
+      click_to_switch_to_project: 'المشروع: %{projectname}'
+      context: سياق المشروع
+      not_available: المشروع غير متاح
+      required_outside_context: 'يرجى اختيار المشروع الذي ستُنشأ فيه حزمة العمل لعرض جميع السمات. يمكنك فقط اختيار المشاريع التي فُعِّل فيها النوع المحدد أعلاه.
 
         '
     project_menu_details: تفاصيل
     projects:
       identifier_suggestion:
-        loading: Loading suggestion...
-        set_name_first: Please set the name first.
+        loading: جارٍ تحميل الاقتراح...
+        set_name_first: يرجى تحديد الاسم أولًا.
     relation_buttons:
       abort: إلغاء
-      add_existing: Add existing
+      add_existing: إضافة عنصر موجود
       add_existing_child: أضِف طفلًا
-      add_existing_relation: Add existing relation
+      add_existing_relation: إضافة علاقة موجودة
       add_new_child: إنشاء طفل جديد
       add_new_relation: إنشاء علاقة جديدة
       add_parent: إضافة والد موجود مسبقًا
-      add_predecessor: Add predecessor
-      add_successor: Add successor
+      add_predecessor: إضافة سابق
+      add_successor: إضافة لاحق
       change_parent: تغيير الوالد
-      create_new: Create new
+      create_new: إنشاء جديد
       group_by_relation_type: تصنيف حسب نوع العلاقة
       group_by_wp_type: تجميع حسب نوع حزمة العمل
-      hierarchy_indent: Indent hierarchy
-      hierarchy_outdent: Outdent hierarchy
+      hierarchy_indent: إزاحة التسلسل الهرمي للداخل
+      hierarchy_outdent: إزاحة التسلسل الهرمي للخارج
       remove: حذف علاقة
       remove_child: إزالة طفل
       remove_parent: إزالة والد
       save: إحفظ العلاقة
-      set_parent: Set parent
-      show_relations: Show relations
-      toggle_description: Toggle relation description
-      update_description: Set or update description of this relation
-      update_relation: Click to change the relation type
+      set_parent: تعيين الأصل
+      show_relations: عرض العلاقات
+      toggle_description: إظهار/إخفاء وصف العلاقة
+      update_description: تعيين وصف هذه العلاقة أو تحديثه
+      update_relation: انقر لتغيير نوع العلاقة
     relation_labels:
       blocked: محظور من قِبَل
       blocks: المحظورون
-      child: Child
+      child: فرعي
       children: الأطفال
       duplicated: مكرر بواسطة
       duplicates: التكرارات
@@ -786,128 +786,131 @@ ar:
       empty: لا يوجد علاقات
       remove: حذف علاقة
     relations_autocomplete:
-      parent_placeholder: Choose new parent or press escape to cancel.
-      placeholder: Type to search
+      parent_placeholder: اختر أصلًا جديدًا أو اضغط Escape للإلغاء.
+      placeholder: اكتب للبحث
     relations_hierarchy:
       children_headline: الأطفال
-      hierarchy_headline: Hierarchy
+      hierarchy_headline: التسلسل الهرمي
       parent_headline: الجذر
     repositories:
       select_branch: اختر فرع
       select_tag: حدد العلامة
     sharing:
-      selected_count: "%{count} selected"
+      selected_count: تم تحديد %{count}
       selection:
-        mixed: Mixed
+        mixed: مختلط
       share: شارك
     sort:
-      activate_asc: activate to apply an ascending sort
-      activate_dsc: activate to apply a descending sort
-      activate_no: activate to remove the sort
-      sorted_asc: 'Ascending sort applied, '
-      sorted_dsc: 'Descending sort applied, '
-      sorted_no: 'No sort applied, '
-      sorting_disabled: sorting is disabled
+      activate_asc: فعّل لتطبيق فرز تصاعدي
+      activate_dsc: فعّل لتطبيق فرز تنازلي
+      activate_no: فعّل لإزالة الفرز
+      sorted_asc: 'تم تطبيق فرز تصاعدي، '
+      sorted_dsc: 'تم تطبيق فرز تنازلي، '
+      sorted_no: 'لم يُطبَّق أي فرز، '
+      sorting_disabled: الفرز معطّل
     sortable_lists:
       announcements:
-        fallback_item_label: Item
-        fallback_list_name: another list
-        move_failed_check_position: Move failed. Check the item's current position.
-        move_failed_rolled_back: Move failed. %{label} returned to its previous position.
-        moved: "%{label} moved to position %{position} of %{total}"
-        moved_to_list: "%{label} moved to %{list}, position %{position} of %{total}"
+        fallback_item_label: عنصر
+        fallback_list_name: قائمة أخرى
+        move_failed_check_position: فشل النقل. تحقق من الموضع الحالي للعنصر.
+        move_failed_rolled_back: فشل النقل. أُعيد %{label} إلى موضعه السابق.
+        moved: تم نقل %{label} إلى الموضع %{position} من %{total}
+        moved_to_list: تم نقل %{label} إلى %{list}، الموضع %{position} من %{total}
     spot:
       drop_modal:
-        close: Close modal
-        focus_grab: This is a focus anchor for modals. Press shift+tab to go back to the modal trigger element.
+        close: إغلاق النافذة المنبثقة
+        focus_grab: هذه نقطة ارتكاز للتركيز في النوافذ المنبثقة. اضغط shift+tab للعودة إلى العنصر الذي فتح النافذة المنبثقة.
       filter_chip:
         remove: إزالة
     text_are_you_sure: هل أنت متأكد؟
-    text_are_you_sure_to_cancel: You have unsaved changes on this page. Are you sure you want to discard them?
-    text_data_lost: All entered data will be lost.
-    text_query_destroy_confirmation: Are you sure you want to delete the selected view?
+    text_are_you_sure_to_cancel: لديك تغييرات غير محفوظة في هذه الصفحة. هل أنت متأكد من رغبتك في تجاهلها؟
+    text_data_lost: ستُفقد جميع البيانات المُدخلة.
+    text_query_destroy_confirmation: هل أنت متأكد من رغبتك في حذف العرض المحدد؟
     text_user_wrote: "%{value} كتب:"
     text_work_packages_destroy_confirmation: هل أنت متأكد من أنك تريد حذف العناصر المحددة؟
     time_entry:
-      stop: Stop
+      stop: إيقاف
       title: وقت السجل
       tracking: تعقب الوقت
-      work_package_required: Requires selecting a work package first.
+      work_package_required: يتطلب تحديد حزمة عمل أولًا.
     timer:
-      button_stop: Stop current timer
-      start_new_timer: Start new timer
-      timer_already_running: 'To start a new timer, you must first stop the current timer:'
-      timer_already_stopped: No active timer for this work package, have you stopped it in another window?
-      tracking_time: Tracking time
+      button_stop: إيقاف المؤقت الحالي
+      start_new_timer: بدء مؤقت جديد
+      timer_already_running: 'لبدء مؤقت جديد، يجب عليك أولًا إيقاف المؤقت الحالي:'
+      timer_already_stopped: لا يوجد مؤقت نشط لحزمة العمل هذه، هل أوقفته في نافذة أخرى؟
+      tracking_time: جارٍ تتبع الوقت
     tl_toolbar:
       outlines: مستوى التسلسل الهرمي
       zooms: تكبير المستوى
     toolbar:
       filter: فلترة
-      search_query_label: Search saved views
+      search_query_label: البحث في العروض المحفوظة
       settings:
         columns: الأعمدة
-        configure_view: Configure view
+        configure_view: تكوين العرض
         delete: احذف
-        display_hierarchy: Display hierarchy
+        display_hierarchy: عرض التسلسل الهرمي
         display_sums: عرض المجاميع
         export: تصدير
         group_by: تصنيف حسب
-        hide_hierarchy: Hide hierarchy
+        hide_hierarchy: إخفاء التسلسل الهرمي
         hide_sums: إخفاء المجاميع
-        page_settings: Rename view
+        page_settings: إعادة تسمية العرض
         save: حفظ
         save_as: احفظ بشكل
-        share_calendar: Subscribe to calendar
+        share_calendar: الاشتراك في التقويم
         sort_by: التصنيف حسب
-        visibility_settings: Visibility settings
+        visibility_settings: إعدادات الظهور
       unselected_title: مجموعة العمل
     two_factor_authentication:
-      label_two_factor_authentication: Two-factor authentication
+      label_two_factor_authentication: المصادقة الثنائية
     units:
       child_work_packages:
-        zero: "%{count} work package children"
-        one: one child work package
-        two: "%{count} work package children"
-        few: "%{count} work package children"
-        many: "%{count} work package children"
-        other: "%{count} work package children"
+        zero: "%{count} حزمة عمل فرعية"
+        one: حزمة عمل فرعية واحدة
+        two: حزمتا عمل فرعيتان
+        few: "%{count} حزم عمل فرعية"
+        many: "%{count} حزمة عمل فرعية"
+        other: "%{count} حزمة عمل فرعية"
       day:
-        one: 1 يوم
+        one: يوم واحد
         other: "%{count} يوم"
-        zero: 0 days
+        zero: "%{count} يوم"
+        two: يومان
+        few: "%{count} أيام"
+        many: "%{count} يومًا"
       hour:
         one: 1 h
         other: "%{count} h"
         zero: 0 h
       hour_string: "%{hours} h"
       word:
-        zero: "%{count} words"
-        one: 1 word
-        two: "%{count} words"
-        few: "%{count} words"
-        many: "%{count} words"
-        other: "%{count} words"
+        zero: "%{count} كلمة"
+        one: كلمة واحدة
+        two: كلمتان
+        few: "%{count} كلمات"
+        many: "%{count} كلمة"
+        other: "%{count} كلمة"
       workPackage:
-        zero: work packages
-        one: work package
-        two: work packages
-        few: work packages
-        many: work packages
-        other: work packages
+        zero: حزم عمل
+        one: حزمة عمل
+        two: حزم عمل
+        few: حزم عمل
+        many: حزم عمل
+        other: حزم عمل
     upsell:
-      ee_only: Enterprise edition add-on
+      ee_only: إضافة إصدار المؤسسة
     views:
-      card: Cards
-      list: Table
-      timeline: Gantt
+      card: البطاقات
+      list: الجدول
+      timeline: مخطط جانت
     watchers:
       label_add: إضافة مراقب
       label_discard: تجاهل التحديد
       label_error_loading: حدث خطأ خلال تحميل المشاهدين
       label_loading: تحميل مشاهدين...
       label_search_watchers: البحث عن مشاهدين
-      typeahead_placeholder: Search for possible watchers
+      typeahead_placeholder: البحث عن مراقبين محتملين
     wiki_formatting:
       code: الرمز المُتّضَمَّن
       deleted: محذوف
@@ -926,15 +929,15 @@ ar:
       wiki_link: قُم بوصله إلى صفحة Wiki
     work_packages:
       baseline:
-        addition_label: Added to view within the comparison time period
-        column_incompatible: This column does not show changes in Baseline mode.
-        modification_label: Modified within the comparison time period
-        removal_label: Removed from view within the comparison time period
+        addition_label: أُضيف إلى العرض خلال الفترة الزمنية للمقارنة
+        column_incompatible: لا يعرض هذا العمود التغييرات في وضع خط الأساس.
+        modification_label: عُدِّل خلال الفترة الزمنية للمقارنة
+        removal_label: أُزيل من العرض خلال الفترة الزمنية للمقارنة
       bulk_actions:
-        delete: Bulk delete
-        duplicate: Bulk duplicate
-        edit: Bulk edit
-        move: Bulk change of project
+        delete: حذف جماعي
+        duplicate: تكرار جماعي
+        edit: تحرير جماعي
+        move: تغيير المشروع بشكل جماعي
       button_clear: إزالة
       comment_added: التعليق أضيف بنجاح.
       comment_send_failed: حدث خطأ ما. لاتستطيع تأكيد التعليق.
@@ -949,12 +952,12 @@ ar:
       default_queries:
         all_open: كل المفتوح
         assigned_to_me: مخصص لي
-        created_by_me: Created by me
-        latest_activity: Latest activity
-        manually_sorted: New manually sorted query
-        overdue: Overdue
-        recently_created: Recently created
-        shared_with_me: Shared with me
+        created_by_me: من إنشائي
+        latest_activity: أحدث نشاط
+        manually_sorted: استعلام جديد مرتب يدويًا
+        overdue: متأخرة عن موعدها
+        recently_created: أُنشئت مؤخرًا
+        shared_with_me: تمت مشاركتها معي
         shared_with_users: مشترك مع المستخدمين
         summary: مُلخّص
       description_enter_text: ادخل نصا
@@ -962,27 +965,27 @@ ar:
       description_options_hide: إخفاء الخيارات
       description_options_show: إظهار الخيارات
       duplicate:
-        title: Duplicate work package
+        title: تكرار حزمة العمل
       edit_attribute: "%{attribute}_ عدل"
       faulty_query:
-        description: Your view is erroneous and could not be processed.
-        title: Work packages could not be loaded.
+        description: يحتوي العرض الخاص بك على أخطاء وتعذّرت معالجته.
+        title: تعذّر تحميل حزم العمل.
       filters:
-        baseline_incompatible: This filter attribute is not taken into consideration in Baseline mode.
-        baseline_warning: Baseline mode is on but some of your active filters are not included in the comparison.
+        baseline_incompatible: لا تؤخذ سمة عامل التصفية هذه في الاعتبار في وضع خط الأساس.
+        baseline_warning: وضع خط الأساس مفعّل، لكن بعض عوامل التصفية النشطة لديك غير مضمّنة في المقارنة.
         title: تصفية مجموعات العمل
       hierarchy:
-        children_collapsed: Hierarchy level %{level}, collapsed. Click to show the filtered children
-        children_expanded: Hierarchy level %{level}, expanded. Click to collapse the filtered children
-        hide: Hide hierarchy mode
-        leaf: Work package leaf at level %{level}.
-        show: Show hierarchy mode
-        toggle_button: Click to toggle hierarchy mode.
+        children_collapsed: مستوى التسلسل الهرمي %{level}، مطوي. انقر لعرض العناصر الفرعية المُصفّاة
+        children_expanded: مستوى التسلسل الهرمي %{level}، موسّع. انقر لطي العناصر الفرعية المُصفّاة
+        hide: إخفاء وضع التسلسل الهرمي
+        leaf: حزمة عمل طرفية في المستوى %{level}.
+        show: عرض وضع التسلسل الهرمي
+        toggle_button: انقر لتبديل وضع التسلسل الهرمي.
       inline_create:
         title: اضغط هنا لإضافة مجموعة عمل جديدة للقائمة
       jump_marks:
-        content: Jump to content
-        label_content: Click here to skip over the menu and go to the content
+        content: الانتقال إلى المحتوى
+        label_content: انقر هنا لتخطي القائمة والانتقال إلى المحتوى
         label_pagination: اضغط هنا لتخطي جدول كتب العمل والانتقال للحدود الفاصلة
         pagination: الانتقال السريع إلى تقسيم الجدول
       key_value: "%{key}:%{value}"
@@ -990,24 +993,24 @@ ar:
       label_disable_multi_select: تعطيل الاختيار المتعدد
       label_enable_multi_select: السماح بالاختيار المتعدد
       label_filter_add: إضافة عامل تصفية
-      label_filter_by_text: Filter by text
+      label_filter_by_text: تصفية حسب النص
       label_options: خيارات
-      limited_results: Only %{count} work packages can be shown in manual sorting mode. Please reduce the results by filtering, or switch to automatic sorting.
+      limited_results: لا يمكن عرض أكثر من %{count} من حزم العمل في وضع الفرز اليدوي. يرجى تقليل النتائج باستخدام التصفية، أو التبديل إلى الفرز التلقائي.
       message_error_during_bulk_delete: حدث خطأ ما أثناء محاولة حذف مجموعات العمل.
       message_successful_bulk_delete: تم حذف مجموعات العمل بنجاح.
       message_successful_show_in_fullscreen: اضغط هنا لفتح مجموعة العمل هذه بعرض كامل الشاشة.
       message_view_spent_time: أظهر الوقت المنقضي في رزمة العمل هذه
-      message_work_package_read_only: Work package is locked in this status. No attribute other than status can be altered.
-      message_work_package_status_blocked: Work package status is not writable due to closed status and closed version being assigned.
+      message_work_package_read_only: حزمة العمل مقفلة في هذه الحالة. لا يمكن تغيير أي سمة باستثناء الحالة.
+      message_work_package_status_blocked: لا يمكن تعديل حالة حزمة العمل نظرًا لتعيين حالة مغلقة وإصدار مغلق لها.
       no_results:
         description: إما أنه لا يوجد ما تم إنشاؤه أو أن جميع مجموعات العمل قد تمت فلترتها.
         title: لا يوجد مجموعات عمل لعرضها.
-      placeholder_filter_by_text: Subject, description, comments, ...
+      placeholder_filter_by_text: الموضوع، الوصف، التعليقات، ...
       placeholders:
-        date: Select date
+        date: اختر تاريخًا
         default: "-"
       progress:
-        title: Work estimates and progress
+        title: تقديرات العمل والتقدم
       properties:
         assignee: المُسند إليه
         author: المؤلف
@@ -1015,15 +1018,15 @@ ar:
         createdAt: تم الإنشاء في
         date: التاريخ
         description: الوصف
-        dueDate: Finish date
+        dueDate: تاريخ الانتهاء
         duration: المدّة
-        percentComplete: "% Complete"
-        percentCompleteAlternative: Progress
+        percentComplete: نسبة الإنجاز
+        percentCompleteAlternative: التقدم
         percentageDone: النسبة المئوية المُنجزة
         priority: الأولوية
         projectName: مشروع
-        remainingTime: Remaining work
-        remainingWork: Remaining work
+        remainingTime: العمل المتبقي
+        remainingWork: العمل المتبقي
         remainingWorkAlternative: الساعات المتبقية
         responsible: مسؤول
         spentTime: الوقت المستهلك
@@ -1036,7 +1039,7 @@ ar:
         updatedAt: تم التحديث بتاريخ
         version: الإصدار
         versionName: الإصدار
-        work: Work
+        work: العمل
         workAlternative: الوقت المُقّدَّر
       property_groups:
         details: تفاصيل
@@ -1044,90 +1047,90 @@ ar:
         other: اخرى
         people: الناس
       query:
-        click_to_edit_query_name: Click to edit title of this view.
+        click_to_edit_query_name: انقر لتحرير عنوان هذا العرض.
         column_names: الأعمدة
-        confirm_edit_cancel: Are you sure you want to cancel editing the name of this view? Title will be set back to previous value.
+        confirm_edit_cancel: هل أنت متأكد من رغبتك في إلغاء تحرير اسم هذا العرض؟ ستتم إعادة العنوان إلى قيمته السابقة.
         display_sums: عرض المبالغ
         errors:
-          duplicate_query_title: Name of this view already exists. Change anyway?
-          not_found: There is no such view
-          unretrievable_query: Unable to retrieve view from URL
+          duplicate_query_title: اسم هذا العرض موجود بالفعل. هل تريد التغيير على أي حال؟
+          not_found: هذا العرض غير موجود
+          unretrievable_query: تعذّر استرداد العرض من عنوان URL
         filters: عوامل التصفية
         group: تصنيف حسب
         group_by: نتائج المجموعة حسب
-        group_by_disabled_by_hierarchy: Group by is disabled due to the hierarchy mode being active.
+        group_by_disabled_by_hierarchy: التجميع معطّل لأن وضع التسلسل الهرمي نشط.
         hide_column: إخفاء العمود
-        hierarchy_disabled_by_group_by: Hierarchy mode is disabled due to results being grouped by %{column}.
-        insert_columns: Insert columns
+        hierarchy_disabled_by_group_by: وضع التسلسل الهرمي معطّل لأن النتائج مجمّعة حسب %{column}.
+        insert_columns: إدراج أعمدة
         move_column_left: انقل العمود لليسار
         move_column_right: انقل العمود لليمين
-        public_text: 'Publish this view, allowing other users to access your view. Users with the ''Manage public views'' permission can modify or remove public query. This does not affect the visibility of work package results in that view and depending on their permissions, users may see different results.
+        public_text: 'انشر هذا العرض للسماح للمستخدمين الآخرين بالوصول إليه. يمكن للمستخدمين الذين لديهم صلاحية «إدارة العروض العامة» تعديل الاستعلام العام أو إزالته. لا يؤثر ذلك على ظهور نتائج حزم العمل في هذا العرض، وقد يرى المستخدمون نتائج مختلفة بحسب صلاحياتهم.
 
           '
-        rename_query_placeholder: Name of this view
+        rename_query_placeholder: اسم هذا العرض
         sort_ascending: ترتيب تصاعدي
         sort_descending: ترتيب تنازلي
-        star_text: Mark this view as favorite and add to the saved views sidebar on the left.
-        text_no_results: No matching views were found.
+        star_text: ضع علامة على هذا العرض كمفضّل وأضفه إلى الشريط الجانبي للعروض المحفوظة.
+        text_no_results: لم يتم العثور على عروض مطابقة.
       reminders:
-        button_label: Set reminder
+        button_label: تعيين تذكير
         presets:
-          custom: At a particular date/time
-          month: In a month
-          three_days: In 3 days
-          tomorrow: Tomorrow
-          week: In a week
-        subtitle: You will receive a notification for this work package at the chosen time.
+          custom: في تاريخ/وقت محدد
+          month: بعد شهر
+          three_days: بعد 3 أيام
+          tomorrow: غدًا
+          week: بعد أسبوع
+        subtitle: ستتلقى إشعارًا بشأن حزمة العمل هذه في الوقت المحدد.
         title:
-          edit: Edit reminder
-          new: Set a reminder
+          edit: تحرير التذكير
+          new: تعيين تذكير
       scheduling:
-        is_parent: The dates of this work package are automatically deduced from its children. Activate 'Manual scheduling' to set the dates.
-        is_switched_from_manual_to_automatic: The dates of this work package may need to be recalculated after switching from manual to automatic scheduling due to relationships with other work packages.
+        is_parent: تُستنتج تواريخ حزمة العمل هذه تلقائيًا من حزم العمل الفرعية التابعة لها. فعّل «الجدولة اليدوية» لتعيين التواريخ.
+        is_switched_from_manual_to_automatic: قد يلزم إعادة حساب تواريخ حزمة العمل هذه بعد التبديل من الجدولة اليدوية إلى الجدولة التلقائية بسبب علاقاتها بحزم عمل أخرى.
       sharing:
         show_all_users: إظهار كل المستخدمين الذين تم مشاركة حزمة العمل معهم
-        title: Share work package
+        title: مشاركة حزمة العمل
       table:
-        configure_button: Configure work package table
+        configure_button: تكوين جدول حزم العمل
         summary: أسطر الجدول كتب عمل والاعمدة واصفات لكتب العمل.
         text_inline_edit: معظم خلايا الجدول هي أزرار لتنشيط وظائف التحرير المضمنة لتلك الواصفة.
         text_select_hint: يجب فتح الخانات المختارة بمفتاح "ألت" ومفاتيح الأسهم.
         text_sort_hint: مع الارتباطات الموجودة في رؤوس الجدول يمكنك فرز، والمجموعة، وإعادة ترتيب، وإزالة وإضافة أعمدة الجدول.
       table_configuration:
-        button: Configure this work package table
-        choose_display_mode: Display work packages as
-        columns_help_text: Use the input field above to add columns to your table view. You can drag and drop the columns to reorder them.
+        button: تكوين جدول حزم العمل هذا
+        choose_display_mode: عرض حزم العمل كـ
+        columns_help_text: استخدم حقل الإدخال أعلاه لإضافة أعمدة إلى عرض الجدول. يمكنك سحب الأعمدة وإفلاتها لإعادة ترتيبها.
         default: الافتراضي
-        default_mode: Flat list
-        display_settings: Display settings
-        display_sums_hint: Display sums of all summable attributes in a row below the table results.
-        embedded_tab_disabled: This configuration tab is not available for the embedded view you are editing.
-        hierarchy_hint: All filtered table results will be augmented with their ancestors. Hierarchies can be expanded and collapsed.
-        hierarchy_mode: Hierarchy
-        highlighting: Highlighting
+        default_mode: قائمة مسطّحة
+        display_settings: إعدادات العرض
+        display_sums_hint: عرض مجاميع كل السمات القابلة للجمع في صف أسفل نتائج الجدول.
+        embedded_tab_disabled: علامة تبويب التكوين هذه غير متاحة للعرض المضمّن الذي تحرره.
+        hierarchy_hint: ستُستكمل جميع نتائج الجدول المُصفّاة بالعناصر الأصلية التابعة لها. يمكن توسيع التسلسلات الهرمية وطيها.
+        hierarchy_mode: التسلسل الهرمي
+        highlighting: التمييز
         highlighting_mode:
-          description: Highlight with color
-          entire_row_by: Entire row by
-          inline: Highlighted attribute(s)
-          inline_all: All attributes
-          none: No highlighting
+          description: التمييز باللون
+          entire_row_by: الصف بأكمله حسب
+          inline: السمات المميزة
+          inline_all: جميع السمات
+          none: بلا تمييز
           priority: الأولوية
           status: الحالة
           type: النّوع
-        modal_title: Work package table configuration
+        modal_title: تكوين جدول حزم العمل
         relation_filters:
-          filter_work_packages_by_relation_type: Filter work packages by relation type
-        show_timeline_hint: Show an interactive gantt chart on the right side of the table. You can change its width by dragging the divider between table and gantt chart.
+          filter_work_packages_by_relation_type: تصفية حزم العمل حسب نوع العلاقة
+        show_timeline_hint: عرض مخطط جانت تفاعلي بجانب الجدول. يمكنك تغيير عرضه بسحب الفاصل بين الجدول ومخطط جانت.
         sorting_mode:
-          automatic: Automatic
-          description: 'Chose the mode to sort your Work packages:'
-          manually: Manually
-          warning: You will lose your previous sorting when activating the automatic sorting mode.
+          automatic: تلقائي
+          description: 'اختر وضع فرز حزم العمل:'
+          manually: يدويًا
+          warning: ستفقد الترتيب السابق عند تفعيل وضع الفرز التلقائي.
       tabs:
         activity: النشاط
         files: الملفّات
         overview: نظرة عامة
-        project_attributes: Project attributes
+        project_attributes: سمات المشروع
         relations: صِلات
         watchers: المشاهدون
       time_relative:
@@ -1135,5 +1138,5 @@ ar:
         months: أشهر
         weeks: أسابيع
     zen_mode:
-      button_activate: Activate zen mode
-      button_deactivate: Deactivate zen mode
+      button_activate: تفعيل وضع التركيز
+      button_deactivate: إلغاء تفعيل وضع التركيز

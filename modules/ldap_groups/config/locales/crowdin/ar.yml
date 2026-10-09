@@ -3,103 +3,106 @@ ar:
   activerecord:
     attributes:
       ldap_groups/synchronized_filter:
-        auth_source: Auth source
-        base_dn: Search base DN
+        auth_source: مصدر المصادقة
+        base_dn: DN الأساسي للبحث
         filter_string: مرشّح LDAP
-        group_name_attribute: Group name attribute
+        group_name_attribute: سمة اسم المجموعة
         ldap_auth_source: اتصال LDAP
-        member_lookup_attribute: Group member attribute
+        member_lookup_attribute: سمة أعضاء المجموعة
         sync_users: مزامنة المستخدمين
       ldap_groups/synchronized_group:
-        auth_source: Auth source
+        auth_source: مصدر المصادقة
         dn: DN
         ldap_auth_source: اتصال LDAP
         sync_users: مزامنة المستخدمين
     errors:
       models:
         ldap_groups/synchronized_filter:
-          must_contain_base_dn: Filter base DN must be contained within the LDAP connection's base DN
+          must_contain_base_dn: يجب أن يكون DN الأساسي لعامل التصفية ضمن DN الأساسي لاتصال LDAP
     models:
       ldap_groups/synchronized_filter:
-        zero: LDAP Group synchronization filters
-        one: LDAP Group synchronization filter
-        two: LDAP Group synchronization filters
-        few: LDAP Group synchronization filters
-        many: LDAP Group synchronization filters
-        other: LDAP Group synchronization filters
+        zero: عوامل تصفية مزامنة مجموعات LDAP
+        one: عامل تصفية مزامنة مجموعات LDAP
+        two: عوامل تصفية مزامنة مجموعات LDAP
+        few: عوامل تصفية مزامنة مجموعات LDAP
+        many: عوامل تصفية مزامنة مجموعات LDAP
+        other: عوامل تصفية مزامنة مجموعات LDAP
       ldap_groups/synchronized_group:
-        zero: Synchronized LDAP groups
-        one: Synchronized LDAP group
-        two: Synchronized LDAP groups
-        few: Synchronized LDAP groups
-        many: Synchronized LDAP groups
-        other: Synchronized LDAP groups
+        zero: مجموعات LDAP المتزامنة
+        one: مجموعة LDAP متزامنة
+        two: مجموعات LDAP المتزامنة
+        few: مجموعات LDAP المتزامنة
+        many: مجموعات LDAP المتزامنة
+        other: مجموعات LDAP المتزامنة
   ee:
     upsell:
       ldap_groups:
-        description: Synchronize LDAP groups with OpenProject groups to manage users, change their permissions and facilitate user management across groups.
-        title: LDAP group synchronization
+        description: زامن مجموعات LDAP مع مجموعات OpenProject لإدارة المستخدمين وتغيير صلاحياتهم وتسهيل إدارة المستخدمين عبر المجموعات.
+        title: مزامنة مجموعات LDAP
   ldap_groups:
-    label_group_key: LDAP group filter key
-    label_menu_item: LDAP group synchronization
-    label_synchronize: Discover LDAP groups
+    label_group_key: مفتاح عامل تصفية مجموعات LDAP
+    label_menu_item: مزامنة مجموعات LDAP
+    label_synchronize: اكتشاف مجموعات LDAP
     settings:
-      name_attribute: LDAP groups name attribute
-      name_attribute_text: The LDAP attribute used for naming the OpenProject group when created by a filter
+      name_attribute: سمة اسم مجموعات LDAP
+      name_attribute_text: سمة LDAP المستخدمة لتسمية مجموعة OpenProject عند إنشائها بواسطة عامل تصفية
     synchronized_filters:
-      add_new: Add synchronized LDAP filter
+      add_new: إضافة عامل تصفية LDAP متزامن
       destroy:
-        confirmation: If you continue, the synchronized filter %{name} and all groups %{groups_count} created through it will be removed.
-        heading: Remove synchronized filter %{name}?
-        removed_groups: 'Warning: This will remove the following groups from OpenProject and remove it from all projects!'
-        title: Remove synchronized filter %{name}
-        verification_html: Enter the filter name %{name} to verify the deletion.
+        confirmation: إذا تابعت، فستتم إزالة عامل التصفية المتزامن %{name} وجميع المجموعات (%{groups_count}) التي أُنشئت من خلاله.
+        heading: إزالة عامل التصفية المتزامن %{name}؟
+        removed_groups: 'تحذير: سيؤدي هذا إلى إزالة المجموعات التالية من OpenProject وإزالتها من جميع المشاريع!'
+        title: إزالة عامل التصفية المتزامن %{name}
+        verification_html: أدخل اسم عامل التصفية %{name} لتأكيد الحذف.
       form:
-        base_dn_text: 'Enter the search base DN to use for this filter. It needs to be below the base DN of the selected LDAP connection. Leave this option empty to reuse the base DN of the connection
-
-          '
-        filter_string_text: Enter the RFC4515 LDAP filter that returns groups in your LDAP to synchronize with OpenProject.
-        group_name_attribute_text: Enter the attribute of the LDAP group used for setting the OpenProject group name.
-        member_lookup_attribute_text: 'Leave empty to use the default reverse lookup: OpenProject searches for users whose memberOf attribute matches the group DN. This requires the memberOf attribute to be present on user entries (Active Directory, OpenLDAP with memberof overlay). Set this to the attribute name on group entries that lists member DNs to use forward lookup instead. Examples: "uniqueMember" (groupOfUniqueNames), "member" (groupOfNames). Use this for LDAP servers that do not maintain the memberOf attribute on user entries.
-
-          '
+        base_dn_text: |
+          أدخل DN الأساسي للبحث الذي سيُستخدم لعامل التصفية هذا. يجب أن يكون أسفل DN الأساسي لاتصال LDAP المحدد.
+          اترك هذا الخيار فارغًا لإعادة استخدام DN الأساسي للاتصال
+        filter_string_text: أدخل عامل تصفية LDAP وفق RFC4515 الذي يُرجع المجموعات الموجودة في LDAP لديك لمزامنتها مع OpenProject.
+        group_name_attribute_text: أدخل سمة مجموعة LDAP المستخدمة لتعيين اسم مجموعة OpenProject.
+        member_lookup_attribute_text: |
+          اتركه فارغًا لاستخدام البحث العكسي الافتراضي: يبحث OpenProject عن المستخدمين الذين تطابق سمة memberOf لديهم DN المجموعة. ويتطلب ذلك وجود سمة memberOf في إدخالات المستخدمين (Active Directory، أو OpenLDAP مع تراكب memberof).
+          لاستخدام البحث المباشر بدلًا من ذلك، اضبط هذا الحقل على اسم السمة في إدخالات المجموعات التي تسرد DN الأعضاء. أمثلة: "uniqueMember" (groupOfUniqueNames)، "member" (groupOfNames). استخدم هذا الخيار مع خوادم LDAP التي لا تحتفظ بسمة memberOf في إدخالات المستخدمين.
       label_n_groups_found:
-        one: 1 group found by the filter
-        other: "%{count} groups found by the filter"
-        zero: No groups were found by the filter
-      plural: LDAP Group synchronization filters
-      singular: LDAP Group synchronization filter
+        one: عثر عامل التصفية على مجموعة واحدة
+        other: عثر عامل التصفية على %{count} مجموعة
+        zero: لم يعثر عامل التصفية على أي مجموعات
+        two: عثر عامل التصفية على مجموعتين
+        few: عثر عامل التصفية على %{count} مجموعات
+        many: عثر عامل التصفية على %{count} مجموعة
+      plural: عوامل تصفية مزامنة مجموعات LDAP
+      singular: عامل تصفية مزامنة مجموعات LDAP
     synchronized_groups:
-      add_new: Add synchronized LDAP group
+      add_new: إضافة مجموعة LDAP متزامنة
       destroy:
-        confirmation: If you continue, the synchronized group %{name} and all %{users_count} users synchronized through it will be removed.
-        heading: Remove synchronized group %{name}?
-        info: The OpenProject group itself and members added outside this LDAP synchronization will not be removed.
-        title: Remove synchronized group %{name}
+        confirmation: إذا تابعت، فستتم إزالة المجموعة المتزامنة %{name} وجميع المستخدمين (%{users_count}) الذين تمت مزامنتهم من خلالها.
+        heading: إزالة المجموعة المتزامنة %{name}؟
+        info: لن تتم إزالة مجموعة OpenProject نفسها ولا الأعضاء الذين أُضيفوا خارج مزامنة LDAP هذه.
+        title: إزالة المجموعة المتزامنة %{name}
       form:
-        auth_source_text: Select which LDAP connection should be used.
-        dn_text: Enter the full DN of the group in LDAP
-        group_text: Select an existing OpenProject group that members of the LDAP group shall be synchronized with
-        sync_users_text: 'If you enable this option, found users will also be automatically created in OpenProject. Without it, only existing accounts in OpenProject will be added to groups.
+        auth_source_text: حدد اتصال LDAP الذي يجب استخدامه.
+        dn_text: أدخل DN الكامل للمجموعة في LDAP
+        group_text: حدد مجموعة OpenProject موجودة لمزامنة أعضاء مجموعة LDAP معها
+        sync_users_text: 'إذا فعّلت هذا الخيار، فسيتم أيضًا إنشاء المستخدمين الذين يُعثر عليهم تلقائيًا في OpenProject. وبدونه، ستُضاف الحسابات الموجودة في OpenProject فقط إلى المجموعات.
 
           '
       help_text_html: |
-        This module allows you to set up a synchronization between LDAP and OpenProject groups.
+        تتيح لك هذه الوحدة إعداد مزامنة بين مجموعات LDAP ومجموعات OpenProject.
         <br/>
-        By default, OpenProject uses <strong>reverse lookup</strong>: it searches for users whose <em>memberOf</em> attribute matches the group DN.
-        This requires the <em>memberOf</em> attribute to be present on user entries (Active Directory, OpenLDAP with memberof overlay).
+        افتراضيًا، يستخدم OpenProject <strong>البحث العكسي</strong>: إذ يبحث عن المستخدمين الذين تطابق سمة <em>memberOf</em> لديهم DN المجموعة.
+        ويتطلب ذلك وجود سمة <em>memberOf</em> في إدخالات المستخدمين (Active Directory، أو OpenLDAP مع تراكب memberof).
         <br/>
-        If your LDAP server does not maintain <em>memberOf</em> on user entries (e.g. it uses <em>groupOfUniqueNames</em> with <em>uniqueMember</em>),
-        you can configure <strong>forward lookup</strong> by setting the <em>Group member attribute</em> on the synchronization filter.
+        إذا كان خادم LDAP لديك لا يحتفظ بسمة <em>memberOf</em> في إدخالات المستخدمين (مثلًا عند استخدام <em>groupOfUniqueNames</em> مع <em>uniqueMember</em>)،
+        فيمكنك تكوين <strong>البحث المباشر</strong> عبر تعيين <em>سمة أعضاء المجموعة</em> في عامل تصفية المزامنة.
         <br/>
-        Groups are synchronized hourly through a cron job.
-        [Please see our documentation on this topic](docs_url).
-      no_members: This group has no synchronized members yet.
-      no_results: No synchronized groups found.
-      plural: Synchronized LDAP groups
-      singular: Synchronized LDAP group
+        تتم مزامنة المجموعات كل ساعة عبر مهمة cron.
+        [يُرجى الاطلاع على وثائقنا حول هذا الموضوع](docs_url).
+      no_members: لا يوجد في هذه المجموعة أعضاء متزامنون بعد.
+      no_results: لم يتم العثور على مجموعات متزامنة.
+      plural: مجموعات LDAP المتزامنة
+      singular: مجموعة LDAP متزامنة
       upsell:
-        description: Take advantage of synchronised LDAP groups to manage users, change their permissions and facilitate user management across groups.
+        description: استفد من مجموعات LDAP المتزامنة لإدارة المستخدمين وتغيير صلاحياتهم وتسهيل إدارة المستخدمين عبر المجموعات.
   plugin_openproject_ldap_groups:
-    description: Synchronization of LDAP group memberships.
-    name: OpenProject LDAP groups
+    description: مزامنة عضويات مجموعات LDAP.
+    name: مجموعات LDAP في OpenProject

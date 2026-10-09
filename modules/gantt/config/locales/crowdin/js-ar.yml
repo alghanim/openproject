@@ -4,4 +4,4 @@ ar:
     work_packages:
       default_queries:
         milestones: الأحداث الرئيسية
-      label_gantt_chart_plural: Gantt charts
+      label_gantt_chart_plural: مخططات جانت

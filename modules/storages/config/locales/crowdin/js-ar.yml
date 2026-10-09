@@ -2,28 +2,28 @@
 ar:
   js:
     storages:
-      authentication_error: Authentication with %{storageType} failed
-      choose_location: Choose location
-      drop_files: Drop files here to upload them to %{name}.
-      drop_or_click_files: Drop files here or click to upload them to %{name}.
+      authentication_error: فشلت المصادقة مع %{storageType}
+      choose_location: اختيار الموقع
+      drop_files: أفلت الملفات هنا لرفعها إلى %{name}.
+      drop_or_click_files: أفلت الملفات هنا أو انقر لرفعها إلى %{name}.
       file_links:
-        already_linked_directory: This directory is already linked to this work package.
-        already_linked_file: This file is already linked to this work package.
-        download: Download %{fileName}
-        empty: 'Currently there are no linked files to this work package. Start linking files with the action below or from within %{storageType}.
+        already_linked_directory: هذا المجلد مرتبط بالفعل بحزمة العمل هذه.
+        already_linked_file: هذا الملف مرتبط بالفعل بحزمة العمل هذه.
+        download: تنزيل %{fileName}
+        empty: 'لا توجد حاليًا ملفات مرتبطة بحزمة العمل هذه. ابدأ بربط الملفات باستخدام الإجراء أدناه أو من داخل %{storageType}.
 
           '
-        link_uploaded_file_error: 'An error occurred linking the recently uploaded file ''%{fileName}'' to the work package %{workPackageId}.
+        link_uploaded_file_error: 'حدث خطأ أثناء ربط الملف المرفوع مؤخرًا «%{fileName}» بحزمة العمل %{workPackageId}.
 
           '
-        open: Open file on storage
-        open_location: Open file in location
-        remove: Remove file link
-        remove_confirmation: 'Are you sure you want to unlink the file from this work package? Unlinking does not affect the original file and only removes the connection to this work package.
+        open: فتح الملف في مساحة التخزين
+        open_location: فتح الملف في موقعه
+        remove: إزالة رابط الملف
+        remove_confirmation: 'هل أنت متأكد من أنك تريد إلغاء ربط الملف بحزمة العمل هذه؟ لا يؤثر إلغاء الربط على الملف الأصلي، بل يزيل الارتباط بحزمة العمل هذه فقط.
 
           '
-        remove_short: Remove link
-        select: Select files
+        remove_short: إزالة الرابط
+        select: تحديد الملفات
         select_all: اختر الجميع
         selection:
           zero: حدد الملفات لربطها
@@ -33,82 +33,82 @@ ar:
           many: ربط %{count} من الملفات
           other: ربط %{count} من الملفات
         success_create:
-          zero: Successfully created %{count} file links.
-          one: Successfully created 1 file link.
-          two: Successfully created %{count} file links.
-          few: Successfully created %{count} file links.
-          many: Successfully created %{count} file links.
-          other: Successfully created %{count} file links.
+          zero: لم يتم إنشاء أي روابط للملفات.
+          one: تم إنشاء رابط ملف واحد بنجاح.
+          two: تم إنشاء رابطين للملفات بنجاح.
+          few: تم إنشاء %{count} روابط للملفات بنجاح.
+          many: تم إنشاء %{count} رابطًا للملفات بنجاح.
+          other: تم إنشاء %{count} رابط للملفات بنجاح.
         tooltip:
-          not_found: This file cannot be found.
-          not_logged_in: Please log in to the storage to access this file.
-          view_not_allowed: You have no permission to see this file.
+          not_found: تعذّر العثور على هذا الملف.
+          not_logged_in: يُرجى تسجيل الدخول إلى مساحة التخزين للوصول إلى هذا الملف.
+          view_not_allowed: ليست لديك صلاحية لعرض هذا الملف.
         upload_error:
-          403: 'Your file (%{fileName}) could not be uploaded due to system restrictions. Please contact your administrator for more information.
+          403: 'تعذّر رفع ملفك (%{fileName}) بسبب قيود النظام. يُرجى التواصل مع المسؤول لمزيد من المعلومات.
 
             '
-          413: 'Your file (%{fileName}) is bigger than what OpenProject can upload to %{storageType}. You can upload it directly to %{storageType} first and then link the file.
+          413: 'حجم ملفك (%{fileName}) أكبر مما يمكن لـ OpenProject رفعه إلى %{storageType}. يمكنك رفعه مباشرةً إلى %{storageType} أولًا ثم ربط الملف.
 
             '
-          507: 'Your file (%{fileName}) is bigger than the storage quota allows. Contact your administrator to modify this quota.
+          507: 'حجم ملفك (%{fileName}) يتجاوز الحصة المسموح بها في مساحة التخزين. تواصل مع المسؤول لتعديل هذه الحصة.
 
             '
-          default: 'Your file (%{fileName}) could not be uploaded.
+          default: 'تعذّر رفع ملفك (%{fileName}).
 
             '
           detail:
-            nextcloud: 'Please check that the latest version of the Nextcloud App "OpenProject Integration" is installed and contact your administrator for more information.
+            nextcloud: 'يُرجى التحقق من تثبيت أحدث إصدار من تطبيق Nextcloud «OpenProject Integration»، والتواصل مع المسؤول لمزيد من المعلومات.
 
               '
       files:
-        already_existing_body: 'A file with the name "%{fileName}" already exists in the location where you are trying to upload this file. What would you like to do?
+        already_existing_body: 'يوجد بالفعل ملف بالاسم «%{fileName}» في الموقع الذي تحاول رفع هذا الملف إليه. ماذا تريد أن تفعل؟
 
           '
-        already_existing_header: This file already exists
-        cannot_create_folder: Failed to create folder. Avoid using special characters and symbols and make sure the folder does not exist already.
-        directory_not_writeable: You do not have permission to add files to this folder.
-        dragging_folder: The upload to %{storageType} does not support folders.
-        dragging_many_files: The upload to %{storageType} supports only one file at once.
-        empty_folder: This folder is empty.
-        empty_folder_location_hint: Click the button below to upload the file to this location.
-        file_not_selectable_location: Selecting a file is not possible in the process of choosing a location.
-        managed_project_folder_no_access: 'You have no access yet to the managed project folder. Please wait a bit and try again.
+        already_existing_header: هذا الملف موجود بالفعل
+        cannot_create_folder: فشل إنشاء المجلد. تجنّب استخدام الأحرف الخاصة والرموز، وتأكد من أن المجلد غير موجود مسبقًا.
+        directory_not_writeable: ليست لديك صلاحية لإضافة ملفات إلى هذا المجلد.
+        dragging_folder: لا يدعم الرفع إلى %{storageType} المجلدات.
+        dragging_many_files: يدعم الرفع إلى %{storageType} ملفًا واحدًا فقط في كل مرة.
+        empty_folder: هذا المجلد فارغ.
+        empty_folder_location_hint: انقر على الزر أدناه لرفع الملف إلى هذا الموقع.
+        file_not_selectable_location: لا يمكن تحديد ملف أثناء عملية اختيار الموقع.
+        managed_project_folder_no_access: 'ليس لديك حق الوصول إلى مجلد المشروع المُدار بعد. يُرجى الانتظار قليلًا والمحاولة مرة أخرى.
 
           '
-        managed_project_folder_not_available: 'The automatically managed project folder was not yet found. Please wait a bit, reload the page to fetch the newest data, and try again.
+        managed_project_folder_not_available: 'لم يتم العثور على مجلد المشروع المُدار تلقائيًا بعد. يُرجى الانتظار قليلًا، ثم إعادة تحميل الصفحة لجلب أحدث البيانات، والمحاولة مرة أخرى.
 
           '
-        project_folder_no_access: 'You have no access to the project folder. Please, contact your administrator to get access or upload the file in another location.
+        project_folder_no_access: 'ليس لديك حق الوصول إلى مجلد المشروع. يُرجى التواصل مع المسؤول للحصول على حق الوصول، أو رفع الملف إلى موقع آخر.
 
           '
-        upload_keep_both: Keep both
-        upload_replace: Replace
+        upload_keep_both: الاحتفاظ بكليهما
+        upload_replace: استبدال
       information:
-        authentication_error: The request to %{storageType} could not be authenticated, that's an error.
-        connection_error: 'Some %{storageType} settings are not working. Please contact your %{storageType} administrator.
+        authentication_error: تعذّرت مصادقة الطلب إلى %{storageType}، وهذا خطأ.
+        connection_error: 'بعض إعدادات %{storageType} لا تعمل. يُرجى التواصل مع مسؤول %{storageType}.
 
           '
-        live_data_error: Error fetching file details
-        live_data_error_description: 'Some %{storageType} data could not be fetched. Please try to reload this page or contact your %{storageType} administrator.
+        live_data_error: خطأ في جلب تفاصيل الملف
+        live_data_error_description: 'تعذّر جلب بعض بيانات %{storageType}. يُرجى محاولة إعادة تحميل هذه الصفحة أو التواصل مع مسؤول %{storageType}.
 
           '
-        no_file_links: In order to link files to this work package please do it via %{storageType}.
-        not_logged_in: 'To add a link, see or upload files related to this work package, please login to %{storageType}.
+        no_file_links: لربط ملفات بحزمة العمل هذه، يُرجى القيام بذلك عبر %{storageType}.
+        not_logged_in: 'لإضافة رابط، أو عرض الملفات المتعلقة بحزمة العمل هذه أو رفعها، يُرجى تسجيل الدخول إلى %{storageType}.
 
           '
-        suggest_logout: You can try whether logging out and back in fixes this problem.
-        suggest_relink: You can try whether re-linking your account via the login button below fixes this problem.
-      link_existing_files: Link existing files
-      link_files_in_storage: Link files in %{storageType}
-      login: "%{storageType} login"
-      login_to: Login to %{storageType}
-      new_folder: New folder
-      no_connection: No %{storageType} connection
-      open_storage: Open %{storageType}
-      select_location: Select location
+        suggest_logout: يمكنك محاولة تسجيل الخروج ثم تسجيل الدخول مجددًا لمعرفة ما إذا كان ذلك يحل المشكلة.
+        suggest_relink: يمكنك محاولة إعادة ربط حسابك عبر زر تسجيل الدخول أدناه لمعرفة ما إذا كان ذلك يحل المشكلة.
+      link_existing_files: ربط ملفات موجودة
+      link_files_in_storage: ربط ملفات في %{storageType}
+      login: تسجيل دخول %{storageType}
+      login_to: تسجيل الدخول إلى %{storageType}
+      new_folder: مجلد جديد
+      no_connection: لا يوجد اتصال بـ %{storageType}
+      open_storage: فتح %{storageType}
+      select_location: تحديد الموقع
       types:
-        default: Storage
+        default: مساحة التخزين
         nextcloud: Nextcloud
         one_drive: OneDrive
         sharepoint: SharePoint
-      upload_files: Upload files
+      upload_files: رفع الملفات

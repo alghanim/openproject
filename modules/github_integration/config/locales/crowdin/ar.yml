@@ -24,83 +24,81 @@ ar:
   activerecord:
     models:
       deploy_status_check:
-        zero: Deployment status checks
-        one: Deployment status check
-        two: Deployment status checks
-        few: Deployment status checks
-        many: Deployment status checks
-        other: Deployment status checks
+        zero: فحوصات حالة النشر
+        one: فحص حالة النشر
+        two: فحوصات حالة النشر
+        few: فحوصات حالة النشر
+        many: فحوصات حالة النشر
+        other: فحوصات حالة النشر
       deploy_target:
-        zero: Deployment targets
-        one: Deployment target
-        two: Deployment targets
-        few: Deployment targets
-        many: Deployment targets
-        other: Deployment targets
+        zero: أهداف النشر
+        one: هدف النشر
+        two: أهداف النشر
+        few: أهداف النشر
+        many: أهداف النشر
+        other: أهداف النشر
       github_check_run:
-        zero: GitHub check runs
-        one: GitHub check run
-        two: GitHub check runs
-        few: GitHub check runs
-        many: GitHub check runs
-        other: GitHub check runs
+        zero: عمليات تشغيل فحوصات GitHub
+        one: تشغيل فحص GitHub
+        two: عمليات تشغيل فحوصات GitHub
+        few: عمليات تشغيل فحوصات GitHub
+        many: عمليات تشغيل فحوصات GitHub
+        other: عمليات تشغيل فحوصات GitHub
       github_pull_request:
-        zero: GitHub pull requests
-        one: GitHub pull request
-        two: GitHub pull requests
-        few: GitHub pull requests
-        many: GitHub pull requests
-        other: GitHub pull requests
+        zero: طلبات دمج GitHub
+        one: طلب دمج GitHub
+        two: طلبات دمج GitHub
+        few: طلبات دمج GitHub
+        many: طلبات دمج GitHub
+        other: طلبات دمج GitHub
       github_user:
-        zero: GitHub users
-        one: GitHub user
-        two: GitHub users
-        few: GitHub users
-        many: GitHub users
-        other: GitHub users
+        zero: مستخدمو GitHub
+        one: مستخدم GitHub
+        two: مستخدمو GitHub
+        few: مستخدمو GitHub
+        many: مستخدمو GitHub
+        other: مستخدمو GitHub
   attributes:
-    additions_count: Number of additions
-    changed_files_count: Changed files
-    comments_count: Comments count
-    deletions_count: Number of deletions
-    github: GitHub identifer
-    github_app_owner_avatar_url: Owner avatar URL
-    github_avatar_url: Avatar URL
-    github_html_url: Pull Request URL
-    github_login: GitHub login
-    github_updated_at: Updated at
+    additions_count: عدد الإضافات
+    changed_files_count: الملفات المعدّلة
+    comments_count: عدد التعليقات
+    deletions_count: عدد عمليات الحذف
+    github: معرّف GitHub
+    github_app_owner_avatar_url: عنوان URL للصورة الرمزية للمالك
+    github_avatar_url: عنوان URL للصورة الرمزية
+    github_html_url: عنوان URL لطلب الدمج
+    github_login: اسم تسجيل الدخول في GitHub
+    github_updated_at: تاريخ التحديث
     host: المضيف
-    labels: Labels
+    labels: التسميات
     repository: مستودع البيانات
-    review_comments_count: Review comments count
+    review_comments_count: عدد تعليقات المراجعة
   button_add_deploy_target: إضافة هدف النشر
   label_deploy_target: نشر الهدف
   label_deploy_target_new: نشر هدف جديد
   label_deploy_target_plural: نشر الهدف
-  label_github_comment_user: GitHub actor
+  label_github_comment_user: المستخدم المنفّذ لـ GitHub
   label_github_integration: التكامل مع GitHub
-  label_github_webhook_secret: Webhook secret
+  label_github_webhook_secret: سر Webhook
   notice_deploy_target_created: نشر هدف تم إنشاؤه
   notice_deploy_target_destroyed: تم حذف نشر الهدف
   permission_introspection: قراءة تشغيل الإصدار الأساسي من OpenProject وبناء SHA
   permission_show_github_content: عرض محتوى GitHub
   plugin_openproject_github_integration:
-    description: Integrates OpenProject and GitHub for a better workflow
-    name: OpenProject GitHub Integration
+    description: تكامل OpenProject مع GitHub لسير عمل أفضل
+    name: تكامل OpenProject مع GitHub
   project_module_github: GitHub
-  text_deploy_target_api_key_info: 'An OpenProject [API key](docs_url) belonging to a user who has the global introspection permission.
-
-    '
+  text_deploy_target_api_key_info: "[مفتاح API](docs_url) في OpenProject يخص مستخدمًا لديه صلاحية الفحص الذاتي (introspection) العامة.\n"
   text_deploy_target_type_info: 'حتى الآن نحن ندعم OpenProject نفسه فقط.
 
     '
-  text_github_comment_user_info: 'The OpenProject user whose API key must be used to authenticate incoming webhook requests. When set, requests authenticated with any other user''s credentials are rejected. This user also posts automated deploy-status comments on work packages. Defaults to the system user when not set.
+  text_github_comment_user_info: 'مستخدم OpenProject الذي يجب استخدام مفتاح API الخاص به لمصادقة طلبات Webhook الواردة. عند تعيينه، تُرفض الطلبات المصادَق عليها ببيانات اعتماد أي مستخدم آخر. ينشر هذا المستخدم أيضًا تعليقات تلقائية حول حالة النشر على حزم العمل. يُستخدم مستخدم النظام افتراضيًا عند عدم تعيينه.
 
     '
-  text_github_webhook_secret_info: 'A secret token shared with GitHub when configuring the webhook. When set, OpenProject verifies the X-Hub-Signature-256 header on every incoming request, rejecting payloads that do not match. Leave blank to skip verification (not recommended).
+  text_github_webhook_secret_info: 'رمز سري مشترك مع GitHub عند تكوين Webhook. عند تعيينه، يتحقق OpenProject من الترويسة X-Hub-Signature-256 في كل طلب وارد، ويرفض الحمولات غير المطابقة. اتركه فارغًا لتخطي التحقق (غير مستحسن).
 
     '
-  text_github_webhook_secret_missing_warning: 'No webhook secret is configured. Any request to the GitHub webhook endpoint will be accepted without verification, which may allow unauthorized actors to forge events. It is strongly recommended to set a secret.
+  text_github_webhook_secret_missing_warning: 'لم يتم تكوين سر Webhook. سيُقبل أي طلب إلى نقطة نهاية Webhook الخاصة بـ GitHub دون تحقق، مما قد يسمح لجهات غير مصرّح لها بتزوير الأحداث. يُوصى بشدة بتعيين سر.
 
     '
-  text_pull_request_deployed_to: "%{pr_link} deployed to %{deploy_target_link}"
+  text_pull_request_deployed_to: تم نشر %{pr_link} إلى %{deploy_target_link}

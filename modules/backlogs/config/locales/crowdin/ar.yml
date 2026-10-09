@@ -27,30 +27,30 @@ ar:
         allow_multiple_active_sprints: السماح بوجود عدة سباقات نشطة
         backlog_excluded_types: أنواع حزم العمل المستبعدة
         sprint_sharing: مشاركة السباق
-        statuses_considered_closed: Statuses considered closed
+        statuses_considered_closed: الحالات المعتبرة مغلقة
       sprint:
-        duration: Duration
-        finish_date: Finish date
-        goal: Sprint goal
-        name: Sprint name
-        sharing: Sharing
+        duration: المدة
+        finish_date: تاريخ الانتهاء
+        goal: هدف السبرينت
+        name: اسم السبرينت
+        sharing: المشاركة
         statuses:
-          active: Active
-          completed: Completed
-          in_planning: In planning
-        work_packages: Work packages
+          active: نشط
+          completed: مكتمل
+          in_planning: قيد التخطيط
+        work_packages: حزم العمل
       sprint_goal:
-        text: Sprint goal
+        text: هدف السبرينت
       work_package:
-        backlog_bucket: Backlog bucket
-        backlog_inbox: Backlog inbox
+        backlog_bucket: مجموعة الأعمال المتراكمة
+        backlog_inbox: صندوق وارد الأعمال المتراكمة
         backlogs_work_package_type: نوع الأعمال المتراكمة غير المنجزة
         position: الموقع
-        sprint: Sprint
+        sprint: السبرينت
         story_points: نقاط القصة
     errors:
       messages:
-        cannot_start_while_receiving_shared_sprints: cannot be started while the project is receiving shared sprints.
+        cannot_start_while_receiving_shared_sprints: لا يمكن بدؤه بينما يتلقى المشروع سبرينتات مشتركة.
         dates_required: يجب تحديد تواريخ البدء والانتهاء لبدء السبرينت.
         must_be_in_planning: يجب أن يكون في مرحلة التخطيط للبدء.
         only_one_active_sprint_allowed: يُسمح بوجود سباق واحد نشط فقط لكل مشروع.
@@ -61,23 +61,23 @@ ar:
               locked_by_multiple_active_sprints: لا يمكن تغييرها أثناء وجود عدة سباقات نشطة قيد التنفيذ.
               requires_no_sharing: لا يمكن تمكين هذه الميزة إلا عندما تكون إعدادات مشاركة السبرينت مضبوطة على «عدم المشاركة».
             sprint_sharing:
-              active_or_borrowed_sprint_blocks_receiving: cannot be set to receive because the project has an active or borrowed sprint. Close or unassign the work packages first.
+              active_or_borrowed_sprint_blocks_receiving: لا يمكن ضبطها على التلقي لأن المشروع لديه سبرينت نشط أو مستعار. أغلق حزم العمل أو ألغِ تعيينها أولًا.
               locked_by_multiple_active_sprints: لا يمكن تغييره أثناء تفعيل عدة سباقات نشطة.
               share_all_projects_already_taken: لا يمكن تعيينه لأن المشروع "%{name}" مشترك بالفعل مع جميع المشاريع.
               share_all_projects_already_taken_anonymous: لا يمكن تعيينه لأن هناك مشروعًا آخر يشاركه بالفعل مع جميع المشاريع.
-              work_packages_still_linked_to_shared_sprints: cannot be changed because work packages are still linked to shared sprints. Unassign them first.
+              work_packages_still_linked_to_shared_sprints: لا يمكن تغييرها لأن حزم العمل لا تزال مرتبطة بسبرينتات مشتركة. ألغِ تعيينها أولًا.
           receiving_sprints: يتلقى سباقات مشتركة. ولا يمكن إنشاء سباقات خاصة.
         sprint:
           attributes:
             base:
               format: "%{message}"
               unfinished_work_packages:
-                zero: There are %{count} work packages that were not completed in this sprint.
-                one: There is one work package that was not completed in this sprint.
-                two: There are %{count} work packages that were not completed in this sprint.
-                few: There are %{count} work packages that were not completed in this sprint.
-                many: There are %{count} work packages that were not completed in this sprint.
-                other: There are %{count} work packages that were not completed in this sprint.
+                zero: لا توجد حزم عمل غير مكتملة في هذا السبرينت.
+                one: توجد حزمة عمل واحدة لم تكتمل في هذا السبرينت.
+                two: توجد حزمتا عمل لم تكتملا في هذا السبرينت.
+                few: توجد %{count} حزم عمل لم تكتمل في هذا السبرينت.
+                many: توجد %{count} حزمة عمل لم تكتمل في هذا السبرينت.
+                other: توجد %{count} حزمة عمل لم تكتمل في هذا السبرينت.
             status:
               not_active: إنه غير نشط، لذا لا يمكن إغلاقه.
         sprint_goal:
@@ -90,36 +90,36 @@ ar:
               can_only_contain_work_packages_of_current_sprint: يمكن أن تحتوي فقط على الهويات المعرّفة لمجموعات العمل في السباق الحالي.
               must_block_at_least_one_work_package: يجب أن يحتوي على الأقل على الهوية المعرّفة لبطاقة واحدة.
             sprint:
-              not_assignable: is not assignable since it is either not shared with the project or already finished.
+              not_assignable: لا يمكن تعيينه لأنه إما غير مشترك مع المشروع أو منتهٍ بالفعل.
               not_eligible_for_moving: ليس سبرينتًا نشطًا في المشروع الذي يحتوي على السبرينت الذي تم نقل حزمة العمل منه.
             version_id:
               task_version_must_be_the_same_as_story_version: يجب أن يكون نفس نسخة القصة الأصلية.
           backlog_bucket_xor_sprint: لا يمكن تخصيصها في كل من «السبرينت» و«مجموعة المهام المتأخرة».
     models:
       backlog_bucket:
-        zero: Backlog buckets
-        one: Backlog bucket
-        two: Backlog buckets
-        few: Backlog buckets
-        many: Backlog buckets
-        other: Backlog buckets
+        zero: مجموعات الأعمال المتراكمة
+        one: مجموعة الأعمال المتراكمة
+        two: مجموعات الأعمال المتراكمة
+        few: مجموعات الأعمال المتراكمة
+        many: مجموعات الأعمال المتراكمة
+        other: مجموعات الأعمال المتراكمة
       sprint:
-        zero: السباقات
-        one: Sprint
-        two: Sprints
-        few: Sprints
-        many: Sprints
-        other: Sprints
+        zero: السبرينتات
+        one: سبرينت
+        two: السبرينتات
+        few: السبرينتات
+        many: السبرينتات
+        other: السبرينتات
       sprint_goal:
-        zero: Sprint goals
-        one: Sprint goal
-        two: Sprint goals
-        few: Sprint goals
-        many: Sprint goals
-        other: Sprint goals
+        zero: أهداف السبرينت
+        one: هدف السبرينت
+        two: أهداف السبرينت
+        few: أهداف السبرينت
+        many: أهداف السبرينت
+        other: أهداف السبرينت
   backlogs:
     add_existing_work_package_dialog_component:
-      title_without_container: Add existing work package
+      title_without_container: إضافة حزمة عمل موجودة
     administration_blankslate:
       text: نحن نعمل حاليًا على إعادة تصميم وحدة «قوائم المهام المتأخرة». وستظهر هنا في المستقبل القريب إعدادات الإدارة الخاصة بالسباقات وقوائم المهام المتأخرة. وتظل الإعدادات على مستوى المشروع متاحة.
       title: تتطور إعدادات إدارة الطلبات المتراكمة
@@ -135,7 +135,7 @@ ar:
         other: السباقات
         zero: جميع السباقات القصيرة
       select_panel_title: تحديد عناصر
-    blankslate_filtered_title: No work packages match the filter criteria.
+    blankslate_filtered_title: لا توجد حزم عمل تطابق معايير التصفية.
     bucket_component:
       action_menu:
         add_existing_work_package: إضافة حزمة عمل موجودة
@@ -175,19 +175,19 @@ ar:
       drop_zone_label: انقر هنا لإضافة هذا العنصر
       label_actions: إجراءات صندوق الوارد
       show_more:
-        zero: عرض %{count} عنصر آخر
-        one: عرض 1 عنصر آخر
-        two: Show %{count} more items
-        few: Show %{count} more items
-        many: Show %{count} more items
-        other: عرض %{count} عناصر أخرى
+        zero: عرض %{count} عنصر إضافي
+        one: عرض عنصر إضافي واحد
+        two: عرض عنصرين إضافيين
+        few: عرض %{count} عناصر إضافية
+        many: عرض %{count} عنصرًا إضافيًا
+        other: عرض %{count} عنصر إضافي
       title: البريد الوارد
     index_subheader_component:
-      label_search_by_subject: Search work packages by subject
+      label_search_by_subject: البحث عن حزم العمل حسب الموضوع
     label_burndown_chart: مخطط العمل المتبقي
     label_is_done_status: الحالة %{status_name} تعني أنها منجزة
     label_sprint_board: لوحة السباق
-    label_sprint_report: Sprint report
+    label_sprint_report: تقرير السبرينت
     move_to_bucket_dialog_component:
       title: الإنتقال إلى فئة المهام المتراكمة
     move_to_sprint_dialog_component:
@@ -195,12 +195,12 @@ ar:
       title: الانتقال إلى السباقات
     multiple_active_sprints: سباقات نشطة متعددة
     points_label:
-      zero: النقاط
-      one: النقاط
-      two: points
-      few: points
-      many: points
-      other: نِقَاط
+      zero: نقطة
+      one: نقطة
+      two: نقطتان
+      few: نقاط
+      many: نقطة
+      other: نقطة
     positions_could_not_be_rebuilt: تعذَر إعادة بناء المواقع.
     positions_rebuilt_successfully: تم إعادة بناء المواقع بنجاح.
     rebuild: إعِدْ بناء
@@ -215,156 +215,156 @@ ar:
         edit_sprint: تحرير السباق
       blankslate_description: لم يتم تخطيط أي عناصر حتى الآن. اسحب العناصر إلى هنا لإضافتها.
       blankslate_title: "%{name} فارغ"
-      drop_zone_label: Drop here to add this item
-      label_actions: Sprint actions
-      label_complete_sprint: Complete sprint
-      label_start_sprint: Start sprint
-      start_sprint_disabled_reason_active_sprint: Another sprint is already active.
-      start_sprint_disabled_reason_missing_dates: Start and finish dates are required in order to start the sprint.
-      start_sprint_disabled_reason_receiving_shared_sprints: This project's own sprints cannot be started while it is receiving shared sprints.
-      start_sprint_disabled_reason_shared_sprint: This sprint is from another project that doesn't support multiple active sprints.
+      drop_zone_label: أفلِت هنا لإضافة هذا العنصر
+      label_actions: إجراءات السبرينت
+      label_complete_sprint: إكمال السبرينت
+      label_start_sprint: بدء السبرينت
+      start_sprint_disabled_reason_active_sprint: يوجد سبرينت آخر نشط بالفعل.
+      start_sprint_disabled_reason_missing_dates: يجب تحديد تاريخي البدء والانتهاء لبدء السبرينت.
+      start_sprint_disabled_reason_receiving_shared_sprints: لا يمكن بدء السبرينتات الخاصة بهذا المشروع أثناء تلقيه سبرينتات مشتركة.
+      start_sprint_disabled_reason_shared_sprint: هذا السبرينت تابع لمشروع آخر لا يدعم وجود عدة سبرينتات نشطة.
     sprint_form:
-      goal_caption: The sprint goal is unique to this project and is not shared with other projects also using this sprint.
-      goal_for_this_project_label: "%{attribute} (for this project)"
+      goal_caption: هدف السبرينت خاص بهذا المشروع، ولا تتم مشاركته مع المشاريع الأخرى التي تستخدم هذا السبرينت أيضًا.
+      goal_for_this_project_label: "%{attribute} (لهذا المشروع)"
     sprint_form_component:
-      shared_sprint_info_banner: This is a shared sprint. Modifications will be reflected in all projects using it.
-      shared_sprint_warning_banner: This is a shared sprint. You do not have the necessary permissions to edit it.
+      shared_sprint_info_banner: هذا سبرينت مشترك. ستنعكس التعديلات على جميع المشاريع التي تستخدمه.
+      shared_sprint_warning_banner: هذا سبرينت مشترك. ليست لديك الصلاحيات اللازمة لتحريره.
     sprint_reports:
       page_header_component:
-        breadcrumb: Report
-        title: "%{sprint} report"
+        breadcrumb: التقرير
+        title: تقرير %{sprint}
     sprints:
       row_component:
         action_menu:
-          edit_sprint: Edit sprint
-          sprint_report: Sprint report
+          edit_sprint: تحرير السبرينت
+          sprint_report: تقرير السبرينت
     sprints_component:
       blankslate:
-        create_and_manage_description_html: To start planning your sprint, create one here or go to the %{settings_link} to receive sprints from a different project.
-        create_description_text: To start planning your sprint, create one here.
-        manage_description_html: To start planning your sprint, go to the %{settings_link} to receive sprints from a different project.
-        no_actions_description_text: No sprints are available for this project yet.
-        receive_and_manage_description_html: This project receives sprints from a different project. Manage this in the %{settings_link}.
-        receive_description_text: This project receives shared sprints from a different project, but none are available right now.
-        settings_link_text: project settings
-        title: No sprints present yet
-      button_new_sprint: New sprint
-    statuses_considered_closed_caption: 'Choose the statuses that represent a closed or finished state in your workflow. These will be treated as the "Closed" state across reporting (e.g. burndown) and sprint planning. For example, statuses like Done, Resolved, or Won''t Fix may all represent a closed work item in your process.
+        create_and_manage_description_html: لبدء تخطيط السبرينت، أنشئ سبرينتًا هنا أو انتقل إلى %{settings_link} لتلقي سبرينتات من مشروع آخر.
+        create_description_text: لبدء تخطيط السبرينت، أنشئ سبرينتًا هنا.
+        manage_description_html: لبدء تخطيط السبرينت، انتقل إلى %{settings_link} لتلقي سبرينتات من مشروع آخر.
+        no_actions_description_text: لا توجد سبرينتات متاحة لهذا المشروع بعد.
+        receive_and_manage_description_html: يتلقى هذا المشروع سبرينتات من مشروع آخر. يمكنك إدارة ذلك في %{settings_link}.
+        receive_description_text: يتلقى هذا المشروع سبرينتات مشتركة من مشروع آخر، ولكن لا يتوفر أي منها حاليًا.
+        settings_link_text: إعدادات المشروع
+        title: لا توجد سبرينتات بعد
+      button_new_sprint: سبرينت جديد
+    statuses_considered_closed_caption: 'اختر الحالات التي تمثل حالة مغلقة أو منتهية في سير العمل لديك. ستُعامَل هذه الحالات على أنها حالة «مغلقة» في التقارير (مثل مخطط الإنجاز التنازلي) وفي تخطيط السبرينت. على سبيل المثال، قد تمثل حالات مثل «منجز» أو «تم الحل» أو «لن يُصلح» جميعها عنصر عمل مغلقًا في عمليتك.
 
       '
     story_points:
-      zero: "%{count} story points"
-      one: "%{count} story point"
-      two: "%{count} story points"
-      few: "%{count} story points"
-      many: "%{count} story points"
-      other: "%{count} story points"
-    types_and_statuses: Types and statuses
+      zero: "%{count} نقطة قصة"
+      one: نقطة قصة واحدة
+      two: نقطتا قصة
+      few: "%{count} نقاط قصة"
+      many: "%{count} نقطة قصة"
+      other: "%{count} نقطة قصة"
+    types_and_statuses: الأنواع والحالات
     unassigned: غير المعيّنة
     user_preference:
-      button_update_backlogs: Update backlogs module
+      button_update_backlogs: تحديث وحدة قوائم الأعمال المتراكمة
       header_backlogs: ''
     work_package_card_menu_component:
       action_menu:
-        copy_url_to_clipboard: Copy URL to clipboard
-        copy_work_package_id: Copy work package ID
-        move_menu: Move to position
-        move_to_backlog_bucket: Move to backlog bucket
-        move_to_inbox: Move to backlog inbox
-        move_to_sprint: Move to sprint
+        copy_url_to_clipboard: نسخ عنوان URL إلى الحافظة
+        copy_work_package_id: نسخ معرّف حزمة العمل
+        move_menu: نقل إلى موضع
+        move_to_backlog_bucket: نقل إلى مجموعة الأعمال المتراكمة
+        move_to_inbox: نقل إلى صندوق وارد الأعمال المتراكمة
+        move_to_sprint: نقل إلى سبرينت
     work_package_is_closed: مجموعة العمل قد تمت، عندما
     work_packages:
       add_existing_dialog:
-        invalid_target: The target you are trying to add to is invalid.
-        target_not_found: The sprint or backlog you are trying to add to was not found.
+        invalid_target: الهدف الذي تحاول الإضافة إليه غير صالح.
+        target_not_found: لم يتم العثور على السبرينت أو قائمة الأعمال المتراكمة التي تحاول الإضافة إليها.
       move:
-        moved_announcement: "%{label} moved to %{list}, position %{position} of %{total}"
+        moved_announcement: تم نقل %{label} إلى %{list}، الموضع %{position} من %{total}
       update_service:
-        invalid_target_type: 'list_type must be one of: backlog_bucket with a list_id, sprint with a list_id, or inbox without a list_id.'
-        missing_target: list_type or list_id must be present.
+        invalid_target_type: 'يجب أن تكون قيمة list_type إحدى القيم التالية: backlog_bucket مع list_id، أو sprint مع list_id، أو inbox بدون list_id.'
+        missing_target: يجب توفير list_type أو list_id.
   burndown:
-    story_points: Story points
-    story_points_ideal: Story points (ideal)
+    story_points: نقاط القصة
+    story_points_ideal: نقاط القصة (المثالية)
   ee:
     features:
-      multiple_active_sprints: Multiple active sprints
-      sprint_sharing: Sprint sharing
+      multiple_active_sprints: سبرينتات نشطة متعددة
+      sprint_sharing: مشاركة السبرينت
     upsell:
       multiple_active_sprints:
-        description: Run multiple sprints in parallel for different teams in your project for more control and flexibility.
+        description: شغّل عدة سبرينتات بالتوازي لفرق مختلفة في مشروعك لمزيد من التحكم والمرونة.
       sprint_sharing:
-        description: Share sprints across projects to align teams and coordinate work in scaled agile setups (SAFe).
-  label_all_sprints: All sprints
-  label_backlog: Backlog
-  label_backlog_and_sprints: Backlog and sprints
-  label_backlog_bucket_edit: Edit backlog bucket
-  label_backlog_bucket_new: New backlog bucket
+        description: شارك السبرينتات عبر المشاريع لمواءمة الفرق وتنسيق العمل في أطر العمل الرشيقة الموسّعة (SAFe).
+  label_all_sprints: جميع السبرينتات
+  label_backlog: قائمة الأعمال المتراكمة
+  label_backlog_and_sprints: قائمة الأعمال المتراكمة والسبرينتات
+  label_backlog_bucket_edit: تحرير مجموعة الأعمال المتراكمة
+  label_backlog_bucket_new: مجموعة أعمال متراكمة جديدة
   label_backlogs: الأعمال المتراكمة غير المنجزة
-  label_burndown_chart: Burndown chart
+  label_burndown_chart: مخطط الإنجاز التنازلي
   label_inbox: الوارد
   label_points_burn_down: الأسفل
   label_points_burn_up: الأعلى
-  label_sprint_board: Sprint board
-  label_sprint_edit: Edit sprint
-  label_sprint_new: New sprint
+  label_sprint_board: لوحة السبرينت
+  label_sprint_edit: تحرير السبرينت
+  label_sprint_new: سبرينت جديد
   label_task_board: لوحة المهمة
-  notice_successful_finish: The sprint was completed.
-  notice_successful_start: The sprint was started.
-  notice_unsuccessful_finish: The sprint could not be completed.
-  notice_unsuccessful_finish_with_reason: 'The sprint could not be completed: %{reason}'
-  notice_unsuccessful_start: The sprint could not be started.
-  notice_unsuccessful_start_with_reason: 'The sprint could not be started: %{reason}'
-  notice_work_package_invisible_after_move: 'The work package was moved to %{backlog} but is not visible because its type or status is excluded from the backlog.
+  notice_successful_finish: تم إكمال السبرينت.
+  notice_successful_start: تم بدء السبرينت.
+  notice_unsuccessful_finish: تعذّر إكمال السبرينت.
+  notice_unsuccessful_finish_with_reason: 'تعذّر إكمال السبرينت: %{reason}'
+  notice_unsuccessful_start: تعذّر بدء السبرينت.
+  notice_unsuccessful_start_with_reason: 'تعذّر بدء السبرينت: %{reason}'
+  notice_work_package_invisible_after_move: 'تم نقل حزمة العمل إلى %{backlog}، لكنها غير ظاهرة لأن نوعها أو حالتها مستبعد من قائمة الأعمال المتراكمة.
 
     '
-  permission_create_sprints: Create sprints
-  permission_manage_sprint_items: Manage sprint items
-  permission_select_backlog_types_and_statuses: Select backlog types and statuses
-  permission_select_backlog_types_and_statuses_explanation: 'Allows choosing which work package types to hide from the backlog. Also allows defining which statuses represent a closed or finished state in the project''s workflow.
+  permission_create_sprints: إنشاء السبرينتات
+  permission_manage_sprint_items: إدارة عناصر السبرينت
+  permission_select_backlog_types_and_statuses: تحديد أنواع قائمة الأعمال المتراكمة وحالاتها
+  permission_select_backlog_types_and_statuses_explanation: 'تتيح اختيار أنواع حزم العمل التي يتم إخفاؤها من قائمة الأعمال المتراكمة. كما تتيح تحديد الحالات التي تمثل حالة مغلقة أو منتهية في سير عمل المشروع.
 
     '
-  permission_share_sprint: Share sprint
-  permission_start_complete_sprint: Start/complete sprint
-  permission_view_sprints: View sprints
+  permission_share_sprint: مشاركة السبرينت
+  permission_start_complete_sprint: بدء/إكمال السبرينت
+  permission_view_sprints: عرض السبرينتات
   plugin_openproject_backlogs:
-    description: This module adds features enabling agile teams to work with OpenProject in Scrum projects.
-    name: OpenProject Backlogs
+    description: تضيف هذه الوحدة ميزات تُمكّن الفرق الرشيقة (Agile) من العمل باستخدام OpenProject في مشاريع Scrum.
+    name: قوائم الأعمال المتراكمة لـ OpenProject
   project_module_backlogs: الأعمال المتراكمة غير المنجزة
   projects:
     copy:
-      backlog_buckets: Backlog buckets
-      sprints: Sprints
+      backlog_buckets: مجموعات الأعمال المتراكمة
+      sprints: السبرينتات
     settings:
       backlog_sharing:
         options:
           no_sharing:
-            caption: Sprints created in this project will only be available and visible to this project. They will also not be visible to subprojects.
+            caption: ستكون السبرينتات المُنشأة في هذا المشروع متاحة ومرئية لهذا المشروع فقط. كما أنها لن تكون مرئية للمشاريع الفرعية.
             label: لا تشارك
           receive_shared:
-            caption: This project can only use sprints shared by other projects.
-            label: Receive shared sprints
-            warning: This project can only use sprints shared by other projects. Unused sprints created in this project in the past, will no longer be visible.
+            caption: يمكن لهذا المشروع استخدام السبرينتات التي تشاركها مشاريع أخرى فقط.
+            label: تلقي السبرينتات المشتركة
+            warning: يمكن لهذا المشروع استخدام السبرينتات التي تشاركها مشاريع أخرى فقط. ولن تعود السبرينتات غير المستخدمة التي أُنشئت في هذا المشروع سابقًا مرئية.
           share_all_projects:
-            caption: Sprints created in this project will be available to all projects in this instance. If you select this option, it will no longer be available to other projects.
-            disabled_caption: Option not available since project "%{name}" is currently sharing with all projects and only one project can do this.
-            disabled_caption_anonymous: Option not available since another project is currently sharing with all projects and only one project can do this.
+            caption: ستكون السبرينتات المُنشأة في هذا المشروع متاحة لجميع المشاريع في هذا النظام. إذا حددت هذا الخيار، فلن يعود متاحًا للمشاريع الأخرى.
+            disabled_caption: هذا الخيار غير متاح لأن المشروع «%{name}» يشارك حاليًا مع جميع المشاريع، ولا يمكن ذلك إلا لمشروع واحد فقط.
+            disabled_caption_anonymous: هذا الخيار غير متاح لأن مشروعًا آخر يشارك حاليًا مع جميع المشاريع، ولا يمكن ذلك إلا لمشروع واحد فقط.
             label: جميع المشاريع
           share_subprojects:
-            caption: Sprints created in this project will be available to all subprojects of the current project.
-            info: Sharing a sprint will share the name, status and the start and finish dates in all projects. These cannot be modified in projects that receive and use these sprints.
-            label: Subprojects
-        sprint_sharing: Share sprints
+            caption: ستكون السبرينتات المُنشأة في هذا المشروع متاحة لجميع المشاريع الفرعية للمشروع الحالي.
+            info: تؤدي مشاركة السبرينت إلى مشاركة اسمه وحالته وتاريخي البدء والانتهاء في جميع المشاريع. ولا يمكن تعديل هذه القيم في المشاريع التي تتلقى هذه السبرينتات وتستخدمها.
+            label: المشاريع الفرعية
+        sprint_sharing: مشاركة السبرينتات
       backlogs:
         multiple_active_sprints:
-          description: By default, only one sprint can be active at a time per project. You can change this so that multiple sprints can be active in parallel in this project.
-          heading: Number of active sprints
+          description: افتراضيًا، يمكن أن يكون سبرينت واحد فقط نشطًا في كل مرة لكل مشروع. يمكنك تغيير ذلك بحيث يمكن أن تكون عدة سبرينتات نشطة بالتوازي في هذا المشروع.
+          heading: عدد السبرينتات النشطة
         multiple_active_sprints_component:
-          cannot_turn_off: Multiple sprints are currently active. To switch back to allow only one active sprint at a time, please first ensure that at most one sprint is active.
-          not_available_html: Multiple active sprints are not available when <a href=%{sprint_sharing_url}>sprint sharing</a> or receiving is enabled.
+          cannot_turn_off: توجد حاليًا عدة سبرينتات نشطة. للعودة إلى السماح بسبرينت نشط واحد فقط في كل مرة، يرجى التأكد أولًا من أن سبرينتًا واحدًا على الأكثر نشط.
+          not_available_html: لا تتوفر السبرينتات النشطة المتعددة عند تفعيل <a href=%{sprint_sharing_url}>مشاركة السبرينت</a> أو تلقيه.
         sharing_form_component:
-          disabled_due_to_multiple_active_sprints: Sprint sharing is not available when multiple active sprints are enabled.
-          sharing_description: This project can either share its own sprints, receive shared sprints or handle sprints independently (no sharing).
-          sharing_fallback_description: Lacking a corporate enterprise plan, the sharing options are limited to the project's own sprints. The currently active setting remains active.
+          disabled_due_to_multiple_active_sprints: مشاركة السبرينت غير متاحة عند تفعيل السبرينتات النشطة المتعددة.
+          sharing_description: يمكن لهذا المشروع إما مشاركة سبرينتاته الخاصة، أو تلقي سبرينتات مشتركة، أو إدارة السبرينتات بشكل مستقل (دون مشاركة).
+          sharing_fallback_description: نظرًا لعدم توفر خطة المؤسسة من فئة Corporate، تقتصر خيارات المشاركة على السبرينتات الخاصة بالمشروع. ويظل الإعداد النشط حاليًا ساريًا.
   query_fields:
-    backlog_inbox: Backlog inbox
+    backlog_inbox: صندوق وارد الأعمال المتراكمة
   remaining_hours: الساعات المتبقية

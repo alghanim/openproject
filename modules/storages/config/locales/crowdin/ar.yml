@@ -3,607 +3,607 @@ ar:
   activerecord:
     attributes:
       oauth_client:
-        client_id: Client ID
-        client_secret: Client secret
+        client_id: معرّف العميل
+        client_secret: سر العميل
       project:
-        project_folder_type: Project folder type
+        project_folder_type: نوع مجلد المشروع
       storages/file_link:
-        origin: Origin
-        storage: Storage
+        origin: المصدر
+        storage: مساحة التخزين
       storages/nextcloud_storage:
         authentication_methods:
-          oauth2_sso: Single-Sign-On through OpenID Connect Identity Provider
-          oauth2_sso_with_two_way_oauth2_fallback: Single-Sign-On with Two-Way OAuth 2.0 as fallback
-          two_way_oauth2: Two-way OAuth 2.0 authorization code flow
-        storage_audience: Storage Audience
-        token_exchange_scope: Storage Scope
+          oauth2_sso: تسجيل الدخول الموحد عبر موفر هوية OpenID Connect
+          oauth2_sso_with_two_way_oauth2_fallback: تسجيل الدخول الموحد مع OAuth 2.0 ثنائي الاتجاه كخيار احتياطي
+          two_way_oauth2: تدفق رمز التفويض في OAuth 2.0 ثنائي الاتجاه
+        storage_audience: جمهور مساحة التخزين (Audience)
+        token_exchange_scope: نطاق مساحة التخزين
       storages/project_storage:
-        project_folder: Project folder
-        project_folder_mode: Project folder mode
-        storage: Storage
-        storage_url: Storage URL
+        project_folder: مجلد المشروع
+        project_folder_mode: وضع مجلد المشروع
+        storage: مساحة التخزين
+        storage_url: عنوان URL لمساحة التخزين
       storages/sharepoint_storage:
-        host: Sharepoint Site URL
-        library: Library ID
+        host: عنوان URL لموقع SharePoint
+        library: معرّف المكتبة
         name: الاسم
-        site: Site ID
+        site: معرّف الموقع
       storages/storage:
-        authentication_method: Authentication Method
-        creator: Creator
-        drive: Drive ID
-        file_link_origin: File link origin ID
+        authentication_method: طريقة المصادقة
+        creator: المنشئ
+        drive: معرّف محرك الأقراص (Drive ID)
+        file_link_origin: معرّف مصدر رابط الملف
         host: المضيف
-        linkable_to_storage: Linkable to storage
-        linkable_to_storage_url: Linkable to storage URL
+        linkable_to_storage: قابل للربط بمساحة التخزين
+        linkable_to_storage_url: قابل للربط بعنوان URL لمساحة التخزين
         name: الاسم
-        password: Application password
-        provider_type: Provider type
-        storage: Storage
-        storage_url: Storage URL
-        tenant: Directory (tenant) ID
+        password: كلمة مرور التطبيق
+        provider_type: نوع الموفر
+        storage: مساحة التخزين
+        storage_url: عنوان URL لمساحة التخزين
+        tenant: معرّف الدليل (المستأجر)
       work_package:
-        file_links: File links
+        file_links: روابط الملفات
     errors:
       messages:
-        invalid_host_url: is not a valid URL.
-        invalid_sharepoint_url: is not a valid SharePoint site, library, or document URL.
-        not_linked_to_project: is not linked to project.
+        invalid_host_url: ليس عنوان URL صالحًا.
+        invalid_sharepoint_url: ليس عنوان URL صالحًا لموقع أو مكتبة أو مستند SharePoint.
+        not_linked_to_project: غير مرتبط بالمشروع.
       models:
         storages/file_link:
           attributes:
             origin_id:
-              only_numeric_or_uuid: can only be numeric or uuid.
+              only_numeric_or_uuid: يمكن أن يكون رقميًا أو UUID فقط.
         storages/project_storage:
           attributes:
             project_folder_id:
-              blank: Please select a folder.
+              blank: يرجى تحديد مجلد.
             project_folder_mode:
-              mode_unavailable: is not available for this storage.
+              mode_unavailable: غير متاح لمساحة التخزين هذه.
             project_ids:
-              blank: Please select a project.
+              blank: يرجى تحديد مشروع.
         storages/storage:
           attributes:
             host:
-              authorization_header_missing: is not fully set up. The Nextcloud instance does not receive the "Authorization" header, which is necessary for a Bearer token based authorization of API requests. Please double check your HTTP server configuration.
-              cannot_be_connected_to: could not be reached. Please ensure the host is reachable and the OpenProject integration app is installed.
-              minimal_nextcloud_version_not_met: does not meet minimal version requirements (must be Nextcloud %{minimal_version} or higher, but %{detected_version} was detected)
-              not_nextcloud_server: is not a Nextcloud server
-              op_application_not_installed: appears to not have the app "OpenProject integration" installed. Please install it first and then try again.
+              authorization_header_missing: لم يتم إعداده بالكامل. لا يتلقى خادم Nextcloud الترويسة «Authorization» اللازمة لتفويض طلبات API المستند إلى رمز Bearer. يرجى التحقق مجددًا من تكوين خادم HTTP لديك.
+              cannot_be_connected_to: تعذّر الوصول إليه. يرجى التأكد من إمكانية الوصول إلى المضيف ومن تثبيت تطبيق تكامل OpenProject.
+              minimal_nextcloud_version_not_met: لا يستوفي الحد الأدنى لمتطلبات الإصدار (يجب أن يكون Nextcloud %{minimal_version} أو أحدث، ولكن تم اكتشاف %{detected_version})
+              not_nextcloud_server: ليس خادم Nextcloud
+              op_application_not_installed: يبدو أن تطبيق «OpenProject integration» غير مثبت عليه. يرجى تثبيته أولًا ثم المحاولة مرة أخرى.
             password:
-              invalid_password: is not valid.
-              unknown_error: could not be validated with the file storage provider. Please verify that the connection is functioning properly.
+              invalid_password: غير صالحة.
+              unknown_error: تعذّر التحقق منها لدى موفر تخزين الملفات. يرجى التحقق من أن الاتصال يعمل بشكل صحيح.
     models:
       storages/file_link:
-        zero: File links
-        one: File link
-        two: File links
-        few: File links
-        many: File links
-        other: File links
+        zero: روابط الملفات
+        one: رابط ملف
+        two: روابط الملفات
+        few: روابط الملفات
+        many: روابط الملفات
+        other: روابط الملفات
       storages/nextcloud_storage:
-        zero: Nextcloud storages
-        one: Nextcloud storage
-        two: Nextcloud storages
-        few: Nextcloud storages
-        many: Nextcloud storages
-        other: Nextcloud storages
+        zero: مساحات تخزين Nextcloud
+        one: مساحة تخزين Nextcloud
+        two: مساحات تخزين Nextcloud
+        few: مساحات تخزين Nextcloud
+        many: مساحات تخزين Nextcloud
+        other: مساحات تخزين Nextcloud
       storages/one_drive_storage:
-        zero: OneDrive storages
-        one: OneDrive storage
-        two: OneDrive storages
-        few: OneDrive storages
-        many: OneDrive storages
-        other: OneDrive storages
+        zero: مساحات تخزين OneDrive
+        one: مساحة تخزين OneDrive
+        two: مساحات تخزين OneDrive
+        few: مساحات تخزين OneDrive
+        many: مساحات تخزين OneDrive
+        other: مساحات تخزين OneDrive
       storages/project_storage:
-        zero: Project storages
-        one: Project storage
-        two: Project storages
-        few: Project storages
-        many: Project storages
-        other: Project storages
+        zero: مساحات تخزين المشاريع
+        one: مساحة تخزين المشروع
+        two: مساحات تخزين المشاريع
+        few: مساحات تخزين المشاريع
+        many: مساحات تخزين المشاريع
+        other: مساحات تخزين المشاريع
       storages/sharepoint_storage:
-        zero: SharePoint storages
-        one: SharePoint storage
-        two: SharePoint storages
-        few: SharePoint storages
-        many: SharePoint storages
-        other: SharePoint storages
+        zero: مساحات تخزين SharePoint
+        one: مساحة تخزين SharePoint
+        two: مساحات تخزين SharePoint
+        few: مساحات تخزين SharePoint
+        many: مساحات تخزين SharePoint
+        other: مساحات تخزين SharePoint
       storages/storage:
-        zero: Storages
-        one: Storage
-        two: Storages
-        few: Storages
-        many: Storages
-        other: Storages
+        zero: مساحات التخزين
+        one: مساحة التخزين
+        two: مساحات التخزين
+        few: مساحات التخزين
+        many: مساحات التخزين
+        other: مساحات التخزين
   api_v3:
     errors:
-      too_many_elements_created_at_once: Too many elements created at once. Expected %{max} at most, got %{actual}.
-  external_file_storages: External file storages
-  permission_create_files: 'Automatically managed project folders: Create files'
-  permission_create_files_explanation: This permission is only available for Nextcloud storages
-  permission_delete_files: 'Automatically managed project folders: Delete files'
-  permission_delete_files_explanation: This permission is only available for Nextcloud storages
-  permission_header_for_project_module_storages: Automatically managed project folders
-  permission_manage_file_links: Manage file links
-  permission_manage_files_in_project: Manage files in project
-  permission_read_files: 'Automatically managed project folders: Read files'
-  permission_share_files: 'Automatically managed project folders: Share files'
-  permission_share_files_explanation: This permission is only available for Nextcloud storages
-  permission_view_file_links: View file links
-  permission_write_files: 'Automatically managed project folders: Write files'
+      too_many_elements_created_at_once: تم إنشاء عدد كبير جدًا من العناصر دفعة واحدة. الحد الأقصى المتوقع %{max}، والعدد الفعلي %{actual}.
+  external_file_storages: مساحات تخزين الملفات الخارجية
+  permission_create_files: 'مجلدات المشروع المُدارة تلقائيًا: إنشاء الملفات'
+  permission_create_files_explanation: هذه الصلاحية متاحة فقط لمساحات تخزين Nextcloud
+  permission_delete_files: 'مجلدات المشروع المُدارة تلقائيًا: حذف الملفات'
+  permission_delete_files_explanation: هذه الصلاحية متاحة فقط لمساحات تخزين Nextcloud
+  permission_header_for_project_module_storages: مجلدات المشروع المُدارة تلقائيًا
+  permission_manage_file_links: إدارة روابط الملفات
+  permission_manage_files_in_project: إدارة الملفات في المشروع
+  permission_read_files: 'مجلدات المشروع المُدارة تلقائيًا: قراءة الملفات'
+  permission_share_files: 'مجلدات المشروع المُدارة تلقائيًا: مشاركة الملفات'
+  permission_share_files_explanation: هذه الصلاحية متاحة فقط لمساحات تخزين Nextcloud
+  permission_view_file_links: عرض روابط الملفات
+  permission_write_files: 'مجلدات المشروع المُدارة تلقائيًا: كتابة الملفات'
   project_module_storages: الملفّات
   project_storages:
     edit_project_folder:
-      label: Edit project folder
+      label: تعديل مجلد المشروع
     open:
-      contact_admin: Please contact your administrator to resolve this error.
-      remote_identity_error: An unexpected error occurred while connecting to the storage.
+      contact_admin: يرجى التواصل مع المسؤول لحل هذا الخطأ.
+      remote_identity_error: حدث خطأ غير متوقع أثناء الاتصال بمساحة التخزين.
     project_folder_mode:
-      automatic: Automatically managed
-      inactive: No specific folder
-      manual: Existing folder manually managed
+      automatic: مُدار تلقائيًا
+      inactive: لا يوجد مجلد محدد
+      manual: مجلد موجود يُدار يدويًا
     remove_project:
-      deletion_failure_flash: Failed to remove the project from the storage. %{error}
-      label: Remove project
+      deletion_failure_flash: فشلت إزالة المشروع من مساحة التخزين. %{error}
+      label: إزالة المشروع
   services:
     attributes:
       nextcloud_sync_service:
-        add_user_to_group: 'Add User to Group:'
-        create_folder: 'Managed Project Folder Creation:'
-        ensure_root_folder_permissions: 'Set Base Folder Permissions:'
-        hide_inactive_folders: 'Hide Inactive Folders Step:'
-        remote_folders: 'Read contents of the team folder:'
-        remove_user_from_group: 'Remove User from Group:'
-        rename_project_folder: 'Rename managed project Folder:'
-        set_folder_permission: 'Set managed project Folder permissions:'
+        add_user_to_group: 'إضافة مستخدم إلى مجموعة:'
+        create_folder: 'إنشاء مجلد المشروع المُدار:'
+        ensure_root_folder_permissions: 'تعيين صلاحيات المجلد الأساسي:'
+        hide_inactive_folders: 'خطوة إخفاء المجلدات غير النشطة:'
+        remote_folders: 'قراءة محتويات مجلد الفريق:'
+        remove_user_from_group: 'إزالة مستخدم من مجموعة:'
+        rename_project_folder: 'إعادة تسمية مجلد المشروع المُدار:'
+        set_folder_permission: 'تعيين صلاحيات مجلد المشروع المُدار:'
       one_drive_sync_service:
-        create_folder: 'Managed Project Folder Creation:'
-        ensure_root_folder_permissions: 'Set Base Folder Permissions:'
-        hide_inactive_folders: 'Hide Inactive Folders Step:'
-        remote_folders: 'Read contents of the drive root folder:'
-        rename_project_folder: 'Rename managed project Folder:'
-        set_folder_permission: 'Set managed project Folder permissions:'
+        create_folder: 'إنشاء مجلد المشروع المُدار:'
+        ensure_root_folder_permissions: 'تعيين صلاحيات المجلد الأساسي:'
+        hide_inactive_folders: 'خطوة إخفاء المجلدات غير النشطة:'
+        remote_folders: 'قراءة محتويات المجلد الجذر لمحرك الأقراص:'
+        rename_project_folder: 'إعادة تسمية مجلد المشروع المُدار:'
+        set_folder_permission: 'تعيين صلاحيات مجلد المشروع المُدار:'
       sharepoint_sync_service:
-        create_folder: 'Managed Project Folder Creation:'
-        ensure_root_folder_permissions: 'Set Base Folder Permissions:'
-        hide_inactive_folders: 'Hide Inactive Folders Step:'
-        remote_folders: 'Read contents of the drive root folder:'
-        rename_project_folder: 'Rename managed project Folder:'
-        set_folder_permission: 'Set managed project Folder permissions:'
+        create_folder: 'إنشاء مجلد المشروع المُدار:'
+        ensure_root_folder_permissions: 'تعيين صلاحيات المجلد الأساسي:'
+        hide_inactive_folders: 'خطوة إخفاء المجلدات غير النشطة:'
+        remote_folders: 'قراءة محتويات المجلد الجذر لمحرك الأقراص:'
+        rename_project_folder: 'إعادة تسمية مجلد المشروع المُدار:'
+        set_folder_permission: 'تعيين صلاحيات مجلد المشروع المُدار:'
     errors:
       messages:
-        error: An unexpected error occurred. Please check OpenProject logs for more information or contact an administrator
-        folder_id_collision: Multiple project storages try to manage the project folder %{folder}. Its synchronization was skipped.
-        forbidden: OpenProject could not access the requested resource. Please check your permissions configuration on the Storage Provider.
-        invalid_response: OpenProject could not process the response received from the Storage Provider. Please check OpenProject logs for more information or contact an administrator.
-        unauthorized: OpenProject could not authenticate with the Storage Provider. Please ensure that you have access to it.
+        error: حدث خطأ غير متوقع. يرجى مراجعة سجلات OpenProject لمزيد من المعلومات أو التواصل مع المسؤول
+        folder_id_collision: تحاول عدة مساحات تخزين للمشاريع إدارة مجلد المشروع %{folder}. تم تخطي مزامنته.
+        forbidden: تعذّر على OpenProject الوصول إلى المورد المطلوب. يرجى التحقق من تكوين الصلاحيات لدى موفر التخزين.
+        invalid_response: تعذّر على OpenProject معالجة الاستجابة الواردة من موفر التخزين. يرجى مراجعة سجلات OpenProject لمزيد من المعلومات أو التواصل مع المسؤول.
+        unauthorized: تعذّر على OpenProject المصادقة لدى موفر التخزين. يرجى التأكد من أن لديك صلاحية الوصول إليه.
       models:
         copy_project_folders_service:
-          conflict: The folder %{destination_path} already exists. Interrupting process to avoid overwrites.
-          error: An unexpected error occurred. Please check OpenProject logs for more information or contact an administrator
-          forbidden: OpenProject could not access the source folder. Please check your permissions configuration on the Storage Provider
-          not_found: The source template location %{source_path} wasn't found.
-          unauthorized: OpenProject could not authenticate with the Storage Provider. Please check your storage configuration
+          conflict: المجلد %{destination_path} موجود بالفعل. تم إيقاف العملية لتجنّب الكتابة فوق البيانات.
+          error: حدث خطأ غير متوقع. يرجى مراجعة سجلات OpenProject لمزيد من المعلومات أو التواصل مع المسؤول
+          forbidden: تعذّر على OpenProject الوصول إلى المجلد المصدر. يرجى التحقق من تكوين الصلاحيات لدى موفر التخزين
+          not_found: لم يتم العثور على موقع القالب المصدر %{source_path}.
+          unauthorized: تعذّر على OpenProject المصادقة لدى موفر التخزين. يرجى التحقق من تكوين مساحة التخزين
         nextcloud_sync_service:
           attributes:
             add_user_to_group:
-              conflict: 'The user %{user} could not be added to the %{group} group for the following reason: %{reason}'
-              failed_to_add: 'The user %{user} could not be added to the %{group} group for the following reason: %{reason}'
+              conflict: 'تعذّرت إضافة المستخدم %{user} إلى المجموعة %{group} للسبب التالي: %{reason}'
+              failed_to_add: 'تعذّرت إضافة المستخدم %{user} إلى المجموعة %{group} للسبب التالي: %{reason}'
             create_folder:
-              conflict: The folder %{folder_name} already exists on %{parent_location}.
-              not_found: "%{parent_location} wasn't found."
+              conflict: المجلد %{folder_name} موجود بالفعل في %{parent_location}.
+              not_found: لم يتم العثور على %{parent_location}.
             ensure_root_folder_permissions:
-              not_found: "%{group_folder} wasn't found. Please check your Nextcloud Team Folder setup."
-              permission_not_set: could not set permissions on %{group_folder}.
+              not_found: لم يتم العثور على %{group_folder}. يرجى التحقق من إعداد مجلد الفريق (Team Folder) في Nextcloud.
+              permission_not_set: تعذّر تعيين الصلاحيات على %{group_folder}.
             hide_inactive_folders:
-              permission_not_set: could not set permissions on %{path}.
+              permission_not_set: تعذّر تعيين الصلاحيات على %{path}.
             remote_folders:
-              not_allowed: The %{username} doesn't have access to the %{group_folder} folder. Please check the folder permissions on Nextcloud.
-              not_found: "%{group_folder} folder wasn't found. Please check your Nextcloud setup."
+              not_allowed: لا يملك %{username} صلاحية الوصول إلى المجلد %{group_folder}. يرجى التحقق من صلاحيات المجلد في Nextcloud.
+              not_found: لم يتم العثور على المجلد %{group_folder}. يرجى التحقق من إعداد Nextcloud.
             remove_user_from_group:
-              conflict: 'The user %{user} could not be removed from the %{group} group for the following reason: %{reason}'
-              failed_to_remove: 'The user %{user} could not be removed from the %{group} group for the following reason: %{reason}'
+              conflict: 'تعذّرت إزالة المستخدم %{user} من المجموعة %{group} للسبب التالي: %{reason}'
+              failed_to_remove: 'تعذّرت إزالة المستخدم %{user} من المجموعة %{group} للسبب التالي: %{reason}'
             rename_project_folder:
-              conflict: OpenProject could not rename the project folder to %{current_path} as a folder with the same name already exists
-              forbidden: OpenProject user does not have access to %{current_path} folder.
-              not_found: "%{current_path} wasn't found."
+              conflict: تعذّر على OpenProject إعادة تسمية مجلد المشروع إلى %{current_path} لوجود مجلد بالاسم نفسه بالفعل
+              forbidden: لا يملك مستخدم OpenProject صلاحية الوصول إلى المجلد %{current_path}.
+              not_found: لم يتم العثور على %{current_path}.
             set_folders_permissions:
-              permission_not_set: could not set permissions on %{path}.
-          error: An unexpected error occurred. Please ensure that your Nextcloud instance is reachable and check OpenProject worker logs for more information
-          group_does_not_exist: "%{group} does not exist. Check your Nextcloud instance configuration."
-          insufficient_privileges: OpenProject does not have enough privileges to add %{user} to %{group}. Check you group settings in Nextcloud.
-          not_allowed: Nextcloud block the request.
-          not_found: OpenProject could not find the file on the Nextcloud Storage Provider. Please check if it wasn't deleted.
-          unauthorized: OpenProject could not sync with Nextcloud. Please check your storage and Nextcloud configuration.
-          user_does_not_exist: "%{user} does not exist in Nextcloud."
+              permission_not_set: تعذّر تعيين الصلاحيات على %{path}.
+          error: حدث خطأ غير متوقع. يرجى التأكد من إمكانية الوصول إلى خادم Nextcloud ومراجعة سجلات العامل (worker) في OpenProject لمزيد من المعلومات
+          group_does_not_exist: المجموعة %{group} غير موجودة. تحقق من تكوين خادم Nextcloud.
+          insufficient_privileges: لا يملك OpenProject صلاحيات كافية لإضافة %{user} إلى %{group}. تحقق من إعدادات المجموعة في Nextcloud.
+          not_allowed: حظر Nextcloud الطلب.
+          not_found: تعذّر على OpenProject العثور على الملف لدى موفر التخزين Nextcloud. يرجى التحقق مما إذا كان قد حُذف.
+          unauthorized: تعذّرت على OpenProject المزامنة مع Nextcloud. يرجى التحقق من تكوين مساحة التخزين وتكوين Nextcloud.
+          user_does_not_exist: المستخدم %{user} غير موجود في Nextcloud.
         one_drive_sync_service:
           attributes:
             create_folder:
-              conflict: The %{folder_name} already exists on %{parent_location}.
-              not_found: "%{parent_location} wasn't found."
+              conflict: المجلد %{folder_name} موجود بالفعل في %{parent_location}.
+              not_found: لم يتم العثور على %{parent_location}.
             hide_inactive_folders:
-              permission_not_set: could not set permissions on %{path}.
+              permission_not_set: تعذّر تعيين الصلاحيات على %{path}.
             remote_folders:
-              request_error: OpenProject could not access your drive %{drive_id}. Please check if your storage configuration is correct.
+              request_error: تعذّر على OpenProject الوصول إلى محرك الأقراص %{drive_id}. يرجى التحقق من صحة تكوين مساحة التخزين.
             rename_project_folder:
-              conflict: OpenProject could not rename the folder %{current_path} to %{project_folder_name} as a folder with the same name already exists.
-              forbidden: OpenProject does not have access to %{current_path} in order to rename it.
-              not_found: "%{current_path} wasn't found."
+              conflict: تعذّر على OpenProject إعادة تسمية المجلد %{current_path} إلى %{project_folder_name} لوجود مجلد بالاسم نفسه بالفعل.
+              forbidden: لا يملك OpenProject صلاحية الوصول إلى %{current_path} لإعادة تسميته.
+              not_found: لم يتم العثور على %{current_path}.
             set_folders_permissions:
-              permission_not_set: could not set permissions on %{path}.
-          error: An unexpected error occurred. Please ensure that OneDrive is reachable and check OpenProject worker logs for more information.
-          not_allowed: OpenProject wasn't allowed to access your OneDrive drive. Please check the permissions set on the Azure Application.
-          unauthorized: OpenProject could not sync with OneDrive. Please check your storage and Azure Application configuration.
-          user_does_not_exist: "%{user} does not exist in Nextcloud."
+              permission_not_set: تعذّر تعيين الصلاحيات على %{path}.
+          error: حدث خطأ غير متوقع. يرجى التأكد من إمكانية الوصول إلى OneDrive ومراجعة سجلات العامل (worker) في OpenProject لمزيد من المعلومات.
+          not_allowed: لم يُسمح لـ OpenProject بالوصول إلى محرك أقراص OneDrive الخاص بك. يرجى التحقق من الصلاحيات المعيّنة في تطبيق Azure.
+          unauthorized: تعذّرت على OpenProject المزامنة مع OneDrive. يرجى التحقق من تكوين مساحة التخزين وتكوين تطبيق Azure.
+          user_does_not_exist: المستخدم %{user} غير موجود في Nextcloud.
         sharepoint_sync_service:
           attributes:
             create_folder:
-              conflict: The %{folder_name} already exists on %{parent_location}.
-              not_found: "%{parent_location} wasn't found."
+              conflict: المجلد %{folder_name} موجود بالفعل في %{parent_location}.
+              not_found: لم يتم العثور على %{parent_location}.
             hide_inactive_folders:
-              permission_not_set: could not set permissions on %{path}.
+              permission_not_set: تعذّر تعيين الصلاحيات على %{path}.
             rename_project_folder:
-              conflict: OpenProject could not rename the folder %{current_path} to %{project_folder_name} as a folder with the same name already exists
-              forbidden: OpenProject does not have access to %{current_path} in order to rename it.
-              not_found: "%{current_path} wasn't found."
+              conflict: تعذّر على OpenProject إعادة تسمية المجلد %{current_path} إلى %{project_folder_name} لوجود مجلد بالاسم نفسه بالفعل
+              forbidden: لا يملك OpenProject صلاحية الوصول إلى %{current_path} لإعادة تسميته.
+              not_found: لم يتم العثور على %{current_path}.
             set_folders_permissions:
-              permission_not_set: could not set permissions on %{path}.
-          error: An unexpected error occurred. Please ensure that OneDrive is reachable and check OpenProject worker logs for more information
-          not_allowed: OpenProject wasn't allowed to access your OneDrive drive. Please check the permissions set on the Azure Application.
-          not_found: OpenProject could not access your library %{drive_name}. Please check you Sharepoint site document libraries.
-          unauthorized: OpenProject could not sync with OneDrive. Please check your storage and Azure Application configuration.
-          user_does_not_exist: "%{user} does not exist in Nextcloud."
+              permission_not_set: تعذّر تعيين الصلاحيات على %{path}.
+          error: حدث خطأ غير متوقع. يرجى التأكد من إمكانية الوصول إلى OneDrive ومراجعة سجلات العامل (worker) في OpenProject لمزيد من المعلومات
+          not_allowed: لم يُسمح لـ OpenProject بالوصول إلى محرك أقراص OneDrive الخاص بك. يرجى التحقق من الصلاحيات المعيّنة في تطبيق Azure.
+          not_found: تعذّر على OpenProject الوصول إلى المكتبة %{drive_name}. يرجى التحقق من مكتبات المستندات في موقع SharePoint.
+          unauthorized: تعذّرت على OpenProject المزامنة مع OneDrive. يرجى التحقق من تكوين مساحة التخزين وتكوين تطبيق Azure.
+          user_does_not_exist: المستخدم %{user} غير موجود في Nextcloud.
         upload_link_service:
-          not_found: The destination folder %{folder} could not be found on %{storage_name}.
+          not_found: تعذّر العثور على المجلد الوجهة %{folder} في %{storage_name}.
   storages:
     admin:
       side_panel:
         health_notifications_component:
-          sync_now: Sync now
-          sync_queued: Synchronization queued.
+          sync_now: المزامنة الآن
+          sync_queued: تمت إضافة المزامنة إلى قائمة الانتظار.
     buttons:
-      done_continue: Done, continue
-      open_storage: Open file storage
-      replace_oauth_application: Replace OpenProject OAuth
-      replace_oauth_client: Replace %{provider_type} OAuth
-      save_and_continue: Save and continue
-      select_folder: Select folder
+      done_continue: تم، متابعة
+      open_storage: فتح مساحة تخزين الملفات
+      replace_oauth_application: استبدال OAuth الخاص بـ OpenProject
+      replace_oauth_client: استبدال OAuth الخاص بـ %{provider_type}
+      save_and_continue: حفظ ومتابعة
+      select_folder: تحديد مجلد
     configuration_checks:
       oauth_client_incomplete:
-        nextcloud: Allow OpenProject to access Nextcloud data using OAuth.
-        one_drive: Allow OpenProject to access Azure data using OAuth to connect OneDrive.
-        sharepoint: Allow OpenProject to access SharePoint data using OAuth.
+        nextcloud: اسمح لـ OpenProject بالوصول إلى بيانات Nextcloud باستخدام OAuth.
+        one_drive: اسمح لـ OpenProject بالوصول إلى بيانات Azure باستخدام OAuth لربط OneDrive.
+        sharepoint: اسمح لـ OpenProject بالوصول إلى بيانات SharePoint باستخدام OAuth.
       redirect_uri_incomplete:
-        one_drive: Complete the setup with the correct URI redirection.
-        sharepoint: Complete the setup with the correct URI redirection.
-    confirm_replace_oauth_application: This action will reset the current OAuth credentials. After confirming you will have to reenter the credentials at the storage provider and all remote users will have to authorize against OpenProject again. Are you sure you want to proceed?
-    confirm_replace_oauth_client: This action will reset the current OAuth credentials. After confirming you will have to enter new credentials from the storage provider and all users will have to authorize against %{provider_type} again. Are you sure you want to proceed?
+        one_drive: أكمل الإعداد باستخدام عنوان URI الصحيح لإعادة التوجيه.
+        sharepoint: أكمل الإعداد باستخدام عنوان URI الصحيح لإعادة التوجيه.
+    confirm_replace_oauth_application: سيؤدي هذا الإجراء إلى إعادة تعيين بيانات اعتماد OAuth الحالية. بعد التأكيد، سيتعين عليك إعادة إدخال بيانات الاعتماد لدى موفر التخزين، وسيتعين على جميع المستخدمين البعيدين إعادة التفويض مع OpenProject. هل أنت متأكد من أنك تريد المتابعة؟
+    confirm_replace_oauth_client: سيؤدي هذا الإجراء إلى إعادة تعيين بيانات اعتماد OAuth الحالية. بعد التأكيد، سيتعين عليك إدخال بيانات اعتماد جديدة من موفر التخزين، وسيتعين على جميع المستخدمين إعادة التفويض مع %{provider_type}. هل أنت متأكد من أنك تريد المتابعة؟
     delete_warning:
-      project_storage_delete_result_1: All links to corresponding files and folders will be removed
-      project_storage_delete_result_2: The automatically-managed project folder and all files in it will be deleted
-      project_storage_html: Are you sure you want to remove %{file_storage} from this project?
-      storage_delete_result_1: The storage will be removed from all projects currently using it
-      storage_delete_result_2: All links to corresponding files and folders will be removed
-      storage_delete_result_3: The automatically-managed project folder and all files in it will be deleted
-      storage_html: Are you sure you want to delete %{file_storage} as an external file storage?
+      project_storage_delete_result_1: ستُزال جميع الروابط إلى الملفات والمجلدات المقابلة
+      project_storage_delete_result_2: سيُحذف مجلد المشروع المُدار تلقائيًا وجميع الملفات الموجودة فيه
+      project_storage_html: هل أنت متأكد من أنك تريد إزالة %{file_storage} من هذا المشروع؟
+      storage_delete_result_1: ستُزال مساحة التخزين من جميع المشاريع التي تستخدمها حاليًا
+      storage_delete_result_2: ستُزال جميع الروابط إلى الملفات والمجلدات المقابلة
+      storage_delete_result_3: سيُحذف مجلد المشروع المُدار تلقائيًا وجميع الملفات الموجودة فيه
+      storage_html: هل أنت متأكد من أنك تريد حذف %{file_storage} بوصفها مساحة تخزين ملفات خارجية؟
     dependencies:
       nextcloud:
-        group_folders_app: Team Folders
+        group_folders_app: مجلدات الفريق (Team Folders)
         integration_app: Integration OpenProject
     enabled_in_projects:
-      setup_incomplete_description: This storage has an incomplete setup. Please, complete the setup before enabling it in multiple projects.
-      setup_incomplete_header: Storage setup incomplete
-    error_invalid_provider_type: Please select a valid storage provider.
+      setup_incomplete_description: إعداد مساحة التخزين هذه غير مكتمل. يرجى إكمال الإعداد قبل تفعيلها في مشاريع متعددة.
+      setup_incomplete_header: إعداد مساحة التخزين غير مكتمل
+    error_invalid_provider_type: يرجى تحديد موفر تخزين صالح.
     file_storage_view:
       access_management:
-        automatic_management: Enable automatically-managed access and folders
-        automatic_management_description: Each project will be able to decide, when a storage is added to it, whether they want the automatically-managed or the manual approach to folder and access management.
-        description: OpenProject can automatically create and manage project folders when a file storage is added to a project. This can result in a more organized folder structure and straightforward access management that guarantees access to all relevant users.
-        manual_management: Only allow manually-managed access and folders
-        manual_management_description: Projects using this storage will not be offered the option of the automatically-managed approach. Folders and access must be managed manually.
-        setup_incomplete: Select the type of management of user access and folder creation.
-        subtitle: Folder and access management
-      access_management_section: Access and project folders
-      automatically_managed_folders: Automatically managed folders
-      general_information: General information
-      oauth_configuration: OAuth configuration
+        automatic_management: تفعيل الإدارة التلقائية للوصول والمجلدات
+        automatic_management_description: سيتمكن كل مشروع، عند إضافة مساحة تخزين إليه، من اختيار النهج المُدار تلقائيًا أو النهج اليدوي لإدارة المجلدات والوصول.
+        description: يمكن لـ OpenProject إنشاء مجلدات المشروع وإدارتها تلقائيًا عند إضافة مساحة تخزين ملفات إلى مشروع. قد يؤدي ذلك إلى بنية مجلدات أكثر تنظيمًا وإدارة وصول مبسّطة تضمن الوصول لجميع المستخدمين المعنيين.
+        manual_management: السماح فقط بالإدارة اليدوية للوصول والمجلدات
+        manual_management_description: لن يُتاح للمشاريع التي تستخدم مساحة التخزين هذه خيار النهج المُدار تلقائيًا. يجب إدارة المجلدات والوصول يدويًا.
+        setup_incomplete: حدد نوع إدارة وصول المستخدمين وإنشاء المجلدات.
+        subtitle: إدارة المجلدات والوصول
+      access_management_section: الوصول ومجلدات المشروع
+      automatically_managed_folders: المجلدات المُدارة تلقائيًا
+      general_information: معلومات عامة
+      oauth_configuration: تكوين OAuth
       one_drive:
         access_management:
-          automatic_management: Enable automatically-managed access and folders
-          automatic_management_description: Each project using this file storage will necessarily have to use the automatically-managed approach to folder and access management. They cannot do it manually.
-          manual_management: Only allow manually-managed access and folders
-          manual_management_description: Projects using this storage will not be offered the option of the automatically-managed approach. Folders and access must be managed manually.
-      one_drive_oauth: Azure OAuth
-      openproject_oauth: OpenProject OAuth
-      project_folders: Project folders
-      redirect_uri: Redirect URI
-      sharepoint_oauth: Azure OAuth
-      storage_audience_blank: No audience has been configured.
-      storage_audience_description: Exchanging tokens for audience "%{audience}".
-      storage_audience_idp: Using access token obtained by identity provider during login, regardless of audience.
-      storage_oauth: Storage OAuth
-      storage_provider: Storage provider
-      token_exchange: Token Exchange
+          automatic_management: تفعيل الإدارة التلقائية للوصول والمجلدات
+          automatic_management_description: يتعين على كل مشروع يستخدم مساحة تخزين الملفات هذه اعتماد النهج المُدار تلقائيًا لإدارة المجلدات والوصول، ولا يمكنه القيام بذلك يدويًا.
+          manual_management: السماح فقط بالإدارة اليدوية للوصول والمجلدات
+          manual_management_description: لن يُتاح للمشاريع التي تستخدم مساحة التخزين هذه خيار النهج المُدار تلقائيًا. يجب إدارة المجلدات والوصول يدويًا.
+      one_drive_oauth: OAuth الخاص بـ Azure
+      openproject_oauth: OAuth الخاص بـ OpenProject
+      project_folders: مجلدات المشروع
+      redirect_uri: عنوان URI لإعادة التوجيه
+      sharepoint_oauth: OAuth الخاص بـ Azure
+      storage_audience_blank: لم يتم تكوين أي جمهور (audience).
+      storage_audience_description: تبادل الرموز للجمهور «%{audience}».
+      storage_audience_idp: استخدام رمز الوصول الذي تم الحصول عليه من موفر الهوية أثناء تسجيل الدخول، بغض النظر عن الجمهور.
+      storage_oauth: OAuth الخاص بمساحة التخزين
+      storage_provider: موفر التخزين
+      token_exchange: تبادل الرموز
     health:
       actions:
         download_report: تحميل
-        rerun_checks: Re-run all checks
-        run_checks: Run checks now
-      checked: 'Last check: %{datetime}'
+        rerun_checks: إعادة تشغيل جميع الفحوصات
+        run_checks: تشغيل الفحوصات الآن
+      checked: 'آخر فحص: %{datetime}'
       checks:
         ampf_configuration:
-          client_folder_creation: Automatic folder creation
-          client_folder_removal: Automatic folder deletion
-          drive_contents: Drive content
-          files_request: Fetching team folder files
-          header: Automatically managed project folders
-          project_folders_exist: Project folders exist
-          project_folders_linked: Project folders linked
-          team_folder_app: 'Dependency: Team Folders'
-          team_folder_contents: Team folder content
-          team_folder_presence: Team folder exists
-          userless_access: Server-side request authentication
+          client_folder_creation: الإنشاء التلقائي للمجلدات
+          client_folder_removal: الحذف التلقائي للمجلدات
+          drive_contents: محتوى محرك الأقراص
+          files_request: جلب ملفات مجلد الفريق
+          header: مجلدات المشروع المُدارة تلقائيًا
+          project_folders_exist: مجلدات المشروع موجودة
+          project_folders_linked: مجلدات المشروع مرتبطة
+          team_folder_app: 'الاعتمادية: مجلدات الفريق (Team Folders)'
+          team_folder_contents: محتوى مجلد الفريق
+          team_folder_presence: مجلد الفريق موجود
+          userless_access: مصادقة الطلبات من جانب الخادم
         authentication:
-          existing_token: User token
+          existing_token: رمز المستخدم
           header: المصادقة
-          non_provisioned_user: User provisioned by IDP
-          offline_access: Configured OIDC offline_access scope
-          provider_capabilities: Provider capabilities
-          provisioned_user_provider: User provisioned by OIDC
-          token_negotiable: User token capabilities
-          user_bound_request: User-based request authentication
+          non_provisioned_user: مستخدم مُزوَّد بواسطة موفر الهوية (IDP)
+          offline_access: نطاق offline_access المكوَّن في OIDC
+          provider_capabilities: إمكانات الموفر
+          provisioned_user_provider: مستخدم مُزوَّد بواسطة OIDC
+          token_negotiable: إمكانات رمز المستخدم
+          user_bound_request: مصادقة الطلبات المستندة إلى المستخدم
         base_configuration:
-          capabilities_request: Remote file storage capabilities
-          client_id: Client ID
-          client_secret: Client secret
+          capabilities_request: إمكانات مساحة تخزين الملفات البعيدة
+          client_id: معرّف العميل
+          client_secret: سر العميل
           dependencies_check: الاعتماديات
-          dependencies_versions: Dependencies (version)
-          diagnostic_request: Diagnostic request
-          drive_id_exists: Drive exists
-          drive_id_format: Drive ID format
-          header: Configuration
-          host: Host URL
-          host_url_accessible: Host URL accessible
-          storage_configured: Configuration complete
-          tenant_id: Tenant ID
+          dependencies_versions: الاعتماديات (الإصدار)
+          diagnostic_request: طلب تشخيصي
+          drive_id_exists: محرك الأقراص موجود
+          drive_id_format: تنسيق معرّف محرك الأقراص
+          header: التكوين
+          host: عنوان URL للمضيف
+          host_url_accessible: إمكانية الوصول إلى عنوان URL للمضيف
+          storage_configured: التكوين مكتمل
+          tenant_id: معرّف المستأجر (Tenant)
         errors:
-          client_id_invalid: The configured OAuth 2 client id is invalid. Please check the configuration.
-          client_secret_invalid: The configured OAuth 2 client secret is invalid. Please check the configuration.
-          nc_dependency_missing: 'A required dependency is missing on the file storage. Please add the following dependency: %{dependency}.'
-          nc_dependency_version_mismatch: The %{dependency} app version is not supported. Please update your Nextcloud server.
-          nc_host_not_found: No Nextcloud server found at the configured host url. Please check the configuration.
-          nc_oauth_request_not_found: The endpoint to fetch the currently connected user was not found. Please check the server logs for further information.
-          nc_oauth_request_unauthorized: The current user isn't authorized to access the remote file storage. Please check the server logs for further information.
-          nc_oauth_token_missing: OpenProject cannot test the user level communication with Nextcloud as the user did not yet link their Nextcloud account.
-          nc_project_folder_missing: The previously created project folder for project "%{project}" could not be found.
-          nc_team_folder_not_found: The team folder could not be found.
-          nc_unexpected_files: 'Unexpected files found in the managed team folder. For example: %{sample}'
-          nc_unlinked_project_folders: Not all project folders have been created yet (%{actual} / %{expected}). This can indicate errors during the AMPF background synchronization.
-          nc_userless_access_denied: The configured app password is invalid.
-          not_configured: The connection could not be validated. Please finish configuration first.
-          od_client_cant_delete_folder: The client is having trouble deleting folders. Please check the setup documentation for your storage.
-          od_client_write_permission_missing: The client seems to have write permissions missing. Please check the setup documentation for your storage.
-          od_drive_id_invalid: The configured drive id seems invalid. Please check the configuration.
-          od_drive_id_not_found: The configured drive id could not be found. Please check the configuration.
-          od_oauth_request_not_found: The endpoint to fetch the currently connected user was not found. Please check the server logs for further information.
-          od_oauth_request_unauthorized: The current user isn't authorized to access the remote file storage. Please check the server logs for further information.
-          od_oauth_token_missing: OpenProject cannot test the user level communication with OneDrive as the user did not yet link their Microsoft account.
-          od_tenant_id_wrong: The configured directory (tenant) id is invalid. Please check the configuration.
-          od_test_folder_exists: The folder %{folder_name} needed for testing already exists. Please delete it and try again.
-          od_unexpected_content: Unexpected content found in the drive.
-          offline_access_scope_missing: It is recommended to configure the OpenID Connect provider to request the offline_access scope. The integration may still work anyways, but make sure that refresh tokens do not expire.
-          oidc_cant_refresh_token: There was an error while trying to check your access to the storage. Please check the server logs for further information.
-          oidc_non_oidc_user: The current user, while provisioned, wasn't provisioned by an OpenID Connect (OIDC) Identity Provider. Please re-run the check with an OIDC provisioned user.
-          oidc_non_provisioned_user: The current user isn't provided by an OpenID Connect Identity Provider. Please re-run the check with a provided user.
-          oidc_provider_cant_exchange: The OpenID Connect provider does not seem to support token exchange, but token exchange was configured for the storage.
-          oidc_token_acquisition_failed: Your OpenID Connect setup doesn't provide the necessary audience, nor does it provide token exchange capabilities. Please check out our documentation for more information.
-          oidc_token_exchange_failed: There seems to be a problem with the Token Exchange setup on your OpenID Connect Provider. Please check its configuration and try again.
-          oidc_token_refresh_failed: There was an error while trying to check your access to the storage. Please check the server logs for further information.
-          sp_client_cant_delete_folder: The client is having trouble deleting folders in SharePoint. Please check the setup documentation for your storage.
-          sp_client_id_missing: The configured OAuth 2 client id is missing for SharePoint. Please check the configuration.
-          sp_client_secret_missing: The configured OAuth 2 client secret is missing for SharePoint. Please check the configuration.
-          sp_client_write_permission_missing: The client seems to have write permissions missing in SharePoint. Please check the setup documentation for your storage.
-          sp_existing_test_folder: The folder %{folder_name} needed for testing already exists in SharePoint. Please delete it and try again.
-          sp_oauth_request_error: The user-bound request to SharePoint failed. Please check the server logs for further information.
-          sp_oauth_request_unauthorized: The current user isn't authorized to access the remote file storage. Please check the server logs for further information.
-          sp_oauth_token_missing: OpenProject cannot test the user level communication with SharePoint as the user did not yet link their SharePoint account.
-          sp_tenant_id_missing: The configured directory (tenant) id is missing for SharePoint. Please check the configuration.
-          sp_unexpected_content: Unexpected content found in the SharePoint Document Library.
-          unknown_error: The connection could not be validated. An unknown error occurred. Please check the server logs for further information.
+          client_id_invalid: معرّف عميل OAuth 2 المكوَّن غير صالح. يرجى التحقق من التكوين.
+          client_secret_invalid: سر عميل OAuth 2 المكوَّن غير صالح. يرجى التحقق من التكوين.
+          nc_dependency_missing: 'هناك اعتمادية مطلوبة مفقودة في مساحة تخزين الملفات. يرجى إضافة الاعتمادية التالية: %{dependency}.'
+          nc_dependency_version_mismatch: إصدار تطبيق %{dependency} غير مدعوم. يرجى تحديث خادم Nextcloud.
+          nc_host_not_found: لم يتم العثور على خادم Nextcloud على عنوان URL للمضيف المكوَّن. يرجى التحقق من التكوين.
+          nc_oauth_request_not_found: لم يتم العثور على نقطة النهاية الخاصة بجلب المستخدم المتصل حاليًا. يرجى مراجعة سجلات الخادم لمزيد من المعلومات.
+          nc_oauth_request_unauthorized: المستخدم الحالي غير مخوَّل بالوصول إلى مساحة تخزين الملفات البعيدة. يرجى مراجعة سجلات الخادم لمزيد من المعلومات.
+          nc_oauth_token_missing: لا يمكن لـ OpenProject اختبار الاتصال على مستوى المستخدم مع Nextcloud لأن المستخدم لم يربط حسابه في Nextcloud بعد.
+          nc_project_folder_missing: تعذّر العثور على مجلد المشروع الذي تم إنشاؤه سابقًا للمشروع «%{project}».
+          nc_team_folder_not_found: تعذّر العثور على مجلد الفريق.
+          nc_unexpected_files: 'تم العثور على ملفات غير متوقعة في مجلد الفريق المُدار. على سبيل المثال: %{sample}'
+          nc_unlinked_project_folders: لم يتم إنشاء جميع مجلدات المشروع بعد (%{actual} / %{expected}). قد يشير ذلك إلى وجود أخطاء أثناء المزامنة الخلفية لمجلدات المشروع المُدارة تلقائيًا (AMPF).
+          nc_userless_access_denied: كلمة مرور التطبيق المكوَّنة غير صالحة.
+          not_configured: تعذّر التحقق من صحة الاتصال. يرجى إكمال التكوين أولًا.
+          od_client_cant_delete_folder: يواجه العميل مشكلة في حذف المجلدات. يرجى مراجعة وثائق الإعداد الخاصة بمساحة التخزين.
+          od_client_write_permission_missing: يبدو أن العميل يفتقد صلاحيات الكتابة. يرجى مراجعة وثائق الإعداد الخاصة بمساحة التخزين.
+          od_drive_id_invalid: يبدو أن معرّف محرك الأقراص المكوَّن غير صالح. يرجى التحقق من التكوين.
+          od_drive_id_not_found: تعذّر العثور على معرّف محرك الأقراص المكوَّن. يرجى التحقق من التكوين.
+          od_oauth_request_not_found: لم يتم العثور على نقطة النهاية الخاصة بجلب المستخدم المتصل حاليًا. يرجى مراجعة سجلات الخادم لمزيد من المعلومات.
+          od_oauth_request_unauthorized: المستخدم الحالي غير مخوَّل بالوصول إلى مساحة تخزين الملفات البعيدة. يرجى مراجعة سجلات الخادم لمزيد من المعلومات.
+          od_oauth_token_missing: لا يمكن لـ OpenProject اختبار الاتصال على مستوى المستخدم مع OneDrive لأن المستخدم لم يربط حسابه في Microsoft بعد.
+          od_tenant_id_wrong: معرّف الدليل (المستأجر) المكوَّن غير صالح. يرجى التحقق من التكوين.
+          od_test_folder_exists: المجلد %{folder_name} المطلوب للاختبار موجود بالفعل. يرجى حذفه والمحاولة مرة أخرى.
+          od_unexpected_content: تم العثور على محتوى غير متوقع في محرك الأقراص.
+          offline_access_scope_missing: يُوصى بتكوين موفر OpenID Connect لطلب النطاق offline_access. قد يستمر التكامل في العمل على أي حال، ولكن تأكد من أن رموز التحديث (refresh tokens) لا تنتهي صلاحيتها.
+          oidc_cant_refresh_token: حدث خطأ أثناء محاولة التحقق من وصولك إلى مساحة التخزين. يرجى مراجعة سجلات الخادم لمزيد من المعلومات.
+          oidc_non_oidc_user: على الرغم من أن المستخدم الحالي مُزوَّد، إلا أنه لم يُزوَّد بواسطة موفر هوية OpenID Connect (OIDC). يرجى إعادة تشغيل الفحص باستخدام مستخدم مُزوَّد عبر OIDC.
+          oidc_non_provisioned_user: المستخدم الحالي غير مُزوَّد بواسطة موفر هوية OpenID Connect. يرجى إعادة تشغيل الفحص باستخدام مستخدم مُزوَّد.
+          oidc_provider_cant_exchange: يبدو أن موفر OpenID Connect لا يدعم تبادل الرموز، ولكن تم تكوين تبادل الرموز لمساحة التخزين.
+          oidc_token_acquisition_failed: لا يوفر إعداد OpenID Connect لديك الجمهور (audience) اللازم، ولا يوفر إمكانات تبادل الرموز. يرجى الاطلاع على الوثائق لمزيد من المعلومات.
+          oidc_token_exchange_failed: يبدو أن هناك مشكلة في إعداد تبادل الرموز لدى موفر OpenID Connect. يرجى التحقق من تكوينه والمحاولة مرة أخرى.
+          oidc_token_refresh_failed: حدث خطأ أثناء محاولة التحقق من وصولك إلى مساحة التخزين. يرجى مراجعة سجلات الخادم لمزيد من المعلومات.
+          sp_client_cant_delete_folder: يواجه العميل مشكلة في حذف المجلدات في SharePoint. يرجى مراجعة وثائق الإعداد الخاصة بمساحة التخزين.
+          sp_client_id_missing: معرّف عميل OAuth 2 المكوَّن مفقود لـ SharePoint. يرجى التحقق من التكوين.
+          sp_client_secret_missing: سر عميل OAuth 2 المكوَّن مفقود لـ SharePoint. يرجى التحقق من التكوين.
+          sp_client_write_permission_missing: يبدو أن العميل يفتقد صلاحيات الكتابة في SharePoint. يرجى مراجعة وثائق الإعداد الخاصة بمساحة التخزين.
+          sp_existing_test_folder: المجلد %{folder_name} المطلوب للاختبار موجود بالفعل في SharePoint. يرجى حذفه والمحاولة مرة أخرى.
+          sp_oauth_request_error: فشل الطلب المرتبط بالمستخدم إلى SharePoint. يرجى مراجعة سجلات الخادم لمزيد من المعلومات.
+          sp_oauth_request_unauthorized: المستخدم الحالي غير مخوَّل بالوصول إلى مساحة تخزين الملفات البعيدة. يرجى مراجعة سجلات الخادم لمزيد من المعلومات.
+          sp_oauth_token_missing: لا يمكن لـ OpenProject اختبار الاتصال على مستوى المستخدم مع SharePoint لأن المستخدم لم يربط حسابه في SharePoint بعد.
+          sp_tenant_id_missing: معرّف الدليل (المستأجر) المكوَّن مفقود لـ SharePoint. يرجى التحقق من التكوين.
+          sp_unexpected_content: تم العثور على محتوى غير متوقع في مكتبة مستندات SharePoint.
+          unknown_error: تعذّر التحقق من صحة الاتصال. حدث خطأ غير معروف. يرجى مراجعة سجلات الخادم لمزيد من المعلومات.
       label_error: خطأ
-      label_healthy: Healthy
+      label_healthy: سليم
       label_pending: قيد الانتظار
-      no_report: No report available
-      no_report_description: Run the checks now for a full health status report for this file storage.
-      open_report: Open full health report
+      no_report: لا يوجد تقرير متاح
+      no_report_description: شغّل الفحوصات الآن للحصول على تقرير كامل عن حالة الصحة لمساحة تخزين الملفات هذه.
+      open_report: فتح تقرير الصحة الكامل
       project_folders:
-        subtitle: Automatically managed project folders
-      since: since %{datetime}
-      synced: 'Last sync: %{datetime}'
-      title: Health status report
+        subtitle: مجلدات المشروع المُدارة تلقائيًا
+      since: منذ %{datetime}
+      synced: 'آخر مزامنة: %{datetime}'
+      title: تقرير حالة الصحة
     health_email_notifications:
-      description_disabled: Admins will not receive updates by email when there are important updates.
-      description_enabled: Admins will receive updates by email when there are important updates.
-      error_could_not_be_saved: Email notification settings could not be saved. Please try again.
-      title: Email updates to admins
+      description_disabled: لن يتلقى المسؤولون تحديثات عبر البريد الإلكتروني عند وجود تحديثات مهمة.
+      description_enabled: سيتلقى المسؤولون تحديثات عبر البريد الإلكتروني عند وجود تحديثات مهمة.
+      error_could_not_be_saved: تعذّر حفظ إعدادات إشعارات البريد الإلكتروني. يُرجى المحاولة مرة أخرى.
+      title: تحديثات البريد الإلكتروني للمسؤولين
     help_texts:
-      project_folder: The project folder is the default folder for file uploads for this project. Users can nevertheless still upload files to other locations.
-      project_folder_bulk: The project folder is the default folder for file uploads for all the projects selected. You can modify this individually in each project settings. Users can nevertheless still upload files to other locations.
+      project_folder: مجلد المشروع هو المجلد الافتراضي لرفع الملفات في هذا المشروع. ومع ذلك، لا يزال بإمكان المستخدمين رفع الملفات إلى مواقع أخرى.
+      project_folder_bulk: مجلد المشروع هو المجلد الافتراضي لرفع الملفات في جميع المشاريع المحددة. يمكنك تعديل ذلك لكل مشروع على حدة من إعدادات المشروع. ومع ذلك، لا يزال بإمكان المستخدمين رفع الملفات إلى مواقع أخرى.
     instructions:
-      all_available_storages_already_added: All available storages are already added to the project.
-      authentication_method: The way that requests between OpenProject and the Storage are authenticated.
-      automatic_folder: This will automatically create a root folder for this project and manage the access permissions for each project member.
-      empty_project_folder_validation: Selecting a folder is mandatory to proceed.
-      existing_manual_folder: You can designate an existing folder as the root folder for this project. The permissions are however not automatically managed, the administrator needs to manually ensure relevant users have access. The selected folder can be used by multiple projects.
-      host: Please add the host address of your storage including the https://. It should not be longer than 255 characters.
-      managed_project_folders_application_password_caption: 'Enable automatic managed folders by copying this value from: %{provider_type_link}.'
-      name: Give your storage a name so that users can differentiate between multiple storages.
-      new_storage_html: Read our documentation on [setting up a %{provider_name} file storage](docs_url) integration for more information.
+      all_available_storages_already_added: تمت إضافة جميع مساحات التخزين المتاحة إلى المشروع بالفعل.
+      authentication_method: طريقة مصادقة الطلبات المتبادلة بين OpenProject ومساحة التخزين.
+      automatic_folder: سيؤدي هذا إلى إنشاء مجلد جذر لهذا المشروع تلقائيًا وإدارة صلاحيات الوصول لكل عضو في المشروع.
+      empty_project_folder_validation: يلزم تحديد مجلد للمتابعة.
+      existing_manual_folder: يمكنك تعيين مجلد موجود كمجلد جذر لهذا المشروع. غير أن الصلاحيات لا تُدار تلقائيًا، إذ يتعين على المسؤول التأكد يدويًا من حصول المستخدمين المعنيين على حق الوصول. ويمكن استخدام المجلد المحدد في مشاريع متعددة.
+      host: يُرجى إضافة عنوان المضيف لمساحة التخزين متضمنًا https://. يجب ألا يتجاوز طوله 255 حرفًا.
+      managed_project_folders_application_password_caption: 'فعّل المجلدات المُدارة تلقائيًا بنسخ هذه القيمة من: %{provider_type_link}.'
+      name: امنح مساحة التخزين اسمًا ليتمكن المستخدمون من التمييز بين مساحات التخزين المتعددة.
+      new_storage_html: لمزيد من المعلومات، اطّلع على توثيقنا حول [إعداد تكامل تخزين الملفات %{provider_name}](docs_url).
       nextcloud:
-        application_link_text: application “Integration OpenProject”
-        integration: Nextcloud Administration / OpenProject
-        oauth_configuration: Copy these values from %{application_link_text}.
-        provider_configuration: Please make sure you have administration privileges in your Nextcloud instance and the %{application_link_text} is installed before doing the setup.
-        storage_audience: The client ID that the Nextcloud instance uses to communicate with the identity provider.
-        storage_audience_placeholder: e.g. nextcloud
-        token_exchange_scope: The scopes that should be requested during token exchange, each one separated by a space.
-      no_specific_folder: By default, each user will start at their own home folder when they upload a file.
-      no_storage_set_up: There are no file storages set up yet.
-      not_logged_into_storage: To select a project folder, please first login
-      oauth_application_details_html: The client secret value will not be accessible again after you close this window. Please copy these values into the [Nextcloud OpenProject Integration settings](oauth_application_details_link).
+        application_link_text: التطبيق «Integration OpenProject»
+        integration: إدارة Nextcloud / OpenProject
+        oauth_configuration: انسخ هذه القيم من %{application_link_text}.
+        provider_configuration: يُرجى التأكد من امتلاكك صلاحيات الإدارة في نسخة Nextcloud لديك ومن تثبيت %{application_link_text} قبل إجراء الإعداد.
+        storage_audience: معرّف العميل الذي تستخدمه نسخة Nextcloud للتواصل مع موفر الهوية.
+        storage_audience_placeholder: 'مثال: nextcloud'
+        token_exchange_scope: النطاقات التي يجب طلبها أثناء تبادل الرمز، على أن يُفصل بين كل منها بمسافة.
+      no_specific_folder: افتراضيًا، سيبدأ كل مستخدم من مجلده الرئيسي عند رفع ملف.
+      no_storage_set_up: لم يتم إعداد أي مساحات لتخزين الملفات بعد.
+      not_logged_into_storage: لتحديد مجلد المشروع، يُرجى تسجيل الدخول أولًا
+      oauth_application_details_html: لن تتمكن من الوصول إلى قيمة سر العميل مرة أخرى بعد إغلاق هذه النافذة. يُرجى نسخ هذه القيم إلى [إعدادات تكامل OpenProject في Nextcloud](oauth_application_details_link).
       one_drive:
-        application_link_text: Azure portal
-        copy_redirect_uri: Copy redirect URI
-        documentation_link_text: OneDrive file storages documentation
-        drive_id: Please copy the ID from the desired drive by following the steps in the %{drive_id_link_text}.
+        application_link_text: بوابة Azure
+        copy_redirect_uri: نسخ عنوان URI لإعادة التوجيه
+        documentation_link_text: توثيق مساحات تخزين الملفات في OneDrive
+        drive_id: يُرجى نسخ معرّف (ID) محرك الأقراص المطلوب باتباع الخطوات الواردة في %{drive_id_link_text}.
         integration: OneDrive
-        missing_client_id_for_redirect_uri: Please fill the OAuth values to generate a URI
-        oauth_client_redirect_uri: Please copy this value to a new Web redirect URI under Redirect URIs.
-        oauth_client_secret: In case there is no application client secret under Client credentials, please create a new one.
-        oauth_configuration: Copy these values from the desired application in the %{application_link_text}.
+        missing_client_id_for_redirect_uri: يُرجى تعبئة قيم OAuth لإنشاء عنوان URI
+        oauth_client_redirect_uri: يُرجى نسخ هذه القيمة إلى عنوان URI جديد لإعادة التوجيه من نوع Web ضمن «Redirect URIs».
+        oauth_client_secret: إذا لم يكن هناك سر عميل للتطبيق ضمن «Client credentials»، فيُرجى إنشاء سر جديد.
+        oauth_configuration: انسخ هذه القيم من التطبيق المطلوب في %{application_link_text}.
         provider_configuration: يرجى التأكد من حصولك على امتيازات الإدارة في %{application_link_text} أو الاتصال بمسؤول Microsoft قبل القيام بالإعداد. في البوابة، تحتاج أيضًا إلى تسجيل تطبيق Azure أو استخدام تطبيق موجود للمصادقة.
-        tenant_id: Please copy the Directory (tenant) ID from the desired application and App registrations in the %{application_link_text}.
-        tenant_id_placeholder: Name or UUID
-      setting_up_additional_storages: For setting up additional file storages, please visit
-      setting_up_additional_storages_non_admin: Administrators can set up additional file storages in Administration / File storages.
-      setting_up_storages: For setting up file storages, please visit
-      setting_up_storages_non_admin: Administrators can set up file storages in Administration / File storages.
+        tenant_id: يُرجى نسخ معرّف الدليل (Directory (tenant) ID) من التطبيق المطلوب ضمن «App registrations» في %{application_link_text}.
+        tenant_id_placeholder: الاسم أو UUID
+      setting_up_additional_storages: لإعداد مساحات إضافية لتخزين الملفات، يُرجى زيارة
+      setting_up_additional_storages_non_admin: يمكن للمسؤولين إعداد مساحات إضافية لتخزين الملفات من الإدارة / الملفّات / مساحات تخزين الملفات الخارجية.
+      setting_up_storages: لإعداد مساحات تخزين الملفات، يُرجى زيارة
+      setting_up_storages_non_admin: يمكن للمسؤولين إعداد مساحات تخزين الملفات من الإدارة / الملفّات / مساحات تخزين الملفات الخارجية.
       sharepoint:
-        application_link_text: SharePoint site
-        integration: SharePoint Administration / OpenProject
-        oauth_configuration: Copy these values from the desired application in the %{application_link_text}.
+        application_link_text: موقع SharePoint
+        integration: إدارة SharePoint / OpenProject
+        oauth_configuration: انسخ هذه القيم من التطبيق المطلوب في %{application_link_text}.
         provider_configuration: يرجى التأكد من حصولك على امتيازات الإدارة في %{application_link_text} أو الاتصال بمسؤول Microsoft قبل القيام بالإعداد. في البوابة، تحتاج أيضًا إلى تسجيل تطبيق Azure أو استخدام تطبيق موجود للمصادقة.
-      type: 'Please make sure you have administration privileges in your Nextcloud instance and have the following application installed before doing the setup:'
+      type: 'يُرجى التأكد من امتلاكك صلاحيات الإدارة في نسخة Nextcloud لديك ومن تثبيت التطبيق التالي قبل إجراء الإعداد:'
       type_link_text: '"تكامل OpenProject"'
     label_active: مفعّل
-    label_add_new_storage: Add new storage
-    label_automatic_folder: New folder with automatically managed permissions
-    label_creation_time: Creation time
-    label_creator: Creator
-    label_delete_storage: Delete storage
-    label_edit_storage_access_management: Edit storage access management
-    label_edit_storage_automatically_managed_folders: Edit storage automatically managed folders
-    label_edit_storage_host: Edit storage host
-    label_edit_token_exchange: Edit token exchange configuration
-    label_existing_manual_folder: Existing folder with manually managed permissions
-    label_file_storage: File storage
-    label_host: Host URL
-    label_inactive: Inactive
+    label_add_new_storage: إضافة مساحة تخزين جديدة
+    label_automatic_folder: مجلد جديد بصلاحيات تُدار تلقائيًا
+    label_creation_time: وقت الإنشاء
+    label_creator: المُنشئ
+    label_delete_storage: حذف مساحة التخزين
+    label_edit_storage_access_management: تعديل إدارة الوصول إلى مساحة التخزين
+    label_edit_storage_automatically_managed_folders: تعديل المجلدات المُدارة تلقائيًا لمساحة التخزين
+    label_edit_storage_host: تعديل مضيف مساحة التخزين
+    label_edit_token_exchange: تعديل تكوين تبادل الرموز
+    label_existing_manual_folder: مجلد موجود بصلاحيات تُدار يدويًا
+    label_file_storage: مساحة تخزين الملفات
+    label_host: عنوان URL للمضيف
+    label_inactive: غير نشط
     label_managed_project_folders:
-      application_password: Application password
-      automatically_managed_folders: Automatically managed folders
+      application_password: كلمة مرور التطبيق
+      automatically_managed_folders: المجلدات المُدارة تلقائيًا
     label_name: الاسم
-    label_new_file_storage: New %{provider} storage
-    label_new_storage: New storage
-    label_no_selected_folder: No selected folder
-    label_no_specific_folder: No specific folder
-    label_oauth_client_id: OAuth Client ID
-    label_openproject_oauth_application_id: OpenProject OAuth Client ID
-    label_openproject_oauth_application_secret: OpenProject OAuth Client Secret
-    label_project_folder: Project folder
-    label_provider: Provider
-    label_redirect_uri: Redirect URI
-    label_show_storage_redirect_uri: Show redirect URI
+    label_new_file_storage: مساحة تخزين %{provider} جديدة
+    label_new_storage: مساحة تخزين جديدة
+    label_no_selected_folder: لم يتم تحديد مجلد
+    label_no_specific_folder: بدون مجلد محدد
+    label_oauth_client_id: معرّف عميل OAuth
+    label_openproject_oauth_application_id: معرّف عميل OAuth في OpenProject
+    label_openproject_oauth_application_secret: سر عميل OAuth في OpenProject
+    label_project_folder: مجلد المشروع
+    label_provider: الموفر
+    label_redirect_uri: عنوان URI لإعادة التوجيه
+    label_show_storage_redirect_uri: إظهار عنوان URI لإعادة التوجيه
     label_status: الحالة
-    label_storage: Storage
+    label_storage: مساحة التخزين
     label_uri: URI
     member_connection_status:
-      connected: Connected
-      connected_no_permissions: User role has no storages permissions
-      not_connectable: Not connectable. The storage requires login through an SSO provider, but the user is not logging in through SSO.
-      not_connected: Not connected. The user should login to the storage via the following %{link}.
-      not_connected_sso: Not yet connected, SSO should automatically connect them, once looking at files.
-    members_no_results: No members to display.
-    no_results: No storages set up yet.
+      connected: متصل
+      connected_no_permissions: لا يملك دور المستخدم صلاحيات مساحات التخزين
+      not_connectable: يتعذّر الاتصال. تتطلب مساحة التخزين تسجيل الدخول عبر موفر SSO، لكن المستخدم لا يسجّل الدخول عبر SSO.
+      not_connected: غير متصل. يجب على المستخدم تسجيل الدخول إلى مساحة التخزين عبر %{link}.
+      not_connected_sso: غير متصل بعد، وسيتولى SSO ربطه تلقائيًا عند استعراض الملفات.
+    members_no_results: لا يوجد أعضاء لعرضهم.
+    no_results: لم يتم إعداد أي مساحات تخزين بعد.
     oauth_access_granted_modal:
-      access_granted: Access granted
+      access_granted: تم منح الوصول
       project_settings:
-        access_granted_screen_reader: Access granted. You are now ready to use %{storage}
-        storage_ready: You are now ready to use %{storage}
+        access_granted_screen_reader: تم منح الوصول. أصبحت الآن جاهزًا لاستخدام %{storage}
+        storage_ready: أصبحت الآن جاهزًا لاستخدام %{storage}
       storage_admin:
-        access_granted_screen_reader: Access granted. You are now ready to add projects to %{storage}
-        storage_ready: You are now ready to add projects to %{storage}
+        access_granted_screen_reader: تم منح الوصول. أصبحت الآن جاهزًا لإضافة مشاريع إلى %{storage}
+        storage_ready: أصبحت الآن جاهزًا لإضافة مشاريع إلى %{storage}
     oauth_grant_nudge_modal:
-      cancel_button_label: I will do it later
-      heading: Login to %{provider_type} required
-      login_button_aria_label: Login to %{storage}
-      login_button_label: "%{provider_type} log in"
+      cancel_button_label: سأقوم بذلك لاحقًا
+      heading: يلزم تسجيل الدخول إلى %{provider_type}
+      login_button_aria_label: تسجيل الدخول إلى %{storage}
+      login_button_label: تسجيل الدخول إلى %{provider_type}
       project_settings:
-        description: To get access to the project folder you need to login to %{storage}.
-      requesting_access_to: Requesting access to %{storage}
+        description: للوصول إلى مجلد المشروع، يجب عليك تسجيل الدخول إلى %{storage}.
+      requesting_access_to: جارٍ طلب الوصول إلى %{storage}
       storage_admin:
-        description: In order to add projects to this storage you need to be logged into %{provider_type}. Please, log in and try again.
+        description: لإضافة مشاريع إلى مساحة التخزين هذه، يجب أن تكون مسجّل الدخول إلى %{provider_type}. يُرجى تسجيل الدخول والمحاولة مرة أخرى.
     open_project_storage_modal:
       success:
-        subtitle: You are being redirected
-        title: Integration setup completed
+        subtitle: جارٍ إعادة توجيهك
+        title: اكتمل إعداد التكامل
       timeout:
-        link_text: health status of the file storage setup
-        subtitle: OpenProject could not provide you access to the project folder within the expected period of time. Please, try once again.<br><br> If that problem persists please contact your OpenProject administrator to check %{storages_health_link}.
+        link_text: حالة صحة إعداد تخزين الملفات
+        subtitle: تعذّر على OpenProject منحك حق الوصول إلى مجلد المشروع خلال المدة المتوقعة. يُرجى المحاولة مرة أخرى.<br><br> إذا استمرت المشكلة، يُرجى التواصل مع مسؤول OpenProject للتحقق من %{storages_health_link}.
       waiting:
-        subtitle: One moment please, this might take some time...
-        title: We are setting up your permissions on the project folder.
+        subtitle: لحظة من فضلك، قد يستغرق هذا بعض الوقت...
+        title: جارٍ إعداد صلاحياتك على مجلد المشروع.
     page_titles:
       file_storages:
-        delete: Delete file storage?
-        subtitle: Add an external file storage in order to upload, link and manage files in work packages.
+        delete: حذف مساحة تخزين الملفات؟
+        subtitle: أضف مساحة تخزين ملفات خارجية لرفع الملفات وربطها وإدارتها في حزم العمل.
       managed_project_folders:
         subtitle: |-
-          Let OpenProject create folders per project automatically. This is recommended as it ensures that every team
-          member always has the correct access permissions.
-        subtitle_short: Let OpenProject create folders per project automatically.
-        title: Automatically managed project folders
+          اسمح لـ OpenProject بإنشاء مجلدات لكل مشروع تلقائيًا. يوصى بذلك لأنه يضمن أن يمتلك كل عضو
+          في الفريق صلاحيات الوصول الصحيحة دائمًا.
+        subtitle_short: اسمح لـ OpenProject بإنشاء مجلدات لكل مشروع تلقائيًا.
+        title: مجلدات المشروع المُدارة تلقائيًا
       project_settings:
-        edit: Edit the file storage to this project
-        members_connection_status: Members connection status
-        new: Add a file storage to this project
+        edit: تعديل مساحة تخزين الملفات في هذا المشروع
+        members_connection_status: حالة اتصال الأعضاء
+        new: إضافة مساحة تخزين ملفات إلى هذا المشروع
       project_storage_members:
-        subtitle_html: Check the connection status for the storage %{storage_name_link} of all project members.
-        title: Members connection status
+        subtitle_html: تحقق من حالة اتصال جميع أعضاء المشروع بمساحة التخزين %{storage_name_link}.
+        title: حالة اتصال الأعضاء
       project_storages:
-        delete: Remove file storage from project?
-    permission_header_explanation: File permissions on external storages are applied only to folders and files within automatically managed project folders. Note that not all file permissions are supported by all storage providers. Please check the documentation on <a target='_blank' href='https://www.openproject.org/docs/system-admin-guide/users-permissions/roles-permissions/#file-storages-permissions'>file storage permissions</a> for more information.
+        delete: إزالة مساحة تخزين الملفات من المشروع؟
+    permission_header_explanation: تُطبَّق صلاحيات الملفات على مساحات التخزين الخارجية فقط على المجلدات والملفات الموجودة داخل مجلدات المشروع المُدارة تلقائيًا. لاحظ أن بعض صلاحيات الملفات قد لا تكون مدعومة من جميع موفري التخزين. يُرجى مراجعة التوثيق الخاص بـ <a target='_blank' href='https://www.openproject.org/docs/system-admin-guide/users-permissions/roles-permissions/#file-storages-permissions'>صلاحيات تخزين الملفات</a> لمزيد من المعلومات.
     provider_types:
-      label: Provider type
+      label: نوع الموفر
       nextcloud:
-        label_oauth_client_id: Nextcloud OAuth Client ID
-        label_oauth_client_secret: Nextcloud OAuth Client Secret
+        label_oauth_client_id: معرّف عميل OAuth في Nextcloud
+        label_oauth_client_secret: سر عميل OAuth في Nextcloud
         name: Nextcloud
-        name_placeholder: e.g. Nextcloud
+        name_placeholder: 'مثال: Nextcloud'
       one_drive:
-        label_oauth_client_id: Azure OAuth Application (client) ID
-        label_oauth_client_secret: Azure OAuth Client Secret Value
+        label_oauth_client_id: معرّف التطبيق (العميل) في Azure OAuth
+        label_oauth_client_secret: قيمة سر عميل Azure OAuth
         name: OneDrive
-        name_placeholder: e.g. OneDrive
+        name_placeholder: 'مثال: OneDrive'
       sharepoint:
-        drive_description: OpenProject access-managed document library
-        label_oauth_client_id: Azure OAuth Application (client) ID
-        label_oauth_client_secret: Azure OAuth Client Secret Value
+        drive_description: مكتبة مستندات يدير OpenProject الوصول إليها
+        label_oauth_client_id: معرّف التطبيق (العميل) في Azure OAuth
+        label_oauth_client_secret: قيمة سر عميل Azure OAuth
         name: SharePoint
-        name_placeholder: e.g. SharePoint
+        name_placeholder: 'مثال: SharePoint'
     show_attachments_toggle:
-      description: Deactivating this option will hide the attachments list on the work packages files tab. The files attached in the description of a work package will still be uploaded in the internal attachments storage.
-      label: Show attachments in the work packages files tab
+      description: سيؤدي إلغاء تفعيل هذا الخيار إلى إخفاء قائمة المرفقات في علامة تبويب الملفات لحزم العمل. وستظل الملفات المرفقة في وصف حزمة العمل تُرفع إلى مساحة تخزين المرفقات الداخلية.
+      label: إظهار المرفقات في علامة تبويب الملفات لحزم العمل
     storage_audience:
-      documentation_intro: Please read our documentation for details on the following options and configuration of the identity provider.
+      documentation_intro: يُرجى قراءة توثيقنا للاطلاع على تفاصيل الخيارات التالية وتكوين موفر الهوية.
       idp:
-        helptext: OpenProject will use the access token received by the identity provider during log in to authenticate requests to the storage. It will not try to obtain another token.
-        label: Use access token obtained during user log in
+        helptext: سيستخدم OpenProject رمز الوصول المستلم من موفر الهوية أثناء تسجيل الدخول لمصادقة الطلبات إلى مساحة التخزين. ولن يحاول الحصول على رمز آخر.
+        label: استخدام رمز الوصول الذي تم الحصول عليه أثناء تسجيل دخول المستخدم
       manual:
-        helptext: OpenProject will exchange a token with the identity provider for the given audience.
-        label: Manually specify audience for which to exchange access token (Recommended)
+        helptext: سيُجري OpenProject تبادلًا للرمز مع موفر الهوية للجمهور (audience) المحدد.
+        label: تحديد الجمهور (audience) يدويًا لتبادل رمز الوصول (موصى به)
     storage_list_blank_slate:
-      description: Add a storage to see them here.
-      heading: You don't have any storages yet.
-    successful_storage_connection: Storage connected successfully! Remember to activate the storage in the Projects tab for each desired project to use it.
+      description: أضف مساحة تخزين لتظهر هنا.
+      heading: ليس لديك أي مساحات تخزين بعد.
+    successful_storage_connection: تم توصيل مساحة التخزين بنجاح! تذكّر تفعيل مساحة التخزين في علامة التبويب «المشاريع» لكل مشروع تريد استخدامها فيه.
     upsell:
       one_drive:
         description: |-
-          Integrate your OneDrive drive as a file storage with OpenProject. Upload files and link them directly to
-          work packages in a project.
-        title: OneDrive integration
+          ادمج محرك أقراص OneDrive الخاص بك كمساحة لتخزين الملفات مع OpenProject. ارفع الملفات واربطها مباشرةً
+          بحزم العمل في المشروع.
+        title: تكامل OneDrive
       sharepoint:
         description: |-
-          Integrate your SharePoint site as a file storage with OpenProject. Upload files and link them directly to
-          work packages in a project.
-        title: SharePoint integration
+          ادمج موقع SharePoint الخاص بك كمساحة لتخزين الملفات مع OpenProject. ارفع الملفات واربطها مباشرةً
+          بحزم العمل في المشروع.
+        title: تكامل SharePoint

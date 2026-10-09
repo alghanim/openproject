@@ -2,28 +2,28 @@
 ar:
   js:
     bcf:
-      add_viewpoint: Add viewpoint
-      delete_viewpoint: Delete viewpoint
+      add_viewpoint: إضافة نقطة عرض
+      delete_viewpoint: حذف نقطة العرض
       export: تصدير
-      export_bcf_xml_file: Export BCF XML file (BCF version 2.1)
+      export_bcf_xml_file: تصدير ملف BCF XML (إصدار BCF 2.1)
       import: استيراد
-      import_bcf_xml_file: Import BCF XML file (BCF version 2.1)
+      import_bcf_xml_file: استيراد ملف BCF XML (إصدار BCF 2.1)
       label_bcf: BCF
-      management: BCF management
-      refresh: Refresh
-      refresh_work_package: Refresh work package
-      show_viewpoint: Show viewpoint
-      viewpoint: Viewpoint
+      management: إدارة BCF
+      refresh: تحديث
+      refresh_work_package: تحديث حزمة العمل
+      show_viewpoint: عرض نقطة العرض
+      viewpoint: نقطة العرض
     ifc_models:
-      empty_warning: This project does not yet have any IFC models.
-      keyboard_input_disabled: Viewer does not have keyboard controls. Click on the viewer to give keyboard control to the viewer.
+      empty_warning: لا يحتوي هذا المشروع على أي نماذج IFC بعد.
+      keyboard_input_disabled: لا يملك العارض تحكمًا بلوحة المفاتيح. انقر على العارض لمنحه التحكم بلوحة المفاتيح.
       models:
-        ifc_models: IFC models
-      use_this_link_to_manage: Use this link to upload and manage your IFC models
+        ifc_models: نماذج IFC
+      use_this_link_to_manage: استخدم هذا الرابط لرفع نماذج IFC الخاصة بك وإدارتها
       views:
-        split: Viewer and table
-        split_cards: Viewer and cards
-        viewer: Viewer
+        split: العارض والجدول
+        split_cards: العارض والبطاقات
+        viewer: العارض
     revit:
-      revit_add_in: Revit Add-In
-      revit_add_in_settings: Revit Add-In settings
+      revit_add_in: إضافة Revit
+      revit_add_in_settings: إعدادات إضافة Revit

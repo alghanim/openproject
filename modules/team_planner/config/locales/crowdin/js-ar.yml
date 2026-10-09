@@ -3,27 +3,27 @@ ar:
   js:
     team_planner:
       add_assignee: المُسند إليه
-      add_existing: Add existing
-      add_existing_title: Add existing work packages
-      cannot_drag_here: Cannot move the work package due to permissions or editing restrictions.
-      cannot_drag_to_non_working_day: This work package cannot start/finish on a non-working day.
+      add_existing: إضافة عناصر موجودة
+      add_existing_title: إضافة حزم عمل موجودة
+      cannot_drag_here: لا يمكن نقل حزمة العمل بسبب الصلاحيات أو قيود التعديل.
+      cannot_drag_to_non_working_day: لا يمكن أن تبدأ حزمة العمل هذه أو تنتهي في يوم عطلة.
       create_label: مخطط الفريق
       create_title: إنشاء مخطط فريق جديد
-      drag_here_to_remove: Drag here to remove assignee and start and end dates.
-      eight_weeks: 8-week
-      four_weeks: 4-week
+      drag_here_to_remove: اسحب إلى هنا لإزالة المُسند إليه وتاريخي البدء والانتهاء.
+      eight_weeks: 8 أسابيع
+      four_weeks: 4 أسابيع
       label_team_planner_plural: مخططي الفريق
       modify:
         errors:
-          fallback: This work package cannot be edited.
-          permission_denied: You do not have the necessary permissions to modify this.
-      no_data: Add assignees to set up your team planner.
-      one_week: 1-week
+          fallback: لا يمكن تعديل حزمة العمل هذه.
+          permission_denied: ليست لديك الصلاحيات اللازمة لتعديل هذا العنصر.
+      no_data: أضف المُسند إليهم لإعداد مخطط الفريق الخاص بك.
+      one_week: أسبوع واحد
       quick_add:
-        empty_state: Use the search field to find work packages and drag them to the planner to assign it to someone and define start and end dates.
-        search_placeholder: Search...
-      remove_assignee: Remove assignee
+        empty_state: استخدم حقل البحث للعثور على حزم العمل، واسحبها إلى المخطط لإسنادها إلى شخص ما وتحديد تاريخي البدء والانتهاء.
+        search_placeholder: بحث...
+      remove_assignee: إزالة المُسند إليه
       today: اليوم
-      two_weeks: 2-week
-      unsaved_title: Unnamed team planner
+      two_weeks: أسبوعان
+      unsaved_title: مخطط فريق بدون اسم
       work_week: أسبوع العمل

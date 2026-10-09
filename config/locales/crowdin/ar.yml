@@ -3897,7 +3897,7 @@ ar:
       status_excluded_from_totals_set_to_true_message: مُستبعَد الآن من إجماليات التسلسل الهرمي
       status_percent_complete_changed: "% الإنجاز تغيّر من %{old_value}% إلى %{new_value}%"
       system_update:
-        file_links_journal: 'من الآن فصاعدًا، سيظهر النشاط المتعلق بروابط الملفات (الملفات المخزنة في وحدات تخزين خارجية) هنا في علامة تبويب النشاط. يمثّل ما يلي نشاطًا يتعلق بالروابط الموجودة مسبقًا:'
+        file_links_journal: 'من الآن فصاعدًا، سيظهر النشاط المتعلق بروابط الملفات (الملفات المخزنة في مساحات تخزين خارجية) هنا في علامة تبويب النشاط. يمثّل ما يلي نشاطًا يتعلق بالروابط الموجودة مسبقًا:'
         progress_calculation_adjusted: تم تعديل حساب التقدم تلقائيًا <a href="%{href}" target="_blank">مع تحديث الإصدار</a>.
         progress_calculation_adjusted_from_disabled_mode: تم تعيين حساب التقدم تلقائيًا <a href="%{href}" target="_blank">على الوضع القائم على العمل وتعديله مع تحديث الإصدار</a>.
         scheduling_mode_adjusted: تم تعديل وضع الجدولة تلقائيًا مع تحديث الإصدار.
@@ -4460,8 +4460,8 @@ ar:
   label_project_plural: المشاريع
   label_project_settings: إعدادات المشروع
   label_project_show_details: عرض تفاصيل المشروع
-  label_project_storage_plural: مخازن الملفات
-  label_project_storage_project_folder: 'مخازن الملفات: مجلدات المشروع'
+  label_project_storage_plural: مساحات تخزين الملفات
+  label_project_storage_project_folder: 'مساحات تخزين الملفات: مجلدات المشروع'
   label_project_view_all: عرض جميع المشاريع
   label_projects_disk_usage_information: "%{count} مشروع يستخدم %{used_disk_space} من مساحة القرص"
   label_projects_menu: المشاريع
@@ -4861,33 +4861,33 @@ ar:
           user: "%{user} شارك معك حزمة عمل بصلاحيات %{role_rights}"
     storages:
       health:
-        email_notification_settings: إعدادات إشعارات البريد الإلكتروني للمخزن
+        email_notification_settings: إعدادات إشعارات البريد الإلكتروني لمساحة التخزين
         healthy:
           solved_at: تم الحل في
-          subject: المخزن "%{name}" أصبح سليماً!
-          summary: تم حل المشكلة في تكامل مخزن %{storage_name}
+          subject: مساحة التخزين "%{name}" أصبحت سليمة!
+          summary: تم حل المشكلة في تكامل مساحة التخزين %{storage_name}
         plaintext:
           healthy:
-            details: لمزيد من التفاصيل أو إجراء أي تعديلات ضرورية، يمكنك زيارة إعدادات مخزنك
+            details: لمزيد من التفاصيل أو إجراء أي تعديلات ضرورية، يمكنك زيارة إعدادات مساحة التخزين الخاصة بك
             error-solved-on: تاريخ الحل
             recommendation: سنواصل مراقبة النظام للتأكد من بقائه في حالة جيدة. في حال وجود أي تناقضات، سنخطرك.
-            summary: أخبار سارة! حالة مخزنك %{storage_name} تظهر حالياً على أنها "سليمة".
+            summary: أخبار سارة! حالة مساحة التخزين الخاصة بك %{storage_name} تظهر حالياً على أنها "سليمة".
           storage: التخزين
           unhealthy:
             error-details: تفاصيل الخطأ
             error-message: رسالة الخطأ
             error-occurred-on: تاريخ الحدوث
-            recommendation: نوصي بالتوجه إلى صفحة إعدادات المخزن لمعالجة هذه المشكلة
-            summary: حالة مخزنك %{storage_name} تظهر حالياً على أنها "خطأ". لقد رصدنا مشكلة قد تستلزم انتباهك.
+            recommendation: نوصي بالتوجه إلى صفحة إعدادات مساحة التخزين لمعالجة هذه المشكلة
+            summary: حالة مساحة التخزين الخاصة بك %{storage_name} تظهر حالياً على أنها "خطأ". لقد رصدنا مشكلة قد تستلزم انتباهك.
             unsubscribe: إذا كنت لا ترغب في تلقي هذه الإشعارات بعد الآن، يمكنك إلغاء الاشتراك في أي وقت. لإلغاء الاشتراك، يرجى اتباع التعليمات في هذه الصفحة
-        see_storage_settings: عرض إعدادات المخزن
+        see_storage_settings: عرض إعدادات مساحة التخزين
         unhealthy:
           since: منذ
-          subject: المخزن "%{name}" غير سليم!
-          summary: توجد مشكلة في تكامل مخزن %{storage_name}
+          subject: مساحة التخزين "%{name}" غير سليمة!
+          summary: توجد مشكلة في تكامل مساحة التخزين %{storage_name}
           troubleshooting:
             link_text: وثائق استكشاف الأخطاء وإصلاحها
-            text: لمزيد من المعلومات، راجع مخازن الملفات
+            text: لمزيد من المعلومات، راجع مساحات تخزين الملفات
     work_packages:
       created_at: تم الإنشاء في %{timestamp} بواسطة %{user}
       login_to_see_all: سجّل الدخول لرؤية جميع الإشعارات.
@@ -6156,8 +6156,8 @@ ar:
       not_available: استهلاك تخزين القرص غير متوفر لهذا المستودع.
       oauth_application_details_html: 'لن تكون قيمة سر العميل قابلة للوصول مرة أخرى بعد إغلاق هذه النافذة. يرجى نسخ هذه القيم في إعدادات تكامل Nextcloud OpenProject:'
       oauth_application_details_link_text: الانتقال إلى صفحة الإعدادات
-      setup_documentation_details: 'إذا كنت بحاجة إلى مساعدة في تهيئة مخزن ملفات جديد، يرجى مراجعة الوثائق:'
-      setup_documentation_details_link_text: إعداد مخازن الملفات
+      setup_documentation_details: 'إذا كنت بحاجة إلى مساعدة في تهيئة مساحة تخزين ملفات جديدة، يرجى مراجعة الوثائق:'
+      setup_documentation_details_link_text: إعداد مساحات تخزين الملفات
       show_warning_details: لاستخدام هذا التخزين للملفات، تذكر تفعيل الوحدة والتخزين المحدد في إعدادات المشروع لكل مشروع مرغوب.
       update_timeout: الاحتفاظ بآخر المعلومات مساحة القرص المطلوبة لمستودع لدقائق ن. العد القرص المطلوب مساحة مستودع قد يكون مكلفاً، بزيادة هذه القيمة الحد من تأثير على الأداء.
     subversion:

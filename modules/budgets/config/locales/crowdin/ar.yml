@@ -26,12 +26,12 @@ ar:
       budget:
         author: المؤلف
         available: متاح
-        base_amount: Base amount
+        base_amount: المبلغ الأساسي
         budget: مُخَطَّط
         budget_ratio: أنفق (النسبة)
         description: الوصف
         labor_budget: تكاليف العمل المخطط لها
-        labor_budget_items: Planned labor costs
+        labor_budget_items: تكاليف العمالة المخططة
         material_budget: تكاليف الوحدة المخطط لها
         spent: أنفق
         status: الحالة
@@ -44,29 +44,29 @@ ar:
         labor_budget_item:
           attributes:
             principal:
-              not_a_member_of_budget_project: is not a member of the budget's project
+              not_a_member_of_budget_project: ليس عضوًا في مشروع الميزانية
     models:
       budget:
-        zero: Budgets
-        one: Budget
-        two: Budgets
-        few: Budgets
-        many: Budgets
-        other: Budgets
+        zero: الميزانيات
+        one: ميزانية
+        two: الميزانيات
+        few: الميزانيات
+        many: الميزانيات
+        other: الميزانيات
       labor_budget_item:
-        zero: Planned labor costs
-        one: Planned labor cost
-        two: Planned labor costs
-        few: Planned labor costs
-        many: Planned labor costs
-        other: Planned labor costs
+        zero: تكاليف العمالة المخططة
+        one: تكلفة العمالة المخططة
+        two: تكاليف العمالة المخططة
+        few: تكاليف العمالة المخططة
+        many: تكاليف العمالة المخططة
+        other: تكاليف العمالة المخططة
       material_budget_item:
-        zero: Units
-        one: Unit
-        two: Units
-        few: Units
-        many: Units
-        other: Units
+        zero: الوحدات
+        one: وحدة
+        two: الوحدات
+        few: الوحدات
+        many: الوحدات
+        other: الوحدات
   activity:
     filter:
       budget: الميزانيات
@@ -76,36 +76,48 @@ ar:
     widgets:
       budget_by_cost_type:
         blankslate:
-          description: Get an overview of your budgets and costs to efficiently track the health status of your project
-          heading: Start project controlling
+          description: احصل على نظرة عامة على ميزانياتك وتكاليفك لتتبع حالة صحة مشروعك بكفاءة
+          heading: ابدأ مراقبة المشروع
         blankslate_zero:
-          description: Add details about your planned budget to see data here
-          heading: Budget details missing
+          description: أضف تفاصيل حول ميزانيتك المخططة لعرض البيانات هنا
+          heading: تفاصيل الميزانية غير متوفرة
         count_caption:
-          one: Data aggregated from %{count} budget
-          other: Data aggregated from %{count} budgets
-          zero: No budget data.
+          one: بيانات مجمّعة من ميزانية واحدة
+          other: بيانات مجمّعة من %{count} ميزانية
+          zero: لا توجد بيانات ميزانية.
+          two: بيانات مجمّعة من ميزانيتين
+          few: بيانات مجمّعة من %{count} ميزانيات
+          many: بيانات مجمّعة من %{count} ميزانية
         count_caption_with_subitems:
           portfolio:
-            one: Data aggregated from %{count} budget included in this portfolio and its subitems.
-            other: Data aggregated from %{count} budgets included in this portfolio and its subitems.
-            zero: No budget data.
+            one: بيانات مجمّعة من ميزانية واحدة مُدرجة في هذه المحفظة وعناصرها الفرعية.
+            other: بيانات مجمّعة من %{count} ميزانية مُدرجة في هذه المحفظة وعناصرها الفرعية.
+            zero: لا توجد بيانات ميزانية.
+            two: بيانات مجمّعة من ميزانيتين مُدرجتين في هذه المحفظة وعناصرها الفرعية.
+            few: بيانات مجمّعة من %{count} ميزانيات مُدرجة في هذه المحفظة وعناصرها الفرعية.
+            many: بيانات مجمّعة من %{count} ميزانية مُدرجة في هذه المحفظة وعناصرها الفرعية.
           program:
-            one: Data aggregated from %{count} budget included in this program and its subitems.
-            other: Data aggregated from %{count} budgets included in this program and its subitems.
-            zero: No budget data.
+            one: بيانات مجمّعة من ميزانية واحدة مُدرجة في هذا البرنامج وعناصره الفرعية.
+            other: بيانات مجمّعة من %{count} ميزانية مُدرجة في هذا البرنامج وعناصره الفرعية.
+            zero: لا توجد بيانات ميزانية.
+            two: بيانات مجمّعة من ميزانيتين مُدرجتين في هذا البرنامج وعناصره الفرعية.
+            few: بيانات مجمّعة من %{count} ميزانيات مُدرجة في هذا البرنامج وعناصره الفرعية.
+            many: بيانات مجمّعة من %{count} ميزانية مُدرجة في هذا البرنامج وعناصره الفرعية.
           project:
-            one: Data aggregated from %{count} budget included in this project and its subitems.
-            other: Data aggregated from %{count} budgets included in this project and its subitems.
-            zero: No budget data.
-        title: Budget by cost type
-        view_details: View budget details
+            one: بيانات مجمّعة من ميزانية واحدة مُدرجة في هذا المشروع وعناصره الفرعية.
+            other: بيانات مجمّعة من %{count} ميزانية مُدرجة في هذا المشروع وعناصره الفرعية.
+            zero: لا توجد بيانات ميزانية.
+            two: بيانات مجمّعة من ميزانيتين مُدرجتين في هذا المشروع وعناصره الفرعية.
+            few: بيانات مجمّعة من %{count} ميزانيات مُدرجة في هذا المشروع وعناصره الفرعية.
+            many: بيانات مجمّعة من %{count} ميزانية مُدرجة في هذا المشروع وعناصره الفرعية.
+        title: الميزانية حسب نوع التكلفة
+        view_details: عرض تفاصيل الميزانية
       budget_totals:
-        remaining_budget: Remaining budget
-        spent_budget: Spent budget
-        title: Budget totals
-        total_actual_costs: Total actual costs
-        total_planned_budget: Total planned budget
+        remaining_budget: الميزانية المتبقية
+        spent_budget: الميزانية المصروفة
+        title: إجماليات الميزانية
+        total_actual_costs: إجمالي التكاليف الفعلية
+        total_planned_budget: إجمالي الميزانية المخططة
   budgets_title: الميزانيات
   button_add_budget: أضِف الميزانية
   button_add_budget_item: أضِف التكاليف المخطط لها
@@ -120,15 +132,15 @@ ar:
   help_click_to_edit: اضغط هنا للتعديل.
   help_currency_format: شكل قِيَم العملة المعروضة. %n تم إبداله بقيمة العملة، %u تم إبداله بوحدة العملة.
   help_override_rate: أدخل قيمة هنا لتجاهل المعدل الافتراضي.
-  label_budget_available: Budget available
-  label_budget_details: Budget details
+  label_budget_available: الميزانية المتاحة
+  label_budget_details: تفاصيل الميزانية
   label_budget_id: 'الميزانية #%{id}'
   label_budget_new: الميزانية الجديدة
-  label_budget_planned: Budget planned
+  label_budget_planned: الميزانية المخططة
   label_budget_plural: الميزانيات
-  label_budget_spent: Budget spent
-  label_budget_spent_ratio: Budget spent ratio
-  label_budget_totals: Totals
+  label_budget_spent: الميزانية المصروفة
+  label_budget_spent_ratio: نسبة الميزانية المصروفة
+  label_budget_totals: الإجماليات
   label_deliverable: الميزانية
   label_example_placeholder: مثال، %{decimal}
   label_view_all_budgets: عرض جميع الميزانيات

@@ -4,102 +4,102 @@ ar:
     attributes:
       ldap_departments/synchronized_department:
         dn: DN
-        group: Department
-        ldap_auth_source: LDAP connection
-        users_count: Members
+        group: القسم
+        ldap_auth_source: اتصال LDAP
+        users_count: الأعضاء
       ldap_departments/synchronized_tree:
-        base_dn: Base DN
-        guid_attribute: Unique identifier attribute
-        ldap_auth_source: LDAP connection
-        name: Name
-        ou_name_attribute: OU name attribute
-        structure_filter_string: Organizational unit filter
-        sync_users: Sync users
-        user_filter_string: User filter
+        base_dn: DN الأساسي
+        guid_attribute: سمة المعرّف الفريد
+        ldap_auth_source: اتصال LDAP
+        name: الاسم
+        ou_name_attribute: سمة اسم الوحدة التنظيمية (OU)
+        structure_filter_string: عامل تصفية الوحدات التنظيمية
+        sync_users: مزامنة المستخدمين
+        user_filter_string: عامل تصفية المستخدمين
     errors:
       models:
         ldap_departments/synchronized_tree:
-          must_contain_base_dn: The base DN must be contained within the LDAP connection's base DN.
-          overlaps_other_tree: Overlaps the base DN of another synchronization on the same LDAP connection.
+          must_contain_base_dn: يجب أن يكون DN الأساسي ضمن DN الأساسي لاتصال LDAP.
+          overlaps_other_tree: يتداخل مع DN الأساسي لمزامنة أخرى على اتصال LDAP نفسه.
     models:
       ldap_departments/synchronized_department:
-        zero: Synchronized departments
-        one: Synchronized department
-        two: Synchronized departments
-        few: Synchronized departments
-        many: Synchronized departments
-        other: Synchronized departments
+        zero: الأقسام المتزامنة
+        one: قسم متزامن
+        two: الأقسام المتزامنة
+        few: الأقسام المتزامنة
+        many: الأقسام المتزامنة
+        other: الأقسام المتزامنة
       ldap_departments/synchronized_tree:
-        zero: LDAP department synchronizations
-        one: LDAP department synchronization
-        two: LDAP department synchronizations
-        few: LDAP department synchronizations
-        many: LDAP department synchronizations
-        other: LDAP department synchronizations
+        zero: عمليات مزامنة أقسام LDAP
+        one: مزامنة أقسام LDAP
+        two: عمليات مزامنة أقسام LDAP
+        few: عمليات مزامنة أقسام LDAP
+        many: عمليات مزامنة أقسام LDAP
+        other: عمليات مزامنة أقسام LDAP
   ee:
     upsell:
       ldap_departments:
-        description: Mirror your LDAP organizational unit structure into the OpenProject department hierarchy and keep department members in sync automatically.
-        title: LDAP department synchronization
+        description: انسخ بنية الوحدات التنظيمية في LDAP إلى التسلسل الهرمي للأقسام في OpenProject، وأبقِ أعضاء الأقسام متزامنين تلقائيًا.
+        title: مزامنة أقسام LDAP
   ldap_departments:
-    label_menu_item: LDAP department synchronization
-    label_synchronize: Synchronize organizational units
+    label_menu_item: مزامنة أقسام LDAP
+    label_synchronize: مزامنة الوحدات التنظيمية
     synchronized_departments:
       blankslate:
-        description: Run the synchronization to import the organizational units of this base DN as departments.
-        heading: No departments synchronized yet
+        description: شغّل المزامنة لاستيراد الوحدات التنظيمية التابعة لـ DN الأساسي هذا كأقسام.
+        heading: لم تتم مزامنة أي أقسام بعد
       destroy:
-        confirmation: If you continue, %{name} is no longer managed by LDAP synchronization.
-        heading: Stop managing %{name}?
-        info: The department and its members are kept. It becomes a regular department that you can edit or delete manually.
-        title: Stop managing %{name}
-      managed_notice: Managed by LDAP synchronization
-      no_results: No departments have been synchronized yet.
-      plural: Synchronized departments
-      singular: Synchronized department
+        confirmation: إذا تابعت، فلن تتم إدارة %{name} بواسطة مزامنة LDAP بعد الآن.
+        heading: إيقاف إدارة %{name}؟
+        info: سيتم الاحتفاظ بالقسم وأعضائه، وسيصبح قسمًا عاديًا يمكنك تعديله أو حذفه يدويًا.
+        title: إيقاف إدارة %{name}
+      managed_notice: مُدار بواسطة مزامنة LDAP
+      no_results: لم تتم مزامنة أي أقسام بعد.
+      plural: الأقسام المتزامنة
+      singular: قسم متزامن
     synchronized_trees:
-      add_new: Add LDAP department synchronization
+      add_new: إضافة مزامنة أقسام LDAP
       blankslate:
-        description: Set up a synchronization to mirror your LDAP organizational unit structure into the OpenProject department hierarchy.
-        heading: No LDAP department synchronizations
+        description: أعدّ مزامنة لنسخ بنية الوحدات التنظيمية في LDAP إلى التسلسل الهرمي للأقسام في OpenProject.
+        heading: لا توجد عمليات مزامنة لأقسام LDAP
       destroy:
         confirmation_message:
-          zero: If you continue, the synchronization %{name} is removed and its %{count} departments are no longer managed by LDAP.
-          one: If you continue, the synchronization %{name} is removed and its %{count} department is no longer managed by LDAP.
-          two: If you continue, the synchronization %{name} is removed and its %{count} departments are no longer managed by LDAP.
-          few: If you continue, the synchronization %{name} is removed and its %{count} departments are no longer managed by LDAP.
-          many: If you continue, the synchronization %{name} is removed and its %{count} departments are no longer managed by LDAP.
-          other: If you continue, the synchronization %{name} is removed and its %{count} departments are no longer managed by LDAP.
-        heading: Remove synchronization %{name}?
-        info: The departments and their members are kept and become regular departments. You can edit or delete them manually afterwards under Administration → Users and permissions → Organization.
-        title: Remove synchronization %{name}
+          zero: إذا تابعت، فستتم إزالة المزامنة %{name}، ولا توجد أقسام تابعة لها تُدار بواسطة LDAP.
+          one: إذا تابعت، فستتم إزالة المزامنة %{name} ولن يُدار القسم التابع لها بواسطة LDAP بعد الآن.
+          two: إذا تابعت، فستتم إزالة المزامنة %{name} ولن يُدار القسمان التابعان لها بواسطة LDAP بعد الآن.
+          few: إذا تابعت، فستتم إزالة المزامنة %{name} ولن تُدار أقسامها البالغ عددها %{count} بواسطة LDAP بعد الآن.
+          many: إذا تابعت، فستتم إزالة المزامنة %{name} ولن تُدار أقسامها البالغ عددها %{count} بواسطة LDAP بعد الآن.
+          other: إذا تابعت، فستتم إزالة المزامنة %{name} ولن تُدار أقسامها البالغ عددها %{count} بواسطة LDAP بعد الآن.
+        heading: إزالة المزامنة %{name}؟
+        info: سيتم الاحتفاظ بالأقسام وأعضائها وستصبح أقسامًا عادية. يمكنك تعديلها أو حذفها يدويًا لاحقًا من الإدارة ← المستخدمون والصلاحيات ← الهيكل التنظيمي.
+        title: إزالة المزامنة %{name}
       form:
-        auth_source_text: Select which LDAP connection should be used.
-        base_dn_text: 'Enter the base DN whose organizational units should be synchronized. Its direct child OUs become top-level departments. It must be below the base DN of the selected LDAP connection.
+        auth_source_text: حدد اتصال LDAP الذي يجب استخدامه.
+        base_dn_text: 'أدخل DN الأساسي الذي تريد مزامنة وحداته التنظيمية. تصبح الوحدات التنظيمية (OU) التابعة له مباشرةً أقسامًا في المستوى الأعلى. يجب أن يكون أسفل DN الأساسي لاتصال LDAP المحدد.
 
           '
-        guid_attribute_text: 'Optional. The LDAP attribute holding a stable unique identifier (e.g. "objectGUID" or "entryUUID"). When set, departments survive OU renames and moves. Leave empty to match by DN.
+        guid_attribute_text: 'اختياري. سمة LDAP التي تحمل معرّفًا فريدًا ثابتًا (مثل "objectGUID" أو "entryUUID"). عند تعيينها، تبقى الأقسام محفوظة عند إعادة تسمية الوحدات التنظيمية (OU) أو نقلها. اتركها فارغة للمطابقة حسب DN.
 
           '
-        ou_name_attribute_text: The LDAP attribute used to name the department (e.g. "ou").
+        ou_name_attribute_text: سمة LDAP المستخدمة لتسمية القسم (مثل "ou").
         sections:
-          connection: LDAP connection
-          structure: Organizational units
-          users: Users
-        structure_filter_string_text: RFC4515 LDAP filter identifying organizational unit entries.
-        sync_users_text: 'If enabled, users found below the base DN are also created in OpenProject. Without it, only existing accounts are assigned to departments.
+          connection: اتصال LDAP
+          structure: الوحدات التنظيمية
+          users: المستخدمون
+        structure_filter_string_text: عامل تصفية LDAP وفق RFC4515 يحدد إدخالات الوحدات التنظيمية.
+        sync_users_text: 'عند التفعيل، يتم أيضًا إنشاء المستخدمين الموجودين أسفل DN الأساسي في OpenProject. وبدونه، تُسند الحسابات الموجودة فقط إلى الأقسام.
 
           '
-        user_filter_string_text: 'Optional RFC4515 LDAP filter identifying user entries. Leave empty to use the connection filter, or a generic person filter when none is set.
+        user_filter_string_text: 'عامل تصفية LDAP اختياري وفق RFC4515 يحدد إدخالات المستخدمين. اتركه فارغًا لاستخدام عامل تصفية الاتصال، أو عامل تصفية عام للأشخاص في حال عدم تعيينه.
 
           '
-      help_text: 'This module mirrors the organizational unit (OU) structure of your LDAP directory into the OpenProject department hierarchy. Each OU below the configured base DN becomes a department, and users are assigned to the department of the OU they reside in. Departments are synchronized regularly through a cron job.
+      help_text: 'تنسخ هذه الوحدة البرمجية بنية الوحدات التنظيمية (OU) في دليل LDAP إلى التسلسل الهرمي للأقسام في OpenProject. تصبح كل وحدة تنظيمية أسفل DN الأساسي المُكوَّن قسمًا، ويُسند المستخدمون إلى قسم الوحدة التنظيمية التي ينتمون إليها. تتم مزامنة الأقسام بانتظام عبر مهمة cron.
 
         '
-      no_results: No LDAP department synchronizations configured yet.
-      plural: LDAP department synchronizations
-      singular: LDAP department synchronization
-      synchronization_started: Synchronization started in the background. Departments will appear once it completes.
+      no_results: لم يتم تكوين أي مزامنة لأقسام LDAP بعد.
+      plural: عمليات مزامنة أقسام LDAP
+      singular: مزامنة أقسام LDAP
+      synchronization_started: بدأت المزامنة في الخلفية. ستظهر الأقسام بمجرد اكتمالها.
   plugin_openproject_ldap_departments:
-    description: Synchronization of LDAP organizational units into OpenProject departments.
-    name: OpenProject LDAP departments
+    description: مزامنة الوحدات التنظيمية في LDAP مع الأقسام في OpenProject.
+    name: أقسام LDAP في OpenProject
