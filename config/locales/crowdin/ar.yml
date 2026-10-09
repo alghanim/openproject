@@ -4731,15 +4731,28 @@ ar:
   ldap_auth_sources:
     attribute_texts:
       admin_map_html: 'اختياري: مفتاح السمة في LDAP الذي <strong>عند وجوده</strong> يُعيّن مستخدم OpenProject كمشرف. اتركه فارغاً عند الشك.'
-      base_dn: أدخل DN الأساسي للشجرة الفرعية في LDAP التي تريد من OpenProject البحث فيها عن المستخدمين والمجموعات.
-      filter_string: أضف مرشح RFC4515 اختيارياً لتطبيقه على النتائج المُعادة للمستخدمين المُصفَّين في LDAP.
-      filter_string_concat: سيقوم OpenProject دائماً بالتصفية لسمة تسجيل الدخول المُقدَّمة من المستخدم لتحديد السجل. إذا قدّمت مرشحاً هنا،
+      base_dn: |
+        أدخل DN الأساسي للشجرة الفرعية في LDAP التي تريد من OpenProject البحث فيها عن المستخدمين والمجموعات.
+        سيقوم OpenProject بتصفية أسماء المستخدمين المُقدَّمة داخل هذه الشجرة الفرعية فقط.
+        مثال: ou=users,dc=example,dc=com
+      filter_string: |
+        أضف مرشح RFC4515 اختيارياً لتطبيقه على النتائج المُعادة للمستخدمين المُصفَّين في LDAP.
+        يمكن استخدامه لتقييد مجموعة المستخدمين الذين يعثر عليهم OpenProject للمصادقة ومزامنة المجموعات.
+      filter_string_concat: |
+        سيقوم OpenProject دائماً بالتصفية لسمة تسجيل الدخول المُقدَّمة من المستخدم لتحديد السجل. إذا قدّمت مرشحاً هنا،
+        فسيتم دمجه باستخدام AND. افتراضياً، يُستخدم المرشح الشامل (objectClass=*).
       generic_map: مفتاح السمة في LDAP المُعيَّن لسمة OpenProject `%{attribute}`
       host: اسم مضيف LDAP أو عنوان IP
       login_map: مفتاح السمة في LDAP المستخدم لتعريف تسجيل دخول المستخدم الفريد. عادةً ما يكون `uid` أو `samAccountName`.
       name: اسم تعسفي لاتصال LDAP
-      onthefly_register: إذا حددت هذا المربع، سيقوم OpenProject تلقائياً بإنشاء مستخدمين جدد من إدخالات LDAP الخاصة بهم
-      system_user_dn_html: أدخل DN لمستخدم النظام المستخدم للوصول للقراءة فقط.
+      onthefly_register: |
+        إذا حددت هذا المربع، سيقوم OpenProject تلقائياً بإنشاء مستخدمين جدد من إدخالات LDAP الخاصة بهم
+        عند مصادقتهم لأول مرة مع OpenProject.
+        اترك هذا المربع غير محدد للسماح فقط للحسابات الموجودة في OpenProject بالمصادقة عبر LDAP!
+      system_user_dn_html: |
+        أدخل DN لمستخدم النظام المستخدم للوصول للقراءة فقط.
+        <br>
+        مثال: uid=openproject,ou=system,dc=example,dc=com
       system_user_password: أدخل كلمة المرور لربط مستخدم النظام
     back_to_index: انقر هنا للعودة إلى قائمة الاتصالات.
     connection_encryption: تشفير الاتصال
@@ -4749,8 +4762,12 @@ ar:
     ldap_error: 'خطأ LDAP: %{error_message}'
     sync_failed: 'فشل المزامنة من LDAP: %{message}.'
     system_account: حساب النظام
-    system_account_legend: يتطلب OpenProject وصولاً للقراءة فقط عبر حساب نظام للبحث عن المستخدمين والمجموعات في شجرة LDAP الخاصة بك.
-    technical_warning: يتطلب هذا النموذج LDAP معرفة تقنية بإعداد LDAP / Active Directory الخاص بك.
+    system_account_legend: |
+      يتطلب OpenProject وصولاً للقراءة فقط عبر حساب نظام للبحث عن المستخدمين والمجموعات في شجرة LDAP الخاصة بك.
+      يرجى تحديد بيانات اعتماد الربط لمستخدم النظام هذا في القسم التالي.
+    technical_warning: |
+      يتطلب هذا النموذج LDAP معرفة تقنية بإعداد LDAP / Active Directory الخاص بك.
+      [يرجى زيارة الوثائق للاطلاع على التعليمات التفصيلية](docs_url).
     tls_mode:
       plain: لا شيء
       plain_description: يفتح اتصالاً غير مشفر بخادم LDAP. غير موصى به للإنتاج.
@@ -4764,7 +4781,9 @@ ar:
       verify_peer: التحقق من شهادة SSL
       verify_peer_description_html: يُفعّل التحقق الصارم من SSL لسلسلة ثقة الشهادة. <br> <strong>تحذير:</strong> إلغاء تحديد هذا الخيار يُعطّل التحقق من SSL لشهادة خادم LDAP. هذا يُعرّض اتصالك لهجمات الوسيط.
     user_settings: تعيين السمات
-    user_settings_legend: الحقول التالية تتعلق بكيفية إنشاء المستخدمين في OpenProject من إدخالات LDAP و
+    user_settings_legend: |
+      الحقول التالية تتعلق بكيفية إنشاء المستخدمين في OpenProject من إدخالات LDAP و
+      بسمات LDAP المستخدمة لتحديد سمات مستخدم OpenProject (ربط السمات).
   link: رابط
   links:
     configuration_guide: دليل التكوين
@@ -4910,7 +4929,11 @@ ar:
   mail_body_register_closing: فريق OpenProject الخاص بك
   mail_body_register_ending: ابق على تواصل! مع أطيب التحيات،
   mail_body_register_header_title: بريد دعوة عضو المشروع
-  mail_body_register_links_html: نرجو منك تصفح قناتنا على YouTube (%{youtube_link}) حيث نقدم ندوة عبر الإنترنت (%{webinar_link})
+  mail_body_register_links_html: |
+    نرجو منك تصفح قناتنا على YouTube (%{youtube_link}) حيث نقدم ندوة عبر الإنترنت (%{webinar_link})
+    ومقاطع فيديو «البدء» (%{get_started_link}) لتكون خطواتك الأولى في OpenProject سهلة قدر الإمكان.
+    <br />
+    إذا كانت لديك أي أسئلة أخرى، راجع الوثائق (%{documentation_link}) أو تواصل مع المسؤول.
   mail_body_register_user: عزيزي %{name}،
   mail_body_reminder: "%{count} عمل الحزمة (الحزم) التي تم تعيينها لك الواجبة في الأيام المقبلة %{days}:"
   mail_body_wiki_page_added: تم إضافة صفحة wiki '%{id}' من %{author}.
@@ -4949,7 +4972,9 @@ ar:
   mail_subject_wiki_content_added: تم إضافة صفحة wiki '%{id}'
   mail_subject_wiki_content_updated: تم تحديث صفحة wiki '%{id}'
   mail_user_activation_limit_reached:
-    message_html: حاول مستخدم جديد (%{email}) إنشاء حساب في بيئة OpenProject التي تديرها (%{host}).
+    message_html: |
+      حاول مستخدم جديد (%{email}) إنشاء حساب في بيئة OpenProject التي تديرها (%{host}).
+      لا يمكن للمستخدم تفعيل حسابه لأنه تم الوصول إلى الحد الأقصى لعدد المستخدمين.
     steps:
       a: ترقية خطة الدفع الخاصة بك ([هنا](upgrade_url))
       b: قفل أو حذف مستخدم موجود ([هنا](users_url))
@@ -5300,7 +5325,9 @@ ar:
   notice_successful_create: إنشاء ناجح.
   notice_successful_delete: حذف ناجح.
   notice_successful_update: تحديث ناجح.
-  notice_successful_update_custom_fields_added_to_project: تم التحديث بنجاح. يتم تفعيل الحقول المخصصة للأنواع المفعّلة تلقائياً
+  notice_successful_update_custom_fields_added_to_project: |
+    تم التحديث بنجاح. يتم تفعيل الحقول المخصصة للأنواع المفعّلة تلقائياً
+    في نموذج حزمة العمل. <a href="%{url}" target="_blank">اعرف المزيد</a>.
   notice_to_many_principals_to_display: هناك الكثير من النتائج. تضييق البحث عن طريق كتابة اسم العضو الجديد (أو المجموعة).
   notice_unsuccessful_create: فشل الإنشاء.
   notice_unsuccessful_create_with_reason: 'فشل الإنشاء: %{reason}'
@@ -5741,7 +5768,9 @@ ar:
   present_access_key_value: "%{key_name} الخاص بك: %{value}"
   priorities:
     edit:
-      priority_color_text: انقر لتعيين لون لهذه الأولوية أو تغييره.
+      priority_color_text: |
+        انقر لتعيين لون لهذه الأولوية أو تغييره.
+        يمكن استخدامه لتمييز حزم العمل في الجدول.
   program:
     count:
       one: برنامج واحد
@@ -6486,7 +6515,11 @@ ar:
       submission:
         assignee: المسند إليه عند التقديم
         assignee_caption_html: سيصبح المستخدم أو المجموعة المُسند إليها سمة المشروع هذه أيضًا المسند إليه لحزمة العمل الجديدة. تتضمن هذه القائمة سمات المشروع النشطة من نوع <i>مستخدم</i> فقط.
-        confirmation_email_default: مرحبًا،
+        confirmation_email_default: |-
+          مرحبًا،
+
+          لقد قدّمت طلب بدء مشروع لـ **%{project_name}**. وهو الآن بانتظار المراجعة.
+          انقر على الرابط أدناه للوصول إلى حزمة العمل التي تتضمن طلبك.
         confirmation_email_text: نص البريد الإلكتروني التأكيدي
         description: When a user submits a project initiation request, a new work package will be created with the request artefact attached as a PDF file. The settings below define the type, status and assignee for this new work package.
         description_template: "**This work package was automatically created upon completion of the %{wizard_name} workflow.** A PDF artefact containing all submitted information has been generated and attached to this work package for reference and audit purposes. If you need to update or re-run the initiation steps, you can reopen the wizard at any time by using the link below:\n"
@@ -6643,11 +6676,22 @@ ar:
   status_registered: تم التسجيل
   statuses:
     edit:
-      status_color_text: انقر لتعيين لون لهذه الحالة أو تغييره.
+      status_color_text: |
+        انقر لتعيين لون لهذه الحالة أو تغييره.
+        يظهر في زر الحالة ويمكن استخدامه لتمييز حزم العمل في الجدول.
       status_default_text: يتم تعيين حزم العمل الجديدة افتراضيًا لهذا النوع. لا يمكن أن تكون للقراءة فقط.
-      status_excluded_from_totals_text: حدد هذا الخيار لاستبعاد حزم العمل ذات هذه الحالة من إجماليات العمل،
-      status_percent_complete_text_html: في [وضع حساب التقدم القائم على الحالة](setting_url)، يتم تعيين نسبة الإنجاز لحزمة العمل
-      status_readonly_html: حدد هذا الخيار لتمييز حزم العمل ذات هذه الحالة بأنها للقراءة فقط.
+      status_excluded_from_totals_text: |-
+        حدد هذا الخيار لاستبعاد حزم العمل ذات هذه الحالة من إجماليات العمل،
+        والعمل المتبقي، ونسبة الإنجاز في التسلسل الهرمي.
+      status_percent_complete_text_html: |-
+        في [وضع حساب التقدم القائم على الحالة](setting_url)، يتم تعيين نسبة الإنجاز لحزمة العمل
+        تلقائياً إلى هذه القيمة عند تحديد هذه الحالة.
+        يتم تجاهلها في الوضع القائم على العمل.
+      status_readonly_html: |
+        حدد هذا الخيار لتمييز حزم العمل ذات هذه الحالة بأنها للقراءة فقط.
+        لا يمكن تغيير أي سمات باستثناء الحالة.
+        <br>
+        <strong>ملاحظة</strong>: ستظل القيم الموروثة (مثل القيم القادمة من العناصر الفرعية أو العلاقات) مطبّقة.
     index:
       headers:
         excluded_from_totals: مستبعد من الإجماليات
@@ -6695,7 +6739,9 @@ ar:
   text_destroy_with_associated: 'هناك كائنات إضافية مرتبطة بحزمة (حزم) العمل المراد حذفها. هذه الكائنات من الأنواع التالية:'
   text_diff_truncated: "... تم اقتطاعه لأنه يتجاوز الحد الأقصى للحجم التي يمكن عرضها."
   text_email_delivery_letter_opener: Letter opener is used to render emails as files in your Rails tmp folder. Emails will automatically open in your browser if supported.
-  text_email_delivery_not_configured: لم يتم تكوين تسليم البريد الإلكتروني، والإشعارات معطلة.
+  text_email_delivery_not_configured: |-
+    لم يتم تكوين تسليم البريد الإلكتروني، والإشعارات معطلة.
+    قم بتكوين خادم SMTP لتفعيلها.
   text_enumeration_category_reassign_to: 'إعادة تعيينهم إلى هذه القيمة:'
   text_enumeration_destroy_question: يتم تعيين الكائنات %{count} لهذه القيمة.
   text_file_repository_writable: مرفقات دليل قابل للكتابة
@@ -7336,7 +7382,9 @@ ar:
         '
   warning_imminent_user_limit_html: لقد دعوت عددًا من المستخدمين يتجاوز ما تدعمه خطتك الحالية. قد لا يتمكن المستخدمون المدعوون من الانضمام إلى بيئة OpenProject الخاصة بك. يرجى [ترقية خطتك](upgrade_url) أو حظر المستخدمين الحاليين للسماح للمستخدمين المدعوين والمسجلين بالانضمام.
   warning_protocol_mismatch_html: ''
-  warning_registration_token_expired: انتهت صلاحية بريد التفعيل الإلكتروني. لقد أرسلنا لك بريدًا جديدًا إلى %{email}.
+  warning_registration_token_expired: |
+    انتهت صلاحية بريد التفعيل الإلكتروني. لقد أرسلنا لك بريدًا جديدًا إلى %{email}.
+    يرجى النقر على الرابط الموجود فيه لتفعيل حسابك.
   warning_user_limit_reached: إضافة مستخدمين إضافيين سيتجاوز الحد الحالي. يرجى التواصل مع المسؤول لزيادة حد المستخدمين لضمان تمكن المستخدمين الخارجيين من الوصول إلى هذا النظام.
   warning_user_limit_reached_admin_html: إضافة مستخدمين إضافيين سيتجاوز الحد الحالي. يرجى [ترقية خطتك](upgrade_url) لضمان تمكن المستخدمين الخارجيين من الوصول إلى هذا النظام.
   warning_user_limit_reached_instructions: 'لقد وصلت إلى حد المستخدمين الخاص بك (%{current}/%{max} مستخدمين نشطين). يرجى الاتصال بـ sales@openproject.com لترقية خطة النسخة المؤسسية الخاصة بك وإضافة مستخدمين إضافيين.
@@ -7413,7 +7461,9 @@ ar:
     label_add_x: إضافة %{x}
     label_edit_x: تعديل %{x}
     lag:
-      caption: الحد الأدنى لعدد أيام العمل للإبقاء عليها بين حزمتي العمل.
+      caption: |-
+        الحد الأدنى لعدد أيام العمل للإبقاء عليها بين حزمتي العمل.
+        ويمكن أن يكون سالباً أيضاً.
       subject: الفجوة الزمنية
     relations:
       blocked_by_description: لا يمكن إغلاق حزمة العمل هذه حتى يتم إغلاق الحزمة المرتبطة أولًا
