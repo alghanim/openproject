@@ -30,6 +30,21 @@ import moment from 'moment';
 import { I18n } from 'i18n-js';
 import { getMetaElement } from './globals/global-helpers';
 
+// Same CLDR rule rails-i18n applies on the backend, so both pick the same Arabic form.
+export function arabicPluralForm(count:number):string {
+  if (!Number.isInteger(count)) {
+    return 'other';
+  }
+
+  const mod100 = count % 100;
+  if (count === 0) return 'zero';
+  if (count === 1) return 'one';
+  if (count === 2) return 'two';
+  if (mod100 >= 3 && mod100 <= 10) return 'few';
+  if (mod100 >= 11) return 'many';
+  return 'other';
+}
+
 export function initializeLocale() {
   const meta = getMetaElement('openproject_initializer');
   const getInitializerValue = (key:string, defaultValue = '') => meta?.dataset[key] ?? defaultValue;
@@ -77,6 +92,11 @@ export function initializeLocale() {
           return ['other'];
       }
     },
+  );
+
+  i18n.pluralization.register(
+    'ar',
+    (_i18n:I18n, count:number) => [arabicPluralForm(count), 'other'],
   );
 
   const localeImports = [...new Set([userLocale, instanceLocale])]
