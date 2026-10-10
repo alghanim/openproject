@@ -1,0 +1,113 @@
+<%#-- copyright
+OpenProject is an open source project management software.
+Copyright (C) the OpenProject GmbH
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License version 3.
+
+OpenProject is a fork of ChiliProject, which is a fork of Redmine. The copyright follows:
+Copyright (C) 2006-2013 Jean-Philippe Lang
+Copyright (C) 2010-2013 the ChiliProject Team
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+See COPYRIGHT and LICENSE files for more details.
+
+++#%>
+
+<%#
+  Qatar Services design system v3.1 on top of Primer's light and dark themes.
+  Rendered after custom_styles/primer_color_mapping, whose selectors these match or
+  exceed, and before custom_styles/inline_css, so design colours set by an
+  administrator still win. High-contrast themes are left to Primer.
+%>
+<style type="text/css">
+  [data-color-mode=light][data-light-theme=light] {
+    --body-background: #F7F5F3;
+    --bgColor-muted: #F2EFEC;
+    --bgColor-inset: #F2EFEC;
+    --control-transparent-bgColor-hover: rgba(26, 31, 36, 0.05);
+    --button-default-bgColor-rest: rgba(26, 31, 36, 0.05);
+    --button-default-bgColor-hover: #E8E4DF;
+    --button-default-borderColor-rest: #E2DACF;
+    --borderColor-default: #E2DACF;
+    --borderColor-muted: #EFE9E0;
+    --fgColor-default: #1A1F24;
+    --fgColor-muted: #4A5560;
+    --fgColor-disabled: #7A8590;
+    --focus-outlineColor: #8F6A2A;
+    --fgColor-danger: #B71C3C;
+    --fgColor-success: #1B6E3D;
+    --fgColor-attention: #C4900A;
+    --bgColor-danger-muted: #F8E8ED;
+    --bgColor-success-muted: #E8F5ED;
+    --bgColor-attention-muted: #FDF6E8;
+    --bgColor-accent-muted: rgba(143, 106, 42, 0.10);
+  }
+
+  [data-color-mode=light][data-light-theme=light] .main-menu {
+    --control-transparent-bgColor-selected: #FFFFFF;
+  }
+
+  [data-color-mode=dark][data-dark-theme=dark],
+  [data-color-mode][data-color-mode=auto][data-dark-theme=dark] {
+    --body-background: #1E2126;
+    --bgColor-default: #272B31;
+    --bgColor-inset: #1E2126;
+    --bgColor-muted: #2F343B;
+    --bgColor-emphasis: #394049;
+    --overlay-bgColor: #2F343B;
+    --control-bgColor-rest: #2F343B;
+    --control-bgColor-hover: #394049;
+    --control-transparent-bgColor-hover: rgba(255, 255, 255, 0.07);
+    --control-transparent-bgColor-selected: #2F343B;
+    --button-default-bgColor-rest: rgba(255, 255, 255, 0.07);
+    --button-default-bgColor-hover: #394049;
+    --button-default-borderColor-rest: rgba(255, 255, 255, 0.09);
+    --borderColor-default: rgba(255, 255, 255, 0.09);
+    --borderColor-muted: rgba(255, 255, 255, 0.06);
+    --fgColor-default: #F4F5F6;
+    --fgColor-muted: #A8ACB3;
+    --fgColor-disabled: #7B8189;
+    --focus-outlineColor: #CBAE79;
+    --fgColor-danger: #E76259;
+    --fgColor-success: #43C983;
+    --fgColor-attention: #E3AA47;
+    --bgColor-danger-muted: rgba(231, 98, 89, 0.13);
+    --bgColor-success-muted: rgba(67, 201, 131, 0.13);
+    --bgColor-attention-muted: rgba(227, 170, 71, 0.13);
+    --bgColor-accent-muted: rgba(203, 174, 121, 0.15);
+
+    --header-bg-color: #272B31;
+    --main-menu-bg-selected-background: #CBAE79;
+    --main-menu-selected-font-color: #CBAE79;
+    --content-icon-color: #A8ACB3;
+    --enterprise-upsell-text-color: #CBAE79;
+    --button--primary-background-hover-color: #BA2551;
+    --button--primary-background-active-color: #8C183A;
+    --button--primary-background-disabled-color: #7B8189;
+    --button--primary-border-disabled-color: #7B8189;
+    --box-list-item-selected-bg-color: rgba(203, 174, 121, 0.15) !important;
+    --box-list-item-selected-bg-hover-color: rgba(203, 174, 121, 0.15) !important;
+    --box-list-item-selected-border-color: #CBAE79 !important;
+    --box-list-item-pressed-border-color: #CBAE79 !important;
+  }
+
+  @media (prefers-color-scheme: light) {
+    [data-color-mode][data-color-mode=auto][data-light-theme=light] {
+      --body-background: #F7F5F3;
+    }
+  }
+</style>

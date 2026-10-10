@@ -32,12 +32,12 @@ See COPYRIGHT and LICENSE files for more details.
   is_ru = I18n.locale == :ru
   cs = apply_custom_styles? ? CustomStyle.current : nil
 
-  # The branded header is light, so the default logo is the dark variant.
   logo_url = if is_ru
-               asset_path("logo-black-bg-ua.png")
+               asset_path("logo-white-bg-ua.png")
              else
-               asset_path("logo_openproject.png")
+               asset_path("logo_openproject_white_big.png")
              end
+  default_logo_url = logo_url
 
   high_contrast_logo_url = if is_ru
                              asset_path("logo-black-bg-ua.png")
@@ -92,4 +92,11 @@ See COPYRIGHT and LICENSE files for more details.
   .op-logo--link_high_contrast {
     background-image: url(<%= OpenProject::Configuration.bim? ? high_contrast_bim_logo_url : high_contrast_logo_url %>);
   }
+
+  <%# The branded light header is white, so the default white logo needs its dark variant there. %>
+  <% if logo_url == default_logo_url %>
+    [data-color-mode=light] .op-logo--link:not(.op-logo--link_high_contrast) {
+      background-image: url(<%= high_contrast_logo_url %>);
+    }
+  <% end %>
 </style>
